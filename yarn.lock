@@ -3236,6 +3236,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.3.6"
 
+jsx-html-class@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/jsx-html-class/-/jsx-html-class-1.0.3.tgz#efd7cc7c523d3ccc5247f6b1ce53ef9566f7cffa"
+
 kew@~0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"
