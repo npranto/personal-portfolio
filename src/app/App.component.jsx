@@ -18,7 +18,7 @@ class App extends Component{
                 <section className="col s12 m12 l12">
                     <NavigationBar />
                 </section>
-                <section>
+                <section className="pages col s12 m12 l12">
                     <Switch>
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
