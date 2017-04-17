@@ -11,7 +11,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 // storing vendor packages and libraries
 const VENDOR_LIBS = [
     'react',
-    'react-dom'
+    'react-dom',
+    'react-router-dom'
 ]
 
 // configuration for development
