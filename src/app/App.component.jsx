@@ -5,6 +5,7 @@ import './App.component.css';
 import NavigationBar from './components/navigation-bar/NavigationBar.component.jsx';
 import Home from './pages/home/Home.component.jsx';
 import About from './pages/about/About.component.jsx';
+import Skills from './pages/skills/Skills.component.jsx';
 
 class App extends Component{
     render() {
@@ -17,6 +18,7 @@ class App extends Component{
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/about" component={About}/>
+                        <Route path="/skills" component={Skills} />
                     </Switch>
                 </section>
             </div>
