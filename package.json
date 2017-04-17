@@ -1,9 +1,9 @@
 {
-    "name": "react-starter",
+    "name": "personal-portfolio",
     "version": "1.0.0",
-    "description": "A starter kit, boilerplate for building React single page applications with Webpack 2, Babel, and Yarn",
+    "description": "Personal Portfolio - built with React, Webpack 2 and Yarn",
     "main": "index.js",
-    "repository": "https://github.com/npranto/react-guide.git",
+    "repository": "https://github.com/npranto/personal-portfolio.git",
     "author": "Nazmuz Shakib Pranto <npranto@gmail.com>",
     "license": "MIT",
     "scripts": {
