@@ -1,3 +1,8 @@
+@import './../../App.component';
+
+nav, .nav-wrapper{
+    height: $header-height !important;
+}
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
@@ -5,16 +10,7 @@
 and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2) {
-    .app-component .header{
-        height: 7.5vh;
-    }
-    .app-component .pages{
-        height: 85vh;
-        overflow: auto;
-    }
-    .app-component .footer{
-        height: 7.5vh;
-    }
+   
 }
 
 /* Portrait */
@@ -23,7 +19,6 @@ and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
-    
 }
 
 /* Landscape */

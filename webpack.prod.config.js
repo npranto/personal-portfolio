@@ -4,7 +4,7 @@ console.log('RUNNING IN PRODUCTION...');
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractCSS = require('extract-text-webpack-plugin');
+const ExtractSass = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 // storing vendor packages and libraries
@@ -37,11 +37,16 @@ const config = {
               exclude: /node_modules/,
             },
             {
-                test: /\.css$/,
-                use: ExtractCSS.extract({
-                    use: 'css-loader'   // translates CSS into CommonJS
-                }),
-                exclude: /node_modules/
+                test: /\.scss$/,
+                use: ExtractSass.extract({
+                    use: [{
+                        loader: "css-loader"
+                    }, {
+                        loader: "sass-loader"
+                    }],
+                    // use style-loader in development
+                    fallback: "style-loader"
+                })
             },
             {
                 test: /\.(jpe?g|png|gif|svg|ico)$/i,
@@ -99,7 +104,7 @@ const config = {
                 return module.context && module.context.indexOf('node_modules') !== -1;
             }
         }),
-        new ExtractCSS('styles.bundle.css'),
+        new ExtractSass('styles.bundle.css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
         })

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-import './App.component.css';
+import './App.component.scss';
 import NavigationBar from './components/navigation-bar/NavigationBar.component.jsx';
 import Home from './pages/home/Home.component.jsx';
 import About from './pages/about/About.component.jsx';
@@ -12,6 +12,13 @@ import Experience from './pages/experience/Experience.component.jsx';
 import Education from './pages/education/Education.component.jsx';
 
 class App extends Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+
+        }
+    }
     render() {
         return (
             <div className="app-component">
@@ -30,7 +37,15 @@ class App extends Component{
                     </Switch>
                 </section>
                 <section className="footer col s12 m12 l12">
-                    <h1 style={{background: 'lightgreen'}}> Socials </h1> 
+                    <nav class="nav-extended">
+                        <div class="nav-content">
+                            <ul class="tabs tabs-transparent">
+                                <li class="tab"><a href="#test1"> GitHub </a></li>
+                                <li class="tab"><a href="#test2"> LinkedIn </a></li>
+                                <li class="tab"><a href="#test2"> NPM </a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </section>
             </div>
         )
