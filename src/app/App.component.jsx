@@ -14,8 +14,8 @@ import Education from './pages/education/Education.component.jsx';
 class App extends Component{
     render() {
         return (
-            <div id="app-component container">
-                <section className="col s12 m12 l12">
+            <div className="app-component">
+                <section className="header col s12 m12 l12">
                     <NavigationBar />
                 </section>
                 <section className="pages col s12 m12 l12">
@@ -28,6 +28,9 @@ class App extends Component{
                         <Route path="/education" component={Education} />
                         <Route path="/connect" component={Connect} />
                     </Switch>
+                </section>
+                <section className="footer col s12 m12 l12">
+                    <h1 style={{background: 'lightgreen'}}> Socials </h1> 
                 </section>
             </div>
         )
