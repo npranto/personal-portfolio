@@ -27,6 +27,24 @@ $footer-height: 7.5vh;
     }
 }
 
+.socials{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: $footer-height;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    a{
+        transition: 0.5s;
+        &:hover{
+            .chip{
+                background: white;
+                color: black;
+            }
+        }
+    }
+}
+
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
 @media only screen
@@ -134,3 +152,4 @@ and (min-resolution: 192dpi) {
 
 
 }
+

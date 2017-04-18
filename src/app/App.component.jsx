@@ -11,6 +11,8 @@ import Connect from './pages/connect/Connect.component.jsx';
 import Experience from './pages/experience/Experience.component.jsx';
 import Education from './pages/education/Education.component.jsx';
 
+
+
 class App extends Component{
     constructor(props) {
         super(props);
@@ -37,15 +39,26 @@ class App extends Component{
                     </Switch>
                 </section>
                 <section className="footer col s12 m12 l12">
-                    <nav class="nav-extended">
-                        <div class="nav-content">
-                            <ul class="tabs tabs-transparent">
-                                <li class="tab"><a href="#test1"> GitHub </a></li>
-                                <li class="tab"><a href="#test2"> LinkedIn </a></li>
-                                <li class="tab"><a href="#test2"> NPM </a></li>
-                            </ul>
-                        </div>
-                    </nav>
+                    <div className="socials valign-wrapper col s12 m12 l12">
+                        <a href="https://www.google.com">
+                            <div className="chip hvr-grow">
+                                <img src="https://img.clipartfest.com/5f501c692bb9c6782efc7af0f4bcf349_facebook-icon-circle-vector-facebook-logo_512-512.png" alt="GitHub" />
+                                GitHub
+                            </div>
+                        </a>
+                        <a href="https://www.google.com">
+                            <div className="chip hvr-grow">
+                                <img src="https://img.clipartfest.com/5f501c692bb9c6782efc7af0f4bcf349_facebook-icon-circle-vector-facebook-logo_512-512.png" alt="LinkedIn" />
+                                LinkedIn
+                            </div>
+                        </a>
+                        <a href="https://www.google.com">
+                            <div className="chip hvr-grow">
+                                <img src="https://img.clipartfest.com/5f501c692bb9c6782efc7af0f4bcf349_facebook-icon-circle-vector-facebook-logo_512-512.png" alt="NPM" />
+                                NPM
+                            </div>
+                        </a>
+                    </div>
                 </section>
             </div>
         )
