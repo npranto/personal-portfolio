@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './Connect.component.css';
+import './Connect.component.scss';
 
 class Connect extends Component {
     constructor(props) {

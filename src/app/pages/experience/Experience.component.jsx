@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './Experience.component.css';
+import './Experience.component.scss';
 
 class Experience extends Component {
     constructor(props) {

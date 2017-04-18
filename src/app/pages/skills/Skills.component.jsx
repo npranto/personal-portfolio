@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './Skills.component.css';
+import './Skills.component.scss';
 
 class Skills extends Component {
     constructor(props) {

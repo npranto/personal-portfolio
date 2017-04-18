@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import './Home.component.css';
+import './Home.component.scss';
 
 class Home extends Component {
     constructor(props) {

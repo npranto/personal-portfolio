@@ -1,11 +1,53 @@
 
+$header-color: deeppink;
+$pages-color: lightgray;
+$footer-color: #1e88e5;
+
+$header-height: 7.5vh;
+$pages-height: 85vh;
+$footer-height: 7.5vh;
+
+.app-component {
+    .header{
+        height: $header-height;
+        background: $header-color;
+    }
+    .pages{
+        height: $pages-height;
+        overflow: auto;
+        background: $pages-color;
+        h1{
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    .footer{
+        height: $footer-height;
+        background: $footer-color;
+    }
+}
+
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2) {
-
+    .app-component {
+        .header{
+            height: $header-height;
+            background: $header-color;
+        }
+        .pages{
+            height: $pages-height;
+            overflow: auto;
+            background: $pages-color;
+        }
+        .footer{
+            height: $footer-height;
+            background: $footer-color;
+        }
+    }
 }
 
 /* Portrait */
@@ -14,6 +56,7 @@ and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
+    
 }
 
 /* Landscape */

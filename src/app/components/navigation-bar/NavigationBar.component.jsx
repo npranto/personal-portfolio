@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-import './NavigationBar.component.css';
+import './NavigationBar.component.scss';
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -23,7 +23,7 @@ class NavigationBar extends Component {
         return (
             <div className="navigation-bar-component col s12 m12 l12">
                 <nav>
-                    <div className="nav-wrapper">
+                    <div className="nav-wrapper valign-wrapper">
                     <a href="/" className="brand-logo center pacifico"> nsp </a>
                     <a href="/" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
                     <ul id="nav-mobile" className="left hide-on-med-and-down">
