@@ -26,7 +26,11 @@
 and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2) {
-
+    .app-component {
+        .footer{
+            background: white;
+        }
+    }
 }
 
 /* Portrait */

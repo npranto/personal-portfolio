@@ -19,6 +19,10 @@
             margin: 0px;
         }
     }
+    // normally hides the mobile version of socials
+    .mobile{
+        display: none;
+    }
 }
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
@@ -27,7 +31,28 @@
 and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2) {
-
+    .socials {
+        .mobile {
+            color: gray;
+            font-size: 2em;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            .social-logo{
+                text-align: center;
+                img{
+                    text-align: center;
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+        // hides the non-mobile version on mobile version
+        .mobile-up{
+            display: none;
+        }
+    }
+    
 }
 
 /* Portrait */
