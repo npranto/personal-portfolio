@@ -1,19 +1,53 @@
 @import './../../../style.scss';
 
+.portrait-jumbotron-component {
+    height: $pages-height;
+    transition: 0.5s;
+    .portrait-name-position{
+        text-align: center;
+        .portrait{
+            img{
+                max-height: $pages-height*0.5;
+                max-width: 45vw;
+            }
+        }
+        .name{
+            color: #EC6F73;
+        }
+        hr.style14 { 
+            border: 0; 
+            height: 1px; 
+            background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+            background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+        }
+        .typewriter-starter{
+            color: lightgray;
+        }
+        .position{
+            transition: 0.5s;
+            font-size: 2em;
+            font-weight: 200;
+            color: #1C89E4;
+        }
+    }
+}
+
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 767px)
+and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
-    
+
 }
 
 /* Portrait */
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 767px)
+and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     
@@ -22,7 +56,7 @@ and (orientation: portrait) {
 /* Landscape */
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 767px)
+and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
 
@@ -41,8 +75,8 @@ and (orientation: landscape) {
 /* -------------------------------------------- Tablets -------------------------------------------- */
 /* Portrait and Landscape */
 @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (min-device-width: 600px)
+and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
 
@@ -51,8 +85,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /* Portrait */
 @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (min-device-width: 600px)
+and (max-device-width: 992px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -60,8 +94,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /* Landscape */
 @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (min-device-width: 600px)
+and (max-device-width: 992px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -79,7 +113,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /* -------------------------------------------- Non-Retina Screens -------------------------------------------- */
 @media screen
-and (min-device-width: 1025px)
+and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
 
@@ -94,4 +128,5 @@ and (min-resolution: 192dpi) {
 
 
 }
+
 

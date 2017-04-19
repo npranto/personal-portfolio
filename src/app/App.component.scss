@@ -1,30 +1,10 @@
 @import './../style.scss';
 
-.app-component {
-    .header{
-        height: $header-height;
-        background: $header-color;
-    }
-    .pages{
-        height: $pages-height;
-        overflow: auto;
-        background: $pages-color;
-        h1{
-            margin: 0px;
-            padding: 0px;
-        }
-    }
-    .footer{
-        height: $footer-height;
-        background: $footer-color;
-    }
-}
-
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 767px)
+and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
     .app-component {
         .footer{
@@ -36,7 +16,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 /* Portrait */
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 767px)
+and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
     
@@ -45,7 +25,7 @@ and (orientation: portrait) {
 /* Landscape */
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 767px)
+and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
 
@@ -64,8 +44,8 @@ and (orientation: landscape) {
 /* -------------------------------------------- Tablets -------------------------------------------- */
 /* Portrait and Landscape */
 @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (min-device-width: 600px)
+and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
 
@@ -74,8 +54,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /* Portrait */
 @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (min-device-width: 600px)
+and (max-device-width: 992px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -83,8 +63,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /* Landscape */
 @media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
+and (min-device-width: 600px)
+and (max-device-width: 992px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -102,7 +82,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 /* -------------------------------------------- Non-Retina Screens -------------------------------------------- */
 @media screen
-and (min-device-width: 1025px)
+and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
 
