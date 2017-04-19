@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import {Route, Switch} from 'react-router-dom';
 
 import './App.component.scss';
+
+import githubLogo from './../assets/images/social-logos/github-logo.png';
+import linkedinLogo from './../assets/images/social-logos/linkedin-logo.png';
+import npmLogo from './../assets/images/social-logos/npm-logo.png';
+
 import NavigationBar from './components/navigation-bar/NavigationBar.component.jsx';
 import Home from './pages/home/Home.component.jsx';
 import About from './pages/about/About.component.jsx';
@@ -41,20 +46,20 @@ class App extends Component{
                 <section className="footer col s12 m12 l12">
                     <div className="socials valign-wrapper col s12 m12 l12">
                         <a href="https://www.google.com">
-                            <div className="chip hvr-grow">
-                                <img src="https://img.clipartfest.com/5f501c692bb9c6782efc7af0f4bcf349_facebook-icon-circle-vector-facebook-logo_512-512.png" alt="GitHub" />
+                            <div className="chip github hvr-grow">
+                                <img src={githubLogo} alt="GitHub" />
                                 GitHub
                             </div>
                         </a>
                         <a href="https://www.google.com">
-                            <div className="chip hvr-grow">
-                                <img src="https://img.clipartfest.com/5f501c692bb9c6782efc7af0f4bcf349_facebook-icon-circle-vector-facebook-logo_512-512.png" alt="LinkedIn" />
+                            <div className="chip linkedin hvr-grow">
+                                <img src={linkedinLogo} alt="LinkedIn" />
                                 LinkedIn
                             </div>
                         </a>
                         <a href="https://www.google.com">
-                            <div className="chip hvr-grow">
-                                <img src="https://img.clipartfest.com/5f501c692bb9c6782efc7af0f4bcf349_facebook-icon-circle-vector-facebook-logo_512-512.png" alt="NPM" />
+                            <div className="chip npm hvr-grow">
+                                <img src={npmLogo} alt="NPM" />
                                 NPM
                             </div>
                         </a>

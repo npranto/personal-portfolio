@@ -50,16 +50,8 @@ const config = {
                 })
             },
             {
-                test: /\.(jpe?g|png|gif|svg|ico)$/i,
-                use: [
-                    {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 1
-                        }
-                    },
-                    'image-webpack-loader'
-                ],
+                test: /\.(jpe?g|png|gif|svg)$/i, 
+                use: "file-loader?name=/assets/images/[name].[ext]",
                 exclude: /node_modules/
             }
         ]
@@ -74,7 +66,7 @@ const config = {
             // Your source logo
             logo: './src/assets/images/favicon/favicon.svg',
             // The prefix for all image files (might be a folder or a name)
-            prefix: 'icon-[name]-[hash]/',
+            prefix: 'icon-[name]/',
             // Emit all stats of the generated icons
             emitStats: false,
             // Generate a cache file with control hashes and
