@@ -13,23 +13,42 @@ class SocialsFooter extends Component {
     render() {
         return (
             <div className="socials valign-wrapper col s12 m12 l12">
-                <a href="https://github.com/npranto">
+                <a href="https://github.com/npranto" className="mobile-up">
                     <div className="chip github hvr-grow">
                         <img src={githubLogo} alt="GitHub" />
                         GitHub
                     </div>
                 </a>
-                <a href="https://www.linkedin.com/in/npranto/">
+                <a href="https://www.linkedin.com/in/npranto/" className="mobile-up">
                     <div className="chip linkedin hvr-grow">
                         <img src={linkedinLogo} alt="NPM" />
                         LinkedIn
                     </div>
                 </a>
-                <a href="https://www.npmjs.com/~npranto">
+                <a href="https://www.npmjs.com/~npranto" className="mobile-up">
                     <div className="chip npm hvr-grow">
                         <img src={npmLogo} alt="NPM" />
                         NPM
                     </div>
+                </a>
+
+                <a href="https://github.com/npranto" className="mobile waves-effect waves-light collection-item"> 
+                    <div className="social-logo">
+                        <img src={githubLogo} alt="GitHub" />
+                    </div>
+                    GITHUB 
+                </a>
+                <a href="https://www.linkedin.com/in/npranto/" className="mobile waves-effect waves-light collection-item"> 
+                    <div className="social-logo">
+                        <img src={linkedinLogo} alt="GitHub" />
+                    </div>
+                    LINKEDIN 
+                </a>
+                <a href="https://www.npmjs.com/~npranto" className="mobile waves-effect waves-light collection-item"> 
+                    <div className="social-logo">
+                        <img src={npmLogo} alt="GitHub" />
+                    </div>
+                    NPM 
                 </a>
             </div>
         )
