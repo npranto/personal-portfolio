@@ -1,22 +1,23 @@
-@import './../style.scss';
+@import './../../../style.scss';
 
-.app-component {
-    .header{
-        height: $header-height;
-        background: $header-color;
-    }
-    .pages{
-        height: $pages-height;
-        overflow: auto;
-        background: $pages-color;
-        h1{
-            margin: 0px;
-            padding: 0px;
+.socials{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: $footer-height;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    a{
+        transition: 0.5s;
+        &:hover{
+            .chip{
+                background: white;
+                color: black;
+            }
         }
-    }
-    .footer{
-        height: $footer-height;
-        background: $footer-color;
+        .chip{
+            margin: 0px;
+        }
     }
 }
 

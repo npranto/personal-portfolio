@@ -3,11 +3,8 @@ import {Route, Switch} from 'react-router-dom';
 
 import './App.component.scss';
 
-import githubLogo from './../assets/images/social-logos/github-logo.png';
-import linkedinLogo from './../assets/images/social-logos/linkedin-logo.png';
-import npmLogo from './../assets/images/social-logos/npm-logo.png';
-
 import NavigationBar from './components/navigation-bar/NavigationBar.component.jsx';
+import SocialsFooter from './components/socials-footer/SocialsFooter.component.jsx';
 import Home from './pages/home/Home.component.jsx';
 import About from './pages/about/About.component.jsx';
 import Skills from './pages/skills/Skills.component.jsx';
@@ -44,26 +41,7 @@ class App extends Component{
                     </Switch>
                 </section>
                 <section className="footer col s12 m12 l12">
-                    <div className="socials valign-wrapper col s12 m12 l12">
-                        <a href="https://www.google.com">
-                            <div className="chip github hvr-grow">
-                                <img src={githubLogo} alt="GitHub" />
-                                GitHub
-                            </div>
-                        </a>
-                        <a href="https://www.google.com">
-                            <div className="chip linkedin hvr-grow">
-                                <img src={linkedinLogo} alt="LinkedIn" />
-                                LinkedIn
-                            </div>
-                        </a>
-                        <a href="https://www.google.com">
-                            <div className="chip npm hvr-grow">
-                                <img src={npmLogo} alt="NPM" />
-                                NPM
-                            </div>
-                        </a>
-                    </div>
+                    <SocialsFooter />
                 </section>
             </div>
         )
