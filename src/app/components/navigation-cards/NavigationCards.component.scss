@@ -1,5 +1,26 @@
 @import './../../../style.scss';
 
+.navigation-cards-component{
+    height: $pages-height;
+    .navigation-card-container{
+        height: $pages-height*0.90;
+        overflow-y: auto;
+        .navigation-card{
+            transition: 0.5s;
+            border: 1em solid white;
+            margin: 0em auto;
+            height: $pages-height*0.90/3;
+            &:hover{
+                z-index: 1;
+            }
+            .section{
+                margin: 0 auto;
+                font-weight: 100;
+            }
+        }
+    }
+    
+}
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
@@ -44,8 +65,6 @@ and (orientation: landscape) {
 and (min-device-width: 600px)
 and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
-
-
 
 }
 

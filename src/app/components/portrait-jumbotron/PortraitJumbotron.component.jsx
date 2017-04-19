@@ -85,7 +85,7 @@ class PortraitJumbotron extends Component {
     render() {
         return (
             <div className="portrait-jumbotron-component col s12 m12 l12 valign-wrapper">
-                <div className="portrait-name-position">
+                <div className="portrait-name-position col s12 m12 l12 center">
                     <div className="portrait">
                         <img src={portrait} alt="portrait" />
                     </div>
