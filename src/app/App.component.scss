@@ -37,7 +37,15 @@ $footer-height: 7.5vh;
     a{
         transition: 0.5s;
         &:hover{
-            .chip{
+            .github{
+                background: white;
+                color: black;
+            }
+            .linkedin{
+                background: white;
+                color: black;
+            }
+            .npm{
                 background: white;
                 color: black;
             }
