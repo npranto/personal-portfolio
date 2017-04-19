@@ -1,8 +1,5 @@
 @import './../../../style.scss';
 
-nav, .nav-wrapper{
-    height: $header-height !important;
-}
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
@@ -10,11 +7,7 @@ nav, .nav-wrapper{
 and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2) {
-    .navigation-bar-component {
-        .brand-logo{
-            font-size: 4em;
-        }
-    }
+    
 }
 
 /* Portrait */
@@ -23,6 +16,7 @@ and (min-device-width: 320px)
 and (max-device-width: 767px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
+    
 }
 
 /* Landscape */
@@ -100,3 +94,4 @@ and (min-resolution: 192dpi) {
 
 
 }
+
