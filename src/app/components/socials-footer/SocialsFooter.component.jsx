@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 
 import './SocialsFooter.component.scss';
 
-import githubLogo from './../../../assets/images/social-logos/github-logo.png';
-import linkedinLogo from './../../../assets/images/social-logos/linkedin-logo.png';
-import npmLogo from './../../../assets/images/social-logos/npm-logo.png';
+import githubLogo from './../../../assets/images/social-logos/github_logo.png';
+import linkedinLogo from './../../../assets/images/social-logos/linkedin_logo.png';
+import npmLogo from './../../../assets/images/social-logos/npm_logo.png';
 
 class SocialsFooter extends Component {
     constructor(props) {
