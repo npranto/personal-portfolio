@@ -4,7 +4,6 @@ import './About.component.scss';
 
 import PageHeader from './../../components/page-header/PageHeader.component.jsx';
 
-
 class About extends Component {
     constructor(props) {
         super(props);
