@@ -10,10 +10,10 @@ class PortraitJumbotron extends Component {
 
         this.state = {
             typewriterPositions: [ 
-                "Front End Developer.", 
-                "Problem Solver.", 
-                "Junior Software Engineer.", 
-                "Creative Thinker." 
+                "Front End Developer", 
+                "Problem Solver", 
+                "Junior Software Engineer", 
+                "Creative Thinker" 
             ]
         }
 
