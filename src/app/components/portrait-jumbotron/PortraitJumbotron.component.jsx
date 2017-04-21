@@ -2,19 +2,16 @@ import React, {Component} from 'react';
 
 import './PortraitJumbotron.component.scss';
 
-import portrait from './../../../assets/images/portrait_placeholder.png';
+import {PORTRAIT_JUMBOTRON_DATA} from './../../../assets/data/home/portrait-jumbotron/index.js';
 
 class PortraitJumbotron extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            typewriterPositions: [ 
-                "Front End Developer", 
-                "Problem Solver", 
-                "Junior Software Engineer", 
-                "Creative Thinker" 
-            ]
+            typewriterPositions: PORTRAIT_JUMBOTRON_DATA.typewriterPositions,
+            portrait: PORTRAIT_JUMBOTRON_DATA.portrait,
+            name: PORTRAIT_JUMBOTRON_DATA.name
         }
 
         this.initializeTypewriter();    
@@ -87,9 +84,9 @@ class PortraitJumbotron extends Component {
             <div className="portrait-jumbotron-component col s12 m12 l12 valign-wrapper">
                 <div className="portrait-name-position col s12 m12 l12 center">
                     <div className="portrait">
-                        <img src={portrait} alt="portrait" />
+                        <img src={this.state.portrait} alt="portrait" />
                     </div>
-                    <h2 className="name pacifico"> Nazmuz Shakib Pranto </h2>
+                    <h2 className="name pacifico"> {this.state.name} </h2>
                     <p className="position">
                         <a href="" className="typewrite" data-period="2000" data-type={JSON.stringify(this.state.typewriterPositions)}>
                             <span className="wrap"></span>
