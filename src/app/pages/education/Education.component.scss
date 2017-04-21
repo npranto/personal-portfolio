@@ -4,9 +4,11 @@
   margin-bottom: 0px;
   .education-courses{
     min-height: 75vh;
-    background: lightpink;
+    //background: lightpink;
     .education{
+      //max-height: 75vh;
       background: white;
+      overflow: auto;
       .education-thumbnail{
         margin: 2em;
         .education-img-title-subtitle-description{
@@ -45,7 +47,28 @@
       }
     }
     .courses{
-      background: lightgray;
+      //height: 75vh;
+      //overflow: auto;
+      background: #EE6E73;
+      padding-top: 0px;
+      padding-right: 0px;
+      .collapsible{
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      //.collapsible-content{
+      //  height: 72vh;
+      //  overflow: auto;
+      //}
+      .collapsible-body{
+        padding: 0px;
+        //height: 66vh;
+        //background: white;
+        //overflow: auto;
+        //.collection{
+        //  overflow: auto;
+        //}
+      }
     }
   }
 }
@@ -94,7 +117,9 @@ and (orientation: landscape) {
 and (min-device-width: 600px)
 and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
-
+  .education-courses{
+    height: 75vh;
+  }
 }
 
 /* Portrait */
