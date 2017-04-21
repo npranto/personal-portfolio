@@ -1,5 +1,5 @@
 import mitIstLogo from './../../../images/experiences/mit_ist_logo.png';
-import ICST_MIT_ShaunPaulma from './../recommenders/ICST_MIT_ShaunPaulma.js';
+import ICST_MIT_ShaunPaulma from './../recommenders/ICST_MIT_ShaunPaulma';
 import ICST_MIT_BrianPenney from './../recommenders/ICST_MIT_BrianPenney.js'
 
 const ICST_MIT = {
