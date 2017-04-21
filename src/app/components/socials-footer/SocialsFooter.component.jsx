@@ -2,54 +2,40 @@ import React, {Component} from 'react';
 
 import './SocialsFooter.component.scss';
 
-import githubLogo from './../../../assets/images/social-logos/github_logo.png';
-import linkedinLogo from './../../../assets/images/social-logos/linkedin_logo.png';
-import npmLogo from './../../../assets/images/social-logos/npm_logo.png';
+import {SOCIALS_FOOTER_DATA} from './../../../assets/data/socials-footer/index.js';
 
 class SocialsFooter extends Component {
     constructor(props) {
-        super(props)
+        super(props);
+
+        this.state = {
+            socials: SOCIALS_FOOTER_DATA
+        }
     }
     render() {
         return (
             <div className="socials valign-wrapper col s12 m12 l12">
-                <a href="https://github.com/npranto" className="mobile-up">
-                    <div className="chip github hvr-grow">
-                        <img src={githubLogo} alt="GitHub" />
-                        GitHub
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/npranto/" className="mobile-up">
-                    <div className="chip linkedin hvr-grow">
-                        <img src={linkedinLogo} alt="NPM" />
-                        LinkedIn
-                    </div>
-                </a>
-                <a href="https://www.npmjs.com/~npranto" className="mobile-up">
-                    <div className="chip npm hvr-grow">
-                        <img src={npmLogo} alt="NPM" />
-                        NPM
-                    </div>
-                </a>
+                {
+                    this.state.socials.map((social, index)=>{
+                        return (
+                            <div key={index}>
+                                <a href={social.redirectUrl} className="mobile-up">
+                                    <div className="chip github hvr-grow">
+                                        <img src={social.logo} alt={social.title} />
+                                        {social.title}
+                                    </div>
+                                </a>
 
-                <a href="https://github.com/npranto" className="mobile waves-effect waves-light collection-item"> 
-                    <div className="social-logo">
-                        <img src={githubLogo} alt="GitHub" />
-                    </div>
-                    GITHUB 
-                </a>
-                <a href="https://www.linkedin.com/in/npranto/" className="mobile waves-effect waves-light collection-item"> 
-                    <div className="social-logo">
-                        <img src={linkedinLogo} alt="GitHub" />
-                    </div>
-                    LINKEDIN 
-                </a>
-                <a href="https://www.npmjs.com/~npranto" className="mobile waves-effect waves-light collection-item"> 
-                    <div className="social-logo">
-                        <img src={npmLogo} alt="GitHub" />
-                    </div>
-                    NPM 
-                </a>
+                                <a href={social.redirectUrl} className="mobile waves-effect waves-light collection-item"> 
+                                    <div className="social-logo">
+                                        <img src={social.logo} alt={social.title} />
+                                    </div>
+                                    {social.title} 
+                                </a>
+                            </div>
+                        )
+                    })
+                }
             </div>
         )
     }

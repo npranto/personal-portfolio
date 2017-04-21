@@ -3,11 +3,11 @@ import ICST_MIT from './experiences/ICST_MIT.js';
 import PAA_HPAC from './experiences/PAA_HPAC.js';
 import CSA_HarvardEdPortal from './experiences/CSA_HarvardEdPortal.js';
 
-const data = [
+const experience = [
     JSE_LexiaLearning,
     ICST_MIT,
     PAA_HPAC,
     CSA_HarvardEdPortal
 ]
 
-export const EXPERIENCE_DATA = data;
+export const EXPERIENCE_DATA = experience;
