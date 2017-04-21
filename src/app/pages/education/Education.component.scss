@@ -1,0 +1,145 @@
+@import './../../../style.scss';
+
+.education-component{
+  margin-bottom: 0px;
+  .education-courses{
+    min-height: 75vh;
+    background: lightpink;
+    .education{
+      background: white;
+      .education-thumbnail{
+        margin: 2em;
+        .education-img-title-subtitle-description{
+          width: 100%;
+          display: flex;
+          flex-flow: row;
+          justify-content: flex-start;
+          .image-container{
+              width: 20%;
+              height: auto;
+              img{
+                width: 100%;
+                height: auto;
+              }
+          }
+          .title-subtitle-description{
+            padding-left: 1em;
+            width: 80%;
+            .divider{
+              margin-top: 0.5em;
+              margin-bottom: 0.5em;
+            }
+            .title{
+              font-weight: bold !important;
+            }
+            .duration-location{
+              color: gray;
+              font-style: italic;
+            }
+          }
+          .title-subtitle-description *{
+            margin: 0px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    .courses{
+      background: lightgray;
+    }
+  }
+}
+
+
+/* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- Tablets -------------------------------------------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 992px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 992px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 992px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- Non-Retina Screens -------------------------------------------- */
+@media screen
+and (min-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+
+
+
+}
+

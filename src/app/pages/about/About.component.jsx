@@ -10,7 +10,8 @@ class About extends Component {
         super(props);
 
         this.state = {
-            about: APP_STORE.about
+            about: APP_STORE.about,
+            aboutSlideshow: APP_STORE.aboutSlideshow
         }
 
         this.initializeCarousal();
@@ -23,10 +24,18 @@ class About extends Component {
     }
 
     render() {
-        const renderAboutDetail = ()=>{
+        const renderAboutDetail = () => {
             return this.state.about.map((parg, index)=>{
                 return (
                     <p className="about-detail-parg flow-text" key={index}> {parg} </p>
+                )
+            })
+        }
+
+        const renderAboutSlideshow = () => {
+            return this.state.aboutSlideshow.map((slide, index) => {
+                return (
+                    <a className="carousel-item" key={index} href={slide.link}><img src={slide.photoUrl}/></a>
                 )
             })
         }
@@ -38,11 +47,7 @@ class About extends Component {
                  <div className="about-slideshow-detail col s12 m12 l12 hide-on-small-and-down">
                     <section className="about-slideshow col s12 m6 l6 valign-wrapper">
                         <div className="carousel col s12 m12 l12">
-                            <a className="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/food/1" /></a>
-                            <a className="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/5" /></a>
-                            <a className="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/food/1" /></a>
-                            <a className="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/1" /></a>
-                            <a className="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/food/1" /></a>
+                            {renderAboutSlideshow()}
                         </div>
                     </section>
                     <section className="about-detail valign-wrapper col s12 m6 l6">
@@ -57,11 +62,7 @@ class About extends Component {
                  <div className="mobile-about-slideshow-detail col s12 m12 l12 hide-on-med-and-up">
                     <section className="about-slideshow col s12">
                         <div className="carousel col s12 m12 l12">
-                            <a className="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/food/1" /></a>
-                            <a className="carousel-item" href="#two!"><img src="http://lorempixel.com/250/250/nature/5" /></a>
-                            <a className="carousel-item" href="#three!"><img src="http://lorempixel.com/250/250/food/1" /></a>
-                            <a className="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/1" /></a>
-                            <a className="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/food/1" /></a>
+                            {renderAboutSlideshow()}
                         </div>
                     </section>
                     <section className="about-detail col s12">
