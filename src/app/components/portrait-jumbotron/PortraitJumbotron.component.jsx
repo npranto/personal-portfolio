@@ -8,11 +8,7 @@ class PortraitJumbotron extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            typewriterPositions: PORTRAIT_JUMBOTRON_DATA.typewriterPositions,
-            portrait: PORTRAIT_JUMBOTRON_DATA.portrait,
-            name: PORTRAIT_JUMBOTRON_DATA.name
-        }
+        this.state = PORTRAIT_JUMBOTRON_DATA
 
         this.initializeTypewriter();    
     }
