@@ -2,7 +2,7 @@ import githubLogo from './../../images/social-logos/github_logo.png';
 import linkedinLogo from './../../images/social-logos/linkedin_logo.png';
 import npmLogo from './../../images/social-logos/npm_logo.png';
 
-const socialsFooter = [
+const socials = [
     {
         title: 'GitHub',
         logo: githubLogo,
@@ -20,4 +20,4 @@ const socialsFooter = [
     }
 ]
 
-export default socialsFooter;
+export const SOCIALS = socials;

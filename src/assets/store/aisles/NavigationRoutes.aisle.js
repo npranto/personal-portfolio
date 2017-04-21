@@ -1,4 +1,4 @@
-const navigationCards = [
+const navigationRoutes = [
     'About',
     'Projects',
     'Experience',
@@ -7,4 +7,4 @@ const navigationCards = [
     'Connect'
 ];
 
-export default navigationCards;
+export const NAVIGATION_ROUTES = navigationRoutes;
