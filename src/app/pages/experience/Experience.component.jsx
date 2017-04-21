@@ -4,13 +4,13 @@ import './Experience.component.scss';
 
 import PageHeader from './../../components/page-header/PageHeader.component.jsx';
 
-import {EXPERIENCE_DATA} from './../../../assets/data/experience/index.js';
+import {APP_STORE} from './../../../assets/store/index.js';
 
 class Experience extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            experiences: EXPERIENCE_DATA
+            experiences: APP_STORE.experiences
         }
         console.log(this.state.experiences);
     }
@@ -47,7 +47,9 @@ class Experience extends Component {
                             {eachRecommender.recommendationDate}
                         </p>
                         <blockquote>
-                            {this.renderRecommenderRecommendations(eachRecommender.recommendation)}
+                            {
+                                this.renderRecommenderRecommendations(eachRecommender.recommendation)
+                            }
                         </blockquote>
                     </li>
                 )
@@ -58,8 +60,7 @@ class Experience extends Component {
     renderExperiences() {
         return this.state.experiences.map((experience, index)=>{
             return (
-
-                <div className="card large col s8 m6 l4 offset-s2 hoverable" key={index}>
+                <div className="card large col s8 m6 l5 offset-s2 push-l1  hoverable" key={index}>
                     <div className="card-image center waves-effect waves-block waves-light img-container">
                         <img className="activator resize-horizontal resize-vertical" src={experience.experienceLogo} />
                     </div>
@@ -75,15 +76,18 @@ class Experience extends Component {
                         <p className="location"> {experience.experienceLocation} </p>
                         <div className="divider"></div>
                         <div className="description">
-                            {this.renderExperienceDescription(experience.experienceDescription)}
+                            {
+                                this.renderExperienceDescription(experience.experienceDescription)
+                            }
                         </div>
                     
                         <ul className="collection">
-                            {this.renderExperienceRecommenders(experience.experienceRecommenders)}
+                            {
+                                this.renderExperienceRecommenders(experience.experienceRecommenders)
+                            }
                         </ul>
                     </div>
                 </div>
-
             )
         })
     }
@@ -92,7 +96,9 @@ class Experience extends Component {
         return (
             <div className="experience-component row">
                 <PageHeader title="Experience" />
-                {this.renderExperiences()}
+                {
+                    this.renderExperiences()
+                }
             </div>
         )
     }

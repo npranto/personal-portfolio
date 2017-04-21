@@ -4,6 +4,7 @@ import {SOCIALS} from './aisles/Socials.aisle.js';
 import {NAVIGATION_ROUTES} from './aisles/NavigationRoutes.aisle.js';
 import {TYPEWRITER_POSITIONS} from './aisles/TypewriterPositions.aisle.js';
 import {EXPERIENCES} from './aisles/Experiences.aisle.js';
+import {ABOUT} from './aisles/About.aisle.js';
 
 const AppStore = {
     portfolioAuthorName: 'Nazmuz Shakib Pranto',
@@ -11,7 +12,8 @@ const AppStore = {
     socials: SOCIALS,
     navigationRoutes: NAVIGATION_ROUTES,
     typewriterPositions: TYPEWRITER_POSITIONS,
-    experiences: EXPERIENCES
+    experiences: EXPERIENCES,
+    about: ABOUT
 }
 
 export default AppStore;

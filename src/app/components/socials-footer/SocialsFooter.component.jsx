@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 
 import './SocialsFooter.component.scss';
 
-import {SOCIALS_FOOTER_DATA} from './../../../assets/data/socials-footer/index.js';
+import {APP_STORE} from './../../../assets/store/index.js';
 
 class SocialsFooter extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            socials: SOCIALS_FOOTER_DATA
+            socials: APP_STORE.socials
         }
     }
     render() {
