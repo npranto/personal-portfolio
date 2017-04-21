@@ -1,0 +1,8 @@
+const about = [
+    'Junior at the University of Massachusetts Boston, pursuing bachelor\'s degree in Computer Science. I am very passionate, endurable, dedicated, and a self-motivated individual eager to learn and develop technical skills through entry-level internship experiences.',
+    'As a computer science student, I tend to look at the world in a logical perspective where problems are needed to be solved and solved very quickly with creative tactics. I am very passionate about problem solving and enjoy diving into challenges that truly matters for the people and society. Thus, I chose to pursue my educational career in computer science. However, I believe that I am a go-getter as well and the traditional computer science education where heavy theoretical approach is exercised is not what I adore the most. In addition, I consider a more hands-on, practical experience where learning to code is acquired from series of trials and mistakes.',
+    'After a solid introduction to web development from DevMountain, a full-time web immersive program, I learned the value of functional learning and building real world products that can improve people\'s lives. Along with logical aspects of web development, I am also very much interested in design and user-experience as well.',
+    'As I move forward, I want to continue working towards my bachelor\'s degree and also broaden my communication skills in a team-oriented environment while continuing to explore, practice and hopefully master computer programming fundamentals and web development tools and frameworks to prepare for an exciting career in web development or software engineering near future.'
+]
+
+export const ABOUT = about;

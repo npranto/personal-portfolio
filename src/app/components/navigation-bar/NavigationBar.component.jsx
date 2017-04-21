@@ -3,12 +3,14 @@ import {Link} from 'react-router-dom';
 
 import './NavigationBar.component.scss';
 
+import {APP_STORE} from './../../../assets/store/index.js';
+
 class NavigationBar extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            
+            navigationRoutes: APP_STORE.navigationRoutes
         }
 
         this.initializeSideNav();
@@ -34,13 +36,13 @@ class NavigationBar extends Component {
                         <li><a data-activates="mobile-demo" className="button-collapse-large"><i className="material-icons">menu</i></a></li>
                     </ul>
                     <ul className="side-nav center" id="mobile-demo">
-                        <li><Link to="/"> Home </Link></li>
-                        <li><Link to="/about"> About </Link></li>
-                        <li><Link to="/projects"> Projects </Link></li>
-                        <li><Link to="/experience"> Experience </Link></li>
-                        <li><Link to="/skills"> Skills </Link></li>
-                        <li><Link to="/education"> Education </Link></li>
-                        <li><Link to="/connect"> Connect </Link></li>
+                        {
+                            this.state.navigationRoutes.map((route, index)=>{
+                                return (
+                                    <li key={index}><Link to={`/${route.toLowerCase()}`}> {route} </Link></li>
+                                )
+                            })
+                        }
                     </ul>
                     </div>
                 </nav>
