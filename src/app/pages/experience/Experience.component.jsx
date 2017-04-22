@@ -60,7 +60,7 @@ class Experience extends Component {
     renderExperiences() {
         return this.state.experiences.map((experience, index)=>{
             return (
-                <div className="card large col s8 m6 l5 offset-s2 push-l1  hoverable" key={index}>
+                <div className="card large col s8 m6 l4 offset-s2  hoverable" key={index}>
                     <div className="card-image center waves-effect waves-block waves-light img-container">
                         <img className="activator resize-horizontal resize-vertical" src={experience.experienceLogo} />
                     </div>

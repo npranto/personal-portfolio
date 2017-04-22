@@ -7,13 +7,13 @@
         }
     }
     .tech-container{
-        height: 200px;
+        height: 180px;
         text-align: center;
         margin-top: 1em;
         margin-bottom: 1em;
         img{
-            height: 200px;
-            width: 200px;
+            height: 180px;
+            width: 180px;
         }
     }
 }
@@ -25,15 +25,7 @@
 and (min-device-width: 320px)
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2) {
-    .skills-component{
-        .tech-container{
-            height: 100px;
-            img{
-                height: 100px;
-                width: 100px;
-            }
-        }
-    }
+
 }
 
 /* Portrait */
@@ -70,15 +62,7 @@ and (orientation: landscape) {
 and (min-device-width: 600px)
 and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
-    .skills-component{
-        .tech-container{
-            height: 150px;
-            img{
-                height: 150px;
-                width: 150px;
-            }
-        }
-    }
+
 }
 
 /* Portrait */

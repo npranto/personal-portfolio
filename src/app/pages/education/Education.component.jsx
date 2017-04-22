@@ -22,7 +22,7 @@ class Education extends Component {
             $('.collapsible').collapsible();
             setTimeout(()=>{
                 $('.collapsible').collapsible('open', 0);
-            }, 1500)
+            }, 250)
         });
     }
 
