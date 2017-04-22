@@ -6,6 +6,7 @@
     min-height: 75vh;
     .card{
       max-height: 65vh;
+      overflow: auto;
       .card-image{
         img{
           margin: 0 auto;
@@ -17,6 +18,9 @@
             cursor: pointer;
           }
         }
+      }
+      .card-content{
+        //overflow: auto;
       }
     }
 
