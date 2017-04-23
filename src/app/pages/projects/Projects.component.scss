@@ -7,16 +7,17 @@
     .card{
       max-height: 65vh;
       padding: 2em 2em;
+      &:hover{
+        img{
+          opacity: 0.50;
+        }
+      }
       .card-image{
         img{
           margin: 0 auto;
           max-width: 100%;
           height: 35vh;
           transition: 0.50s;
-          &:hover {
-            opacity: 0.50;
-            cursor: pointer;
-          }
         }
       }
       .card-content{

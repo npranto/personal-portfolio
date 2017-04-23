@@ -5,11 +5,13 @@
     transition: 0.5s;
     text-align: center;
     .portrait-name-position{
+        padding-top: 1.5em;
         text-align: center;
         .portrait{
             img{
-                max-height: $pages-height*0.5;
+                max-height: $pages-height*0.45;
                 max-width: 45vw;
+                border-radius: 1em;
             }
         }
         .name{
