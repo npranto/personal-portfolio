@@ -1,9 +1,9 @@
-import weatherArtSnapshot from './../../../images/projects/weather-art/snapshot1.png';
+import video5Snapshot from './../../../images/projects/video5/snapshot3.png';
 
-const WeatherArt = {
-    projectSnapshot: weatherArtSnapshot,
-    projectTitle: 'WeatherArt',
-    projectDescription: 'Get a quick glimpse of the weather for your favorite U.S. cities'
+const Video5 = {
+    projectSnapshot: video5Snapshot,
+    projectTitle: 'Video5',
+    projectDescription: 'A very simple clone of Youtube - lets people search for YouTube videos quickly and efficiently'
 }
 
-export default WeatherArt;
+export default Video5;
