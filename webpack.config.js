@@ -51,7 +51,7 @@ const config = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i, 
-                use: "file-loader?name=/assets/images/[name].[ext]",
+                use: "file-loader?name=/assets/images/[name]_[hash].[ext]",
                 exclude: /node_modules/
             }
         ]
