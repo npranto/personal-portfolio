@@ -11,6 +11,7 @@ import {BACK_END_TECHS} from './aisles/BackEndTechs.aisle.js';
 import {BUILD_TOOLS_AND_DEPEN_MNG} from './aisles/BuildToolsAndDepenMng.aisle.js';
 import {COURSES} from './aisles/Courses.aisle.js';
 import {INSTITUTIONS} from './aisles/Institutions.aisle.js';
+import {PROJECTS} from './aisles/Projects.aisle.js';
 
 const AppStore = {
     portfolioAuthorName: 'Nazmuz Shakib Pranto',
@@ -25,7 +26,8 @@ const AppStore = {
     backEndTechs: BACK_END_TECHS,
     buildToolsAndDepenMng: BUILD_TOOLS_AND_DEPEN_MNG,
     courses: COURSES,
-    institutions: INSTITUTIONS
+    institutions: INSTITUTIONS,
+    projects: PROJECTS
 }
 
 export default AppStore;

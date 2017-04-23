@@ -6,7 +6,7 @@
     min-height: 75vh;
     .card{
       max-height: 65vh;
-      overflow: auto;
+      //overflow: auto;
       .card-image{
         img{
           margin: 0 auto;
@@ -21,6 +21,11 @@
       }
       .card-content{
         //overflow: auto;
+        .project-description{
+          height: 4.5em;
+          font-size: 1em;
+          overflow: hidden;
+        }
       }
     }
 
