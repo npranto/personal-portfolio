@@ -1,0 +1,124 @@
+@import './../../../style.scss';
+
+.project-component{
+  margin-bottom: 0px;
+  .header{
+    max-height: 10vh;
+    h3{
+      font-weight: 300;
+    }
+  }
+  .project-slideshow-detail{
+    height: 75vh;
+    .project-slideshow, .project-detail{
+      height: 75vh;
+    }
+    .project-slideshow{
+      z-index: 2;
+    }
+    .project-detail{
+      .card-panel{
+        overflow: auto;
+        height: 75vh;
+      }
+    }
+  }
+  .project-detail-parg{
+    font-weight: 200;
+  }
+}
+
+/* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 600px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- Tablets -------------------------------------------- */
+/* Portrait and Landscape */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 992px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+
+
+}
+
+/* Portrait */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 992px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 600px)
+and (max-device-width: 992px)
+and (orientation: landscape)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------- Non-Retina Screens -------------------------------------------- */
+@media screen
+and (min-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen
+and (min-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (min-resolution: 192dpi) {
+
+
+
+}
+
