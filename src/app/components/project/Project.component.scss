@@ -30,16 +30,29 @@
         }
       }
     }
-    .project-detail{
+    .project-details{
+      .project-title{
+        margin-top: 0px;
+        text-align: right;
+      }
+      .subtitle-header{
+        font-weight: 200;
+      }
+      .project-subtitle-description{
+
+      }
+      .contributions{
+        p{
+          margin: 0px;
+        }
+      }
       .card-panel{
         overflow: auto;
         height: 75vh;
       }
     }
   }
-  .project-detail-parg{
-    font-weight: 200;
-  }
+
 }
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */

@@ -8,9 +8,9 @@
     "license": "MIT",
     "scripts": {
         "clean": "rimraf dist/",
-        "prod": "NODE_ENV=production yarn run clean && node ./node_modules/webpack/bin/webpack.js --config=webpack.prod.config.js -p",
-        "build": "yarn run clean && node ./node_modules/webpack/bin/webpack.js",
-        "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base dist/ --history-api-fallback"
+        "prod": "NODE_ENV=production yarn run clean && node ./node_modules/webpack/bin/webpack.js --progress --colors --config=webpack.prod.config.js -p",
+        "build": "yarn run clean && node ./node_modules/webpack/bin/webpack.js --progress --colors",
+        "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --content-base dist/ --history-api-fallback"
     },
     "devDependencies": {
         "babel-core": "^6.2.1",
