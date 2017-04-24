@@ -8,7 +8,7 @@ class Connect extends Component {
     }
     render() {
         return (
-            <h1> Connect Component </h1> 
+            <h1> Connect Component </h1>
         )
     }
 }

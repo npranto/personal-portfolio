@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, matchPath, Route} from 'react-router-dom';
 
 import './Projects.component.scss';
 
@@ -30,7 +30,10 @@ class Projects extends Component {
                             <p className="project-description">
                                 {project.projectDescription}
                             </p>
-                            <span> ... <a href=""> read more </a></span>
+                            <span> ... <a onClick={()=>{
+                                localStorage.setItem('activeProject', JSON.stringify(project));
+                                this.props.history.push('/project@deed');
+                            }}> read more </a></span>
                         </div>
                     </div>
                 )
@@ -43,7 +46,7 @@ class Projects extends Component {
 
                 <div className="col s12 m12 l12 projects-gallery">
                     {
-                        /*each project card*/
+                        // each project card
                         renderProjects()
                     }
                 </div>
