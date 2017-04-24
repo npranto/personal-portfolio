@@ -1,4 +1,4 @@
-import portfolioAuthorPortrait from './../images/portrait.png';
+import portfolioAuthorPortrait from './../images/portrait_placeholder.png';
 
 import {SOCIALS} from './aisles/Socials.aisle.js';
 import {NAVIGATION_ROUTES} from './aisles/NavigationRoutes.aisle.js';

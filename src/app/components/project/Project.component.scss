@@ -8,6 +8,9 @@
       font-weight: 300;
     }
   }
+  .modal{
+    width: auto;
+  }
   .project-slideshow-detail{
     height: 75vh;
     .project-slideshow, .project-detail{
@@ -15,6 +18,17 @@
     }
     .project-slideshow{
       z-index: 2;
+      .indicators{
+        //background-color: black;
+        //opacity: 0.5;
+        .indicator-item{
+          background: white;
+          border: 1px solid lightgray;
+        }
+        .active{
+          background: black;
+        }
+      }
     }
     .project-detail{
       .card-panel{

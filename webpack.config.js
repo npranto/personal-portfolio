@@ -12,7 +12,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const VENDOR_LIBS = [
     'react',
     'react-dom',
-    'react-router-dom'
+    'react-router-dom',
+    'react-tooltip'
 ]
 
 // configuration for development
