@@ -37,7 +37,10 @@ class App extends Component{
                         <Route path="/skills" component={Skills} />
                         <Route path="/education" component={Education} />
                         <Route path="/connect" component={Connect} />
-                        <Route path="/project@deed" component={Project} />
+                        <Route path="/project@Deed" component={Project} />
+                        <Route path="/project@RecruiterBot" component={Project} />
+                        <Route path="/project@WeatherArt" component={Project} />
+                        <Route path="/project@Video5" component={Project} />
                     </Switch>
                 </section>
                 <section className="footer col s12 m12 l12">
