@@ -43,18 +43,33 @@
     }
   }
 
+  .mobile-project-slideshow-detail{
+    .demo-github{
+      margin-bottom: 0.5em;
+    }
+    .project-title{
+      margin-top: 0.5em;
+      text-align: center;
+    }
+  }
+
+
+  .demo-github{
+    margin-right: 0.50em;
+  }
+  .project-title{
+    margin-top: 0px;
+    text-align: right;
+  }
+  .subtitle-header{
+    font-weight: 200;
+  }
+
 }
 
-.demo-github{
-  margin-right: 0.50em;
-}
-.project-title{
-  margin-top: 0px;
-  text-align: right;
-}
-.subtitle-header{
-  font-weight: 200;
-}
+
+
+
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
 /* Portrait and Landscape */
