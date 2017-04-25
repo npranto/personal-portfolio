@@ -31,16 +31,6 @@
       }
     }
     .project-details{
-      .project-title{
-        margin-top: 0px;
-        text-align: right;
-      }
-      .subtitle-header{
-        font-weight: 200;
-      }
-      .project-subtitle-description{
-
-      }
       .contributions{
         p{
           margin: 0px;
@@ -53,6 +43,17 @@
     }
   }
 
+}
+
+.demo-github{
+  margin-right: 0.50em;
+}
+.project-title{
+  margin-top: 0px;
+  text-align: right;
+}
+.subtitle-header{
+  font-weight: 200;
 }
 
 /* -------------------------------------------- Mobile / Handhelds -------------------------------------------- */
