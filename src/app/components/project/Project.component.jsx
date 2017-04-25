@@ -79,42 +79,48 @@ class Project extends Component {
                     <div className="project-slideshow-detail col s12 m12 l12 hide-on-med-and-down">
                         <section className="project-slideshow col s12 m12 l6 valign-wrapper">
 
-                            <div className="carousel" data-indicators="true">
+                            <div className="carousel col s12 m12 l12" data-indicators="true">
                                 {renderProjectSnapshots()}
                             </div>
 
+
                         </section>
                         <section className="project-details valign-wrapper col s12 m12 l6">
-                            <div className="card-panel blue darken-2">
-                            <span className="white-text">
-                                <h5 className="project-title"> Deed </h5>
 
-                                <div className="divider"></div>
-                                <h5 className="subtitle-header"> What </h5>
-                                {/*<div className="divider"></div>*/}
-                                <p className="project-subtitle-description">
-                                    Deed is a mini social networking web application that anyone can use to share their good deeds throughout the day.
-                                    Users will be able to post, share and be inspired by other's deeds on their home feed.
-                                </p>
+                            <div className="card-panel blue-grey darken-3">
 
-                                <h5 className="subtitle-header"> Why </h5>
-                                {/*<div className="divider"></div>*/}
+                                <span className="white-text">
+                                    <div>
+                                        <a className="demo-github waves-effect waves-light btn"> Demo </a>
+                                        <a className="demo-github waves-effect waves-light btn"> GitHub </a>
+                                        <h4 className="project-title pacifico"> Deed </h4>
+                                    </div>
+                                    <div className="divider"></div>
+                                    <h5 className="subtitle-header"> What </h5>
+                                    {/*<div className="divider"></div>*/}
+                                    <p className="project-subtitle-description">
+                                        Deed is a mini social networking web application that anyone can use to share their good deeds throughout the day.
+                                        Users will be able to post, share and be inspired by other's deeds on their home feed.
+                                    </p>
 
-                                <p className="project-subtitle-description">
-                                    Deed is an user generated content based social platform that aims to help people move away from the single circle of
-                                    friends and their stories trend and rather open a new ground for people to share new perspectives with new individuals
-                                    everyday to inspire people and to create a positive outlook for the world around us. </p>
+                                    <h5 className="subtitle-header"> Why </h5>
+                                    {/*<div className="divider"></div>*/}
 
-                                <h5 className="subtitle-header"> Contributions </h5>
-                                {/*<div className="divider"></div>*/}
-                                <div className="project-subtitle-description contributions">
-                                    <p> <i className="material-icons">done</i> Built full application from the front to the back end in three weeks </p>
-                                    <p> <i className="material-icons">done</i> Implemented with HTML/CSS, AngularJS and Bootstrap for the client side </p>
-                                    <p> <i className="material-icons">done</i> Used Express, Node.JS on the server side and MongoDB for database setup  </p>
-                                </div>
+                                    <p className="project-subtitle-description">
+                                        Deed is an user generated content based social platform that aims to help people move away from the single circle of
+                                        friends and their stories trend and rather open a new ground for people to share new perspectives with new individuals
+                                        everyday to inspire people and to create a positive outlook for the world around us. </p>
 
-                            </span>
+                                    <h5 className="subtitle-header"> Contributions </h5>
+                                    {/*<div className="divider"></div>*/}
+                                    <div className="project-subtitle-description contributions">
+                                        <p> <i className="material-icons">done</i> Built full application from the front to the back end in three weeks </p>
+                                        <p> <i className="material-icons">done</i> Implemented with HTML/CSS, AngularJS and Bootstrap for the client side </p>
+                                        <p> <i className="material-icons">done</i> Used Express, Node.JS on the server side and MongoDB for database setup  </p>
+                                    </div>
+                                </span>
                             </div>
+
                         </section>
                     </div>
 
@@ -127,11 +133,40 @@ class Project extends Component {
 
                         </section>
                         <section className="project-detail col s12">
-                            <div className="card-panel blue darken-2">
-                            <span className="white-text">
-                                <h1> about-detail fdghdfhg jdf  dfg dfg df df ydf gdfuyg dgdgu</h1>
-                            </span>
+
+
+                            <div className="card-panel blue-grey darken-3">
+                                <span className="white-text">
+                                    <h5 className="project-title pacifico"> Deed </h5>
+
+                                    <div className="divider"></div>
+                                    <h5 className="subtitle-header"> What </h5>
+                                    {/*<div className="divider"></div>*/}
+                                    <p className="project-subtitle-description">
+                                        Deed is a mini social networking web application that anyone can use to share their good deeds throughout the day.
+                                        Users will be able to post, share and be inspired by other's deeds on their home feed.
+                                    </p>
+
+                                    <h5 className="subtitle-header"> Why </h5>
+                                    {/*<div className="divider"></div>*/}
+
+                                    <p className="project-subtitle-description">
+                                        Deed is an user generated content based social platform that aims to help people move away from the single circle of
+                                        friends and their stories trend and rather open a new ground for people to share new perspectives with new individuals
+                                        everyday to inspire people and to create a positive outlook for the world around us. </p>
+
+                                    <h5 className="subtitle-header"> Contributions </h5>
+                                    {/*<div className="divider"></div>*/}
+                                    <div className="project-subtitle-description contributions">
+                                        <p> <i className="material-icons">done</i> Built full application from the front to the back end in three weeks </p>
+                                        <p> <i className="material-icons">done</i> Implemented with HTML/CSS, AngularJS and Bootstrap for the client side </p>
+                                        <p> <i className="material-icons">done</i> Used Express, Node.JS on the server side and MongoDB for database setup  </p>
+                                    </div>
+
+                                </span>
                             </div>
+
+
                         </section>
                     </div>
                 </div>
