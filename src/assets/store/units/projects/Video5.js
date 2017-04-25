@@ -13,7 +13,17 @@ const Video5 = {
         snapshot4
     ],
     projectTitle: 'Video5',
-    projectDescription: 'A very simple clone of Youtube - lets people search for YouTube videos quickly and efficiently'
+    projectDescription: 'A very simple clone of Youtube - lets people search for YouTube videos quickly and efficiently',
+    projectDetails: {
+    	projectDemoUrl: 'http://video5.surge.sh/',
+    	projectCodeUrl: 'https://github.com/npranto/video5',
+    	projectWhat: 'A very simple clone of Youtube - lets people search for YouTube videos quickly and efficiently.',
+    	projectWhy: 'Video5 is mini alternative to YouTube that lets people search for their favorite videos and get them instantly',
+    	projectContributions: [
+    		'Implements a single page video player application with React library to extend knowledge and tools of the new framework',
+    		'Connects with the Youtube API to search for the intended videos quickly and efficiently'
+    	]
+    }
 }
 
 export default Video5;

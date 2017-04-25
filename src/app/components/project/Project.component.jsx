@@ -27,6 +27,15 @@ class Project extends Component {
         }
     }
 
+    componentWillUnmount(){
+        this.setState({
+            activeProject: null,
+            activeSnapshot: null
+        })
+        localStorage.clear();
+        console.log('UNMOUNTED...');
+    }
+
     initializeProjectCarousal() {
         $(document).ready(function(){
             $('.carousel').carousel();
@@ -91,32 +100,34 @@ class Project extends Component {
 
                                 <span className="white-text">
                                     <div>
-                                        <a className="demo-github waves-effect waves-light btn"> Demo </a>
-                                        <a className="demo-github waves-effect waves-light btn"> GitHub </a>
-                                        <h4 className="project-title pacifico"> Deed </h4>
+                                        <a href={this.state.activeProject.projectDetails.projectDemoUrl} className="demo-github waves-effect waves-light btn"><i className="large material-icons">videocam</i> Demo </a>
+                                        <a href={this.state.activeProject.projectDetails.projectCodeUrl}  className="demo-github waves-effect waves-light btn"><i className="large material-icons">code</i> Code </a>
+                                        <h4 className="project-title pacifico"> {this.state.activeProject.projectTitle} </h4>
                                     </div>
                                     <div className="divider"></div>
                                     <h5 className="subtitle-header"> What </h5>
                                     {/*<div className="divider"></div>*/}
                                     <p className="project-subtitle-description">
-                                        Deed is a mini social networking web application that anyone can use to share their good deeds throughout the day.
-                                        Users will be able to post, share and be inspired by other's deeds on their home feed.
+                                        {this.state.activeProject.projectDetails.projectWhat}
                                     </p>
 
                                     <h5 className="subtitle-header"> Why </h5>
                                     {/*<div className="divider"></div>*/}
 
                                     <p className="project-subtitle-description">
-                                        Deed is an user generated content based social platform that aims to help people move away from the single circle of
-                                        friends and their stories trend and rather open a new ground for people to share new perspectives with new individuals
-                                        everyday to inspire people and to create a positive outlook for the world around us. </p>
+                                        {this.state.activeProject.projectDetails.projectWhy}
+                                    </p>
 
                                     <h5 className="subtitle-header"> Contributions </h5>
                                     {/*<div className="divider"></div>*/}
                                     <div className="project-subtitle-description contributions">
-                                        <p> <i className="material-icons">done</i> Built full application from the front to the back end in three weeks </p>
-                                        <p> <i className="material-icons">done</i> Implemented with HTML/CSS, AngularJS and Bootstrap for the client side </p>
-                                        <p> <i className="material-icons">done</i> Used Express, Node.JS on the server side and MongoDB for database setup  </p>
+                                        {
+                                            this.state.activeProject.projectDetails.projectContributions.map((eachContribution, index)=>{
+                                                return (
+                                                    <p key={index}> <i className="material-icons">done</i> {eachContribution} </p>
+                                                )
+                                            })
+                                        }
                                     </div>
                                 </span>
                             </div>
@@ -136,33 +147,38 @@ class Project extends Component {
 
 
                             <div className="card-panel blue-grey darken-3">
-                                <span className="white-text">
-                                    <h5 className="project-title pacifico"> Deed </h5>
 
+                                <span className="white-text">
+                                    <div>
+                                        <a href={this.state.activeProject.projectDetails.projectDemoUrl} className="demo-github waves-effect waves-light btn col s12"><i className="large material-icons">videocam</i> Demo </a>
+                                        <a href={this.state.activeProject.projectDetails.projectCodeUrl} className="demo-github waves-effect waves-light btn col s12"><i className="large material-icons">code</i> Code </a>
+                                        <h4 className="project-title pacifico col s12"> {this.state.activeProject.projectTitle} </h4>
+                                    </div>
                                     <div className="divider"></div>
                                     <h5 className="subtitle-header"> What </h5>
                                     {/*<div className="divider"></div>*/}
                                     <p className="project-subtitle-description">
-                                        Deed is a mini social networking web application that anyone can use to share their good deeds throughout the day.
-                                        Users will be able to post, share and be inspired by other's deeds on their home feed.
+                                        {this.state.activeProject.projectDetails.projectWhat}
                                     </p>
 
                                     <h5 className="subtitle-header"> Why </h5>
                                     {/*<div className="divider"></div>*/}
 
                                     <p className="project-subtitle-description">
-                                        Deed is an user generated content based social platform that aims to help people move away from the single circle of
-                                        friends and their stories trend and rather open a new ground for people to share new perspectives with new individuals
-                                        everyday to inspire people and to create a positive outlook for the world around us. </p>
+                                        {this.state.activeProject.projectDetails.projectWhy} 
+                                    </p>
 
                                     <h5 className="subtitle-header"> Contributions </h5>
                                     {/*<div className="divider"></div>*/}
                                     <div className="project-subtitle-description contributions">
-                                        <p> <i className="material-icons">done</i> Built full application from the front to the back end in three weeks </p>
-                                        <p> <i className="material-icons">done</i> Implemented with HTML/CSS, AngularJS and Bootstrap for the client side </p>
-                                        <p> <i className="material-icons">done</i> Used Express, Node.JS on the server side and MongoDB for database setup  </p>
+                                        {
+                                            this.state.activeProject.projectDetails.projectContributions.map((eachContribution, index)=>{
+                                                return (
+                                                    <p key={index}> <i className="material-icons">done</i> {eachContribution} </p>
+                                                )
+                                            })
+                                        }
                                     </div>
-
                                 </span>
                             </div>
 
