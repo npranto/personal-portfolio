@@ -18,21 +18,64 @@ class Connect extends Component {
         }
     }
 
-    updateFormValue(e, propKey) {
+    updateFormInputs(e) {
         let form = this.state.connectForm;
         form[e.target.name] = e.target.value;
         this.setState({
             connectForm: form
         })
-        console.log(this.state.connectForm);
+        this.isFormValid();
+        console.log(this.state.connectForm, this.isFormValid());
     }
 
-    sendEmail() {
+    isFormValid(){
+        if (
+            (this.isNameValid()) &&
+            (this.isEmailValid()) &&
+            (this.isSubjectValid()) &&
+            (this.isMessageValid())
+        ){
+            return true;
+        }
+        return false;
+    }
+
+    isNameValid() {
+        return (/^[a-zA-Z\s]*$/.test(this.state.connectForm.name)) && (this.state.connectForm.name.length > 0) && (this.state.connectForm.name.length < 100);
+    }
+
+    isEmailValid() {
+        const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return emailRegex.test(this.state.connectForm.email) && (this.state.connectForm.email.length < 100);
+    }
+
+    isSubjectValid() {
+        return (this.state.connectForm.subject.length > 0) && (this.state.connectForm.subject.length <= 150);
+    }
+
+    isMessageValid() {
+        return (this.state.connectForm.message.length > 0) && (this.state.connectForm.message.length <= 3000);
+    }
+
+    sendEmail(e) {
         console.log('About to send email...');
-        sendEmailViaEmailJS();
+        sendEmailViaEmailJS(this.state.connectForm);
         console.log('Email sent...');
     }
     render() {
+        const renderSendButton = () => {
+            if (this.isFormValid()){
+                return (
+                    <a type="submit" onClick={(e) => {this.sendEmail(e)}} className="waves-effect waves-light btn-large col s6 offset-s3 green darken-1"> Send </a>
+                )
+            }else{
+                return (
+                    <a type="submit" className="waves-effect waves-light btn-large col s6 offset-s3 green darken-1 disabled"> Send </a>
+                )
+            }
+        }
+
+
         return (
 
             <div className="connect-component row">
@@ -40,7 +83,7 @@ class Connect extends Component {
 
                 <div className="connect-form center">
 
-                        <form className="col s12 m6 l6 offset-m3 offset-l3">
+                        <form className="col s12 m6 l6 offset-m3 offset-l3" onSubmit={(e) => {this.sendEmail(e)}}>
                             <h4 className="connect-header"> Let's stay in touch </h4>
                             <div className="row">
                                 <div className="input-field col s12">
@@ -51,7 +94,7 @@ class Connect extends Component {
                                         name="name"
                                         className="validate"
                                         value={this.state.connectForm.name}
-                                        onChange={(e) => { this.updateFormValue(e, 'NAME') }}
+                                        onChange={(e) => { this.updateFormInputs(e) }}
                                         required />
                                     <label htmlFor="icon_prefix"> Name </label>
                                 </div>
@@ -63,7 +106,7 @@ class Connect extends Component {
                                         name="email"
                                         className="validate"
                                         value={this.state.connectForm.email}
-                                        onChange={(e) => { this.updateFormValue(e, 'EMAIL') }}
+                                        onChange={(e) => { this.updateFormInputs(e) }}
                                         required />
                                     <label htmlFor="icon_prefix"> Email </label>
                                 </div>
@@ -75,7 +118,7 @@ class Connect extends Component {
                                         name="subject"
                                         className="validate"
                                         value={this.state.connectForm.subject}
-                                        onChange={(e) => { this.updateFormValue(e, 'SUBJECT') }}
+                                        onChange={(e) => { this.updateFormInputs(e) }}
                                         required />
                                     <label htmlFor="icon_prefix"> Subject </label>
                                 </div>
@@ -86,15 +129,14 @@ class Connect extends Component {
                                         name="message"
                                         className="materialize-textarea"
                                         value={this.state.connectForm.message}
-                                        onChange={(e) => { this.updateFormValue(e, 'MESSAGE') }}
+                                        onChange={(e) => { this.updateFormInputs(e) }}
                                         required>
                                     </textarea>
                                     <label htmlFor="icon_prefix2"> Message </label>
                                 </div>
                             </div>
-                            <a type="submit" className="waves-effect waves-light btn-large col s6 offset-s3 green darken-1"> Send </a>
+                            {renderSendButton()}
                         </form>
-
 
                 </div>
             </div>
