@@ -12,7 +12,8 @@ const VENDOR_LIBS = [
     'react',
     'react-dom',
     'react-router-dom',
-    'react-tooltip'
+    'react-tooltip',
+    'emailjs-com'
 ]
 
 // configuration for development
@@ -53,8 +54,18 @@ const config = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: "file-loader?name=/assets/images/[name]_[hash].[ext]",
                 exclude: /node_modules/
+            },
+            {
+                test: /\.json$/,
+                use: 'json-loader'
             }
         ]
+    },
+    node: {
+        console: true,
+        fs: true,
+        net: true,
+        tls: true
     },
     plugins: [
         new HtmlWebpackPlugin({
