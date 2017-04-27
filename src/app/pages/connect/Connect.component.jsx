@@ -61,6 +61,14 @@ class Connect extends Component {
         console.log('About to send email...');
         sendEmailViaEmailJS(this.state.connectForm);
         console.log('Email sent...');
+        this.setState({
+            connectForm: {
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            }
+        })
     }
     render() {
         const renderSendButton = () => {

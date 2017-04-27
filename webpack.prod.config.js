@@ -63,9 +63,9 @@ const config = {
     },
     node: {
         console: true,
-        fs: true,
-        net: true,
-        tls: true
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     },
     plugins: [
         new HtmlWebpackPlugin({
