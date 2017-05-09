@@ -1,7 +1,7 @@
 @import './../../../style.scss';
 
 .portrait-jumbotron-component {
-    height: $pages-height;
+    /*height: $pages-height;*/
     transition: 0.5s;
     text-align: center;
     .portrait-name-position{
@@ -10,7 +10,7 @@
         .portrait{
             img{
                 max-height: $pages-height*0.45;
-                max-width: 45vw;
+                width: auto;
                 border-radius: 1em;
             }
         }
@@ -29,8 +29,9 @@
             color: lightgray;
         }
         .position{
+            padding: 0.5em 0px;
             transition: 0.5s;
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: 200;
             color: #1C89E4;
         }
@@ -118,6 +119,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media screen
 and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
+    .portrait-jumbotron-component {
+        height: $pages-height;
+    }
 
 
 }
