@@ -1,11 +1,11 @@
 @import './../../../style.scss';
 
 .projects-component{
-  margin-bottom: 0px;
+  margin-bottom: 1em;
   .projects-gallery{
     min-height: 75vh;
     .card{
-      max-height: 65vh;
+      height: auto;
       padding: 2em 2em;
       &:hover{
         img{
