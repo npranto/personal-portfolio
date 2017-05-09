@@ -21,7 +21,7 @@ class Skills extends Component {
         const renderTechList = (techList) => {
             return techList.map((tech, index)=>{
                 return (
-                    <div key={index} data-tip={tech.title} className="tech-container col s6 m4 l3">
+                    <div key={index} data-tip={tech.title} className="tech-container valign-wrapper col s6 m4 l3">
                         <img src={tech.src} className="tech-logo" alt={tech.title} />
                         <ReactTooltip place="bottom" type="dark" effect="solid" />
                     </div>

@@ -66,7 +66,7 @@ class About extends Component {
                         </div>
                     </section>
                     <section className="about-detail col s12">
-                        <div className="card-panel blue darken-2">
+                        <div className="card-panel blue-grey darken-3">
                             <span className="white-text">
                                 {renderAboutDetail()}
                             </span>
