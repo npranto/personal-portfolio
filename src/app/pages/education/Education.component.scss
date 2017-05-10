@@ -1,9 +1,9 @@
 @import './../../../style.scss';
 
 .education-component{
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
   .education-courses{
-    min-height: 75vh;
+    //min-height: 75vh;
     /*background: lightpink;*/
     .education{
       /*max-height: 75vh;*/
@@ -118,7 +118,7 @@ and (min-device-width: 600px)
 and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
   .education-courses{
-    height: 75vh;
+    //height: 75vh;
   }
 }
 
