@@ -67,7 +67,7 @@ class Experience extends Component {
                     <div className="card-content">
                         <i className="material-icons right activator">more_vert</i>
                         <span className="card-title grey-text text-darken-4"> {experience.experiencePosition} </span>
-                        <p><a href="http://www.lexialearning.com/"> {experience.experienceOrganization} </a></p>
+                        <p><a href={experience.experienceUrl}> {experience.experienceOrganization} </a></p>
                     </div>
                     <div className="card-reveal">
                         <span className="card-title grey-text text-darken-4"><i className="material-icons right">close</i></span>

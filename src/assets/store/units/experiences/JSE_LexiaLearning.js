@@ -2,6 +2,7 @@ import lexiaLearningLogo from './../../../images/experiences/lexia_learning_logo
 
 const JSE_LexiaLearning = {
     experienceLogo: lexiaLearningLogo,
+    experienceUrl: 'http://www.lexialearning.com/',
     experiencePosition: 'Junior Software Engineer',
     experienceOrganization: 'Lexia Learning',
     experienceDuration: 'September - December, 2016',

@@ -85,8 +85,6 @@ and (min-device-width: 600px)
 and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
-
-
 }
 
 /* Portrait */
@@ -125,8 +123,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
 @media screen
 and (min-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 1) {
-
-
+    .image-slide-container{
+        margin: 0.5em;
+        text-align: center;
+        height: 70vh;
+    }
 }
 
 /* ----------- Retina Screens ----------- */
