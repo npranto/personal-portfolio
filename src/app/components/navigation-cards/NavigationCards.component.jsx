@@ -14,6 +14,15 @@ class NavigationCards extends Component {
         }
     }
     render() {
+        const lineatGradients = [
+            'lin-grad-1',
+            'lin-grad-2',
+            'lin-grad-3',
+            'lin-grad-4',
+            'lin-grad-5',
+            'lin-grad-6'
+        ]
+
         return (
             <div className="navigation-cards-component col s12 m12 l12 valign-wrapper">
                 <div className="navigation-card-container">
@@ -21,7 +30,7 @@ class NavigationCards extends Component {
                         this.state.navigationRoutes.map((title, index)=>{
                             return (
                                 <Link to={`/${title.toLowerCase()}`} key={index}>
-                                    <div className="navigation-card hvr-sweep-to-right hvr-grow col s12 m12 l6 valign-wrapper blue-grey lighten-5 z-depth-2 hoverable">
+                                    <div className={`${lineatGradients[index]} navigation-card hvr-sweep-to-right hvr-grow col s12 m12 l6 valign-wrapper blue-grey lighten-5 z-depth-2 hoverable`}>
                                         <h4 className="section"> {title} </h4>
                                     </div>
                                 </Link>

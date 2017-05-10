@@ -75,7 +75,7 @@ const config = {
         }),
         new FaviconsWebpackPlugin({
             // Your source logo
-            logo: './src/assets/images/favicon/favicon.svg',
+            logo: './src/assets/images/favicon/favicon.png',
             // The prefix for all image files (might be a folder or a name)
             prefix: 'icon-[name]-[hash]/',
             // Emit all stats of the generated icons
