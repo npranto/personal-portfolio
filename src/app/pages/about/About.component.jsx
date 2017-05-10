@@ -10,17 +10,34 @@ class About extends Component {
         super(props);
 
         this.state = {
+            currentSlideIndex: 0,
             about: APP_STORE.about,
             aboutSlideshow: APP_STORE.aboutSlideshow
         }
 
         this.initializeCarousal();
+
+        setInterval(() => {
+            this.moveIndexForAboutSlideshow(this.state.currentSlideIndex);
+        }, 5000);
     }
 
     initializeCarousal() {
         $(document).ready(function(){
             $('.carousel').carousel();
         });
+    }
+
+    moveIndexForAboutSlideshow(index) {
+        if (index === this.state.aboutSlideshow.length-1){
+            this.setState({
+                currentSlideIndex: 0
+            })
+        }else{
+            this.setState({
+                currentSlideIndex: index + 1
+            })
+        }
     }
 
     render() {
@@ -32,22 +49,14 @@ class About extends Component {
             })
         }
 
-        const renderAboutSlideshow = () => {
-            return this.state.aboutSlideshow.map((slide, index) => {
-                return (
-                    <a className="carousel-item" key={index} href={slide.link}><img src={slide.photoUrl}/></a>
-                )
-            })
-        }
-
         return (
             <div className="about-component row">
                  <PageHeader title="About" />
 
                  <div className="about-slideshow-detail col s12 m12 l12 hide-on-small-and-down">
                     <section className="about-slideshow col s12 m6 l6 valign-wrapper">
-                        <div className="carousel col s12 m12 l12">
-                            {renderAboutSlideshow()}
+                        <div className="image-slide-container col s12 m12 l12 valign-wrapper">
+                            <img src={this.state.aboutSlideshow[this.state.currentSlideIndex].photoUrl}/>
                         </div>
                     </section>
                     <section className="about-detail valign-wrapper col s12 m6 l6">
@@ -61,8 +70,8 @@ class About extends Component {
 
                  <div className="mobile-about-slideshow-detail col s12 m12 l12 hide-on-med-and-up">
                     <section className="about-slideshow col s12">
-                        <div className="carousel col s12 m12 l12">
-                            {renderAboutSlideshow()}
+                        <div className="image-slide-container col s12 m12 l12 valign-wrapper">
+                            <img src={this.state.aboutSlideshow[this.state.currentSlideIndex].photoUrl}/>
                         </div>
                     </section>
                     <section className="about-detail col s12">

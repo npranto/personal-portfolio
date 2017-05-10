@@ -8,6 +8,14 @@
             font-weight: 300;
         }
     }
+    .image-slide-container{
+        margin-top: 0.5em;
+        //height: 450px;
+    }
+    .image-slide-container img{
+        margin: 0 auto;
+        max-width: 100%;
+    }
     .about-slideshow-detail{
         height: 75vh;
         .about-slideshow, .about-detail{
