@@ -10,11 +10,16 @@ class Project extends Component {
         super(props);
 
         this.state = {
+            currentSnapshotIndex: 0,
             activeProject: JSON.parse(localStorage.getItem('activeProject')),
             activeSnapshot: null
         }
 
         console.log(this.state.activeProject);
+
+        setInterval(() => {
+            this.moveIndexForProjectSnapshots(this.state.currentSnapshotIndex);
+        }, 5000);
     }
 
     componentWillMount() {
@@ -46,6 +51,18 @@ class Project extends Component {
         $(document).ready(function(){
             $('.modal').modal();
         });
+    }
+
+    moveIndexForProjectSnapshots(index) {
+        if (index === this.state.activeProject.projectSnapshots.length-1){
+            this.setState({
+                currentSnapshotIndex: 0
+            })
+        }else{
+            this.setState({
+                currentSnapshotIndex: index + 1
+            })
+        }
     }
 
     openSnapshotModal(snapshot) {
@@ -88,8 +105,13 @@ class Project extends Component {
                     <div className="project-slideshow-detail col s12 m12 l12 hide-on-med-and-down">
                         <section className="project-slideshow col s12 m12 l6 valign-wrapper">
 
-                            <div className="carousel col s12 m12 l12" data-indicators="true">
-                                {renderProjectSnapshots()}
+                            <div className="image-slide-container col s12 m12 l12" data-indicators="true">
+                                <a
+                                    className=""
+                                    href={`#one!${this.state.currentSnapshotIndex}`}
+                                    onClick={() => this.openSnapshotModal(this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]) }>
+                                    <img src={this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]} />
+                                </a>
                             </div>
 
 
@@ -138,9 +160,14 @@ class Project extends Component {
                     <div className="mobile-project-slideshow-detail col s12 m12 l12 hide-on-large-only">
                         <section className="project-slideshow col s12">
 
-                            <div className="carousel" data-indicators="true">
-                                {renderProjectSnapshots()}
+                            <div className="image-slide-container col s12 m12 l12" data-indicators="true">
+                                <a
+                                    className=""
+                                    href={`#one!${this.state.currentSnapshotIndex}`}
+                                    onClick={() => this.openSnapshotModal(this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]) }
+                                ><img src={this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]} /></a>
                             </div>
+
 
                         </section>
                         <section className="project-detail col s12">
