@@ -28,24 +28,26 @@ class NavigationBar extends Component {
     render() {
         return (
             <div className="navigation-bar-component col s12 m12 l12">
-                <nav>
-                    <div className="nav-wrapper valign-wrapper">
-                    <a href="/" className="brand-logo valign-wrapper center pacifico"> nsp </a>
-                    <a href="/" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
-                    <ul id="nav-mobile" className="left hide-on-med-and-down">
-                        <li><a data-activates="mobile-demo" className="button-collapse-large"><i className="material-icons">menu</i></a></li>
-                    </ul>
-                    <ul className="side-nav center" id="mobile-demo">
-                        {
-                            this.state.navigationRoutes.map((route, index)=>{
-                                return (
-                                    <li key={index}><Link to={`/${route.toLowerCase()}`}> {route} </Link></li>
-                                )
-                            })
-                        }
-                    </ul>
-                    </div>
-                </nav>
+                <div className="navbar-fixed">
+                    <nav>
+                        <div className="nav-wrapper valign-wrapper">
+                        <a href="/" className="brand-logo valign-wrapper center pacifico"> nsp </a>
+                        <a href="/" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
+                        <ul id="nav-mobile" className="left hide-on-med-and-down">
+                            <li><a data-activates="mobile-demo" className="button-collapse-large"><i className="material-icons">menu</i></a></li>
+                        </ul>
+                        <ul className="side-nav center" id="mobile-demo">
+                            {
+                                this.state.navigationRoutes.map((route, index)=>{
+                                    return (
+                                        <li key={index}><Link to={`/${route.toLowerCase()}`}> {route} </Link></li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
         )
     }
