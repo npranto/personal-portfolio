@@ -80,9 +80,11 @@ and (orientation: landscape) {
 /* Portrait and Landscape */
 @media only screen
 and (min-device-width: 600px)
-and (max-device-width: 992px)
 and (-webkit-min-device-pixel-ratio: 1) {
 
+    .portrait-jumbotron-component {
+        height: $pages-height;
+    }
 
 
 }
@@ -90,7 +92,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 /* Portrait */
 @media only screen
 and (min-device-width: 600px)
-and (max-device-width: 992px)
 and (orientation: portrait)
 and (-webkit-min-device-pixel-ratio: 1) {
 
@@ -99,7 +100,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
 /* Landscape */
 @media only screen
 and (min-device-width: 600px)
-and (max-device-width: 992px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 1) {
 
