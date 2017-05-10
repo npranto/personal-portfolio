@@ -30,7 +30,7 @@ class NavigationBar extends Component {
             <div className="navigation-bar-component col s12 m12 l12">
                 <nav>
                     <div className="nav-wrapper valign-wrapper">
-                    <a href="/" className="brand-logo center pacifico"> nsp </a>
+                    <a href="/" className="brand-logo valign-wrapper center pacifico"> nsp </a>
                     <a href="/" data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
                     <ul id="nav-mobile" className="left hide-on-med-and-down">
                         <li><a data-activates="mobile-demo" className="button-collapse-large"><i className="material-icons">menu</i></a></li>
