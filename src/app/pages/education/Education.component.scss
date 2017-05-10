@@ -1,12 +1,12 @@
 @import './../../../style.scss';
 
 .education-component{
-  margin-bottom: 0px;
+  margin-bottom: 1.5em;
   .education-courses{
     min-height: 75vh;
-    //background: lightpink;
+    /*background: lightpink;*/
     .education{
-      //max-height: 75vh;
+      /*max-height: 75vh;*/
       background: white;
       overflow: auto;
       .education-thumbnail{
