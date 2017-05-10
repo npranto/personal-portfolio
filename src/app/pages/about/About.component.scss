@@ -61,7 +61,11 @@ and (min-device-width: 320px)
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
-
+    .image-slide-container{
+        margin: 0.5em;
+        text-align: center;
+        height: 70vh;
+    }
 }
 
 
@@ -100,7 +104,11 @@ and (min-device-width: 600px)
 and (max-device-width: 992px)
 and (orientation: landscape)
 and (-webkit-min-device-pixel-ratio: 1) {
-
+    .image-slide-container{
+        margin: 0.5em;
+        text-align: center;
+        height: 70vh;
+    }
 }
 
 
