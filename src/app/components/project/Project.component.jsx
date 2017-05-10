@@ -19,7 +19,7 @@ class Project extends Component {
 
         setInterval(() => {
             this.moveIndexForProjectSnapshots(this.state.currentSnapshotIndex);
-        }, 5000);
+        }, 3000);
     }
 
     componentWillMount() {
@@ -78,17 +78,25 @@ class Project extends Component {
     }
 
     render() {
-        const renderProjectSnapshots = () => {
-            return this.state.activeProject.projectSnapshots.map((snapshot, index)=>{
-                return (
-                    <a
-                        key={index}
-                        className="carousel-item"
-                        href={`#one!${index}`}
-                        onClick={() => this.openSnapshotModal(snapshot) }
-                    ><img src={snapshot} /></a>
+        // const renderProjectSnapshots = () => {
+        //     return this.state.activeProject.projectSnapshots.map((snapshot, index)=>{
+        //         return (
+        //             <a
+        //                 key={index}
+        //                 className="carousel-item"
+        //                 href={`#one!${index}`}
+        //                 onClick={() => this.openSnapshotModal(snapshot) }
+        //             ><img src={snapshot} /></a>
+        //         )
+        //     })
+        // }
+
+        const checkIfDemoExists = (demo) => {
+            if(demo){
+                return(
+                    <a href={this.state.activeProject.projectDetails.projectDemoUrl} className="demo-github waves-effect waves-light pink darken-1 btn-large col s12"><i className="large material-icons">videocam</i> Demo </a>
                 )
-            })
+            }
         }
 
 
@@ -105,13 +113,14 @@ class Project extends Component {
                     <div className="project-slideshow-detail col s12 m12 l12 hide-on-med-and-down">
                         <section className="project-slideshow col s12 m12 l6 valign-wrapper">
 
-                            <div className="image-slide-container col s12 m12 l12" data-indicators="true">
-                                <a
-                                    className=""
-                                    href={`#one!${this.state.currentSnapshotIndex}`}
-                                    onClick={() => this.openSnapshotModal(this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]) }>
+                            <div className="image-slide-container col s12 m12 l12 valign-wrapper" data-indicators="true">
+                                {/*<a*/}
+                                    {/*className=""*/}
+                                    {/*href={`#one!${this.state.currentSnapshotIndex}`}*/}
+                                    {/*onClick={() => this.openSnapshotModal(this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex])}*/}
+                                {/*>*/}
                                     <img src={this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]} />
-                                </a>
+                                {/*</a>*/}
                             </div>
 
 
@@ -161,11 +170,13 @@ class Project extends Component {
                         <section className="project-slideshow col s12">
 
                             <div className="image-slide-container col s12 m12 l12" data-indicators="true">
-                                <a
-                                    className=""
-                                    href={`#one!${this.state.currentSnapshotIndex}`}
-                                    onClick={() => this.openSnapshotModal(this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]) }
-                                ><img src={this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]} /></a>
+                                {/*<a*/}
+                                    {/*className=""*/}
+                                    {/*href={`#one!${this.state.currentSnapshotIndex}`}*/}
+                                    {/*onClick={() => this.openSnapshotModal(this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]) }*/}
+                                {/*>*/}
+                                    <img src={this.state.activeProject.projectSnapshots[this.state.currentSnapshotIndex]} />
+                                {/*</a>*/}
                             </div>
 
 
@@ -177,8 +188,8 @@ class Project extends Component {
 
                                 <span className="white-text">
                                     <div>
-                                        <a href={this.state.activeProject.projectDetails.projectDemoUrl} className="demo-github waves-effect waves-light btn col s12"><i className="large material-icons">videocam</i> Demo </a>
-                                        <a href={this.state.activeProject.projectDetails.projectCodeUrl} className="demo-github waves-effect waves-light btn col s12"><i className="large material-icons">code</i> Code </a>
+                                        { checkIfDemoExists(this.state.activeProject.projectDetails.projectDemoUrl) }
+                                        <a href={this.state.activeProject.projectDetails.projectCodeUrl} className="demo-github waves-effect waves-light pink darken-1 btn-large col s12"><i className="large material-icons">code</i> Code </a>
                                         <h4 className="project-title pacifico col s12"> {this.state.activeProject.projectTitle} </h4>
                                     </div>
                                     <div className="divider"></div>
