@@ -37,7 +37,7 @@ class Education extends Component {
                                 <img src={institution.institutionLogo} alt="education-logo" />
                             </div>
                             <div className="title-subtitle-description">
-                                <h5 className="title flow-text"> <a href="https://devmountain.com/"> {institution.institutionName} </a> </h5>
+                                <h5 className="title flow-text"> <a href={institution.institutionInfoUrl}> {institution.institutionName} </a> </h5>
                                 <p className="subtitle flow-text"> {institution.institutionSubtitle} </p>
                                 <div className="duration-location">
                                     <p className="duration"> {institution.institutionDuration} </p>

@@ -131,8 +131,8 @@ class Project extends Component {
 
                                 <span className="white-text">
                                     <div>
-                                        <a href={this.state.activeProject.projectDetails.projectDemoUrl} className="demo-github waves-effect waves-light btn"><i className="large material-icons">videocam</i> Demo </a>
-                                        <a href={this.state.activeProject.projectDetails.projectCodeUrl}  className="demo-github waves-effect waves-light btn"><i className="large material-icons">code</i> Code </a>
+                                        { checkIfDemoExists(this.state.activeProject.projectDetails.projectDemoUrl) }
+                                        <a href={this.state.activeProject.projectDetails.projectCodeUrl}  className="demo-github waves-effect waves-light pink darken-1 btn-large col s12"><i className="large material-icons">code</i> Code </a>
                                         <h4 className="project-title pacifico"> {this.state.activeProject.projectTitle} </h4>
                                     </div>
                                     <div className="divider"></div>

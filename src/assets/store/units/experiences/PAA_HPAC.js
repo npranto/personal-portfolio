@@ -2,6 +2,7 @@ import hPacLogo from './../../../images/experiences/hpac_logo.png';
 
 const PAA_HPAC = {
     experienceLogo: hPacLogo,
+    experienceUrl: 'https://hpac.harvard.edu/',
     experiencePosition: 'Public Affairs Assistant',
     experienceOrganization: 'Harvard Public Affairs & Communications (HPAC)',
     experienceDuration: 'July - August, 2014',

@@ -2,6 +2,7 @@ import harvardEdPortalLogo from './../../../images/experiences/harvard_ed_portal
 
 const CSA_HarvardEdPortal = {
     experienceLogo: harvardEdPortalLogo,
+    experienceUrl: 'https://edportal.harvard.edu/',
     experiencePosition: 'Customer Service Assistant',
     experienceOrganization: 'Harvard Ed Portal',
     experienceDuration: 'July - August, 2014',

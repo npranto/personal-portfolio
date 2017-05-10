@@ -4,6 +4,7 @@ import ICST_MIT_BrianPenney from './../recommenders/ICST_MIT_BrianPenney.js'
 
 const ICST_MIT = {
     experienceLogo: mitIstLogo,
+    experienceUrl: 'https://ist.mit.edu/',
     experiencePosition: 'Infrastructure Coordinator Support Intern',
     experienceOrganization: 'MIT Information Systems & Technology',
     experienceDuration: 'July - August, 2015',
