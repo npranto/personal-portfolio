@@ -58,17 +58,24 @@ class Connect extends Component {
     }
 
     sendEmail(e) {
+        const self = this;
         console.log('About to send email...');
-        sendEmailViaEmailJS(this.state.connectForm);
-        console.log('Email sent...');
-        this.setState({
-            connectForm: {
-                name: '',
-                email: '',
-                subject: '',
-                message: ''
-            }
-        })
+        sendEmailViaEmailJS(this.state.connectForm)
+            .then(function(response) {
+                console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                console.log('Email sent...');
+                self.setState({
+                    connectForm: {
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    }
+                });
+                self.props.history.push('/thank-you');
+            }, function(err) {
+                console.log("FAILED. error=", err);
+            });
     }
     render() {
         const renderSendButton = () => {
