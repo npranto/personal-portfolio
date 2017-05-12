@@ -14,6 +14,7 @@ import Connect from './pages/connect/Connect.component.jsx';
 import Experience from './pages/experience/Experience.component.jsx';
 import Education from './pages/education/Education.component.jsx';
 import Project from './components/project/Project.component.jsx';
+import EmailSubmitConfirmation from './components/email-submit-confirmation/EmailSubmitConfirmation.component.jsx';
 
 class App extends Component{
     constructor(props) {
@@ -47,6 +48,7 @@ class App extends Component{
                         <Route path="/skills" component={Skills} />
                         <Route path="/education" component={Education} />
                         <Route path="/connect" component={Connect} />
+                        <Route path="/thank-you" component={EmailSubmitConfirmation} />
                         {renderIndividualProjectRoutes()}
                     </Switch>
                 </section>
