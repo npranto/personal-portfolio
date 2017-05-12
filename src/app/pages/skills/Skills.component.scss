@@ -31,8 +31,9 @@ and (min-device-width: 320px)
 and (max-device-width: 600px)
 and (-webkit-min-device-pixel-ratio: 1) {
     .tech-container{
+        height: 130px !important;
         img{
-            height: 150px;
+            height: 130px !important;
             max-width: 100%;
         }
     }
