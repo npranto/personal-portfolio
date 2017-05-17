@@ -6,8 +6,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractSass = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
-const prepackConfiguration = {};
 
 // storing vendor packages and libraries
 const VENDOR_LIBS = [
@@ -113,8 +111,7 @@ const config = {
         new ExtractSass('styles.bundle.css'),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }),
-        new PrepackWebpackPlugin(prepackConfiguration)
+        })
     ]
 }
 
