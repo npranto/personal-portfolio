@@ -6,8 +6,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractSass = require('extract-text-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-// const PrepackWebpackPlugin = require('prepack-webpack-plugin').default;
-// const prepackConfiguration = {};
 
 
 // storing vendor packages and libraries
