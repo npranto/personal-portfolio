@@ -8,7 +8,7 @@
     "license": "MIT",
     "scripts": {
         "clean": "rimraf dist/",
-        "prod": "NODE_ENV=production yarn run clean && node ./node_modules/webpack/bin/webpack.js --progress --colors --config=webpack.prod.config.js -p",
+        "prod": "NODE_ENV=production yarn run clean && node ./node_modules/webpack/bin/webpack.js --progress --colors --config=webpack.prod.config.js -p && shx cp dist/index.html dist/200.html",
         "build": "yarn run clean && node ./node_modules/webpack/bin/webpack.js --progress --colors",
         "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --content-base dist/ --history-api-fallback"
     },
@@ -28,6 +28,7 @@
         "react-addons-test-utils": "^15.5.1",
         "rimraf": "^2.6.1",
         "sass-loader": "^6.0.3",
+        "shx": "^0.2.2",
         "style-loader": "^0.16.1",
         "url-loader": "^0.5.8",
         "webpack": "^2.3.3",
