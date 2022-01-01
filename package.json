@@ -2,11 +2,16 @@
   "name": "personal-portfolio",
   "version": "2.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "concurrently \"npm run tailwind:watch\" \"live-server --port=3000\"",
+    "build": "npm run tailwind:build",
+    "preview": "npm run build && live-server ./ --port=5000",
+    "tailwind:build": "npx tailwindcss -c ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./tailwind/output.css",
+    "tailwind:watch": "npx tailwindcss -c ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./tailwind/output.css --watch"
   },
   "devDependencies": {
-    "vite": "^2.7.2"
-  }
+    "concurrently": "^6.5.1",
+    "live-server": "^1.2.1",
+    "tailwindcss": "^3.0.8"
+  },
+  "dependencies": {}
 }
