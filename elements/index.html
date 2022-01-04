@@ -11,8 +11,6 @@
   <body>
     <h1 class="text-6xl text-blue-100">Elements</h1>
 
-    <style></style>
-
     <!-- Button -->
 
     <!-- Button > Resume  -->
@@ -20,7 +18,6 @@
     <button
       type="button"
       class="
-        ResumeButton
         inline-flex
         items-center
         rounded-sm
@@ -50,7 +47,6 @@
     <a
       href="#/"
       class="
-        ResumeButton
         inline-flex
         items-center
         rounded-sm
@@ -82,7 +78,6 @@
     <button
       type="button"
       class="
-        AboutButton
         inline-flex
         items-center
         rounded-sm
@@ -111,7 +106,6 @@
       target="_blank"
       type="button"
       class="
-        AboutButton
         inline-flex
         items-center
         rounded-sm
@@ -488,14 +482,137 @@
 
     <!-- Text -->
     <!-- Text > SM -->
+    <h2>Text > SM, Base, XS</h2>
+    <p class="text-sm">Text (Small)</p>
+    <p class="text-base">Text (Base)</p>
+    <p class="text-xs">Text (Extra Small)</p>
+
     <!-- Text > Grey -->
-    <!-- Text > Black -->
+    <h2>Text > Base, Grey</h2>
+    <p class="text-base text-gray-500">Text (Base, Grey)</p>
 
     <!-- Input -->
+    <h2>Input > Email</h2>
+    <label class="block">
+      <span
+        class="
+          after:content-['*'] after:ml-0.5 after:text-red-500
+          block
+          text-sm
+          font-medium
+          text-gray-700
+        "
+      >
+        Email
+      </span>
+      <input
+        type="email"
+        name="email"
+        class="
+          mt-1
+          px-3
+          py-2
+          bg-white
+          border
+          shadow-sm
+          border-gray-300
+          placeholder-gray-400
+          focus:outline-none focus:border-sky-500 focus:ring-sky-500
+          block
+          w-full
+          rounded-md
+          sm:text-sm
+          focus:ring-1
+        "
+        placeholder="jsmith@gmail.com"
+      />
+    </label>
+    <h2>Input > Name</h2>
+    <label class="block">
+      <span
+        class="
+          after:content-['*'] after:ml-0.5 after:text-red-500
+          block
+          text-sm
+          font-medium
+          text-gray-700
+        "
+      >
+        Email
+      </span>
+      <input
+        type="text"
+        name="name"
+        class="
+          mt-1
+          px-3
+          py-2
+          bg-white
+          border
+          shadow-sm
+          border-gray-300
+          placeholder-gray-400
+          focus:outline-none focus:border-sky-500 focus:ring-sky-500
+          block
+          w-full
+          rounded-md
+          sm:text-sm
+          focus:ring-1
+        "
+        placeholder="John Smith"
+      />
+    </label>
 
     <!-- Textarea -->
+    <h2>Textarea</h2>
+    <textarea class="resize-none rounded-md block w-full"></textarea>
+
+    <hr />
 
     <!-- Tag -->
+    <h2>Tags</h2>
+    <span
+      class="
+        mr-1
+        px-2
+        rounded-sm
+        inline
+        text-xs
+        font-medium
+        text-gray-50
+        bg-red-500
+      "
+    >
+      React
+    </span>
+    <span
+      class="
+        mr-1
+        px-2
+        rounded-sm
+        inline
+        text-xs
+        font-medium
+        text-gray-50
+        bg-green-500
+      "
+    >
+      Redux
+    </span>
+    <span
+      class="
+        mr-1
+        px-2
+        rounded-sm
+        inline
+        text-xs
+        font-medium
+        text-gray-50
+        bg-yellow-500
+      "
+    >
+      TypeScript
+    </span>
 
     <script type="module" src="/elements/elements.js"></script>
   </body>
