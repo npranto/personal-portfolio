@@ -73,3 +73,35 @@ newfoldInput.addEventListener('change', (e) => {
     newfoldDropdownContent.classList.add('hidden');
   }
 });
+
+// ========== //
+const regexerInput = document.querySelector('#regexer-input');
+const logtradeInput = document.querySelector('#logtrade-input');
+
+regexerInput.addEventListener('change', (e) => {
+  const isInputChecked = e?.target?.checked;
+  const dropdownContentSelector = e?.target?.value;
+  const regexerDropdownContent = document.querySelector(
+    `#${dropdownContentSelector}`
+  );
+
+  if (regexerDropdownContent && isInputChecked) {
+    regexerDropdownContent.classList.remove('hidden');
+  } else if (regexerDropdownContent && !isInputChecked) {
+    regexerDropdownContent.classList.add('hidden');
+  }
+});
+
+logtradeInput.addEventListener('change', (e) => {
+  const isInputChecked = e?.target?.checked;
+  const dropdownContentSelector = e?.target?.value;
+  const logtradeDropdownContent = document.querySelector(
+    `#${dropdownContentSelector}`
+  );
+
+  if (logtradeDropdownContent && isInputChecked) {
+    logtradeDropdownContent.classList.remove('hidden');
+  } else if (logtradeDropdownContent && !isInputChecked) {
+    logtradeDropdownContent.classList.add('hidden');
+  }
+});
