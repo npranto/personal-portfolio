@@ -10,30 +10,66 @@
   </head>
   <body>
     <!-- side navigation bar (start)  -->
-    <nav class="bg-yellow-50 max-w-xs px-2">
+    <nav>
       <!-- menu icon  -->
-      <span class="menu-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-menu-2"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+      <div class="">
+        <a
+          href="#/"
+          class="inline-block menu-icon-btn box-border pl-4 py-2 sm:hidden"
+          id="menu-icon-btn"
         >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <line x1="4" y1="6" x2="20" y2="6"></line>
-          <line x1="4" y1="12" x2="20" y2="12"></line>
-          <line x1="4" y1="18" x2="20" y2="18"></line>
-        </svg>
-      </span>
+          <span class="menu-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-menu-2"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <a
+        href="#/"
+        class="inline-block menu-icon-btn box-border pl-4 py-2 hidden sm:hidden"
+        id="close-menu-icon-btn"
+      >
+        <span class="close-menu-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-square-x"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+            <path d="M10 10l4 4m0 -4l-4 4"></path>
+          </svg>
+        </span>
+      </a>
 
       <!-- navigation menu -->
-      <section class="navigation-menu">
+      <section
+        id="nav-menu"
+        class="navigation-menu hidden sm:block h-screen max-w-xs pl-4 py-2 box-border border-r-2 border-slate-100"
+      >
         <div class="profile-picture mb-2">
           <img
             src="/assets/images/profile-v3.png"
@@ -106,8 +142,8 @@
           </li>
         </ul>
 
-        <ul class="socials flex flex-row space-x-1">
-          <li>
+        <ul class="socials flex flex-row space-x-2">
+          <li class="transition ease-in-out hover:-translate-y-1">
             <a href="#about">
               <span class="github-icon">
                 <svg
@@ -130,7 +166,7 @@
               </span>
             </a>
           </li>
-          <li>
+          <li class="transition ease-in-out hover:-translate-y-1">
             <a href="#about">
               <span class="linkedin-icon">
                 <svg
@@ -155,7 +191,7 @@
               </span>
             </a>
           </li>
-          <li>
+          <li class="transition ease-in-out hover:-translate-y-1">
             <a href="#about">
               <span class="twitter-icon">
                 <svg
@@ -178,7 +214,7 @@
               </span>
             </a>
           </li>
-          <li>
+          <li class="transition ease-in-out hover:-translate-y-1">
             <a href="#about">
               <span class="dev-icon">
                 <svg
@@ -201,7 +237,7 @@
               </span>
             </a>
           </li>
-          <li>
+          <li class="transition ease-in-out hover:-translate-y-1">
             <a href="#about">
               <span class="medium-icon">
                 <svg
