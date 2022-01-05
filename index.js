@@ -41,3 +41,35 @@ function closeReadMoreContent() {
 
 readMoreBtn.addEventListener('click', openReadMoreContent);
 collapseReadMoreBtn.addEventListener('click', closeReadMoreContent);
+
+// ========== //
+const lexiaInput = document.querySelector('#lexia-input');
+const newfoldInput = document.querySelector('#newfold-input');
+
+lexiaInput.addEventListener('change', (e) => {
+  const isInputChecked = e?.target?.checked;
+  const dropdownContentSelector = e?.target?.value;
+  const lexiaDropdownContent = document.querySelector(
+    `#${dropdownContentSelector}`
+  );
+
+  if (lexiaDropdownContent && isInputChecked) {
+    lexiaDropdownContent.classList.remove('hidden');
+  } else if (lexiaDropdownContent && !isInputChecked) {
+    lexiaDropdownContent.classList.add('hidden');
+  }
+});
+
+newfoldInput.addEventListener('change', (e) => {
+  const isInputChecked = e?.target?.checked;
+  const dropdownContentSelector = e?.target?.value;
+  const newfoldDropdownContent = document.querySelector(
+    `#${dropdownContentSelector}`
+  );
+
+  if (newfoldDropdownContent && isInputChecked) {
+    newfoldDropdownContent.classList.remove('hidden');
+  } else if (newfoldDropdownContent && !isInputChecked) {
+    newfoldDropdownContent.classList.add('hidden');
+  }
+});
