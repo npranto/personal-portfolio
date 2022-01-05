@@ -105,3 +105,38 @@ logtradeInput.addEventListener('change', (e) => {
     logtradeDropdownContent.classList.add('hidden');
   }
 });
+
+// ========== //
+const menuLinks = document.querySelectorAll('#menu-links > li > a');
+
+function highlightMenuLink() {
+  menuLinks.forEach((link) => {
+    const { href } = link || {};
+    console.log({ link, path: window?.location?.href });
+    if (href && window?.location?.href?.includes(href)) {
+      link.classList.add(
+        'text-gray-800',
+        'bg-gray-100',
+        '-translate-x-3',
+        'px-1',
+        'font-semibold'
+      );
+    } else {
+      link.classList.remove(
+        'text-gray-800',
+        'bg-gray-100',
+        '-translate-x-3',
+        'px-1',
+        'font-semibold'
+      );
+    }
+  });
+}
+
+window.addEventListener('hashchange', () => {
+  highlightMenuLink();
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  highlightMenuLink();
+});
