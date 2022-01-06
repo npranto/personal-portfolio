@@ -2,19 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/nsp-logo-v2.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="/index.css" />
     <title>Portfolio - Nazmuz Pranto</title>
   </head>
   <body class="max-w-screen-xl m-auto mt-0 mb-0">
-    <!-- side navigation bar (start)  -->
+    <!-- nav (start)  -->
     <nav class="fixed w-full sm:w-64 z-10 bg-white">
       <!-- menu icon  -->
       <div class="">
         <a
-          href="#/"
+          href="#"
           class="inline-block menu-icon-btn box-border pl-4 py-2 sm:hidden"
           id="menu-icon-btn"
         >
@@ -138,7 +142,7 @@
 
         <ul class="socials flex flex-row space-x-2">
           <li class="transition ease-in-out hover:-translate-y-1">
-            <a href="#about">
+            <a href="https://github.com/npranto" target="_blank">
               <span class="github-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +165,7 @@
             </a>
           </li>
           <li class="transition ease-in-out hover:-translate-y-1">
-            <a href="#about">
+            <a href="https://www.linkedin.com/in/npranto/" target="_blank">
               <span class="linkedin-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +190,7 @@
             </a>
           </li>
           <li class="transition ease-in-out hover:-translate-y-1">
-            <a href="#about">
+            <a href="https://twitter.com/nazmuzpranto" target="_blank">
               <span class="twitter-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -209,7 +213,7 @@
             </a>
           </li>
           <li class="transition ease-in-out hover:-translate-y-1">
-            <a href="#about">
+            <a href="https://dev.to/npranto" target="_blank">
               <span class="dev-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -232,7 +236,7 @@
             </a>
           </li>
           <li class="transition ease-in-out hover:-translate-y-1">
-            <a href="#about">
+            <a href="https://medium.com/@npranto" target="_blank">
               <span class="medium-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,9 +264,9 @@
         </ul>
       </section>
     </nav>
-    <!-- side navigation bar (end)  -->
+    <!-- nav (end)  -->
 
-    <main class="sm:ml-64">
+    <main class="sm:ml-64 space-y-4">
       <!-- jumbotron intro (start) -->
       <section id="jumbotron" class="jumbotron-intro py-12 px-4 drop-shadow-sm">
         <h1
@@ -280,12 +284,12 @@
         </h2>
         <div class="action-call flex flex-row space-x-2">
           <a
-            href="#/"
+            href="/assets/resume.pdf"
             class="inline-flex items-center rounded-sm text-xs md:text-sm font-semibold whitespace-nowrap p-3 focus:outline-none focus:ring-2 bg-gray-700 text-white hover:bg-gray-800 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-400 dark:focus:ring-offset-0 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 transition ease-in-out duration-200 hover:-translate-y-1"
             >Resume</a
           >
           <a
-            href="#/"
+            href="#contact"
             class="inline-flex items-center rounded-sm text-xs md:text-sm font-semibold whitespace-nowrap p-3 focus:outline-none focus:ring-2 bg-gray-700 text-white hover:bg-gray-800 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-400 dark:focus:ring-offset-0 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 transition ease-in-out duration-200 hover:-translate-y-1"
             >Let's Talk</a
           >
@@ -294,40 +298,67 @@
       <!-- jumbotron intro (end) -->
 
       <!-- about (start) -->
-      <section id="about" class="bg-red-100 about py-10 px-4">
+      <section id="about" class="bg-red-100 rounded-lg about py-10 px-4">
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
           About
         </h2>
 
-        <p class="text-base text-gray-500 my-2">
-          I am Nazmuz Shakib Pranto. I go by my middle name - Shakib. I'm a
-          front-end engineer with hands-on experience building single and
-          multi-page web applications. I’m passionate about crafting clean,
-          responsive, reusable user interfaces with modern technologies
-          including
-          <a href="#/" class="text-indigo-600 hover:text-indigo-500">React</a>,
-          <a href="#/" class="text-indigo-600 hover:text-indigo-500">Redux</a>,
-          and
-          <a href="#/" class="text-indigo-600 hover:text-indigo-500">Next.js</a
-          >. I also love creating products that serve instant value to
-          customers. Over the past few years, I had the honor of helping build a
-          highly customizable eCommerce platform as an engineer at Newfold
-          Digital. This, in return, accelerated development time and feature
-          delivery for multiple client-side teams within the organization. On
-          the side, I also built and published mini utility libraries and APIs
-          using
-          <a href="#/" class="text-indigo-600 hover:text-indigo-500">
-            Node.js</a
-          >
-          for external use. Currently, I am learning techniques to better
-          architect client-side applications to deliver more performant,
-          reliable applications. So, if you are looking for a front-end focused
-          developer who can take on a project to improve developer experience,
-          create dynamic user interfaces, and collaborate effectively to turn a
-          product into reality, let’s stay in touch!
-        </p>
+        <div class="text-base text-gray-500 space-y-2">
+          <p>
+            I am Nazmuz Shakib Pranto. I go by my middle name - Shakib. I'm a
+            front-end engineer with hands-on experience building single and
+            multi-page web applications. I’m passionate about crafting clean,
+            responsive, reusable user interfaces with modern technologies
+            including
+            <a
+              href="https://reactjs.org/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+              >React</a
+            >,
+            <a
+              href="https://redux.js.org/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+              >Redux</a
+            >, and
+            <a
+              href="https://nextjs.org/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+              >Next.js</a
+            >. I also love creating products that serve instant value to
+            customers.
+          </p>
+          <p>
+            Over the past few years, I had the honor of helping build a highly
+            customizable eCommerce platform as an engineer at Newfold Digital.
+            This, in return, accelerated development time and feature delivery
+            for multiple client-side teams within the organization. On the side,
+            I also built and published mini utility libraries and APIs using
+            <a
+              href="https://nodejs.org/en/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+            >
+              Node.js</a
+            >
+            for external use.
+          </p>
+          <p>
+            Currently, I am learning techniques to better architect client-side
+            applications to deliver more performant, reliable applications. So,
+            if you are looking for a front-end focused developer who can take on
+            a project to improve developer experience, create dynamic user
+            interfaces, and collaborate effectively to turn a product into
+            reality,
+            <a href="#contact" class="text-indigo-600 hover:text-indigo-500">
+              let’s stay in touch!</a
+            >
+          </p>
+        </div>
 
         <div id="read-more-content" class="hidden transition ease-in-out">
           <h3 class="font-semibold mt-3">My Journey</h3>
@@ -336,7 +367,11 @@
             college as a Computer Science student. I was learning HTML and CSS
             for the very first time, not through a college course though, but on
             an online learning platform called -
-            <a href="#/" class="text-indigo-600 hover:text-indigo-500">
+            <a
+              href="https://www.codecademy.com/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+            >
               Codeacademy</a
             >. I found that to be way more fun and practical than the college
             courses I was taking back then. Thus, I continued with it and pushed
@@ -344,7 +379,10 @@
             so much that I took the risk of taking time off from college and
             fully dedicated my time to a software engineering immersive program
             called
-            <a href="#/" class="text-indigo-600 hover:text-indigo-500"
+            <a
+              href="https://devmountain.com/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
               >DevMountain</a
             >.
           </p>
@@ -362,9 +400,21 @@
           </p>
           <p class="text-base text-gray-500 my-2">
             Since my exposure to DevMountain, I have taken on a junior role at
-            <a href="#/">Lexia Learning</a> to a full-time Software Engineer gig
-            at <a href="#/"> Newfold Digital</a>, working on enterprise-level
-            applications used by millions of customers and internal teams.
+            <a
+              href="https://www.lexialearning.com/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+              >Lexia Learning</a
+            >
+            to a full-time Software Engineer gig at
+            <a
+              href="https://newfold.com/"
+              target="_blank"
+              class="text-indigo-600 hover:text-indigo-500"
+            >
+              Newfold Digital</a
+            >, working on enterprise-level applications used by millions of
+            customers and internal teams.
           </p>
 
           <h3 class="font-semibold mt-3">Future Ambitions</h3>
@@ -431,7 +481,7 @@
       <!-- about (end) -->
 
       <!-- work (start) -->
-      <section id="work" class="bg-amber-100 work py-10 px-4">
+      <section id="work" class="bg-amber-100 rounded-lg work py-10 px-4">
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
@@ -450,7 +500,6 @@
               value="lexia-dropdown-content"
             />
             <label for="lexia-input">
-              <!-- <button id="work-newfold" class="text-left"> -->
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
                   <div class="logo">
@@ -469,23 +518,6 @@
                       Jul 2018 - Jul 2021 | Full-time
                     </p>
                   </div>
-                  <!-- <span class="arrow-down-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-chevron-down"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </span> -->
                 </div>
                 <div
                   class="description-and-tech hidden"
@@ -564,7 +596,6 @@
                   </div>
                 </div>
               </div>
-              <!-- </button> -->
             </label>
           </li>
 
@@ -597,23 +628,6 @@
                       Sep - Dec 2016 & Jun - Aug 2017 | Contract
                     </p>
                   </div>
-                  <!-- <span class="arrow-down-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-chevron-down"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </span> -->
                 </div>
                 <div
                   class="description-and-tech hidden"
@@ -659,162 +673,16 @@
       <!-- work (end) -->
 
       <!-- projects (start) -->
-      <section id="projects" class="bg-lime-100 projects py-10 px-4">
+      <section id="projects" class="bg-lime-100 rounded-lg projects py-10 px-4">
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
           Projects
         </h2>
 
-        <ul class="projects-list">
-          <li
-            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
-          >
-            <input
-              class="hidden"
-              type="checkbox"
-              id="regexer-input"
-              name="regexer-input"
-              value="regexer-dropdown-content"
-            />
-            <label for="regexer-input">
-              <!-- <button id="work-newfold" class="text-left"> -->
-              <div class="cursor-pointer p-4">
-                <div class="flex space-x-2">
-                  <div class="logo">
-                    <img
-                      class="w-12 object-cover rounded-md"
-                      src="/assets/images/regexer-logo.png"
-                      alt="Regexer"
-                    />
-                  </div>
-                  <div class="flex flex-col flex-grow top-level-details">
-                    <h4 class="text-base font-semibold">Regexer</h4>
-                    <!-- <p class="text-sm text-gray-500">
-                      Newfold Digital, Burlington, MA
-                    </p> -->
-                    <p class="text-sm text-gray-500">Jul 2018 - Present</p>
-                  </div>
-                  <div class="resources flex space-x-2">
-                    <span
-                      class="github-icon transition ease-in-out hover:-translate-y-1"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-brand-github"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        ></path>
-                        <path
-                          d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-                        ></path>
-                      </svg>
-                    </span>
-                    <span
-                      class="package-icon transition ease-in-out hover:-translate-y-1"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-box"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        ></path>
-                        <polyline
-                          points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"
-                        ></polyline>
-                        <line x1="12" y1="12" x2="20" y2="7.5"></line>
-                        <line x1="12" y1="12" x2="12" y2="21"></line>
-                        <line x1="12" y1="12" x2="4" y2="7.5"></line>
-                      </svg>
-                    </span>
-                  </div>
-                  <!-- <span class="arrow-down-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-chevron-down"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </span> -->
-                </div>
-                <div
-                  class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
-                  id="regexer-dropdown-content"
-                >
-                  <p>
-                    An utility library of functions that leverage regular
-                    expressions to validate different types of inputs
-                  </p>
-                  <p>
-                    <span class="font-semibold">Motivation:</span> Using regexes
-                    is very common for developers to validate inputs like email,
-                    zip code, or credit card number. I wanted to build a small
-                    utility library to verify many different types of inputs
-                    with regexes, so I never have to reach out to google to find
-                    the same, trustworthy regex every time. Currently, I do not
-                    have an exhaustive list of all the regexes there are, but I
-                    have plans to add more and more over time. Regexer is a node
-                    package that can be installed for both server side and
-                    client side use.
-                  </p>
-                  <div class="technologies flex flex-wrap my-2 gap-2">
-                    <span
-                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-                    >
-                      Node.js
-                    </span>
-                    <span
-                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-                    >
-                      ESLint
-                    </span>
-                    <span
-                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-                    >
-                      Mocha
-                    </span>
-                    <span
-                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-                    >
-                      Semantic Release
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <!-- </button> -->
-            </label>
-          </li>
+        <ul
+          class="projects-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row lg:items-baseline"
+        >
           <li
             class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
@@ -826,7 +694,6 @@
               value="logtrade-dropdown-content"
             />
             <label for="logtrade-input">
-              <!-- <button id="work-newfold" class="text-left"> -->
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
                   <div class="logo">
@@ -838,85 +705,75 @@
                   </div>
                   <div class="flex flex-col flex-grow top-level-details">
                     <h4 class="text-base font-semibold">LogTrade</h4>
-                    <!-- <p class="text-sm text-gray-500">
-                      Newfold Digital, Burlington, MA
-                    </p> -->
                     <p class="text-sm text-gray-500">Oct 2021 - Present</p>
                   </div>
                   <div class="resources flex space-x-2">
-                    <span
-                      class="github-icon transition ease-in-out hover:-translate-y-1"
+                    <a
+                      href="https://github.com/npranto/logtrade"
+                      target="_blank"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-brand-github"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                      <span
+                        class="github-icon transition ease-in-out hover:-translate-y-1"
                       >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-brand-github"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
                           fill="none"
-                        ></path>
-                        <path
-                          d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-                        ></path>
-                      </svg>
-                    </span>
-                    <span
-                      class="share-icon transition ease-in-out hover:-translate-y-1"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </a>
+                    <a
+                      href="https://logtrade.netlify.app/home/"
+                      target="_blank"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-screen-share"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                      <span
+                        class="share-icon transition ease-in-out hover:-translate-y-1"
                       >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-screen-share"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
                           fill="none"
-                        ></path>
-                        <path
-                          d="M21 12v3a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h9"
-                        ></path>
-                        <line x1="7" y1="20" x2="17" y2="20"></line>
-                        <line x1="9" y1="16" x2="9" y2="20"></line>
-                        <line x1="15" y1="16" x2="15" y2="20"></line>
-                        <path d="M17 4h4v4"></path>
-                        <path d="M16 9l5 -5"></path>
-                      </svg>
-                    </span>
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M21 12v3a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h9"
+                          ></path>
+                          <line x1="7" y1="20" x2="17" y2="20"></line>
+                          <line x1="9" y1="16" x2="9" y2="20"></line>
+                          <line x1="15" y1="16" x2="15" y2="20"></line>
+                          <path d="M17 4h4v4"></path>
+                          <path d="M16 9l5 -5"></path>
+                        </svg>
+                      </span>
+                    </a>
                   </div>
-                  <!-- <span class="arrow-down-icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-chevron-down"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      stroke-width="2"
-                      stroke="currentColor"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                  </span> -->
                 </div>
                 <div
                   class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
@@ -987,7 +844,143 @@
                   </div>
                 </div>
               </div>
-              <!-- </button> -->
+            </label>
+          </li>
+
+          <li
+            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+          >
+            <input
+              class="hidden"
+              type="checkbox"
+              id="regexer-input"
+              name="regexer-input"
+              value="regexer-dropdown-content"
+            />
+            <label for="regexer-input">
+              <div class="cursor-pointer p-4">
+                <div class="flex space-x-2">
+                  <div class="logo">
+                    <img
+                      class="w-12 object-cover rounded-md"
+                      src="/assets/images/regexer-logo.png"
+                      alt="Regexer"
+                    />
+                  </div>
+                  <div class="flex flex-col flex-grow top-level-details">
+                    <h4 class="text-base font-semibold">Regexer</h4>
+                    <p class="text-sm text-gray-500">Jul 2018 - Present</p>
+                  </div>
+                  <div class="resources flex space-x-2">
+                    <a
+                      href="https://github.com/npranto/regexer"
+                      target="_blank"
+                    >
+                      <span
+                        class="github-icon transition ease-in-out hover:-translate-y-1"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-brand-github"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                          ></path>
+                        </svg>
+                      </span>
+                    </a>
+                    <a
+                      href="https://www.npmjs.com/package/nsp-regexer"
+                      target="_blank"
+                    >
+                      <span
+                        class="package-icon transition ease-in-out hover:-translate-y-1"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-box"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          fill="none"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            stroke="none"
+                            d="M0 0h24v24H0z"
+                            fill="none"
+                          ></path>
+                          <polyline
+                            points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"
+                          ></polyline>
+                          <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                          <line x1="12" y1="12" x2="12" y2="21"></line>
+                          <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
+                  id="regexer-dropdown-content"
+                >
+                  <p>
+                    An utility library of functions that leverage regular
+                    expressions to validate different types of inputs
+                  </p>
+                  <p>
+                    <span class="font-semibold">Motivation:</span> Using regexes
+                    is very common for developers to validate inputs like email,
+                    zip code, or credit card number. I wanted to build a small
+                    utility library to verify many different types of inputs
+                    with regexes, so I never have to reach out to google to find
+                    the same, trustworthy regex every time. Currently, I do not
+                    have an exhaustive list of all the regexes there are, but I
+                    have plans to add more and more over time. Regexer is a node
+                    package that can be installed for both server side and
+                    client side use.
+                  </p>
+                  <div class="technologies flex flex-wrap my-2 gap-2">
+                    <span
+                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+                    >
+                      Node.js
+                    </span>
+                    <span
+                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+                    >
+                      ESLint
+                    </span>
+                    <span
+                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+                    >
+                      Mocha
+                    </span>
+                    <span
+                      class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+                    >
+                      Semantic Release
+                    </span>
+                  </div>
+                </div>
+              </div>
             </label>
           </li>
         </ul>
@@ -995,19 +988,21 @@
       <!-- projects (end) -->
 
       <!-- blog (start) -->
-      <section id="blog" class="bg-green-100 blog py-10 px-4">
+      <section id="blog" class="bg-green-100 blog rounded-lg py-10 px-4">
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
           Blog
         </h2>
 
-        <ul class="blog-list">
+        <ul
+          class="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
+        >
           <li
             class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <a
-              href="#/"
+              href="https://medium.com/@npranto/macos-web-development-setup-guide-db229bcbb849"
               target="_blank"
               class="text-indigo-600 hover:text-indigo-500"
             >
@@ -1029,7 +1024,7 @@
             class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <a
-              href="#/"
+              href="https://dev.to/npranto/quick-bite-ssh-key-4llh"
               target="_blank"
               class="text-indigo-600 hover:text-indigo-500"
             >
@@ -1050,22 +1045,22 @@
       <!-- blog (end) -->
 
       <!-- education (start) -->
-      <section id="education" class="bg-sky-100 education py-10 px-4">
+      <section
+        id="education"
+        class="bg-sky-100 rounded-lg education py-10 px-4"
+      >
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
           Education
         </h2>
 
-        <ul class="education-list">
+        <ul
+          class="education-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
+        >
           <li
             class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
-            <!-- <a
-              href="#/"
-              target="_blank"
-              class="text-indigo-600 hover:text-indigo-500"
-            > -->
             <div class="cursor-pointer p-4">
               <div class="flex space-x-2">
                 <div class="flex flex-col flex-grow top-level-details">
@@ -1076,16 +1071,10 @@
                 </div>
               </div>
             </div>
-            <!-- </a> -->
           </li>
           <li
             class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
-            <!-- <a
-              href="#/"
-              target="_blank"
-              class="text-indigo-600 hover:text-indigo-500"
-            > -->
             <div class="cursor-pointer p-4">
               <div class="flex space-x-2">
                 <div class="flex flex-col flex-grow top-level-details">
@@ -1095,7 +1084,7 @@
                     Certifications:
                     <a
                       class="text-indigo-600 hover:text-indigo-500"
-                      href="http://www.google.com"
+                      href="https://www.freecodecamp.org/certification/npranto/responsive-web-design"
                       target="_blank"
                       class="underline"
                       >Responsive Web Design</a
@@ -1104,14 +1093,16 @@
                 </div>
               </div>
             </div>
-            <!-- </a> -->
           </li>
         </ul>
       </section>
       <!-- education (end) -->
 
       <!-- contact (start) -->
-      <section id="education" class="bg-indigo-100 education py-10 px-4">
+      <section
+        id="contact"
+        class="bg-indigo-100 rounded-lg education py-10 px-4"
+      >
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
