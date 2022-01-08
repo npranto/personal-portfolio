@@ -2,38 +2,6 @@ import InlineStyle from './InlineStyle.js';
 import Main from './Main.js';
 import Nav from './Nav.js';
 
-const Head = ({ title = '', favicon = '', links = [], scripts = [] }) => `
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="${favicon}"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    ${links.join('\n')}
-    ${scripts.join('\n')}
-
-    <title>${title}</title>
-  </head>
-`;
-
-const Body = ({
-  className = '',
-  id = 'root',
-  content = '',
-  links = [],
-  scripts = [],
-}) => `
-  <body class="${className}" id="${id}">
-    ${content}
-    
-    ${links.join('\n')}
-    ${scripts.join('\n')}
-  </body>
-`;
-
 const Home = () => `
   ${InlineStyle({
     css: `
@@ -85,9 +53,44 @@ const Home = () => `
     `,
   })}
   <div class="-translate-x-2 bg-gray-800 text-slate-50 px-1 hidden"></div>
-  ${Nav()} 
+  ${Nav({})} 
   ${Main()} 
 `;
+
+const html = Home();
+document.body.innerHTML = html;
+
+// const Head = ({ title = '', favicon = '', links = [], scripts = [] }) => `
+//   <head>
+//     <meta charset="UTF-8" />
+//     <link
+//       rel="icon"
+//       type="image/svg+xml"
+//       href="${favicon}"
+//     />
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+//     ${links.join('\n')}
+//     ${scripts.join('\n')}
+
+//     <title>${title}</title>
+//   </head>
+// `;
+
+// const Body = ({
+//   className = '',
+//   id = 'root',
+//   content = '',
+//   links = [],
+//   scripts = [],
+// }) => `
+//   <body class="${className}" id="${id}">
+//     ${content}
+
+//     ${links.join('\n')}
+//     ${scripts.join('\n')}
+//   </body>
+// `;
 
 // export default function App() {
 //   return `
@@ -112,6 +115,3 @@ const Home = () => `
 //     </html>
 //   `;
 // }
-
-const html = Home();
-document.body.innerHTML = html;

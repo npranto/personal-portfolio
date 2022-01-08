@@ -1,9 +1,9 @@
 import SocialLinks from './SocialLinks.js';
 import Tab from './Tab.js';
 
-export default function MenuTabs() {
+export default function MenuTabs({ id, className = '' }) {
   return `
-    <div id="menu-tabs" class="flex overflow-x-auto space-x-2 px-4 py-4">
+    <div id="${id}" class="${className}">
       ${Tab({
         href: '#about',
         content: 'About',
