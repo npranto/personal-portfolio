@@ -120,10 +120,13 @@ function highlightMenuTabs() {
   if (!menuTabs || menuLinks === null) return;
   menuTabs.forEach((tab) => {
     const { hash } = tab || {};
+    console.log({ hash, href: window?.location?.href });
     if (hash && window?.location?.href?.includes(hash)) {
-      tab.classList.add('bg-gray-800', 'text-slate-50');
+      tab.classList.replace('bg-gray-100', 'bg-gray-800');
+      tab.classList.replace('text-black', 'text-slate-50');
     } else {
-      tab.classList.remove('bg-gray-800', 'text-slate-50');
+      tab.classList.replace('bg-gray-800', 'bg-gray-100');
+      tab.classList.replace('text-slate-50', 'text-black');
     }
   });
 }
@@ -203,30 +206,30 @@ const showValidationError = (error, field) => {
   if (field === 'name') {
     nameError.textContent = error;
     nameError.classList.remove('hidden');
-    nameField.classList.add('border-red-500');
+    nameField.classList.replace('border-gray-500', 'border-red-500');
   } else if (field === 'email') {
     emailError.textContent = error;
     emailError.classList.remove('hidden');
-    emailField.classList.add('border-red-500');
+    emailField.classList.replace('border-gray-500', 'border-red-500');
   } else if (field === 'message') {
     messageError.textContent = error;
     messageError.classList.remove('hidden');
-    messageField.classList.add('border-red-500');
+    messageField.classList.replace('border-gray-500', 'border-red-500');
   }
 };
 
 const clearValidationErrors = () => {
   nameError.textContent = '';
   nameError.classList.add('hidden');
-  nameField.classList.remove('border-red-500');
+  nameField.classList.replace('border-red-500', 'border-gray-500');
 
   emailError.textContent = '';
   emailError.classList.add('hidden');
-  emailField.classList.remove('border-red-500');
+  emailField.classList.replace('border-red-500', 'border-gray-500');
 
   messageError.textContent = '';
   messageError.classList.add('hidden');
-  messageField.classList.remove('border-red-500');
+  messageField.classList.replace('border-red-500', 'border-gray-500');
 };
 
 contactForm.addEventListener('submit', (e) => {
