@@ -19,34 +19,6 @@ export default function Work() {
                 'work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md',
               content: `
                 ${WorkItem({
-                  id: 'lexia',
-                  companyName: 'Lexia Learning',
-                  companyLogo: '/assets/images/lexia-logo.jpeg',
-                  companyLocation: 'Concord, MA',
-                  title: 'Software Engineer',
-                  employmentType: 'Contract',
-                  employmentDuration: 'Sep - Dec 2016 & Jun - Aug 2017',
-                  description: `
-                    <li>
-                      Built 20+ JSON schemas to validate and structure large,
-                      nested JSON objects, or lesson tasks for production-level
-                      reading software program
-                    </li>
-                    <li>
-                      Written various JavaScript functions or snippets to
-                      automate JSON file modifications to simplify and speed up
-                      application content updates.
-                    </li>
-                  `,
-                  technologies: ['JavaScript', 'JSON Schema', 'Git'],
-                })}
-              `,
-            })}
-            ${ListItem({
-              className:
-                'work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md',
-              content: `
-                ${WorkItem({
                   id: 'newfold',
                   companyName: 'Newfold Digital',
                   companyLogo: '/assets/images/newfold-logo.jpeg',
@@ -91,6 +63,35 @@ export default function Work() {
                     'Git',
                     'JIRA',
                   ],
+                })}
+              `,
+            })}
+
+            ${ListItem({
+              className:
+                'work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md',
+              content: `
+                ${WorkItem({
+                  id: 'lexia',
+                  companyName: 'Lexia Learning',
+                  companyLogo: '/assets/images/lexia-logo.jpeg',
+                  companyLocation: 'Concord, MA',
+                  title: 'Software Engineer',
+                  employmentType: 'Contract',
+                  employmentDuration: 'Sep - Dec 2016 & Jun - Aug 2017',
+                  description: `
+                    <li>
+                      Built 20+ JSON schemas to validate and structure large,
+                      nested JSON objects, or lesson tasks for production-level
+                      reading software program
+                    </li>
+                    <li>
+                      Written various JavaScript functions or snippets to
+                      automate JSON file modifications to simplify and speed up
+                      application content updates.
+                    </li>
+                  `,
+                  technologies: ['JavaScript', 'JSON Schema', 'Git'],
                 })}
               `,
             })}

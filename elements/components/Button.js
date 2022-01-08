@@ -1,6 +1,6 @@
 export default function Button({
   className = '',
-  link = true,
+  link = false,
   href = '',
   content = '',
   type = 'button',

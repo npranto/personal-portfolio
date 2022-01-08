@@ -44,7 +44,7 @@ export default function ContactForm({ id }) {
   return `
     <form class="w-full max-w-lg" id="${id}">
       <div class="flex flex-wrap -mx-3 mb-6">
-        <div class="w-full px-3">
+        <div class="w-full p-3">
           ${Input({
             id: 'name',
             name: 'name',
@@ -53,7 +53,7 @@ export default function ContactForm({ id }) {
             placeholder: 'John Smith',
           })}
         </div>
-        <div class="w-full px-3">
+        <div class="w-full p-3">
           ${Input({
             id: 'email',
             name: 'email',
@@ -62,7 +62,7 @@ export default function ContactForm({ id }) {
             placeholder: 'jsmith@gmail.com',
           })}
         </div>
-        <div class="w-full px-3">
+        <div class="w-full p-3">
           ${TextArea({
             id: 'message',
             name: 'message',

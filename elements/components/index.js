@@ -52,7 +52,7 @@ const Home = () => `
       }
     `,
   })}
-  <div class="-translate-x-2 bg-gray-800 text-slate-50 px-1 hidden"></div>
+  <div class="-translate-x-2 bg-gray-800 text-slate-50 px-1 hidden border-red-500"></div>
   ${Nav({})} 
   ${Main()} 
 `;

@@ -17,7 +17,7 @@ export default function Education() {
           content: `
             ${ListItem({
               className:
-                'work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md',
+                'work-item bg-gray-100 drop-shadow-lg transition ease-in-out duration-500 my-3 rounded-md',
               content: `
                 ${EducationItem({
                   id: 'dev-mountain',
@@ -31,7 +31,7 @@ export default function Education() {
 
             ${ListItem({
               className:
-                'work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md',
+                'work-item bg-gray-100 drop-shadow-lg transition ease-in-out duration-500 my-3 rounded-md',
               content: `
                 ${EducationItem({
                   id: 'free-code-camp',
