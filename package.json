@@ -2,11 +2,11 @@
   "name": "personal-portfolio",
   "version": "2.0.0",
   "scripts": {
-    "dev": "concurrently \"npm run tailwind:watch\" \"live-server --port=3000\"",
+    "dev": "concurrently \"npm run tailwind:watch\" \"live-server ./ --port=3000\"",
     "build": "npm run tailwind:build",
-    "preview": "npm run build && live-server ./ --port=5000",
-    "tailwind:build": "npx tailwindcss -c ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./tailwind/output.css",
-    "tailwind:watch": "npx tailwindcss -c ./tailwind/tailwind.config.js -i ./tailwind/input.css -o ./tailwind/output.css --watch",
+    "preview": "npm run build && live-server dist/ --port=9000",
+    "tailwind:build": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css",
+    "tailwind:watch": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css --watch",
     "lint": "npx eslint ./",
     "format": "npx prettier --write \"**/*.{html,css,js,json}\""
   },

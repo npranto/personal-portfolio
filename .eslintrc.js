@@ -10,6 +10,6 @@ module.exports = {
   },
   rules: {
     'no-console': 'off',
-    'import/extensions': 'never',
+    'import/extensions': 0,
   },
 };

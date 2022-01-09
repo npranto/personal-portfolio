@@ -8,12 +8,11 @@
       href="/assets/images/nsp-logo-v2.png"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="/index.css" />
     <title>Portfolio - Nazmuz Pranto</title>
   </head>
   <body class="max-w-screen-xl m-auto mt-0 mb-0">
-    <!-- styles for slider -->
+    <!-- slider (for above the fold CSS) -->
     <style>
       .slider {
         height: 60px;
@@ -61,13 +60,10 @@
         }
       }
     </style>
-    <!-- dynamic classes to add -->
-    <div
-      class="-translate-x-2 bg-gray-800 text-slate-50 px-1 hidden border-red-500"
-    ></div>
 
     <!-- nav (start)  -->
     <nav class="fixed bottom-0 w-full sm:w-64 z-10 bg-white">
+      <!-- menu tabs (bottom, fixed) -->
       <div id="menu-tabs" class="flex overflow-x-auto space-x-2 px-4 py-4">
         <a
           href="#about"
@@ -222,61 +218,8 @@
           </li>
         </ul>
       </div>
-      <!-- menu icon  -->
-      <!-- <div class="">
-        <a
-          href="#"
-          class="inline-block menu-icon-btn box-border pl-4 py-2 sm:hidden"
-          id="menu-icon-btn"
-        >
-          <span class="menu-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-menu-2"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              stroke="currentColor"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-              <line x1="4" y1="6" x2="20" y2="6"></line>
-              <line x1="4" y1="12" x2="20" y2="12"></line>
-              <line x1="4" y1="18" x2="20" y2="18"></line>
-            </svg>
-          </span>
-        </a>
-      </div> -->
 
-      <!-- <a
-        href="#/"
-        class="menu-icon-btn box-border px-4 py-2 hidden sm:hidden"
-        id="close-menu-icon-btn"
-      >
-        <span class="close-menu-icon">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-square-x"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-            <path d="M10 10l4 4m0 -4l-4 4"></path>
-          </svg>
-        </span>
-      </a> -->
-
-      <!-- navigation menu -->
+      <!-- menu sidebar (left) -->
       <section
         id="nav-menu"
         class="navigation-menu hidden sm:block h-screen pl-4 py-4 mt-2 box-border"
@@ -518,11 +461,6 @@
             &lt; Mentor /&gt;
           </h2>
         </div>
-        <!-- <h2
-          class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 mb-10"
-        >
-          Frontend Engineer
-        </h2> -->
         <div class="action-call flex flex-row space-x-2">
           <a
             href="/assets/resume.pdf"
@@ -546,9 +484,9 @@
           About
         </h2>
 
-        <div class="text-base text-gray-500 space-y-2">
-          <p>
-            I am Nazmuz Shakib Pranto, a front-end engineer with hands-on
+        <div class="text-base text-gray-500">
+          <p class="text-base text-gray-500 my-2">
+            I am Nazmuz (Shakib) Pranto, a front-end engineer with hands-on
             experience building single and multi-page web applications. I’m
             passionate about crafting clean, responsive, reusable user
             interfaces with modern technologies including
@@ -572,7 +510,7 @@
             >. I also love creating products that serve instant value to
             customers.
           </p>
-          <p>
+          <p class="text-base text-gray-500 my-2">
             Over the past few years, I had the honor of helping build a highly
             customizable eCommerce platform as an engineer at Newfold Digital.
             This, in return, accelerated development time and feature delivery
@@ -587,7 +525,7 @@
             >
             for external use.
           </p>
-          <p>
+          <p class="text-base text-gray-500 my-2">
             Currently, I am learning techniques to better architect client-side
             applications to deliver more performant, reliable applications. So,
             if you are looking for a front-end focused developer who can take on
@@ -721,7 +659,7 @@
       <!-- about (end) -->
 
       <!-- work (start) -->
-      <section id="work" class="bg-amber-100 rounded-lg work py-10 px-4">
+      <section id="work" class="bg-amber-100 rounded-lg py-10 px-4">
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
@@ -742,9 +680,9 @@
             <label for="lexia-input">
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
-                  <div class="logo">
+                  <div class="logo flex-shrink-0">
                     <img
-                      class="w-16 object-cover rounded-md"
+                      class="w-12 md:w-16 object-cover rounded-md"
                       src="/assets/images/newfold-logo.jpeg"
                       alt="Newfold Digital"
                     />
@@ -852,9 +790,9 @@
             <label for="newfold-input">
               <div class="cursor-pointer">
                 <div class="flex space-x-2">
-                  <div class="logo">
+                  <div class="logo flex-shrink-0">
                     <img
-                      class="w-16 object-cover rounded-md"
+                      class="w-12 md:w-16 object-cover rounded-md"
                       src="/assets/images/lexia-logo.jpeg"
                       alt="Lexia Learning"
                     />
@@ -913,7 +851,7 @@
       <!-- work (end) -->
 
       <!-- projects (start) -->
-      <section id="projects" class="bg-lime-100 rounded-lg projects py-10 px-4">
+      <section id="projects" class="bg-lime-100 rounded-lg py-10 px-4">
         <h2
           class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight dark:text-gray-200 my-2"
         >
@@ -924,7 +862,7 @@
           class="projects-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row lg:items-baseline"
         >
           <li
-            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+            class="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <input
               class="hidden"
@@ -936,7 +874,7 @@
             <label for="logtrade-input">
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
-                  <div class="logo">
+                  <div class="logo flex-shrink-0">
                     <img
                       class="w-12 object-cover rounded-md"
                       src="/assets/images/logtrade-logo.png"
@@ -1088,7 +1026,7 @@
           </li>
 
           <li
-            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+            class="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <input
               class="hidden"
@@ -1100,7 +1038,7 @@
             <label for="regexer-input">
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
-                  <div class="logo">
+                  <div class="logo flex-shrink-0">
                     <img
                       class="w-12 object-cover rounded-md"
                       src="/assets/images/regexer-logo.png"
@@ -1239,7 +1177,7 @@
           class="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
         >
           <li
-            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+            class="blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <a
               href="https://medium.com/@npranto/macos-web-development-setup-guide-db229bcbb849"
@@ -1261,7 +1199,7 @@
             </a>
           </li>
           <li
-            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+            class="blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <a
               href="https://dev.to/npranto/quick-bite-ssh-key-4llh"
@@ -1299,14 +1237,15 @@
           class="education-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
         >
           <li
-            class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+            class="education-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
           >
             <div class="cursor-pointer p-4">
               <div class="flex space-x-2">
                 <div class="flex flex-col flex-grow top-level-details">
                   <h4 class="text-base font-semibold">DevMountain</h4>
+                  <p class="text-sm text-gray-500">2016 | Dallas, TX</p>
                   <p class="text-sm text-gray-500">
-                    Web Development Immersive Program, 2016
+                    Web Development Immersive Program
                   </p>
                 </div>
               </div>
@@ -1413,6 +1352,11 @@
         </form>
       </section>
       <!-- contact (end) -->
+
+      <!-- dynamic classes (added w/ JavaScript) -->
+      <span
+        class="hidden -translate-x-2 bg-gray-800 text-slate-50 px-1 border-red-500"
+      ></span>
     </main>
     <script type="module" src="/index.js"></script>
   </body>

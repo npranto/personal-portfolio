@@ -1,6 +1,4 @@
 # Ignore artifacts:
 build
+dist
 coverage
-
-# Ignore v1
-v1
