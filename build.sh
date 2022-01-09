@@ -8,7 +8,7 @@ mkdir ./dist
 cp -r ./assets ./dist
 
 # copy vendor
-cp -r ./vendor ./dist
+cp ./vendor/tailwind/output.css ./dist/vendor/tailwind/output.css
 
 # copy scripts
 cp -r ./scripts ./dist
