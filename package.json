@@ -7,7 +7,7 @@
     "lint": "npx eslint ./",
     "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
     "dev": "concurrently \"npm run tailwind:watch\" \"live-server ./ --port=3000\"",
-    "build": "npm run tailwind:build && npm run lint && npm run format",
+    "build": "npm run tailwind:build && npm run lint && npm run format && bash build.sh",
     "preview": "npm run build && live-server dist/ --port=9000"
   },
   "devDependencies": {
