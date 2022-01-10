@@ -1,14 +1,15 @@
-# remove dist directory
-rm -rf ./dist
-
-# create dist directory 
-mkdir ./dist
+# reset dist directory
+rm -rf ./dist # remove dist directory
+mkdir ./dist # create dist directory 
 
 # copy assets
 cp -r ./assets ./dist
 
 # copy vendor
-cp ./vendor/tailwind/output.css ./dist/vendor/tailwind/output.css
+cp -r ./vendor ./dist
+# remove unused tailwind output files
+rm -rf ./dist/vendor/tailwind/input.css
+rm -rf ./dist/vendor/tailwind/tailwind.config.js 
 
 # copy scripts
 cp -r ./scripts ./dist
