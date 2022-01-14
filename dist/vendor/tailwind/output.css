@@ -746,6 +746,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -834,6 +839,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -849,16 +859,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
 }
 
 .pb-20 {
   padding-bottom: 5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-2xl {
@@ -1149,12 +1159,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:ml-64 {
-    margin-left: 16rem;
-  }
-
   .sm\:mb-10 {
     margin-bottom: 2.5rem;
+  }
+
+  .sm\:ml-64 {
+    margin-left: 16rem;
   }
 
   .sm\:block {
@@ -1180,20 +1190,36 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px) {
+  .md\:ml-64 {
+    margin-left: 16rem;
+  }
+
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:block {
+    display: block;
   }
 
   .md\:inline-block {
     display: inline-block;
   }
 
-  .md\:w-16 {
-    width: 4rem;
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-64 {
+    width: 16rem;
   }
 
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-16 {
+    width: 4rem;
   }
 
   .md\:text-6xl {
