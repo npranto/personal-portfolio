@@ -1,8 +1,5 @@
-# personal-portfolio
+# Personal Portfolio v2.0.0
 
-Personal Portfolio - built with React, Webpack 2 and Yarn
+A static personal portfolio website to showcase projects, work experiences and blogs. See it [live](npranto.dev)
 
-[DEMO](http://nsp.surge.sh/)
-
-## Authors
-* **Nazmuz Shakib Pranto** [[GitHub](https://github.com/npranto) | [LinkedIn](https://www.linkedin.com/in/npranto/)]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d16a376-43ef-47af-8b95-ee54bcffd93c/deploy-status)](https://app.netlify.com/sites/npranto/deploys)
