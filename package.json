@@ -17,7 +17,7 @@
     "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
     "dev": "concurrently \"npm run tailwind:watch\" \"npx parcel index.html --port=3000 --open\"",
     "build": "npm run tailwind:build && npm run lint && npm run format && parcel build index.html",
-    "preview": "npm run build && live-server dist/ --port=9000"
+    "preview": "npm run build && npx serve dist -l 9000"
   },
   "devDependencies": {
     "concurrently": "^6.5.1",
@@ -25,9 +25,9 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
-    "live-server": "^1.2.1",
     "parcel": "^2.2.0",
     "prettier": "^2.5.1",
+    "serve": "^13.0.2",
     "sharp": "^0.29.3",
     "tailwindcss": "^3.0.8"
   },
