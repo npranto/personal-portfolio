@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/index.css" />
     <title>Portfolio - Nazmuz Pranto</title>
   </head>
-  <body class="max-w-screen-lg m-auto mt-0 mb-0">
+  <body class="max-w-screen-lg m-auto mt-0 mb-0 bg-gray-50">
     <!-- slider (for above the fold CSS) -->
     <style>
       .slider {
@@ -62,7 +62,7 @@
     </style>
 
     <!-- nav (start)  -->
-    <nav class="fixed bottom-0 w-full sm:w-64 z-10 bg-white">
+    <nav class="fixed bottom-0 w-full md:w-64 z-10 bg-white">
       <!-- menu tabs (bottom, fixed) -->
       <div id="menu-tabs" class="flex overflow-x-auto space-x-2 px-4 py-4">
         <a
@@ -222,13 +222,14 @@
       <!-- menu sidebar (left) -->
       <section
         id="nav-menu"
-        class="navigation-menu hidden sm:block h-screen pl-4 py-4 mt-2 box-border"
+        class="navigation-menu hidden md:block h-screen px-4 py-4 mt-2 box-border"
       >
         <div class="profile-picture mb-2">
           <img
-            src="./assets/images/profile-v3.png"
+            src="./assets/images/profile-v3-160.png"
             alt="Profile Picture"
-            class="w-32 sm:w-40"
+            width="160px"
+            height="auto"
           />
         </div>
         <h1
@@ -416,7 +417,7 @@
     </nav>
     <!-- nav (end)  -->
 
-    <main class="sm:ml-64 space-y-10">
+    <main class="md:ml-64 space-y-10 px-5">
       <!-- jumbotron intro (start) -->
       <section id="jumbotron" class="jumbotron-intro py-10 px-4 drop-shadow-sm">
         <h1
@@ -427,11 +428,12 @@
             I'm Shakib
           </span>
         </h1>
-        <div class="profile-picture mb-2 sm:hidden">
+        <div class="profile-picture mb-2 md:hidden">
           <img
-            src="./assets/images/profile-v3.png"
+            src="./assets/images/profile-v3-112.png"
             alt="Profile Picture"
-            class="w-28"
+            width="112px"
+            height="auto"
           />
         </div>
         <div class="slider sm:mb-10">
@@ -673,19 +675,25 @@
             <input
               class="hidden"
               type="checkbox"
-              id="lexia-input"
-              name="lexia-input"
-              value="lexia-dropdown-content"
+              id="newfold-input"
+              name="newfold-input"
+              value="newfold-dropdown-content"
             />
-            <label for="lexia-input">
+            <label for="newfold-input">
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
                   <div class="logo flex-shrink-0">
-                    <img
-                      class="w-12 md:w-16 object-cover rounded-md"
-                      src="./assets/images/newfold-logo.jpeg"
-                      alt="Newfold Digital"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/newfold-logo-48.jpeg"
+                        media="(max-width: 768px)"
+                      />
+                      <img
+                        class="object-cover rounded-md"
+                        src="./assets/images/newfold-logo-64.jpeg"
+                        alt="Newfold Digital"
+                      />
+                    </picture>
                   </div>
                   <div class="flex flex-col flex-grow top-level-details">
                     <h4 class="text-base font-semibold">Software Engineer</h4>
@@ -699,7 +707,7 @@
                 </div>
                 <div
                   class="description-and-tech hidden"
-                  id="lexia-dropdown-content"
+                  id="newfold-dropdown-content"
                 >
                   <ul
                     class="descriptions mt-2 text-sm space-y-1 list-disc text-gray-500 mx-6"
@@ -783,19 +791,25 @@
             <input
               class="hidden"
               type="checkbox"
-              id="newfold-input"
-              name="newfold-input"
-              value="newfold-dropdown-content"
+              id="lexia-input"
+              name="lexia-input"
+              value="lexia-dropdown-content"
             />
-            <label for="newfold-input">
+            <label for="lexia-input">
               <div class="cursor-pointer">
                 <div class="flex space-x-2">
                   <div class="logo flex-shrink-0">
-                    <img
-                      class="w-12 md:w-16 object-cover rounded-md"
-                      src="./assets/images/lexia-logo.jpeg"
-                      alt="Lexia Learning"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/lexia-logo-48.jpeg"
+                        media="(max-width: 768px)"
+                      />
+                      <img
+                        class="object-cover rounded-md"
+                        src="./assets/images/lexia-logo-64.jpeg"
+                        alt="Lexia Learning"
+                      />
+                    </picture>
                   </div>
                   <div class="flex flex-col flex-grow top-level-details">
                     <h4 class="text-base font-semibold">Software Engineer</h4>
@@ -809,7 +823,7 @@
                 </div>
                 <div
                   class="description-and-tech hidden"
-                  id="newfold-dropdown-content"
+                  id="lexia-dropdown-content"
                 >
                   <ul
                     class="descriptions mt-2 text-sm space-y-1 list-disc text-gray-500 mx-6"
@@ -876,8 +890,10 @@
                 <div class="flex space-x-2">
                   <div class="logo flex-shrink-0">
                     <img
-                      class="w-12 object-cover rounded-md"
-                      src="./assets/images/logtrade-logo.png"
+                      width="48px"
+                      height="auto"
+                      class="object-cover rounded-md"
+                      src="./assets/images/logtrade-logo-48.png"
                       alt="LogTrade"
                     />
                   </div>
@@ -1040,8 +1056,9 @@
                 <div class="flex space-x-2">
                   <div class="logo flex-shrink-0">
                     <img
-                      class="w-12 object-cover rounded-md"
-                      src="./assets/images/regexer-logo.png"
+                      width="48px"
+                      class="object-cover rounded-md"
+                      src="./assets/images/regexer-logo-48.png"
                       alt="Regexer"
                     />
                   </div>
