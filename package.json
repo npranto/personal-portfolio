@@ -1,13 +1,22 @@
 {
   "name": "personal-portfolio",
   "version": "2.0.0",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">= 12"
+  },
   "scripts": {
     "tailwind:build": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css",
     "tailwind:watch": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css --watch",
     "lint": "npx eslint ./",
     "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
-    "dev": "concurrently \"npm run tailwind:watch\" \"live-server ./ --port=3000\"",
-    "build": "npm run tailwind:build && npm run lint && npm run format && bash build.sh",
+    "dev": "concurrently \"npm run tailwind:watch\" \"npx parcel index.html --port=3000 --open\"",
+    "build": "npm run tailwind:build && npm run lint && npm run format && parcel build index.html",
     "preview": "npm run build && live-server dist/ --port=9000"
   },
   "devDependencies": {
@@ -17,7 +26,9 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
     "live-server": "^1.2.1",
+    "parcel": "^2.2.0",
     "prettier": "^2.5.1",
+    "sharp": "^0.29.3",
     "tailwindcss": "^3.0.8"
   },
   "dependencies": {}
