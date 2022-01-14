@@ -225,12 +225,18 @@
         class="navigation-menu hidden md:block h-screen px-4 py-4 mt-2 box-border"
       >
         <div class="profile-picture mb-2">
-          <img
-            src="./assets/images/profile-v3-160.png"
-            alt="Profile Picture"
-            width="160px"
-            height="auto"
-          />
+          <picture>
+            <source
+              srcset="./assets/images/profile-v3-160.png?as=webp"
+              type="image/webp"
+            />
+            <img
+              src="./assets/images/profile-v3-160.png?width=160"
+              alt="Profile Picture"
+              width="160px"
+              height="auto"
+            />
+          </picture>
         </div>
         <h1
           class="name inline-block text-2xl sm:text-3xl font-semibold text-gray-900 tracking-tight my-2"
@@ -429,12 +435,18 @@
           </span>
         </h1>
         <div class="profile-picture mb-2 md:hidden">
-          <img
-            src="./assets/images/profile-v3-112.png"
-            alt="Profile Picture"
-            width="112px"
-            height="auto"
-          />
+          <picture>
+            <source
+              srcset="./assets/images/profile-v3-112.png?as=webp&width=112"
+              type="image/webp"
+            />
+            <img
+              src="./assets/images/profile-v3-112.png?width=160"
+              alt="Profile Picture"
+              width="112px"
+              height="auto"
+            />
+          </picture>
         </div>
         <div class="slider sm:mb-10">
           <h2
@@ -685,8 +697,17 @@
                   <div class="logo flex-shrink-0">
                     <picture>
                       <source
-                        srcset="./assets/images/newfold-logo-48.jpeg"
+                        srcset="./assets/images/newfold-logo-48.jpeg?as=webp"
+                        type="image/webp"
                         media="(max-width: 768px)"
+                      />
+                      <source
+                        srcset="./assets/images/newfold-logo-64.jpeg?as=webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="./assets/images/newfold-logo-64.jpeg"
+                        type="image/jpeg"
                       />
                       <img
                         class="object-cover rounded-md"
@@ -801,6 +822,15 @@
                   <div class="logo flex-shrink-0">
                     <picture>
                       <source
+                        srcset="./assets/images/lexia-logo-48.jpeg?as=webp"
+                        type="image/webp"
+                        media="(max-width: 768px)"
+                      />
+                      <source
+                        srcset="./assets/images/lexia-logo-64.jpeg?as=webp"
+                        type="image/webp"
+                      />
+                      <source
                         srcset="./assets/images/lexia-logo-48.jpeg"
                         media="(max-width: 768px)"
                       />
@@ -889,13 +919,19 @@
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
                   <div class="logo flex-shrink-0">
-                    <img
-                      width="48px"
-                      height="auto"
-                      class="object-cover rounded-md"
-                      src="./assets/images/logtrade-logo-48.png"
-                      alt="LogTrade"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/logtrade-logo-48.png?as=webp"
+                        type="image/webp"
+                      />
+                      <img
+                        width="48px"
+                        height="auto"
+                        class="object-cover rounded-md"
+                        src="./assets/images/logtrade-logo-48.png"
+                        alt="LogTrade"
+                      />
+                    </picture>
                   </div>
                   <div class="flex flex-col flex-grow top-level-details">
                     <h4 class="text-base font-semibold">LogTrade</h4>
@@ -1055,12 +1091,18 @@
               <div class="cursor-pointer p-4">
                 <div class="flex space-x-2">
                   <div class="logo flex-shrink-0">
-                    <img
-                      width="48px"
-                      class="object-cover rounded-md"
-                      src="./assets/images/regexer-logo-48.png"
-                      alt="Regexer"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/regexer-logo-48.png?as=webp"
+                        type="image/webp"
+                      />
+                      <img
+                        width="48px"
+                        class="object-cover rounded-md"
+                        src="./assets/images/regexer-logo-48.png"
+                        alt="Regexer"
+                      />
+                    </picture>
                   </div>
                   <div class="flex flex-col flex-grow top-level-details">
                     <h4 class="text-base font-semibold">Regexer</h4>
@@ -1347,7 +1389,7 @@
                 Message
               </label>
               <textarea
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-64"
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-48"
                 name="message"
                 id="grid-message"
                 type="text"

@@ -587,8 +587,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: auto;
 }
 
-.h-64 {
-  height: 16rem;
+.h-48 {
+  height: 12rem;
 }
 
 .w-full {
