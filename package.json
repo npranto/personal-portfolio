@@ -17,6 +17,7 @@
     "lint": "npx eslint ./",
     "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
     "cypress:open": "npx cypress open",
+    "cypress:run": "npx cypress run",
     "dev": "npx concurrently \"npm run tailwind:watch\" \"npx parcel index.html --port=3000 --open\"",
     "build": "npm run clean && npm run tailwind:build && npm run lint && npm run format && npx parcel build index.html --no-content-hash",
     "preview": "npm run build && npx serve dist -l 9000"
