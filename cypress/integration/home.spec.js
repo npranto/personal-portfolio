@@ -1,11 +1,9 @@
-console.log('Cypress ENV variables...', Cypress.env());
-
 describe('E2E - Home', () => {
   it(`visits portfolio site - ${Cypress.env('build_url')}`, () => {
-    cy.visit('http://localhost:9000/');
+    cy.visit(`${Cypress.env('build_url')}`);
   });
   it('displays navigation and core sections', () => {
-    cy.get('[data-e2e="nav!!!!!!"]').should('exist');
+    cy.get('[data-e2e="nav"]').should('exist');
     cy.get('[data-e2e="jumbotron"]').should('exist');
     cy.get('[data-e2e="about"]').should('exist');
     cy.get('[data-e2e="work"]').should('exist');
