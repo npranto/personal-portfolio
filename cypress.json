@@ -3,6 +3,9 @@
   "env": {
     "local_url": "http://localhost:3000/",
     "build_url": "http://localhost:9000/",
-    "CYPRESS_RECORD_KEY": "a5b18600-a3a9-4266-8ea3-e964c23bee2b"
+    "CYPRESS_RECORD_KEY": "a5b18600-a3a9-4266-8ea3-e964c23bee2b",
+    "secret": {
+      "CYPRESS_RECORD_KEY": "a5b18600-a3a9-4266-8ea3-e964c23bee2b"
+    }
   }
 }
