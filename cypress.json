@@ -1,7 +1,4 @@
 {
   "projectId": "9d9vq3",
-  "env": {
-    "local_url": "http://localhost:3000/",
-    "build_url": "http://localhost:9000/"
-  }
+  "baseUrl": "http://localhost:9000/"
 }
