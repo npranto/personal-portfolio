@@ -18,6 +18,7 @@ export const newfoldInput = document.querySelector('#newfold-input');
 // projects
 export const regexerInput = document.querySelector('#regexer-input');
 export const logtradeInput = document.querySelector('#logtrade-input');
+export const portfolioV2Input = document.querySelector('#portfolio-v2-input');
 
 // contact
 export const contactForm = document.querySelector('#contact-form');
