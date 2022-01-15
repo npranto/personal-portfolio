@@ -1,18 +1,16 @@
-const url = 'http://localhost:3000/';
-
 describe('E2E - Home', () => {
-  it(`visits portfolio site - ${url}`, () => {
-    cy.visit(url);
+  it(`visits portfolio site - ${Cypress.env('build_url')}`, () => {
+    cy.visit(`${Cypress.env('build_url')}`);
   });
   it('displays navigation and core sections', () => {
-    cy.get('[data-e2e="nav"]');
-    cy.get('[data-e2e="jumbotron"]');
-    cy.get('[data-e2e="about"]');
-    cy.get('[data-e2e="work"]');
-    cy.get('[data-e2e="projects"]');
-    cy.get('[data-e2e="blog"]');
-    cy.get('[data-e2e="education"]');
-    cy.get('[data-e2e="contact"]');
+    cy.get('[data-e2e="nav"]').should('exist');
+    cy.get('[data-e2e="jumbotron"]').should('exist');
+    cy.get('[data-e2e="about"]').should('exist');
+    cy.get('[data-e2e="work"]').should('exist');
+    cy.get('[data-e2e="projects"]').should('exist');
+    cy.get('[data-e2e="blog"]').should('exist');
+    cy.get('[data-e2e="education"]').should('exist');
+    cy.get('[data-e2e="contact"]').should('exist');
   });
   it('`Jumbotron` is visible on load', () => {
     cy.get('[data-e2e="jumbotron"]').should('be.visible');
@@ -61,19 +59,35 @@ describe('E2E - Home', () => {
     cy.url().should('include', '#contact');
     cy.get('[data-e2e="contact"]').should('be.visible');
   });
-  it('should have 2 experiences w/in `Work``', () => {
+  it('should have 2 experiences w/in `Work`', () => {
+    cy.get('[data-e2e="work"] .work-list')
+      .debug()
+      .children()
+      .should('have.length', 2);
     cy.get('[data-e2e="work"]').contains('Newfold Digital');
     cy.get('[data-e2e="work"]').contains('Lexia Learning');
   });
   it('should have 2 projects w/in `Projects`', () => {
+    cy.get('[data-e2e="projects"] .projects-list')
+      .debug()
+      .children()
+      .should('have.length', 2);
     cy.get('[data-e2e="projects"]').contains('LogTrade');
     cy.get('[data-e2e="projects"]').contains('Regexer');
   });
   it('should have 2 articles w/in `Blog`', () => {
+    cy.get('[data-e2e="blog"] .blog-list')
+      .debug()
+      .children()
+      .should('have.length', 2);
     cy.get('[data-e2e="blog"]').contains('macOS Web Development Setup Guide');
     cy.get('[data-e2e="blog"]').contains('Quick Bite: SSH Key');
   });
   it('should have 2 education references w/in `Education`', () => {
+    cy.get('[data-e2e="education"] .education-list')
+      .debug()
+      .children()
+      .should('have.length', 2);
     cy.get('[data-e2e="education"]').contains('DevMountain');
     cy.get('[data-e2e="education"]').contains('freeCodeCamp');
   });
