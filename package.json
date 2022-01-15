@@ -11,7 +11,7 @@
     "node": ">= 12"
   },
   "scripts": {
-    "clean": "npx rimraf dist",
+    "clean": "npx rimraf dist node_modules && npm install",
     "tailwind:build": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css",
     "tailwind:watch": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css --watch",
     "lint": "npx eslint ./",
