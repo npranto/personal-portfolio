@@ -3,7 +3,7 @@ describe('E2E - Home', () => {
     cy.visit(`${Cypress.env('build_url')}`);
   });
   it('displays navigation and core sections', () => {
-    cy.get('[data-e2e="nav!!!"]').should('exist');
+    cy.get('[data-e2e="nav"]').should('exist');
     cy.get('[data-e2e="jumbotron"]').should('exist');
     cy.get('[data-e2e="about"]').should('exist');
     cy.get('[data-e2e="work"]').should('exist');
