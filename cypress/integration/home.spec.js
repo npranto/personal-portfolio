@@ -1,8 +1,8 @@
-const url = 'http://localhost:3000/';
+console.log('Cypress ENV variables...', Cypress.env());
 
 describe('E2E - Home', () => {
-  it(`visits portfolio site - ${url}`, () => {
-    cy.visit(url);
+  it(`visits portfolio site - ${Cypress.env('build_url')}`, () => {
+    cy.visit('http://localhost:9000/');
   });
   it('displays navigation and core sections', () => {
     cy.get('[data-e2e="nav!!!!!!"]').should('exist');
