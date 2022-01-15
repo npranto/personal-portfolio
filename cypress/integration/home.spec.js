@@ -1,6 +1,8 @@
+const { baseUrl } = Cypress.config();
+
 describe('E2E - Home', () => {
-  it(`visits portfolio site - ${Cypress.env('build_url')}`, () => {
-    cy.visit(`${Cypress.env('build_url')}`);
+  it(`visits portfolio site - ${baseUrl}`, () => {
+    cy.visit(baseUrl);
   });
   it('displays navigation and core sections', () => {
     cy.get('[data-e2e="nav"]').should('exist');
@@ -67,13 +69,14 @@ describe('E2E - Home', () => {
     cy.get('[data-e2e="work"]').contains('Newfold Digital');
     cy.get('[data-e2e="work"]').contains('Lexia Learning');
   });
-  it('should have 2 projects w/in `Projects`', () => {
+  it('should have 3 projects w/in `Projects`', () => {
     cy.get('[data-e2e="projects"] .projects-list')
       .debug()
       .children()
-      .should('have.length', 2);
+      .should('have.length', 3);
     cy.get('[data-e2e="projects"]').contains('LogTrade');
     cy.get('[data-e2e="projects"]').contains('Regexer');
+    cy.get('[data-e2e="projects"]').contains('Portfolio v2.0.0');
   });
   it('should have 2 articles w/in `Blog`', () => {
     cy.get('[data-e2e="blog"] .blog-list')

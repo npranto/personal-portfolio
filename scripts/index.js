@@ -6,6 +6,7 @@ import {
   logtradeInput,
   contactForm,
   readMoreBtn,
+  portfolioV2Input,
 } from './elements.js';
 import {
   highlightMenuTabs,
@@ -44,6 +45,7 @@ newfoldInput.addEventListener('change', toggleDropdownContent);
 // projects
 regexerInput.addEventListener('change', toggleDropdownContent);
 logtradeInput.addEventListener('change', toggleDropdownContent);
+portfolioV2Input.addEventListener('change', toggleDropdownContent);
 
 // contact
 contactForm.addEventListener('submit', onSend);
