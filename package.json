@@ -16,8 +16,9 @@
     "tailwind:watch": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css --watch",
     "lint": "npx eslint ./",
     "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
-    "cypress:open": "npx cypress open",
-    "cypress:run": "npx cypress run --record --key a5b18600-a3a9-4266-8ea3-e964c23bee2b",
+    "cypress:open": "npx cypress open --config-file cypress.dev.json",
+    "cypress:run:dev": "npx cypress --config-file cypress.dev.json run",
+    "cypress:run:prod": "npx cypress --config-file cypress.json run --record --key a5b18600-a3a9-4266-8ea3-e964c23bee2b",
     "dev": "npx concurrently \"npm run tailwind:watch\" \"npx parcel index.html --port=3000 --open\"",
     "build": "npm run clean && npm run tailwind:build && npm run lint && npm run format && npx parcel build index.html --no-content-hash",
     "preview": "npx serve dist -l 9000"
