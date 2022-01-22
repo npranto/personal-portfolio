@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta
@@ -88,11 +88,15 @@ export default function Home() {
         />
         <meta name="theme-color" content="#ffffff" />
 
-        {/* <link rel="stylesheet" href="./styles/index.css" /> */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap"
+          rel="stylesheet"
+        />
+
         <title>Portfolio - Nazmuz Pranto v3.0.0</title>
       </Head>
 
-      <body className="max-w-screen-lg m-auto mt-0 mb-0 bg-gray-50">
+      <div className="max-w-screen-lg m-auto mt-0 mb-0 bg-gray-50">
         {/* <!-- slider (for above the fold CSS) --> */}
 
         {/* <!-- nav (start)  --> */}
@@ -728,6 +732,7 @@ export default function Home() {
                 experience building single and multi-page web applications. I’m
                 passionate about crafting clean, responsive, reusable user
                 interfaces with modern technologies including
+                <span> </span>
                 <a
                   href="https://reactjs.org/"
                   target="_blank"
@@ -736,7 +741,7 @@ export default function Home() {
                 >
                   React
                 </a>
-                ,
+                ,<span> </span>
                 <a
                   href="https://redux.js.org/"
                   target="_blank"
@@ -745,7 +750,7 @@ export default function Home() {
                 >
                   Redux
                 </a>
-                , and
+                , and <span> </span>
                 <a
                   href="https://nextjs.org/"
                   target="_blank"
@@ -764,6 +769,7 @@ export default function Home() {
                 feature delivery for multiple client-side teams within the
                 organization. On the side, I also built and published mini
                 utility libraries and APIs using
+                <span> </span>
                 <a
                   href="https://nodejs.org/en/"
                   target="_blank"
@@ -772,6 +778,7 @@ export default function Home() {
                 >
                   Node.js
                 </a>
+                <span> </span>
                 for external use.
               </p>
               <p className="text-base text-gray-500 my-2">
@@ -781,6 +788,7 @@ export default function Home() {
                 developer who can take on a project to improve developer
                 experience, create dynamic user interfaces, and collaborate
                 effectively to turn a product into reality,
+                <span> </span>
                 <a
                   href="#contact"
                   className="text-indigo-600 hover:text-indigo-500"
@@ -1801,7 +1809,7 @@ export default function Home() {
           <span className="hidden -translate-x-2 bg-gray-800 text-slate-50 px-1 border-red-500" />
         </main>
         {/* <script type="module" async src="./scripts/index.js" /> */}
-      </body>
+      </div>
 
       {/* <main className={styles.main}>
         <h1 className="text-3xl font-bold underline">
