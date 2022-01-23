@@ -1,4 +1,4 @@
-name: 'Portfolio v3.0.0 Cypress E2E'
+name: 'Portfolio Cypress E2E'
 
 on: [push]
 
@@ -12,7 +12,4 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm start
-          record: true
-        env:
-          CYPRESS_RECORD_KEY: a5b18600-a3a9-4266-8ea3-e964c23bee2b
+          start: npm run preview
