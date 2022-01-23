@@ -4,8 +4,13 @@ export default function MenuLinks() {
 	return (
 		<ul id="menu-links" className="menu-links grid grid-cols-1 my-10">
 			<li>
-				<Button variant={8} href="#work" data-e2e="menu-link-work">
+				<Button variant={8} href="#about" data-e2e="menu-link-about">
 					About
+				</Button>
+			</li>
+			<li>
+				<Button variant={8} href="#work" data-e2e="menu-link-work">
+					Work
 				</Button>
 			</li>
 			<li>

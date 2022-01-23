@@ -27,7 +27,11 @@ export default function InputField({
 					onChange={onChange}
 				/>
 			</label>
-			{error && <p className="text-red-500 text-xs italic">{error}</p>}
+			{error && (
+				<p className="text-red-500 text-xs italic" id={`${name}-error`}>
+					{error}
+				</p>
+			)}
 		</div>
 	);
 }

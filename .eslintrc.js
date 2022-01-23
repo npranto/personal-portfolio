@@ -3,11 +3,14 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		'cypress/globals': true,
 	},
 	extends: [
 		'airbnb',
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
+		'plugin:@next/next/recommended',
+		'plugin:cypress/recommended',
 		'prettier',
 	],
 	parserOptions: {
@@ -17,7 +20,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['react'],
+	plugins: ['react', 'cypress'],
 	rules: {
 		'no-console': 0,
 		'import/extensions': 0,

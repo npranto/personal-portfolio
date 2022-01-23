@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function Avatar({ size = 'lg', logo = '', className = '' }) {
 	if (size === 'sm') {
 		return (

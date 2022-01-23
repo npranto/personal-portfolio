@@ -126,7 +126,7 @@ export default function ContactForm() {
 				disabled={!allFieldsValid}
 				className={!allFieldsValid ? 'opacity-50 cursor-not-allowed' : ''}
 				variant={4}
-				data-e2e="resume-btn"
+				data-e2e="send-btn"
 			>
 				Send
 			</Button>

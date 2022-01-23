@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import Head from 'next/head';
 import About from '../components/About/About';
 import Blog from '../components/Blog/Blog';
