@@ -100,7 +100,7 @@ export default function Home() {
 				<title>Portfolio - Nazmuz Pranto v3.0.0</title>
 			</Head>
 
-			<div className="max-w-screen-lg m-auto mt-0 mb-0 bg-gray-50">
+			<div className="max-w-screen-lg m-auto mt-0 mb-0">
 				<nav className="fixed md:w-64 z-10" data-e2e="nav">
 					{/* <!-- menu tabs (bottom, fixed) --> */}
 					<MenuTabs />
