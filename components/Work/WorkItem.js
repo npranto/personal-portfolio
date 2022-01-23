@@ -28,7 +28,7 @@ export default function ListItem({
 			className={`${listId}-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md`}
 			data-e2e={`${itemId}-item`}
 		>
-			<Button variant={5} onClick={toggleShowDesc}>
+			<Button variant={5} onClick={toggleShowDesc} className="w-full">
 				<div className="cursor-pointer p-4 text-left">
 					<div className="flex space-x-2">
 						<Logo logo={{ sm, lg }} alt={companyName} />

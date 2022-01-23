@@ -19,7 +19,7 @@ export default function Button({
 		return (
 			<button
 				type="button"
-				className="flex space-x-1 font-medium text-indigo-600 hover:text-indigo-500"
+				className={`flex space-x-1 font-medium text-indigo-600 hover:text-indigo-500 ${className}`}
 				{...props}
 			>
 				{children}
@@ -27,7 +27,11 @@ export default function Button({
 		);
 	}
 	if (variant === 3) {
-		return <a {...props}>{children}</a>;
+		return (
+			<a className={className} {...props}>
+				{children}
+			</a>
+		);
 	}
 	if (variant === 4) {
 		return (
@@ -43,7 +47,7 @@ export default function Button({
 	}
 	if (variant === 5) {
 		return (
-			<button type="button" {...props}>
+			<button type="button" className={className} {...props}>
 				{children}
 			</button>
 		);
