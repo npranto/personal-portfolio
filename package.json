@@ -2,10 +2,7 @@
   "name": "personal-portfolio",
   "version": "2.0.0",
   "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
+    "last 2 version"
   ],
   "engines": {
     "node": ">= 12"
@@ -38,7 +35,7 @@
     "rimraf": "^3.0.2",
     "serve": "^13.0.2",
     "sharp": "^0.29.3",
-    "tailwindcss": "^3.0.8"
+    "tailwindcss": "^3.0.15"
   },
   "dependencies": {}
 }
