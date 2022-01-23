@@ -1,34 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <a href="https://npranto.dev/">
+    <img src="./docs/assets/img/nsp-logo-v2.png" alt="Cover" width="80" height="80">
+  </a>
 
-## Getting Started
+  <h2 align="center">npranto.dev</h2>
 
-First, run the development server:
+[![Live](https://img.shields.io/badge/Demo-Live.svg)](https://npranto.dev/)
+[![Live](https://img.shields.io/badge/LinkedIn-blue.svg)](https://www.linkedin.com/in/npranto/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d16a376-43ef-47af-8b95-ee54bcffd93c/deploy-status)](https://app.netlify.com/sites/npranto/deploys)
+[![personal-portfolio](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/9d9vq3&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/9d9vq3/runs)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</div>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<!-- ABOUT THE PROJECT -->
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## About
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+A static personal portfolio website to showcase projects, work experiences and blogs. See it [live](https://npranto.dev/).
 
-## Learn More
+<div>
+  <img src="./docs/assets/img/cover.png" alt="Portfolio Shot" style="width: 100%; max-width: 640px">
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+## Built With
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- HTML
+- CSS
+- JavaScript
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Parcel](https://parceljs.org/)
+- [Cypress](https://www.cypress.io/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Prerequisites
 
-## Deploy on Vercel
+To get started on development, let's install a few prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/npranto/personal-portfolio.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Start up local development server
+   ```sh
+   npm run dev
+   ```
+4. To keep E2E test running on the background
+   ```sh
+   npm run cypress:open
+   ```
+
+## Contributing
+
+Follow the list of procedures below to start contributing or make updates to portfolio
+
+1. Create a new issue on the [issue](https://github.com/npranto/personal-portfolio/issues) board
+2. Create a new branch from `master` branch, i.e., `git checkout -b pp-105`. _Note: `105` refers to the issue id and `pp` is just a prefix, stands for personal portfolio_
+3. Make changes inside `components` and `pages` directory
+4. Before committing all changes:
+   1. Ensure all end-to-end tests are passing w/ Cypress - `npm run cypress:open`
+   2. If needed, add new tests inside cypress for new functionalities or features added
+   3. Create a new production build, run `npm run build`.
+   4. To see preview of build, run `npm start`
+   5. Verify all changes are reflected correctly on the new build
+5. Commit and push changes to remote origin on the new branch
+6. Create a pull request from the new branch => `master` branch
+7. Notice, Netlify will automatically create a preview URL w/ the new changes on the pull request
+8. Verify all changes and merge the pull request
+9. Refer back to the original issue, link the pull request, add assignee, and mark issue as closed
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
+
+## Contributors
+
+<div>
+  <a href="https://github.com/npranto">
+    <img src="https://avatars2.githubusercontent.com/u/13524077?v=4" alt="Nazmuz Shakib pranto" width="50" />
+  </a>
+</div>
