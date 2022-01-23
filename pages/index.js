@@ -97,13 +97,6 @@ export default function Home() {
 					content="/assets/favicons/ms-icon-144x144.png"
 				/>
 				<meta name="theme-color" content="#ffffff" />
-				{/* adding inline font b/c Next.js automatically supports font optimization
-        out of box, ref -
-        https://nextjs.org/docs/basic-features/font-optimization */}
-				<link
-					href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap"
-					rel="stylesheet"
-				/>
 				<title>Portfolio - Nazmuz Pranto v3.0.0</title>
 			</Head>
 
