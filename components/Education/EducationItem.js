@@ -1,5 +1,5 @@
-import Header from '../Header';
-import Text from '../Text';
+import Header from '../shared/Header';
+import Text from '../shared/Text';
 
 export default function EducationItem({
 	institution = '',

@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import Header from '../Header';
-import Logo from '../Logo';
-import Tag from '../Tag';
-import Text from '../Text';
+import Button from '../shared/Button';
+import Header from '../shared/Header';
+import Logo from '../shared/Logo';
+import Tag from '../shared/Tag';
+import Text from '../shared/Text';
 
 export default function ListItem({
 	listId = '',
@@ -17,7 +18,9 @@ export default function ListItem({
 	technologies = [],
 }) {
 	const { sm, lg } = logo;
+
 	const [showDesc, setShowDesc] = useState(false);
+
 	const toggleShowDesc = () => setShowDesc((prevState) => !prevState);
 
 	return (
@@ -25,7 +28,7 @@ export default function ListItem({
 			className={`${listId}-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md`}
 			data-e2e={`${itemId}-item`}
 		>
-			<button type="button" onClick={toggleShowDesc}>
+			<Button variant={5} onClick={toggleShowDesc}>
 				<div className="cursor-pointer p-4 text-left">
 					<div className="flex space-x-2">
 						<Logo logo={{ sm, lg }} alt={companyName} />
@@ -66,7 +69,7 @@ export default function ListItem({
 						</div>
 					)}
 				</div>
-			</button>
+			</Button>
 		</li>
 	);
 }

@@ -1,10 +1,11 @@
+import Button from '../Button';
 import {
 	DevIcon,
 	GitHubIcon,
 	LinkedInIcon,
 	MediumIcon,
 	TwitterIcon,
-} from '../Icons';
+} from '../Icon';
 
 const SOCIALS = [
 	{
@@ -39,11 +40,11 @@ function getSocialInfo(social) {
 	return SOCIALS.find((s) => s.name.toLowerCase() === social);
 }
 
-export default function SocialLink({ social, ...props }) {
+export default function SocialLink({ social }) {
 	const { name, link, icon } = getSocialInfo(social);
 	return (
-		<a href={link} target="_blank" rel="noreferrer" {...props}>
+		<Button variant={7} href={link} target="_blank" rel="noreferrer">
 			<span className={`${name}-icon`}>{icon}</span>
-		</a>
+		</Button>
 	);
 }

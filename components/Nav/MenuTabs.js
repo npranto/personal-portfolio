@@ -1,5 +1,5 @@
-import SocialList from '../SocialList/SocialList';
-import MenuTab from './MenuTab';
+import Button from '../shared/Button';
+import SocialList from '../shared/SocialList/SocialList';
 
 export default function MenuTabs() {
 	return (
@@ -7,12 +7,24 @@ export default function MenuTabs() {
 			id="menu-tabs"
 			className="md:hidden bottom-0 w-full fixed bg-white flex overflow-x-auto space-x-2 px-4 pb-6 pt-4"
 		>
-			<MenuTab href="#about">About</MenuTab>
-			<MenuTab href="#work">Work</MenuTab>
-			<MenuTab href="#projects">Projects</MenuTab>
-			<MenuTab href="#blog">Blog</MenuTab>
-			<MenuTab href="#education">Education</MenuTab>
-			<MenuTab href="#contact">Contact</MenuTab>
+			<Button variant={6} href="#about">
+				About
+			</Button>
+			<Button variant={6} href="#work">
+				Work
+			</Button>
+			<Button variant={6} href="#projects">
+				Projects
+			</Button>
+			<Button variant={6} href="#blog">
+				Blog
+			</Button>
+			<Button variant={6} href="#education">
+				Education
+			</Button>
+			<Button variant={6} href="#contact">
+				Contact
+			</Button>
 			<SocialList />
 		</div>
 	);

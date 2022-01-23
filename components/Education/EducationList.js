@@ -1,3 +1,4 @@
+import Button from '../shared/Button';
 import EducationItem from './EducationItem';
 
 export default function BlogList({ className = '' }) {
@@ -16,14 +17,15 @@ export default function BlogList({ className = '' }) {
 					<span>
 						Certifications:
 						<span> </span>
-						<a
-							className="text-indigo-600 hover:text-indigo-500 underline"
+						<Button
+							variant={9}
+							className="underline"
 							href="https://www.freecodecamp.org/certification/npranto/responsive-web-design"
 							target="_blank"
 							rel="noreferrer"
 						>
 							Responsive Web Design
-						</a>
+						</Button>
 					</span>
 				}
 			/>

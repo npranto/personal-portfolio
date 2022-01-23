@@ -1,32 +1,32 @@
-import MenuLink from './MenuLink';
+import Button from '../shared/Button';
 
 export default function MenuLinks() {
 	return (
 		<ul id="menu-links" className="menu-links grid grid-cols-1 my-10">
 			<li>
-				<MenuLink href="#work" data-e2e="menu-link-work">
+				<Button variant={8} href="#work" data-e2e="menu-link-work">
 					About
-				</MenuLink>
+				</Button>
 			</li>
 			<li>
-				<MenuLink href="#projects" data-e2e="menu-link-projects">
+				<Button variant={8} href="#projects" data-e2e="menu-link-projects">
 					Projects
-				</MenuLink>
+				</Button>
 			</li>
 			<li>
-				<MenuLink href="#blog" data-e2e="menu-link-blog">
+				<Button variant={8} href="#blog" data-e2e="menu-link-blog">
 					Blog
-				</MenuLink>
+				</Button>
 			</li>
 			<li>
-				<MenuLink href="#education" data-e2e="menu-link-education">
+				<Button variant={8} href="#education" data-e2e="menu-link-education">
 					Education
-				</MenuLink>
+				</Button>
 			</li>
 			<li>
-				<MenuLink href="#contact" data-e2e="menu-link-contact">
+				<Button variant={8} href="#contact" data-e2e="menu-link-contact">
 					Contact
-				</MenuLink>
+				</Button>
 			</li>
 		</ul>
 	);

@@ -1,5 +1,5 @@
-import Header from '../Header';
-import Section from '../Section';
+import Header from '../shared/Header';
+import Section from '../shared/Section';
 import BlogList from './BlogList';
 
 export default function Blog() {

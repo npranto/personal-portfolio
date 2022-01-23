@@ -1,7 +1,7 @@
-import Avatar from '../Avatar';
-import Header from '../Header';
-import SocialList from '../SocialList/SocialList';
-import Text from '../Text';
+import Avatar from '../shared/Avatar';
+import Header from '../shared/Header';
+import SocialList from '../shared/SocialList/SocialList';
+import Text from '../shared/Text';
 import MenuLinks from './MenuLinks';
 
 export default function MenuSidebar() {
@@ -10,7 +10,11 @@ export default function MenuSidebar() {
 			id="nav-menu"
 			className="navigation-menu hidden md:block h-screen px-4 py-4 box-border"
 		>
-			<Avatar size="lg" className="mb-2" />
+			<Avatar
+				size="lg"
+				logo="/assets/images/profile-v3-160.png"
+				className="mb-2"
+			/>
 			<Header className="name my-2" variant={1}>
 				Nazmuz
 				<br />

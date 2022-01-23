@@ -1,19 +1,12 @@
 import Head from 'next/head';
 import About from '../components/About/About';
-import Avatar from '../components/Avatar';
 import Blog from '../components/Blog/Blog';
-import Button from '../components/Button';
 import Contact from '../components/Contact/Contact';
 import Education from '../components/Education/Education';
-import Header from '../components/Header';
 import Jumbotron from '../components/Jumbotron/Jumbotron';
 import MenuSidebar from '../components/Nav/MenuSidebar';
 import MenuTabs from '../components/Nav/MenuTabs';
-import Nav from '../components/Nav/Nav';
 import Projects from '../components/Projects/Projects';
-import RoleSlider from '../components/RoleSlider';
-import Section from '../components/Section';
-import SocialList from '../components/SocialList/SocialList';
 import Work from '../components/Work/Work';
 
 export default function Home() {
@@ -123,21 +116,12 @@ export default function Home() {
 
 				<main className="md:ml-64 space-y-10 sm:px-5">
 					<Jumbotron />
-
 					<About />
-
 					<Work />
-
 					<Projects />
-
 					<Blog />
-
 					<Education />
-
 					<Contact />
-
-					{/* <!-- dynamic classes (added w/ JavaScript) --> */}
-					{/* <span className="hidden -translate-x-2 bg-gray-800 text-slate-50 px-1 border-red-500" /> */}
 				</main>
 			</div>
 		</>

@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Button from '../Button';
-import Header from '../Header';
-import { GitHubIcon, PackageIcon, ShareIcon } from '../Icons';
-import Logo from '../Logo';
-import Tag from '../Tag';
-import Text from '../Text';
+import Button from '../shared/Button';
+import Header from '../shared/Header';
+import { GitHubIcon, PackageIcon, ShareIcon } from '../shared/Icon';
+import Logo from '../shared/Logo';
+import Tag from '../shared/Tag';
+import Text from '../shared/Text';
 
 export default function ListItem({
 	logo = '',
@@ -21,7 +21,12 @@ export default function ListItem({
 
 	return (
 		<li className="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md">
-			<button type="button" className="w-full" onClick={toggleShowDesc}>
+			<Button
+				variant={5}
+				type="button"
+				className="w-full"
+				onClick={toggleShowDesc}
+			>
 				<div className="cursor-pointer p-4 text-left">
 					<div className="flex space-x-2">
 						<Logo logo={logo} alt={projectName} />
@@ -84,7 +89,7 @@ export default function ListItem({
 						</div>
 					)}
 				</div>
-			</button>
+			</Button>
 		</li>
 	);
 }
