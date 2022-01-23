@@ -2,4 +2,3 @@ build
 dist
 coverage
 node_modules
-.next

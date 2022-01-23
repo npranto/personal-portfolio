@@ -68,23 +68,18 @@ Follow the list of procedures below to start contributing or make updates to por
 
 1. Create a new issue on the [issue](https://github.com/npranto/personal-portfolio/issues) board
 2. Create a new branch from `master` branch, i.e., `git checkout -b pp-105`. _Note: `105` refers to the issue id and `pp` is just a prefix, stands for personal portfolio_
-3. Make changes inside `components` and `pages` directory
+3. Make changes inside `index.html` file and `styles`, `scripts` and `vendor` directories for content changes
 4. Before committing all changes:
    1. Ensure all end-to-end tests are passing w/ Cypress - `npm run cypress:open`
    2. If needed, add new tests inside cypress for new functionalities or features added
    3. Create a new production build, run `npm run build`.
-   4. To see preview of build, run `npm start`
+   4. To see preview of build, run `npm run preview`
    5. Verify all changes are reflected correctly on the new build
 5. Commit and push changes to remote origin on the new branch
 6. Create a pull request from the new branch => `master` branch
 7. Notice, Netlify will automatically create a preview URL w/ the new changes on the pull request
 8. Verify all changes and merge the pull request
 9. Refer back to the original issue, link the pull request, add assignee, and mark issue as closed
-
-**Note**: Before deploying to production, update the following settings inside Netlify:
-
-- Build command - `npm run build`
-- Publish directory - `.next`
 
 ## License
 

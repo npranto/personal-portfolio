@@ -1,46 +1,44 @@
 {
-	"name": "test",
-	"version": "3.0.0",
-	"browserslist": [
-		"last 1 version",
-		"> 1%",
-		"maintained node versions",
-		"not dead"
-	],
-	"engines": {
-		"node": ">= 12"
-	},
-	"scripts": {
-		"clean": "npx rimraf dist node_modules && npm install",
-		"dev": "next dev -p 3000",
-		"build": "next build",
-		"start": "next start -p 9000",
-		"lint": "npx eslint ./",
-		"format": "npx prettier --write \"**/*.{html,css,js,json}\"",
-		"cypress:open": "npx cypress open --config-file cypress.dev.json",
-		"cypress:run:dev": "npx cypress run --config-file cypress.dev.json",
-		"cypress:run:prod": "npx cypress run --config-file cypress.json --record --key a5b18600-a3a9-4266-8ea3-e964c23bee2b"
-	},
-	"dependencies": {
-		"next": "12.0.8",
-		"react": "17.0.2",
-		"react-dom": "17.0.2"
-	},
-	"devDependencies": {
-		"@next/eslint-plugin-next": "^12.0.8",
-		"autoprefixer": "^10.4.2",
-		"cypress": "^9.3.1",
-		"eslint": "^8.7.0",
-		"eslint-config-airbnb": "^19.0.4",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-cypress": "^2.12.1",
-		"eslint-plugin-import": "^2.25.4",
-		"eslint-plugin-jsx-a11y": "^6.5.1",
-		"eslint-plugin-react": "^7.28.0",
-		"eslint-plugin-react-hooks": "^4.3.0",
-		"postcss": "^8.4.5",
-		"prettier": "^2.5.1",
-		"rimraf": "^3.0.2",
-		"tailwindcss": "^3.0.15"
-	}
+  "name": "personal-portfolio",
+  "version": "2.0.0",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">= 12"
+  },
+  "scripts": {
+    "clean": "npx rimraf dist node_modules && npm install",
+    "tailwind:build": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css",
+    "tailwind:watch": "npx tailwindcss -c ./vendor/tailwind/tailwind.config.js -i ./vendor/tailwind/input.css -o ./vendor/tailwind/output.css --watch",
+    "lint": "npx eslint ./",
+    "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
+    "cypress:open": "npx cypress open --config-file cypress.dev.json",
+    "cypress:run:dev": "npx cypress --config-file cypress.dev.json run",
+    "cypress:run:prod": "npx cypress --config-file cypress.json run --record --key a5b18600-a3a9-4266-8ea3-e964c23bee2b",
+    "dev": "npx concurrently \"npm run tailwind:watch\" \"npx parcel index.html --port=3000 --open\"",
+    "build": "npm run clean && npm run tailwind:build && npx parcel build index.html --no-content-hash",
+    "preview": "npx serve dist -l 9000"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.2.0",
+    "@parcel/transformer-webmanifest": "^2.2.0",
+    "concurrently": "^6.5.1",
+    "cypress": "^9.2.1",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.25.4",
+    "parcel": "^2.2.0",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "serve": "^13.0.2",
+    "sharp": "^0.29.3",
+    "tailwindcss": "^3.0.8"
+  },
+  "dependencies": {}
 }
