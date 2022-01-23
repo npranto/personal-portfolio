@@ -13,6 +13,3 @@ jobs:
         with:
           build: npm run build
           start: npm run preview
-          record: true
-        env:
-          CYPRESS_RECORD_KEY: a5b18600-a3a9-4266-8ea3-e964c23bee2b

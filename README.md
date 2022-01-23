@@ -81,6 +81,11 @@ Follow the list of procedures below to start contributing or make updates to por
 8. Verify all changes and merge the pull request
 9. Refer back to the original issue, link the pull request, add assignee, and mark issue as closed
 
+**Note**: Before deploying to production, update the following settings inside Netlify:
+
+- Build command - `npm run build`
+- Publish directory - `dist`
+
 ## License
 
 [MIT](https://tldrlegal.com/license/mit-license)
