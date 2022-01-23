@@ -1,12 +1,10 @@
-/* tailwind directives */
+@import url('./font.css');
+@import url('./slider.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* role slider animation */
-@import url('./slider.css');
-
-/* global */
 html {
 	font-size: 16px;
 	scroll-behavior: smooth;
