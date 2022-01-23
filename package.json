@@ -13,7 +13,7 @@
 	"scripts": {
 		"clean": "npx rimraf dist node_modules && npm install",
 		"dev": "next dev -p 3000",
-		"build": "next build",
+		"build": "next build && next export",
 		"start": "next start -p 9000",
 		"lint": "npx eslint ./",
 		"format": "npx prettier --write \"**/*.{html,css,js,json}\"",

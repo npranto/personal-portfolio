@@ -1,4 +1,4 @@
-name: 'Portfolio Cypress E2E'
+name: 'Portfolio v3.0.0 Cypress E2E'
 
 on: [push]
 
@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+			- run: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
