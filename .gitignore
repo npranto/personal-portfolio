@@ -4,4 +4,3 @@ node_modules
 .parcel-cache
 cypress/screenshots
 cypress/videos
-dist
