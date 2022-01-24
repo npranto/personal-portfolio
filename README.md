@@ -85,9 +85,9 @@ Follow the list of procedures below to start contributing or make updates to por
 
 **Note**: Before deploying to production, update the following settings inside Netlify:
 
-- Build command - `npm run build`
+- Build command - leave empty (since we run build on pre-commit hook)
 - Publish directory - `dist`
-- Production branch - `v4.0.0`
+- Production branch - `v2.0.0`
 
 ## Release Process
 
