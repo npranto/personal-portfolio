@@ -85,7 +85,7 @@ Follow the list of procedures below to start contributing or make updates to por
 
 - Build command - `npm run build`
 - Publish directory - `dist`
-- Production branch - `wip-v4.0.0`
+- Production branch - `v4.0.0`
 
 ## License
 
