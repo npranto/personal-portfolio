@@ -14,7 +14,8 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
-	background-color: rgb(249 250 251 / 1);
+	/* background-color: rgb(249 250 251 / 1); */
+	background-color: rgb(250, 235, 215, 0.3);
 }
 
 a {
