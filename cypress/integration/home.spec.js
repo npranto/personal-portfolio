@@ -78,11 +78,14 @@ describe('E2E - Home', () => {
 		cy.get('[data-e2e="projects"]').contains('Regexer');
 		cy.get('[data-e2e="projects"]').contains('Portfolio v2.0.0');
 	});
-	it('should have 2 articles w/in `Blog`', () => {
+	it('should have 3 articles w/in `Blog`', () => {
 		cy.get('[data-e2e="blog"] .blog-list')
 			.debug()
 			.children()
-			.should('have.length', 2);
+			.should('have.length', 3);
+		cy.get('[data-e2e="blog"]').contains(
+			'How I Setup ESLint, Prettier, and EditorConfig for Static Sites'
+		);
 		cy.get('[data-e2e="blog"]').contains('macOS Web Development Setup Guide');
 		cy.get('[data-e2e="blog"]').contains('Quick Bite: SSH Key');
 	});
