@@ -1,0 +1,61 @@
+<section
+  id="blog"
+  class="bg-green-100 blog rounded-lg py-10 px-4"
+  data-e2e="blog"
+>
+  <h2
+    class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2"
+  >
+    Blog
+  </h2>
+
+  <ul
+    class="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
+  >
+    {% for post in collections.blog | reverse %}
+    <li
+      class="blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+    >
+      <a
+        href="{{ post.data.href }}"
+        target="_blank"
+        class="text-indigo-600 hover:text-indigo-500"
+      >
+        <div class="cursor-pointer p-4">
+          <div class="flex space-x-2">
+            <div class="flex flex-col flex-grow top-level-details">
+              <h4 class="text-lg font-semibold">
+                {{ post.data.title }}
+              </h4>
+              <p class="text-sm text-gray-500">
+                Published on {{ post.data.publishedOn }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- <li
+  class="blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+>
+  <a
+    href="https://dev.to/npranto/how-i-setup-eslint-prettier-and-editorconfig-for-static-sites-33ep"
+    target="_blank"
+    class="text-indigo-600 hover:text-indigo-500"
+  >
+    <div class="cursor-pointer p-4">
+      <div class="flex space-x-2">
+        <div class="flex flex-col flex-grow top-level-details">
+          <h4 class="text-lg font-semibold">
+            How I Setup ESLint, Prettier, and EditorConfig for Static Sites
+          </h4>
+          <p class="text-sm text-gray-500">Published on Jan 25, 2022</p>
+        </div>
+      </div>
+    </div>
+  </a>
+</li> -->

@@ -1,0 +1,481 @@
+<section
+  id="projects"
+  class="bg-lime-100 rounded-lg py-10 px-4"
+  data-e2e="projects"
+>
+  <h2
+    class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2"
+  >
+    Projects
+  </h2>
+
+  <ul
+    class="projects-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row lg:items-baseline"
+  >
+    <!-- NEW (start) -->
+
+    <li
+      class="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+    >
+      <input
+        class="hidden"
+        type="checkbox"
+        id="portfolio-v2-input"
+        name="portfolio-v2-input"
+        value="portfolio-v2-dropdown-content"
+      />
+      <label for="portfolio-v2-input">
+        <div class="cursor-pointer p-4">
+          <div class="flex space-x-2">
+            <div class="logo flex-shrink-0">
+              <picture>
+                <source
+                  srcset="./assets/images/portfolio-v2-logo-48.png?as=webp"
+                  type="image/webp"
+                />
+                <img
+                  width="48px"
+                  height="auto"
+                  class="object-cover rounded-md"
+                  src="./assets/images/portfolio-v2-logo-48.png"
+                  alt="Portfolio v2.0.0"
+                />
+              </picture>
+            </div>
+            <div class="flex flex-col flex-grow top-level-details">
+              <h4 class="text-base font-semibold">Portfolio v2.0.0</h4>
+              <p class="text-sm text-gray-500">Jan 2022</p>
+            </div>
+            <div class="resources flex space-x-2">
+              <a
+                href="https://github.com/npranto/personal-portfolio"
+                target="_blank"
+              >
+                <span
+                  class="github-icon transition ease-in-out hover:-translate-y-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-github"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://npranto.dev/" target="_blank">
+                <span
+                  class="share-icon transition ease-in-out hover:-translate-y-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-screen-share"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M21 12v3a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h9"
+                    ></path>
+                    <line x1="7" y1="20" x2="17" y2="20"></line>
+                    <line x1="9" y1="16" x2="9" y2="20"></line>
+                    <line x1="15" y1="16" x2="15" y2="20"></line>
+                    <path d="M17 4h4v4"></path>
+                    <path d="M16 9l5 -5"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
+            id="portfolio-v2-dropdown-content"
+          >
+            <p>
+              A static personal portfolio website to showcase projects, work
+              experiences, and blogs.
+            </p>
+            <p>
+              <span class="font-semibold">Motivation:</span>
+              It's been almost 3 years since I have launched
+              <a
+                class="text-indigo-600 hover:text-indigo-500"
+                href="https://nsp.surge.sh/"
+                >v1.0.0</a
+              >
+              of my personal portfolio site. At that time, I was heavily
+              involved with building single-page applications w/ React. So, even
+              for a simple static website like a portfolio, I went overboard and
+              built it as a SPA. Looking back at it, I realized there was no
+              need to complicate building static websites. That can be achieved
+              pretty easily with a few HTML, CSS, and JavaScript files. Thus, I
+              decided to redesign the UI and keep the architecture simple to
+              make future updates easy and more manageable. Unlike v1.0.0, I
+              also added end-to-end UI testing with Cypress and also set up a
+              CI/CD pipeline with GitHub Actions to automate tests and
+              deployment on code changes.
+            </p>
+
+            <div class="technologies flex flex-wrap my-2 gap-2">
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                HTML
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                CSS
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                JavaScript
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Tailwind CSS
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Parcel
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Cypress
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Netlify
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                ESLint
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Prettier
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                GitHub Actions
+              </span>
+            </div>
+          </div>
+        </div>
+      </label>
+    </li>
+
+    <!-- NEW (end) -->
+    <li
+      class="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+    >
+      <input
+        class="hidden"
+        type="checkbox"
+        id="logtrade-input"
+        name="logtrade-input"
+        value="logtrade-dropdown-content"
+      />
+      <label for="logtrade-input">
+        <div class="cursor-pointer p-4">
+          <div class="flex space-x-2">
+            <div class="logo flex-shrink-0">
+              <picture>
+                <source
+                  srcset="./assets/images/logtrade-logo-48.png?as=webp"
+                  type="image/webp"
+                />
+                <img
+                  width="48px"
+                  height="auto"
+                  class="object-cover rounded-md"
+                  src="./assets/images/logtrade-logo-48.png"
+                  alt="LogTrade"
+                />
+              </picture>
+            </div>
+            <div class="flex flex-col flex-grow top-level-details">
+              <h4 class="text-base font-semibold">LogTrade</h4>
+              <p class="text-sm text-gray-500">Oct 2021 - Present</p>
+            </div>
+            <div class="resources flex space-x-2">
+              <a href="https://github.com/npranto/logtrade" target="_blank">
+                <span
+                  class="github-icon transition ease-in-out hover:-translate-y-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-github"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+              <a href="https://logtrade.netlify.app/home/" target="_blank">
+                <span
+                  class="share-icon transition ease-in-out hover:-translate-y-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-screen-share"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M21 12v3a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h9"
+                    ></path>
+                    <line x1="7" y1="20" x2="17" y2="20"></line>
+                    <line x1="9" y1="16" x2="9" y2="20"></line>
+                    <line x1="15" y1="16" x2="15" y2="20"></line>
+                    <path d="M17 4h4v4"></path>
+                    <path d="M16 9l5 -5"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
+            id="logtrade-dropdown-content"
+          >
+            <p>
+              A personal journal for keeping track of all your trades online.
+            </p>
+            <p>
+              <span class="font-semibold">Motivation:</span> A friend reached
+              out to me to ask for an application that he wants to use to log
+              daily stock trades. I found the idea fairly simple to implement as
+              it seemed very similar to any other note or record tracking
+              software. Thus, I felt the need to jump on it right away. I didn't
+              want to spend too much time building out the entire application,
+              specially handling APIs and databases, so I decided to go with a
+              firebase database to store stock trades on the backend. As for
+              user authentication, firebase authentication also came in handy as
+              well. This way, I was able to focus more on the client side and
+              build a responsive, playful UI with React
+            </p>
+            <p>
+              <span class="font-semibold">Future Plans:</span> As of October 17,
+              2021, LogTrade
+              <a
+                class="text-indigo-600 hover:text-indigo-500"
+                href="https://github.com/npranto/logtrade/releases/tag/v1.0.0"
+                >v1.0.0</a
+              >
+              is
+              <a
+                class="text-indigo-600 hover:text-indigo-500"
+                href="https://616ccd47646645000896e7cb--logtrade.netlify.app/home/"
+                >live</a
+              >
+              in production. More potential bug-fixes and feature enhancements
+              will be added pretty soon. Also, I do have plans to release v2.0.0
+              early to mid 2022.
+            </p>
+            <div class="technologies flex flex-wrap my-2 gap-2">
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                React
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Tailwind CSS
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Webpack
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Firebase
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Netlify
+              </span>
+            </div>
+          </div>
+        </div>
+      </label>
+    </li>
+
+    <li
+      class="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+    >
+      <input
+        class="hidden"
+        type="checkbox"
+        id="regexer-input"
+        name="regexer-input"
+        value="regexer-dropdown-content"
+      />
+      <label for="regexer-input">
+        <div class="cursor-pointer p-4">
+          <div class="flex space-x-2">
+            <div class="logo flex-shrink-0">
+              <picture>
+                <source
+                  srcset="./assets/images/regexer-logo-48.png?as=webp"
+                  type="image/webp"
+                />
+                <img
+                  width="48px"
+                  class="object-cover rounded-md"
+                  src="./assets/images/regexer-logo-48.png"
+                  alt="Regexer"
+                />
+              </picture>
+            </div>
+            <div class="flex flex-col flex-grow top-level-details">
+              <h4 class="text-base font-semibold">Regexer</h4>
+              <p class="text-sm text-gray-500">Jul 2018 - Present</p>
+            </div>
+            <div class="resources flex space-x-2">
+              <a href="https://github.com/npranto/regexer" target="_blank">
+                <span
+                  class="github-icon transition ease-in-out hover:-translate-y-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-brand-github"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="https://www.npmjs.com/package/nsp-regexer"
+                target="_blank"
+              >
+                <span
+                  class="package-icon transition ease-in-out hover:-translate-y-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-box"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <polyline
+                      points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"
+                    ></polyline>
+                    <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                    <line x1="12" y1="12" x2="12" y2="21"></line>
+                    <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
+            id="regexer-dropdown-content"
+          >
+            <p>
+              An utility library of functions that leverage regular expressions
+              to validate different types of inputs
+            </p>
+            <p>
+              <span class="font-semibold">Motivation:</span> Using regexes is
+              very common for developers to validate inputs like email, zip
+              code, or credit card number. I wanted to build a small utility
+              library to verify many different types of inputs with regexes, so
+              I never have to reach out to google to find the same, trustworthy
+              regex every time. Currently, I do not have an exhaustive list of
+              all the regexes there are, but I have plans to add more and more
+              over time. Regexer is a node package that can be installed for
+              both server side and client side use.
+            </p>
+            <div class="technologies flex flex-wrap my-2 gap-2">
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Node.js
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                ESLint
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Mocha
+              </span>
+              <span
+                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+              >
+                Semantic Release
+              </span>
+            </div>
+          </div>
+        </div>
+      </label>
+    </li>
+  </ul>
+</section>
