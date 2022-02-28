@@ -12,12 +12,12 @@
   <ul
     class="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
   >
-    {% for post in collections.blog | reverse %}
+    {% for item in collections.blog | reverse %}
     <li
       class="blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
     >
       <a
-        href="{{ post.data.href }}"
+        href="{{ item.data.href }}"
         target="_blank"
         class="text-indigo-600 hover:text-indigo-500"
       >
@@ -25,10 +25,10 @@
           <div class="flex space-x-2">
             <div class="flex flex-col flex-grow top-level-details">
               <h4 class="text-lg font-semibold">
-                {{ post.data.title }}
+                {{ item.data.title }}
               </h4>
               <p class="text-sm text-gray-500">
-                Published on {{ post.data.publishedOn }}
+                Published on {{ item.data.publishedOn }}
               </p>
             </div>
           </div>

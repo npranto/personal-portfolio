@@ -6,214 +6,74 @@
   </h2>
 
   <ul class="work-list">
+    {% for item in collections.work %}
     <li
       class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
-      data-e2e="newfold-item"
+      data-e2e="{{ item.data.id }}-item"
     >
       <input
         class="hidden"
         type="checkbox"
-        id="newfold-input"
-        name="newfold-input"
-        value="newfold-dropdown-content"
+        id="{{ item.data.id }}-input"
+        name="{{ item.data.id }}-input"
+        value="{{ item.data.id }}-dropdown-content"
       />
-      <label for="newfold-input">
+      <label for="{{ item.data.id }}-input">
         <div class="cursor-pointer p-4">
           <div class="flex space-x-2">
             <div class="logo flex-shrink-0">
               <picture>
                 <source
-                  srcset="./assets/images/newfold-logo-48.jpeg?as=webp"
+                  srcset="{{item.data.imageWebpSM}}"
                   type="image/webp"
                   media="(max-width: 768px)"
                 />
-                <source
-                  srcset="./assets/images/newfold-logo-64.jpeg?as=webp"
-                  type="image/webp"
-                />
-                <source
-                  srcset="./assets/images/newfold-logo-64.jpeg"
-                  type="image/jpeg"
-                />
+                <source srcset="{{item.data.imageWebp}}" type="image/webp" />
+                <source srcset="{{item.data.image}}" type="image/jpeg" />
                 <img
                   class="object-cover rounded-md"
-                  src="./assets/images/newfold-logo-64.jpeg"
-                  alt="Newfold Digital"
+                  src="{{ item.data.image }}"
+                  alt="{{ item.data.company }}"
                 />
               </picture>
             </div>
             <div class="flex flex-col flex-grow top-level-details">
-              <h4 class="text-base font-semibold">Software Engineer</h4>
+              <h4 class="text-base font-semibold">{{ item.data.position }}</h4>
               <p class="text-sm text-gray-500">
-                Newfold Digital, Burlington, MA
+                {{ item.data.company }}, {{ item.data.location }}
               </p>
               <p class="text-sm text-gray-500">
-                Jul 2018 - Jul 2021 | Full-time
+                {{ item.data.duration }} | {{ item.data.employmentType }}
               </p>
             </div>
           </div>
           <div
             class="description-and-tech hidden"
-            id="newfold-dropdown-content"
-            data-e2e="newfold-dropdown-content"
+            id="{{ item.data.id }}-dropdown-content"
+            data-e2e="{{ item.data.id }}-dropdown-content"
           >
             <ul
               class="descriptions mt-2 text-sm space-y-1 list-disc text-gray-500 mx-6"
             >
+              {% for desc in item.data.description %}
               <li>
-                Built and maintained robust, reusable e-commerce UI components
-                using React and Redux to ease feature development and
-                integration for multiple internal teams
+                {{ desc }}
               </li>
-              <li>
-                Added over 50+ bug-fixes and features along with unit tests to
-                enhance and improve active single page application (SPA) for
-                customer registration and checkout
-              </li>
-              <li>
-                Integrated Contentful CMS to dynamically prefetch product
-                metadata to enable marketing teams to make custom changes
-                quickly without code releases
-              </li>
-              <li>
-                Frequently collaborated with internal front and backend services
-                teams to integrate new products and payment gateways
-              </li>
-              <li>
-                Worked on a fast-paced agile environment with multiple releases
-                per sprint basis
-              </li>
+              {% endfor %}
             </ul>
             <div class="technologies flex flex-wrap my-2 gap-2">
+              {% for tech in item.data.technologies %}
               <span
                 class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
               >
-                React
+                {{ tech }}
               </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Redux
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Sass
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Webpack
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Contentful
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Node.js
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Git
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                JIRA
-              </span>
+              {% endfor %}
             </div>
           </div>
         </div>
       </label>
     </li>
-
-    <li
-      class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 p-4 my-3 rounded-md"
-      data-e2e="lexia-item"
-    >
-      <input
-        class="hidden"
-        type="checkbox"
-        id="lexia-input"
-        name="lexia-input"
-        value="lexia-dropdown-content"
-      />
-      <label for="lexia-input">
-        <div class="cursor-pointer">
-          <div class="flex space-x-2">
-            <div class="logo flex-shrink-0">
-              <picture>
-                <source
-                  srcset="./assets/images/lexia-logo-48.jpeg?as=webp"
-                  type="image/webp"
-                  media="(max-width: 768px)"
-                />
-                <source
-                  srcset="./assets/images/lexia-logo-64.jpeg?as=webp"
-                  type="image/webp"
-                />
-                <source
-                  srcset="./assets/images/lexia-logo-48.jpeg"
-                  media="(max-width: 768px)"
-                />
-                <img
-                  class="object-cover rounded-md"
-                  src="./assets/images/lexia-logo-64.jpeg"
-                  alt="Lexia Learning"
-                />
-              </picture>
-            </div>
-            <div class="flex flex-col flex-grow top-level-details">
-              <h4 class="text-base font-semibold">Software Engineer</h4>
-              <p class="text-sm text-gray-500">Lexia Learning, Concord, MA</p>
-              <p class="text-sm text-gray-500">
-                Sep - Dec 2016 & Jun - Aug 2017 | Contract
-              </p>
-            </div>
-          </div>
-          <div
-            class="description-and-tech hidden"
-            id="lexia-dropdown-content"
-            data-e2e="lexia-dropdown-content"
-          >
-            <ul
-              class="descriptions mt-2 text-sm space-y-1 list-disc text-gray-500 mx-6"
-            >
-              <li>
-                Built 20+ JSON schemas to validate and structure large, nested
-                JSON objects, or lesson tasks for production-level reading
-                software program
-              </li>
-              <li>
-                Written various JavaScript functions or snippets to automate
-                JSON file modifications to simplify and speed up application
-                content updates
-              </li>
-            </ul>
-            <div class="technologies flex flex-wrap my-2 gap-2">
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                JavaScript
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                JSON Schema
-              </span>
-              <span
-                class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
-              >
-                Git
-              </span>
-            </div>
-          </div>
-        </div>
-      </label>
-    </li>
+    {% endfor %}
   </ul>
 </section>
