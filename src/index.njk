@@ -1,44 +1,22 @@
 ---
-title: Portfolio - Nazmuz Pranto v2.0.0
+title: Portfolio - Nazmuz Pranto
 layout: 'base.njk'
 ---
 
-<!-- nav (start)  -->
 {% include 'nav.njk' %}
-<!-- nav (end)  -->
 
 <main class="md:ml-64 space-y-10 sm:px-5">
-  <!-- jumbotron intro (start) -->
   {% include 'jumbotron.njk' %}
-  <!-- jumbotron intro (end) -->
 
-  <!-- about (start) -->
   {% include 'about.njk' %}
-  <!-- about (end) -->
 
-  <!-- work (start) -->
   {% include 'work.njk' %}
-  <!-- work (end) -->
 
-  <!-- projects (start) -->
   {% include 'projects.njk' %}
-  <!-- projects (end) -->
 
-  <!-- blog (start) -->
   {% include 'blog.njk' %}
-  <!-- blog (end) -->
 
-  <!-- education (start) -->
   {% include 'education.njk' %}
-  <!-- education (end) -->
 
-  <!-- contact (start) -->
   {% include 'contact.njk' %}
-  <!-- contact (end) -->
-
-  <!-- dynamic classes (added w/ JavaScript) -->
-  <span
-    class="hidden -translate-x-2 bg-gray-800 text-slate-50 px-1 border-red-500"
-  ></span>
 </main>
-<script type="module" async src="./scripts/index.js"></script>

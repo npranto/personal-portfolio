@@ -89,6 +89,13 @@
     <title>{{ title }}</title>
   </head>
   <body class="max-w-screen-lg m-auto mt-0 mb-0 bg-green-50">
+
     {{ content | safe }}
+    
+    <!-- dynamic classes (added w/ JavaScript) -->
+    <span
+      class="hidden -translate-x-2 bg-gray-800 text-slate-50 px-1 border-red-500"
+    ></span>
+    <script type="module" async src="./scripts/index.js"></script>
   </body>
 </html>
