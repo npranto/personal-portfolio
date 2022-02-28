@@ -5,6 +5,7 @@ export const menuLinks = document.querySelectorAll('#menu-links > li > a');
 export const menuTabs = document.querySelectorAll('#menu-tabs > a');
 
 // about
+export const aboutSection = document.querySelector('#about');
 export const readMoreBtn = document.querySelector('#read-more-btn');
 export const collapseReadMoreBtn = document.querySelector(
   '#collapse-read-more-btn'
@@ -12,6 +13,7 @@ export const collapseReadMoreBtn = document.querySelector(
 export const readMoreContent = document.querySelector('#read-more-content');
 
 // work
+export const workSection = document.querySelector('#work');
 export const lexiaInput = document.querySelector('#lexia-input');
 export const newfoldInput = document.querySelector('#newfold-input');
 

@@ -1,4 +1,5 @@
 import {
+  aboutSection,
   collapseReadMoreBtn,
   contactForm,
   emailError,
@@ -11,18 +12,21 @@ import {
   nameField,
   readMoreBtn,
   readMoreContent,
+  workSection,
 } from './elements.js';
 
 export function showReadMoreContent() {
   readMoreBtn.classList.add('hidden');
   collapseReadMoreBtn.classList.remove('hidden');
   readMoreContent.classList.remove('hidden');
+  readMoreContent.scrollIntoView();
 }
 
 export function hideReadMoreContent() {
   readMoreBtn.classList.remove('hidden');
   collapseReadMoreBtn.classList.add('hidden');
   readMoreContent.classList.add('hidden');
+  aboutSection.scrollIntoView();
 }
 
 export function highlightMenuLink() {
@@ -71,9 +75,11 @@ export function toggleDropdownContent(e) {
   if (dropdownContent && isInputChecked) {
     // show dropdown content
     dropdownContent.classList.remove('hidden');
+    e?.target?.parentNode?.scrollIntoView();
   } else if (dropdownContent && !isInputChecked) {
     // hide dropdown content
     dropdownContent.classList.add('hidden');
+    e?.target?.parentNode?.parentNode?.parentNode?.scrollIntoView();
   }
 }
 
