@@ -2,67 +2,67 @@
   <h2
     class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2"
   >
-    Work
+    {{ work.header }}
   </h2>
 
   <ul class="work-list">
-    {% for item in collections.work %}
+    {% for item in work.items %}
     <li
       class="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
-      data-e2e="{{ item.data.id }}-item"
+      data-e2e="{{ item.id }}-item"
     >
       <input
         class="hidden"
         type="checkbox"
-        id="{{ item.data.id }}-input"
-        name="{{ item.data.id }}-input"
-        value="{{ item.data.id }}-dropdown-content"
+        id="{{ item.id }}-input"
+        name="{{ item.id }}-input"
+        value="{{ item.id }}-dropdown-content"
       />
-      <label for="{{ item.data.id }}-input">
+      <label for="{{ item.id }}-input">
         <div class="cursor-pointer p-4">
           <div class="flex space-x-2">
             <div class="logo flex-shrink-0">
               <picture>
                 <source
-                  srcset="{{item.data.imageWebpSM}}"
+                  srcset="{{item.image.sm}}?as=webp"
                   type="image/webp"
                   media="(max-width: 768px)"
                 />
-                <source srcset="{{item.data.imageWebp}}" type="image/webp" />
-                <source srcset="{{item.data.image}}" type="image/jpeg" />
+                <source srcset="{{item.image.lg}}?as=webp" type="image/webp" />
+                <source srcset="{{item.image.lg}}" type="image/jpeg" />
                 <img
                   class="object-cover rounded-md"
-                  src="{{ item.data.image }}"
-                  alt="{{ item.data.company }}"
+                  src="{{ item.image.lg }}"
+                  alt="{{ item.company }}"
                 />
               </picture>
             </div>
             <div class="flex flex-col flex-grow top-level-details">
-              <h4 class="text-base font-semibold">{{ item.data.position }}</h4>
+              <h4 class="text-base font-semibold">{{ item.position }}</h4>
               <p class="text-sm text-gray-500">
-                {{ item.data.company }}, {{ item.data.location }}
+                {{ item.company }}, {{ item.location }}
               </p>
               <p class="text-sm text-gray-500">
-                {{ item.data.duration }} | {{ item.data.employmentType }}
+                {{ item.duration }} | {{ item.employmentType }}
               </p>
             </div>
           </div>
           <div
             class="description-and-tech hidden"
-            id="{{ item.data.id }}-dropdown-content"
-            data-e2e="{{ item.data.id }}-dropdown-content"
+            id="{{ item.id }}-dropdown-content"
+            data-e2e="{{ item.id }}-dropdown-content"
           >
             <ul
               class="descriptions mt-2 text-sm space-y-1 list-disc text-gray-500 mx-6"
             >
-              {% for desc in item.data.description %}
+              {% for desc in item.description %}
               <li>
                 {{ desc }}
               </li>
               {% endfor %}
             </ul>
             <div class="technologies flex flex-wrap my-2 gap-2">
-              {% for tech in item.data.technologies %}
+              {% for tech in item.technologies %}
               <span
                 class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
               >

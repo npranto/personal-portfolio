@@ -6,45 +6,45 @@
   <h2
     class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2"
   >
-    Projects
+    {{ projects.header }}
   </h2>
 
   <ul
     class="projects-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row lg:items-baseline"
   >
-    {% for item in collections.projects %}
+    {% for item in projects.items %}
     <li
       class="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
     >
       <input
         class="hidden"
         type="checkbox"
-        id="{{ item.data.id }}-input"
-        name="{{ item.data.id }}-input"
-        value="{{ item.data.id }}-dropdown-content"
+        id="{{ item.id }}-input"
+        name="{{ item.id }}-input"
+        value="{{ item.id }}-dropdown-content"
       />
-      <label for="{{ item.data.id }}-input">
+      <label for="{{ item.id }}-input">
         <div class="cursor-pointer p-4">
           <div class="flex space-x-2">
             <div class="logo flex-shrink-0">
               <picture>
-                <source srcset="{{item.data.imageWebp}}" type="image/webp" />
+                <source srcset="{{item.image.sm}}?as=webp" type="image/webp" />
                 <img
                   width="48px"
                   height="auto"
                   class="object-cover rounded-md"
-                  src="{{ item.data.image }}"
-                  alt="{{ item.data.name }}"
+                  src="{{ item.image.sm }}"
+                  alt="{{ item.name }}"
                 />
               </picture>
             </div>
             <div class="flex flex-col flex-grow top-level-details">
-              <h4 class="text-base font-semibold">{{ item.data.name }}</h4>
-              <p class="text-sm text-gray-500">{{ item.data.duration }}</p>
+              <h4 class="text-base font-semibold">{{ item.name }}</h4>
+              <p class="text-sm text-gray-500">{{ item.duration }}</p>
             </div>
             <div class="resources flex space-x-2">
-              {% if item.data.github %}
-              <a href="{{ item.data.github }}" target="_blank">
+              {% if item.github %}
+              <a href="{{ item.github }}" target="_blank">
                 <span
                   class="github-icon transition ease-in-out hover:-translate-y-1"
                 >
@@ -67,8 +67,8 @@
                   </svg>
                 </span>
               </a>
-              {% endif %} {% if item.data.demo %}
-              <a href="{{ item.data.demo }}" target="_blank">
+              {% endif %} {% if item.demo %}
+              <a href="{{ item.demo }}" target="_blank">
                 <span
                   class="share-icon transition ease-in-out hover:-translate-y-1"
                 >
@@ -101,12 +101,12 @@
           </div>
           <div
             class="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
-            id="{{ item.data.id }}-dropdown-content"
+            id="{{ item.id }}-dropdown-content"
           >
-            {{ item.data.description | safe }}
+            {{ item.description | safe }}
 
             <div class="technologies flex flex-wrap my-2 gap-2">
-              {% for tech in item.data.technologies %}
+              {% for tech in item.technologies %}
               <span
                 class="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
               >

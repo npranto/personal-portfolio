@@ -4,37 +4,13 @@
     id="menu-tabs"
     class="md:hidden bottom-0 w-full fixed bg-white flex overflow-x-auto space-x-2 px-4 pb-6 pt-4"
   >
+    {% for link in nav.links %}
     <a
-      href="#about"
+      href="{{ link.href }}"
       class="inline-flex bg-gray-100 hover:bg-gray-800 text-black hover:text-slate-50 rounded-full h-6 px-3 justify-center items-center"
-      >About
+      >{{ link.text }}
     </a>
-    <a
-      href="#work"
-      class="inline-flex bg-gray-100 hover:bg-gray-800 text-black hover:text-slate-50 rounded-full h-6 px-3 justify-center items-center"
-      >Work
-    </a>
-    <a
-      href="#projects"
-      class="inline-flex bg-gray-100 hover:bg-gray-800 text-black hover:text-slate-50 rounded-full h-6 px-3 justify-center items-center"
-      >Projects
-    </a>
-    <a
-      href="#blog"
-      class="inline-flex bg-gray-100 hover:bg-gray-800 text-black hover:text-slate-50 rounded-full h-6 px-3 justify-center items-center"
-      >Blog
-    </a>
-    <a
-      href="#education"
-      class="inline-flex bg-gray-100 hover:bg-gray-800 text-black hover:text-slate-50 rounded-full h-6 px-3 justify-center items-center"
-      >Education
-    </a>
-    <a
-      href="#contact"
-      class="inline-flex bg-gray-100 hover:bg-gray-800 text-black hover:text-slate-50 rounded-full h-6 px-3 justify-center items-center"
-      >Contact
-    </a>
-    {% include 'socials.njk' %}
+    {% endfor %} {% include 'socials.njk' %}
   </div>
 
   <!-- menu sidebar (left) -->
@@ -44,12 +20,9 @@
   >
     <div class="profile-picture mb-2">
       <picture>
-        <source
-          srcset="./assets/images/profile-v3-160.png?as=webp"
-          type="image/webp"
-        />
+        <source srcset="{{profile.picture.lg}}?as=webp" type="image/webp" />
         <img
-          src="./assets/images/profile-v3-160.png?width=160"
+          src="{{ profile.picture.lg }}?width=160"
           alt="Profile Picture"
           width="160px"
           height="auto"
@@ -59,66 +32,23 @@
     <h1
       class="name inline-block text-2xl sm:text-3xl font-semibold text-gray-900 tracking-tight my-2"
     >
-      Nazmuz<br />Pranto
+      {{ profile.author | safe }}
     </h1>
-    <p class="title text-base text-gray-500">Software Engineer</p>
-    <p class="location text-base text-gray-500">Cambridge, MA</p>
+    <p class="title text-base text-gray-500">{{ profile.currentRole }}</p>
+    <p class="location text-base text-gray-500">{{ profile.location }}</p>
 
     <ul id="menu-links" class="menu-links grid grid-cols-1 my-10">
+      {% for link in nav.links %}
       <li>
         <a
-          href="#about"
+          href="{{ link.href }}"
           type="button"
           class="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-none text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 hover:px-1"
-          data-e2e="menu-link-about"
-          >About</a
+          data-e2e="menu-link-{{ link.id }}"
+          >{{ link.text }}</a
         >
       </li>
-      <li>
-        <a
-          href="#work"
-          type="button"
-          class="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-none text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 hover:px-1"
-          data-e2e="menu-link-work"
-          >Work</a
-        >
-      </li>
-      <li>
-        <a
-          href="#projects"
-          type="button"
-          class="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-non text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 hover:px-1"
-          data-e2e="menu-link-projects"
-          >Projects</a
-        >
-      </li>
-      <li>
-        <a
-          href="#blog"
-          type="button"
-          class="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-non text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 hover:px-1"
-          data-e2e="menu-link-blog"
-          >Blog</a
-        >
-      </li>
-      <li>
-        <a
-          href="#education"
-          type="button"
-          class="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-none text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 hover:px-1"
-          data-e2e="menu-link-education"
-          >Education</a
-        >
-      </li>
-      <li>
-        <a
-          href="#contact"
-          type="button"
-          class="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-none text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2"
-          data-e2e="menu-link-contact"
-          >Contact</a
-        >
-      </li>
+      {% endfor %}
     </ul>
     {% include 'socials.njk' %}
   </section>

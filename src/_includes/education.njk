@@ -6,30 +6,30 @@
   <h2
     class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2"
   >
-    Education
+    {{ education.header }}
   </h2>
 
   <ul
     class="education-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
   >
-    {% for item in collections.education %}
+    {% for item in education.items %}
     <li
       class="education-item bg-gray-100 drop-shadow-lg transition ease-in-out duration-500 my-3 rounded-md"
     >
       <div class="cursor-pointer p-4">
         <div class="flex space-x-2">
           <div class="flex flex-col flex-grow top-level-details">
-            <h4 class="text-base font-semibold">{{ item.data.institution }}</h4>
+            <h4 class="text-base font-semibold">{{ item.institution }}</h4>
             <p class="text-sm text-gray-500">
-              {% if item.data.duration %}
-              <span>{{ item.data.duration }}</span>
-              {% endif %} {% if item.data.location %}
-              <span>| {{ item.data.location }}</span>
+              {% if item.duration %}
+              <span>{{ item.duration }}</span>
+              {% endif %} {% if item.location %}
+              <span>| {{ item.location }}</span>
               {% endif %}
             </p>
-            {% if item.data.description %}
+            {% if item.description %}
             <p class="text-sm text-gray-500">
-              {{ item.data.description | safe }}
+              {{ item.description | safe }}
             </p>
             {% endif %}
           </div>
