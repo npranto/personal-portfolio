@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "clean": "npx rimraf public node_modules && npm install",
-    "tailwind:build": "npx tailwindcss -c ./public/vendor/tailwind/tailwind.config.js -i ./public/vendor/tailwind/input.css -o ./public/vendor/tailwind/output.css",
-    "tailwind:watch": "npx tailwindcss -c ./public/vendor/tailwind/tailwind.config.js -i ./public/vendor/tailwind/input.css -o ./public/vendor/tailwind/output.css --watch",
     "lint": "npx eslint ./",
     "format": "npx prettier --write \"**/*.{html,css,js,json}\"",
-    "dev": "npx concurrently \"npm run tailwind:watch\" \"eleventy --serve\"",
-    "build": "npx rimraf public && eleventy && npm run tailwind:build",
+    "tailwind:build": "npx tailwindcss -c ./src/vendor/tailwind/tailwind.config.js -i ./src/vendor/tailwind/input.css -o ./public/vendor/tailwind/output.css --minify",
+    "tailwind:watch": "npx tailwindcss -c ./src/vendor/tailwind/tailwind.config.js -i ./src/vendor/tailwind/input.css -o ./public/vendor/tailwind/output.css --watch",
+    "dev": "npx concurrently \"eleventy --serve\" \"npm run js:dev\" \"npm run tailwind:watch\"",
+    "build": "npx rimraf public && eleventy && npm run js:prod && npm run tailwind:build",
     "preview": "npx serve public -l 9000",
+    "js:dev": "webpack --mode development --watch",
+    "js:prod": "webpack --mode production",
     "cypress:open": "npx cypress open --config-file cypress.dev.json",
     "cypress:run:dev": "npx cypress --config-file cypress.dev.json run",
     "cypress:run:prod": "npx cypress --config-file cypress.json run"
@@ -41,13 +43,18 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.4",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "husky": "^7.0.4",
     "node-fetch": "^3.2.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "puppeteer": "^13.4.1",
     "rimraf": "^3.0.2",
     "serve": "^13.0.2",
     "sharp": "^0.29.3",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
   }
 }
