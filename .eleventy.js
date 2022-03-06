@@ -6,6 +6,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/vendor/tailwind');
   eleventyConfig.addPassthroughCopy('./src/manifest.webmanifest');
 
+  eleventyConfig.addWatchTarget('./src/');
+
   return {
     dir: {
       input: 'src',
