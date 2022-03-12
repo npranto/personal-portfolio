@@ -68,57 +68,27 @@ Follow the list of procedures below to start contributing or make updates to por
 
 1. Create a new issue on the [issue](https://github.com/npranto/personal-portfolio/issues) board
 2. Create a new branch from `master` branch, i.e., `git checkout -b pp-105`. _Note: `105` refers to the issue id and `pp` is just a prefix, stands for personal portfolio_
-3. Make changes inside `index.html` file and `styles`, `scripts` and `vendor` directories for content changes
+3. Make code or content changes as necessary. Code changes usually go inside `src` directory while content changes sit inside [Contentful](https://app.contentful.com/spaces/e0cj9bej8ddl/entries?id=JE9JMg1ZWONGpXCc&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author).
 4. Before committing all changes:
    1. Ensure all end-to-end tests are passing w/ Cypress - `npm run cypress:open`
    2. If needed, add new tests inside cypress for new functionalities or features added
-   3. Create a new production build, run `npm run build`.
-   4. To see preview of build, run `npm run preview`
+   3. Create a new production build, run `npm run prod`.
+   4. To see preview of build, run `npm run preview`, open http://localhost:9000/
    5. Verify all changes are reflected correctly on the new build
 5. Commit and push changes to remote origin on the new branch
 6. Create a pull request from the new branch => `master` branch
 7. Notice, Netlify will automatically create a preview URL w/ the new changes on the pull request
-8. Verify all changes and merge the pull request
-9. Refer back to the original issue, link the pull request, add assignee, and mark issue as closed
+8. Note, Cypress E2E tests and linting tasks will also get triggered through GitHub workflow actions
+9. Verify all changes and merge the pull request
+10. Refer back to the original issue, link the pull request, add assignee, and mark issue as closed
 
-## Netlify Build Settings
+Note, if you do not have any code changes, rather only changes inside Contentful, then follow these steps:
 
-**Note**: Before deploying to production, update the following settings inside Netlify:
-
-- Build command - leave empty (since we run build on pre-commit hook)
-- Publish directory - `dist`
-- Production branch - `v2.0.0`
-
-## Release Process
-
-- Generally, when you want to release the latest work, you want to merge the `wip` (Work In Progress) branch to both `master` and the next release branch (i.e., `v4.0.0`). In addition, you will also need to configure your Netlify settings to properly deploy the right branch to production. So, just for a quick recap, we have many different versions of the portfolio sitting on GitHub server under a specific branch name, i.e., (`v1.0.0`, `v2.0.0` and so on). We have the flexibility to switch between different versions anytime we want just from Netlify. Our `master` branch basically keeps track of all of our changes over time, but it is NOT the production branch that gets deployed. Rather, the production branch is set to a specific version branch, i.e., `v3.0.0`.
-
-Follow the process below to release a feature / bug:
-
-1. Create a new branch (i.e., `pp-132`, where `132` represents the issue ID) off of the portfolio version branch that you want to make updates to. For example, if you want to add a new feature to portfolio v2.0.0, then create the `pp-132` branch from `v2.0.0` branch.
-
-```bash
-git checkout v2.0.0
-git checkout -b pp-132
-```
-
-2. Work on the feature or bug, commit and push the latest changes on the `pp-132` branch on remote origin
-3. Before creating a new pull request, go over to project settings on Netlify - https://app.netlify.com/sites/npranto/settings/general. Update build command, publish directory and production branch to appropriate values to ensure proper build process is set based on the portfolio version. Refer to README.md file's `Netlify Build Settings` section for values to set. Since different versions of the portfolio could possibly have different build processes, we need to make sure Netlify builds our code appropriately on code merge.
-
-Example: for v2.0.0, here the the Netlify build settings:
-
-- Build command - `npm run build`
-- Publish directory - `dist`
-- Production branch - `v2.0.0`
-
-4. Now, create a pull request to merge `pp-132` => `v2.0.0`
-5. On the pull request, verify that cypress E2E tests are passing and Netlify preview build has all the latest changes. Note: if any of the E2E tests are failing or if the preview build does not have the latest changes, then go ahead and fix the code to reflect a clean slate
-6. Assuming both tests and code changes are all valid and passing, go ahead and merge the pull request to `v2.0.0` branch
-7. Netlify will kick off a new build your latest changes to production site - https://npranto.dev/
-8. Assuming the build passes, go over to production and verify that latest changes are live and working as expected
-9. Now, as the last clean up step, delete the `pp-132` directory as the release is complete
-
-Remember, the production branch is what determines what version of the portfolio is currently active on production site. So, if we want to production site to reflect a new version of the portfolio, say `v5.0.0`, then we will need to create a new branch and ensure Netlify settings also reflect that branch as the production branch along w/ appropriate build command and publish directory.
+1. Go over to [Contentful](https://app.contentful.com/spaces/e0cj9bej8ddl/entries?id=JE9JMg1ZWONGpXCc&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author) and made any content changes as needed
+2. Go over to [Netlify](https://app.netlify.com/sites/npranto/deploys), click on `Trigger deploy` dropdown > `Deploy site`
+3. A new deployment build should be kicked off w/ latest content changes from Contentful
+4. That's it, assuming the build passed, go to production site and verify the latest updates
+5. If deployment build fails, go into the build details and debug
 
 ## License
 
