@@ -1,0 +1,14 @@
+name: 'Portfolio Cypress E2E'
+on: [pull_request]
+jobs:
+  cypress-e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: npm run build
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: npm run preview
