@@ -49,7 +49,7 @@ describe('E2E - Home', () => {
   });
   it('should have correct link to "Resume" button', () => {
     cy.get('[data-e2e="resume-btn"]')
-      .should('have.attr', 'href', '/assets/resume.pdf')
+      .should('have.attr', 'href', './assets/resume.pdf')
       .should('have.attr', 'target', '_blank');
   });
   it('should have correct link to "Let\'s Talk" button', () => {
