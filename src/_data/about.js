@@ -2,6 +2,8 @@
 const chalk = require('chalk');
 const getEntry = require('../vendor/contentful/getEntry');
 
+const a = 'coffee';
+
 module.exports = function about() {
   console.log('==================================================');
   console.log(chalk.bold('START'), chalk.dim('>>> Fetching about...'));
