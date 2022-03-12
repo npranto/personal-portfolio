@@ -1,5 +1,5 @@
 name: 'Portfolio Cypress E2E'
-on: [pull_request]
+on: [push]
 jobs:
   cypress-e2e:
     runs-on: ubuntu-latest
