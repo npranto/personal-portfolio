@@ -34,6 +34,8 @@ A static personal portfolio website to showcase projects, work experiences and b
 - [Cypress](https://www.cypress.io/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [11ty](https://www.11ty.dev/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## Prerequisites
 
