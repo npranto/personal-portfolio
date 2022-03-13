@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="{{profile.description}}"
-    />
+    <meta name="description" content="{{ profile.description }}" />
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -87,11 +84,25 @@
 
     <link rel="stylesheet" href="./styles/index.css" />
     <title>{{ title }}</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1WW5F0M4MQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-1WW5F0M4MQ');
+    </script>
   </head>
   <body class="max-w-screen-lg m-auto mt-0 mb-0">
-
     {{ content | safe }}
-    
+
     <!-- dynamic classes (added w/ JavaScript) -->
     <span
       class="hidden -translate-x-2 bg-gray-800 text-slate-50 px-1 border-red-500"
