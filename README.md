@@ -10,6 +10,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4d16a376-43ef-47af-8b95-ee54bcffd93c/deploy-status)](https://app.netlify.com/sites/npranto/deploys)
 [![personal-portfolio](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/9d9vq3&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/9d9vq3/runs)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=npranto_personal-portfolio&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=npranto_personal-portfolio)
 
 </div>
 
@@ -33,6 +34,8 @@ A static personal portfolio website to showcase projects, work experiences and b
 - [Cypress](https://www.cypress.io/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [11ty](https://www.11ty.dev/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## Prerequisites
 
