@@ -1,4 +1,4 @@
-name: 'Portfolio Workflow - Lint | E2E'
+name: 'Lint || E2E'
 on: [push]
 jobs:
   build:
@@ -15,14 +15,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # runs linting w/ ESLint
       - name: Run ESLint
         run: npm run lint
 
-      # runs E2E tests w/ Cypress
       - name: Create build
         run: npm run prod
-      - name: Cypress run
+      - name: Run Cypress E2E tests
         uses: cypress-io/github-action@v2
         with:
           start: npm run preview
