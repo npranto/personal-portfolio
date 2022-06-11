@@ -27,7 +27,7 @@ const fetchBlogPosts = async () => {
 
     // extract out all the blog post stories
     const stories = [
-      ...document.querySelectorAll('#substories > .crayons-story'),
+      ...document.querySelectorAll('#substories .crayons-story'),
     ];
 
     return (
