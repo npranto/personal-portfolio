@@ -14,8 +14,6 @@
 
 </div>
 
-<!-- ABOUT THE PROJECT -->
-
 ## About
 
 A static personal portfolio website to showcase projects, work experiences and blogs. See it [live](https://npranto.dev/).
@@ -60,6 +58,7 @@ To get started on development, let's install a few prerequisites
    ```sh
    npm run dev
    ```
+   _Note: You will need to setup a `.env` file with a few environmental variables to fetch contents from remote CMS (Contentful). Refer to Netlify environmental variables for that_
 4. To keep E2E test running on the background
    ```sh
    npm run cypress:open
@@ -73,7 +72,7 @@ Follow the list of procedures below to start contributing or make updates to por
 2. Create a new branch from `master` branch, i.e., `git checkout -b pp-105`. _Note: `105` refers to the issue id and `pp` is just a prefix, stands for personal portfolio_
 3. Make code or content changes as necessary. Code changes usually go inside `src` directory while content changes sit inside [Contentful](https://app.contentful.com/spaces/e0cj9bej8ddl/entries?id=JE9JMg1ZWONGpXCc&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author).
 4. Before committing all changes:
-   1. Ensure all end-to-end tests are passing w/ Cypress - `npm run cypress:open`
+   1. Ensure all end-to-end tests are passing w/ Cypress - `npm run cypress:open`. (Note: you may need to run `npm run dev` on the background as well)
    2. If needed, add new tests inside cypress for new functionalities or features added
    3. Create a new production build, run `npm run prod`.
    4. To see preview of build, run `npm run preview`, open http://localhost:9000/

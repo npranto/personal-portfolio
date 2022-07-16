@@ -1,5 +1,7 @@
-name: 'Lint || E2E'
+name: 'Lint | E2E'
+
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,6 +22,7 @@ jobs:
 
       - name: Create build
         run: npm run prod
+
       - name: Run Cypress E2E tests
         uses: cypress-io/github-action@v2
         with:

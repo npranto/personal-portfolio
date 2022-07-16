@@ -7,4 +7,5 @@ cypress/videos
 .next/
 public/
 .env
+.env.local
 dist

@@ -1,10 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const puppeteer = require('puppeteer');
-const chalk = require('chalk');
-const { USE_CACHE } = require('./cache/config');
-const useCache = require('./cache/useCache');
-
-const { getEntryFromCache, saveEntryToCache } = useCache();
 
 const fetchBlogPosts = async () => {
   const browser = await puppeteer.launch();
@@ -52,23 +47,6 @@ const fetchBlogPosts = async () => {
   return posts;
 };
 
-const getBlogPosts = async () => {
-  if (USE_CACHE) {
-    console.log(chalk.cyan('>>> USING CACHE'));
-
-    // get entry from cache
-    const cacheEntry = getEntryFromCache('blog');
-    // if entry does not exist in cache, fetch it
-    if (cacheEntry === null) {
-      console.log(chalk.dim('>>> Entry missing in cache, refetching'));
-      const posts = await fetchBlogPosts();
-      saveEntryToCache('blog', posts);
-      return posts;
-    }
-    // else, return the cache entry
-    return cacheEntry;
-  }
-  return fetchBlogPosts();
-};
+const getBlogPosts = async () => fetchBlogPosts();
 
 module.exports = getBlogPosts;
