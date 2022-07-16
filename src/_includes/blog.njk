@@ -1,16 +1,8 @@
-<section
-  id="blog"
-  class="bg-green-100 blog rounded-lg py-10 px-4"
-  data-e2e="blog"
->
-  <h2
-    class="flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2"
-  >
-    Blog
-  </h2>
+<section id="blog" class="bg-green-100 blog card" data-e2e="blog">
+  <h2 class="card-heading">Blog</h2>
 
   <ul
-    class="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row"
+    class="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row max-h-screen overflow-auto"
   >
     {% for item in blog.posts %}
     <li

@@ -14,8 +14,6 @@
 
 </div>
 
-<!-- ABOUT THE PROJECT -->
-
 ## About
 
 A static personal portfolio website to showcase projects, work experiences and blogs. See it [live](https://npranto.dev/).
@@ -60,6 +58,7 @@ To get started on development, let's install a few prerequisites
    ```sh
    npm run dev
    ```
+   _Note: You will need to setup a `.env` file with a few environmental variables to fetch contents from remote CMS (Contentful). Refer to Netlify environmental variables for that_
 4. To keep E2E test running on the background
    ```sh
    npm run cypress:open

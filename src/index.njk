@@ -3,10 +3,16 @@ title: Portfolio - Nazmuz Pranto
 layout: 'base.njk'
 ---
 
-{% include 'nav.njk' %}
+<nav class="fixed md:w-64 z-10" data-e2e="nav">
+  {% include 'nav.njk' %}
+</nav>  
 
 <main class="md:ml-64 space-y-10 sm:px-5">
-  {% include 'jumbotron.njk' %} {% include 'about.njk' %} {% include 'work.njk'
-  %} {% include 'projects.njk' %} {% include 'blog.njk' %} {% include
-  'education.njk' %} {% include 'contact.njk' %}
+  {% include 'jumbotron.njk' %} 
+  {% include 'about.njk' %} 
+  {% include 'work.njk' %} 
+  {% include 'projects.njk' %} 
+  {% include 'blog.njk' %} 
+  {% include 'education.njk' %} 
+  {% include 'contact.njk' %}
 </main>

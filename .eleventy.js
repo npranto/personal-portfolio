@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/vendor/fonts');
   eleventyConfig.addPassthroughCopy('./src/manifest.webmanifest');
 
-  eleventyConfig.addWatchTarget('./src/');
+  // eleventyConfig.addWatchTarget('./src/');
 
   return {
     dir: {
