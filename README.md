@@ -47,9 +47,9 @@ To get started on development, let's install a few prerequisites
    ```sh
    git clone https://github.com/npranto/personal-portfolio.git
    ```
-2. Checkout branch `v4`
+2. Checkout branch `v5`
    ```sh
-   git checkout v4
+   git checkout v5
    ```
 3. Install NPM packages
    ```sh
