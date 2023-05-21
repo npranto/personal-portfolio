@@ -3,7 +3,8 @@
 	"version": "5.0.0",
 	"description": "A static personal portfolio website to showcase projects, work experiences and blog posts. See it [live](https://npranto.dev/).",
 	"scripts": {
-		"lint": "npx eslint ./"
+		"lint": "npx eslint ./",
+		"format": "npx prettier --write ."
 	},
 	"repository": {
 		"type": "git",
@@ -19,6 +20,8 @@
 	"devDependencies": {
 		"eslint": "^8.41.0",
 		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-plugin-import": "^2.27.5"
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"prettier": "2.8.8"
 	}
 }
