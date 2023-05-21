@@ -4,7 +4,8 @@
 	"description": "A static personal portfolio website to showcase projects, work experiences and blog posts. See it [live](https://npranto.dev/).",
 	"scripts": {
 		"lint": "npx eslint ./",
-		"format": "npx prettier --write ."
+		"format": "npx prettier --write .",
+		"healthcheck": ""
 	},
 	"repository": {
 		"type": "git",
