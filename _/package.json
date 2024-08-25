@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/npranto/personal-portfolio#readme",
   "dependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "contentful": "^9.1.12",
     "dotenv": "^16.0.0"
   },
