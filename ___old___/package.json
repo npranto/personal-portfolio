@@ -1,0 +1,59 @@
+{
+	"name": "personal-portfolio",
+	"version": "4.0.2",
+	"description": "",
+	"scripts": {
+		"clean:install": "npx rimraf node_modules && npm install",
+		"clean:build": "npx rimraf dist public",
+		"clean": "npm run clean:install && npm run clean:build",
+		"tailwind:build": "npx tailwindcss -c ./src/vendor/tailwind/tailwind.config.js -i ./src/vendor/tailwind/input.css -o ./public/vendor/tailwind/output.css",
+		"tailwind:watch": "npx tailwindcss -c ./src/vendor/tailwind/tailwind.config.js -i ./src/vendor/tailwind/input.css -o ./public/vendor/tailwind/output.css --watch",
+		"lint": "npx eslint ./",
+		"format": "npx prettier --write \"**/*.{html,css,js,json}\"",
+		"dev": "npx concurrently \"npm run tailwind:watch\" \"eleventy --serve\"",
+		"out": "npx rimraf public && eleventy && npm run tailwind:build",
+		"prod": "npx rimraf dist && npm run out && npx parcel build public/index.html --no-content-hash",
+		"preview": "npx serve dist -l 9000",
+		"cypress:open": "npx cypress open --config-file cypress.dev.json",
+		"cypress:run:dev": "npx cypress run --config-file cypress.dev.json",
+		"cypress:run:prod": "npx cypress run --config-file cypress.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/npranto/personal-portfolio.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/npranto/personal-portfolio/issues"
+	},
+	"homepage": "https://github.com/npranto/personal-portfolio#readme",
+	"dependencies": {
+		"@11ty/eleventy": "^1.0.0",
+		"contentful": "^9.1.12",
+		"dotenv": "^16.0.0"
+	},
+	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.3.2",
+		"@parcel/transformer-webmanifest": "^2.3.2",
+		"chalk": "^4.1.2",
+		"concurrently": "^6.5.1",
+		"cypress": "^9.5.1",
+		"eslint": "^8.10.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-cypress": "^2.12.1",
+		"eslint-plugin-import": "^2.25.4",
+		"husky": "^7.0.4",
+		"node-fetch": "^3.2.1",
+		"npm-run-all": "^4.1.5",
+		"parcel": "^2.3.2",
+		"prettier": "^2.5.1",
+		"puppeteer": "^13.4.1",
+		"rimraf": "^3.0.2",
+		"serve": "^14.0.1",
+		"sharp": "^0.29.1",
+		"tailwindcss": "^3.0.23"
+	}
+}

@@ -1,36 +1,26 @@
 {
 	"name": "personal-portfolio",
 	"version": "5.0.0",
-	"description": "A static personal portfolio website to showcase projects, work experiences and blog posts. See it [live](https://npranto.dev/).",
+	"private": true,
 	"scripts": {
-		"lint": "npx eslint ./",
-		"format": "npx prettier --write .",
-		"healthcheck": ""
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"prepare": "husky",
+		"format": "npx prettier --write ."
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/npranto/personal-portfolio.git"
+	"dependencies": {
+		"next": "14.2.6",
+		"react": "^18",
+		"react-dom": "^18"
 	},
-	"keywords": [],
-	"author": "Nazmuz Pranto <npranto@gmail.com>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/npranto/personal-portfolio/issues"
-	},
-	"homepage": "https://github.com/npranto/personal-portfolio#readme",
 	"devDependencies": {
-		"commitizen": "^4.3.0",
-		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.41.0",
-		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-import": "^2.27.5",
-		"husky": "^8.0.3",
-		"prettier": "2.8.8"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
+		"eslint": "^8",
+		"eslint-config-next": "14.2.6",
+		"husky": "^9.1.5",
+		"postcss": "^8",
+		"prettier": "^3.3.3",
+		"tailwindcss": "^3.4.1"
 	}
 }
