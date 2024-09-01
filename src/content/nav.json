@@ -1,6 +1,6 @@
 {
 	"id": "content:nav",
-	"link": [
+	"links": [
 		{
 			"id": "about",
 			"text": "About",

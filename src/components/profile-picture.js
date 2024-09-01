@@ -19,8 +19,11 @@ const ProfilePicture = ({ src, width, height, className = '' }) => {
 	}
 
 	return (
-		<div className={`profile-picture ${className}`}>
-			<picture>
+		<div
+			className={`profile-picture bg-gray-200 rounded dark:bg-gray-700 ${className}`}
+			style={{ height: `${height}px`, width: `${width}px` }}
+		>
+			<picture className="">
 				<source srcSet={`${src}?as=webp`} type="image/webp" />
 				<Image
 					src={`${src}?width=${width.toString()}&height=${height.toString()}`}
