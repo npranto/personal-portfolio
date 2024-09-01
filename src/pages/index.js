@@ -22,11 +22,8 @@ export default function Home() {
 		<>
 			<Head>
 				<meta name="viewport" content="viewport-fit=cover" />
-				<meta
-					name="description"
-					content="Learn more about Nazmuz Pranto and his recent works, projects, and personal interests."
-				/>
-				<title>Portfolio - Nazmuz Pranto</title>
+				<meta name="description" content={profile.description} />
+				<title>{profile.title}</title>
 			</Head>
 			<div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
 				<Jumbotron profile={profile} />

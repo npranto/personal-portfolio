@@ -1,5 +1,7 @@
 import React from 'react';
 import Socials from './socials';
+import nav from '../content/nav.json';
+import profile from '../content/profile.json';
 
 const ProfilePicture = ({ srcLg }) => (
 	<div className="profile-picture mb-2">
@@ -16,7 +18,7 @@ const ProfilePicture = ({ srcLg }) => (
 	</div>
 );
 
-const MenuTabs = ({ links, socials }) => (
+const MenuTabs = ({ links }) => (
 	<div
 		id="menu-tabs"
 		className="md:hidden bottom-0 w-full fixed bg-white flex overflow-x-auto space-x-2 px-4 pb-6 pt-4"
@@ -26,11 +28,11 @@ const MenuTabs = ({ links, socials }) => (
 				{link.text}
 			</a>
 		))}
-		<Socials socials={socials} />
+		<Socials />
 	</div>
 );
 
-const MenuSidebar = ({ profile, links, socials }) => (
+const MenuSidebar = ({ profile, links }) => (
 	<section
 		id="nav-menu"
 		className="navigation-menu hidden md:block h-screen px-4 py-4 box-border"
@@ -48,7 +50,7 @@ const MenuSidebar = ({ profile, links, socials }) => (
 					<a
 						href={link.href}
 						type="button"
-						className="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 focus:outline-none text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 hover:px-1"
+						className="flex items-center rounded-sm text-base hover:font-semibold whitespace-nowrap py-2 pl-2 focus:outline-none text-gray-800 hover:bg-gray-100 transition ease-in-out hover:-translate-x-2 "
 						data-e2e={`menu-link-${link.id}`}
 					>
 						{link.text}
@@ -56,67 +58,15 @@ const MenuSidebar = ({ profile, links, socials }) => (
 				</li>
 			))}
 		</ul>
-		<Socials socials={socials} />
+		<Socials />
 	</section>
 );
-
-const profileData = {
-	picture: { lg: '/assets/images/profile-v3-200.png' },
-	author: 'Nazmuz Pranto',
-	currentRole: 'Frontend Developer',
-	location: 'Boston, MA',
-};
-
-const linksData = [
-	{
-		id: 'about',
-		text: 'About',
-		href: '#about',
-	},
-	{
-		id: 'work',
-		text: 'Work',
-		href: '#work',
-	},
-	{
-		id: 'projects',
-		text: 'Projects',
-		href: '#projects',
-	},
-	{
-		id: 'blog',
-		text: 'Blog',
-		href: '#blog',
-	},
-	{
-		id: 'education',
-		text: 'Education',
-		href: '#education',
-	},
-	{
-		id: 'contact',
-		text: 'Contact',
-		href: '#contact',
-	},
-];
-
-const socialsData = {
-	github: 'https://github.com/username',
-	linkedin: 'https://linkedin.com/in/username',
-	twitter: 'https://twitter.com/username',
-	devto: 'https://dev.to/username',
-	medium: 'https://medium.com/@username',
-};
 
 export default function Nav({ className = '' }) {
 	return (
 		<nav className={`${className}`} data-e2e="nav">
-			<MenuTabs links={linksData} socials={socialsData} />
-			<MenuSidebar
-				profile={profileData}
-				links={linksData}
-				socials={socialsData}
-			/>
+			<MenuTabs links={nav?.links} />
+			<MenuSidebar profile={profile} links={nav?.links} />
 		</nav>
 	);
 }

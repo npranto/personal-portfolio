@@ -100,7 +100,7 @@ export default function Document() {
 					}}
 				/> */}
 			</Head>
-			<body className="max-w-screen-lg m-auto mt-0 mb-0">
+			<body className="max-w-screen-lg m-auto my-2 md:my-10">
 				<Main />
 				<NextScript />
 			</body>
