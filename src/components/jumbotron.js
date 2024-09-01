@@ -1,12 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
 import Socials from './socials';
+import Card from './card';
+import ProfilePicture from './profile-picture';
+import TextSlider from './text-slider';
 
 const Jumbotron = ({ profile }) => {
 	return (
-		<section
+		<Card
 			id="jumbotron"
-			className={`jumbotron-intro card`}
+			className={`jumbotron-card sm:pt-0`}
 			data-e2e="jumbotron"
 		>
 			<h1 className="text-5xl md:text-6xl font-extrabold text-gray-300 tracking-tight mb-6">
@@ -15,32 +17,16 @@ const Jumbotron = ({ profile }) => {
 					I&apos;m {profile.nickname}
 				</span>
 			</h1>
-			<div className="profile-picture mb-2 md:hidden">
-				<picture>
-					<source
-						srcSet={`${profile.picture.sm}?as=webp&width=112`}
-						type="image/webp"
-					/>
-					<Image
-						src={`${profile.picture.sm}?width=160`}
-						alt="Profile Picture"
-						width={112}
-						height={160}
-						layout="intrinsic"
-						objectFit="contain"
-					/>
-				</picture>
-			</div>
-			<div className={`slider sm:mb-10`}>
-				{profile.highlightedRoles.map((role, index) => (
-					<h2
-						key={index}
-						className={`item flex text-2xl md:text-4xl font-extrabold text-red-600 tracking-tight mb-10`}
-					>
-						&lt; {role} /&gt;
-					</h2>
-				))}
-			</div>
+
+			<ProfilePicture
+				className="mb-2 md:hidden"
+				src={profile.picture.sm}
+				width={160}
+				height={160}
+			/>
+
+			<TextSlider className="sm:mb-10" items={profile.highlightedRoles} />
+
 			<div className="action-call flex flex-row space-x-2">
 				<a
 					href={profile.resumeHref}
@@ -58,10 +44,11 @@ const Jumbotron = ({ profile }) => {
 					Let&apos;s Talk
 				</a>
 			</div>
+
 			<div className="md:hidden mt-5">
-				<Socials socials={import('../content/socials.json').default} />
+				<Socials />
 			</div>
-		</section>
+		</Card>
 	);
 };
 

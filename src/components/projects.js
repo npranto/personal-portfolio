@@ -1,13 +1,15 @@
 import React from 'react';
+import CardHeading from './card-heading';
+import Card from './card';
 
 const Projects = ({ projects }) => {
 	return (
-		<section
+		<Card
 			id="projects"
 			className="bg-lime-100 projects card"
 			data-e2e="projects"
 		>
-			<h2 className="card-heading">{projects.header}</h2>
+			<CardHeading>{projects.header}</CardHeading>
 
 			<ul className="projects-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row lg:items-stretch">
 				{projects.items.map((item) => (
@@ -124,7 +126,7 @@ const Projects = ({ projects }) => {
 					</li>
 				))}
 			</ul>
-		</section>
+		</Card>
 	);
 };
 

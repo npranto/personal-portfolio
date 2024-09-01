@@ -21,12 +21,12 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<meta name="viewport" content="viewport-fit=cover" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="description" content={profile.description} />
 				<title>{profile.title}</title>
 			</Head>
 			<div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
-				<Jumbotron profile={profile} />
+				<Jumbotron className="card" profile={profile} />
 				<About about={about} />
 				<Work work={work} />
 				<Projects projects={projects} />

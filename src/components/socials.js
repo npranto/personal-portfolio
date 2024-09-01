@@ -143,39 +143,59 @@ const DevToLogo = () => {
 	);
 };
 
-export default function Socials() {
+export default function Socials({
+	className = '',
+	hideGithub = false,
+	hideLinkedin = false,
+	hideTwitter = false,
+	hideMedium = false,
+	hideYoutube = false,
+	hideDevTo = false,
+}) {
 	return (
-		<ul className="socials flex flex-row space-x-2">
-			<li className="transition ease-in-out hover:-translate-y-1">
-				<a href={socials.github} target="_blank" rel="noopener noreferrer">
-					<GitHubLogo />
-				</a>
-			</li>
-			<li className="transition ease-in-out hover:-translate-y-1">
-				<a href={socials.linkedin} target="_blank" rel="noopener noreferrer">
-					<LinkedinLogo />
-				</a>
-			</li>
-			<li className="transition ease-in-out hover:-translate-y-1">
-				<a href={socials.twitter} target="_blank" rel="noopener noreferrer">
-					<TwitterLogo />
-				</a>
-			</li>
-			<li className="transition ease-in-out hover:-translate-y-1">
-				<a href={socials.devto} target="_blank" rel="noopener noreferrer">
-					<DevToLogo />
-				</a>
-			</li>
-			<li className="transition ease-in-out hover:-translate-y-1">
-				<a href={socials.medium} target="_blank" rel="noopener noreferrer">
-					<MediumLogo />
-				</a>
-			</li>
-			<li className="transition ease-in-out hover:-translate-y-1">
-				<a href={socials.youtube} target="_blank" rel="noopener noreferrer">
-					<YoutubeLogo />
-				</a>
-			</li>
+		<ul className={`socials flex flex-row space-x-2 ${className}`}>
+			{!hideGithub && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a href={socials.github} target="_blank" rel="noopener noreferrer">
+						<GitHubLogo />
+					</a>
+				</li>
+			)}
+			{!hideLinkedin && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+						<LinkedinLogo />
+					</a>
+				</li>
+			)}
+			{!hideTwitter && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a href={socials.twitter} target="_blank" rel="noopener noreferrer">
+						<TwitterLogo />
+					</a>
+				</li>
+			)}
+			{!hideDevTo && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a href={socials.devto} target="_blank" rel="noopener noreferrer">
+						<DevToLogo />
+					</a>
+				</li>
+			)}
+			{!hideMedium && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a href={socials.medium} target="_blank" rel="noopener noreferrer">
+						<MediumLogo />
+					</a>
+				</li>
+			)}
+			{!hideYoutube && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a href={socials.youtube} target="_blank" rel="noopener noreferrer">
+						<YoutubeLogo />
+					</a>
+				</li>
+			)}
 		</ul>
 	);
 }

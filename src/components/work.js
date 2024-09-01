@@ -1,9 +1,11 @@
 import Image from 'next/image';
+import CardHeading from './card-heading';
+import Card from './card';
 
 const Work = ({ work }) => {
 	return (
-		<section id="work" className="bg-amber-100 work card" data-e2e="work">
-			<h2 className="card-heading">{work.header}</h2>
+		<Card id="work" className="bg-amber-100 work card" data-e2e="work">
+			<CardHeading>{work.header}</CardHeading>
 
 			<ul className="work-list">
 				{work.items.map((item) => (
@@ -67,7 +69,7 @@ const Work = ({ work }) => {
 					</li>
 				))}
 			</ul>
-		</section>
+		</Card>
 	);
 };
 

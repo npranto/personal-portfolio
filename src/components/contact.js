@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import CardHeading from './card-heading';
+import Card from './card';
+import Socials from './socials';
 
 const Contact = () => {
 	const [formData, setFormData] = useState({
@@ -55,8 +58,10 @@ const Contact = () => {
 	};
 
 	return (
-		<section id="contact" className="contact card" data-e2e="contact">
-			<h2 className="card-heading">Contact</h2>
+		<Card id="contact" className="contact card" data-e2e="contact">
+			<CardHeading>Contact</CardHeading>
+
+			<Socials className="my-10" hideDevTo hideGithub hideMedium hideYoutube />
 
 			<form
 				className="w-full max-w-lg"
@@ -133,7 +138,7 @@ const Contact = () => {
 					Send
 				</button>
 			</form>
-		</section>
+		</Card>
 	);
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
+import CardHeading from './card-heading';
+import Card from './card';
 
 const Blog = ({ posts }) => {
 	return (
-		<section id="blog" className="bg-green-100 blog card" data-e2e="blog">
-			<h2 className="card-heading">Blog</h2>
+		<Card id="blog" className="bg-green-100 blog card" data-e2e="blog">
+			<CardHeading>Blog</CardHeading>
 
 			<ul className="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row max-h-screen overflow-auto">
 				{posts.map((item) => (
@@ -31,7 +33,7 @@ const Blog = ({ posts }) => {
 					</li>
 				))}
 			</ul>
-		</section>
+		</Card>
 	);
 };
 

@@ -1,13 +1,15 @@
 import React from 'react';
+import CardHeading from './card-heading';
+import Card from './card';
 
 const Education = ({ education }) => {
 	return (
-		<section
+		<Card
 			id="education"
 			className="bg-sky-100 education card"
 			data-e2e="education"
 		>
-			<h2 className="card-heading">{education.header}</h2>
+			<CardHeading>{education.header}</CardHeading>
 
 			<ul className="education-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row">
 				{education.items.map((item, index) => (
@@ -37,7 +39,7 @@ const Education = ({ education }) => {
 					</li>
 				))}
 			</ul>
-		</section>
+		</Card>
 	);
 };
 

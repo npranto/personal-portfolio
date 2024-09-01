@@ -1,10 +1,10 @@
-/* slider (for above the fold CSS) */
-.slider {
+/* text-slider */
+.text-slider {
 	height: 60px;
 	overflow: hidden;
 }
 
-.slider > .item {
+.text-slider > .item {
 	height: 60px;
 	display: flex;
 	align-items: center;

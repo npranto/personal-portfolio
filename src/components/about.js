@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import CardHeading from './card-heading';
+import Card from './card';
 
 const About = ({ about }) => {
 	const [showReadMore, setShowReadMore] = useState(false);
@@ -7,8 +9,8 @@ const About = ({ about }) => {
 		setShowReadMore((showReadMore) => !showReadMore);
 
 	return (
-		<section id="about" className="about bg-red-100 card" data-e2e="about">
-			<h2 className="card-heading">{about.header}</h2>
+		<Card id="about" className="about bg-red-100 card" data-e2e="about">
+			<CardHeading>{about.header}</CardHeading>
 
 			<div
 				className="text-base text-gray-500"
@@ -80,7 +82,7 @@ const About = ({ about }) => {
 					</svg>
 				</span>
 			</button>
-		</section>
+		</Card>
 	);
 };
 

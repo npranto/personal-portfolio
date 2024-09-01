@@ -1,22 +1,8 @@
 import React from 'react';
 import Socials from './socials';
-import nav from '../content/nav.json';
+import ProfilePicture from './profile-picture';
+import navLinks from '../content/nav-links.json';
 import profile from '../content/profile.json';
-
-const ProfilePicture = ({ srcLg }) => (
-	<div className="profile-picture mb-2">
-		<picture>
-			<source srcSet={`${srcLg}?as=webp`} type="image/webp" />
-			<img
-				src={`${srcLg}?width=200`}
-				alt="Profile Picture"
-				width="200px"
-				height="auto"
-				className="rounded"
-			/>
-		</picture>
-	</div>
-);
 
 const MenuTabs = ({ links }) => (
 	<div
@@ -40,12 +26,17 @@ const MenuSidebar = ({ profile, links }) => (
 		id="nav-menu"
 		className="navigation-menu hidden md:block h-screen px-4 py-4 box-border"
 	>
-		<ProfilePicture srcLg={profile.picture.lg} />
+		<ProfilePicture
+			className="mb-2"
+			src={profile.picture.lg}
+			width={200}
+			height={200}
+		/>
 		<h1 className="name inline-block text-2xl sm:text-3xl font-semibold text-gray-900 tracking-tight my-2">
 			{profile.author}
 		</h1>
-		<p className="title profile-info">{profile.currentRole}</p>
-		<p className="location profile-info">{profile.location}</p>
+		<p className="title text-base text-gray-500">{profile.currentRole}</p>
+		<p className="location text-base text-gray-500">{profile.location}</p>
 
 		<ul id="menu-links" className="menu-links grid grid-cols-1 my-10">
 			{links.map((link) => (
@@ -68,8 +59,8 @@ const MenuSidebar = ({ profile, links }) => (
 export default function Nav({ className = '' }) {
 	return (
 		<nav className={`${className}`} data-e2e="nav">
-			<MenuTabs links={nav?.links} />
-			<MenuSidebar profile={profile} links={nav?.links} />
+			<MenuTabs links={navLinks} />
+			<MenuSidebar profile={profile} links={navLinks} />
 		</nav>
 	);
 }
