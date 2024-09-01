@@ -1,38 +1,111 @@
-import React, { useState } from 'react';
-import CardHeading from './card-heading';
+import React, { useState, useRef, useEffect } from 'react';
 import Card from './card';
+import CardHeading from './card-heading';
+import about from '../content/about.json';
 
-const About = ({ about }) => {
+const About = () => {
+	const readMoreContentRef = useRef(null);
+	const hasInteractedWithReadMoreBtn = useRef(false);
 	const [showReadMore, setShowReadMore] = useState(false);
 
-	const handleReadMoreToggle = () =>
+	const handleReadMoreToggle = () => {
+		hasInteractedWithReadMoreBtn.current = true;
 		setShowReadMore((showReadMore) => !showReadMore);
+	};
+
+	const scrollIntoView = (ref) => {
+		if (ref.current) {
+			ref.current.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+			});
+		} else {
+			ref.scrollIntoView({
+				behavior: 'smooth',
+				block: 'start',
+			});
+		}
+	};
+
+	useEffect(() => {
+		if (!hasInteractedWithReadMoreBtn.current) return;
+		if (showReadMore) scrollIntoView(readMoreContentRef);
+		else scrollIntoView(document.getElementById('about'));
+	}, [showReadMore]);
 
 	return (
-		<Card id="about" className="about bg-red-100 card" data-e2e="about">
+		<Card id="about" className="about-card bg-red-100 card" data-e2e="about">
 			<CardHeading>{about.header}</CardHeading>
 
 			<div
-				className="text-base text-gray-500"
-				dangerouslySetInnerHTML={{ __html: about.focusContent }}
-			></div>
+				id="focus-content"
+				className="transition ease-in-out"
+				data-e2e="focus-content"
+			>
+				<div className="text-base">
+					{about.mainContent.map((mainContentItem, idx) => (
+						<div key={idx}>
+							{mainContentItem.sectionHeader && (
+								<h3 className="font-semibold mt-3">
+									{mainContentItem.sectionHeader}
+								</h3>
+							)}
+							{mainContentItem.sectionContent.map((sectionContentItem) => (
+								<p
+									key={
+										sectionContentItem.length <= 10
+											? sectionContentItem
+											: sectionContentItem.substr(0, 5) +
+												sectionContentItem.substr(sectionContentItem.length - 5)
+									}
+									className="paragraph-content text-base text-gray-500 my-2"
+									dangerouslySetInnerHTML={{ __html: sectionContentItem }}
+								></p>
+							))}
+						</div>
+					))}
+				</div>
+			</div>
 
 			{showReadMore && (
 				<div
+					ref={readMoreContentRef}
 					id="read-more-content"
 					className="transition ease-in-out"
 					data-e2e="read-more-content"
 				>
-					<div
-						dangerouslySetInnerHTML={{ __html: about.readMoreContent }}
-					></div>
+					<div className="text-base">
+						{about.secondaryContent.map((secondaryContentItem) => (
+							<>
+								<h3 className="font-semibold mt-3">
+									{secondaryContentItem.sectionHeader}
+								</h3>
+								{secondaryContentItem.sectionContent.map(
+									(sectionContentItem) => (
+										<p
+											key={
+												sectionContentItem.length <= 10
+													? sectionContentItem
+													: sectionContentItem.substr(0, 5) +
+														sectionContentItem.substr(
+															sectionContentItem.length - 5
+														)
+											}
+											className="paragraph-content text-base text-gray-500 my-2"
+											dangerouslySetInnerHTML={{ __html: sectionContentItem }}
+										></p>
+									)
+								)}
+							</>
+						))}
+					</div>
 				</div>
 			)}
 
 			<button
 				type="button"
 				id="read-more-btn"
-				className={`flex space-x-1 font-medium text-indigo-600 hover:text-indigo-500 ${showReadMore ? 'hidden' : ''}`}
+				className={`inline-flex items-center rounded-sm text-xs md:text-sm font-semibold whitespace-nowrap p-3 focus:outline-none focus:ring-2 bg-gray-700 text-white hover:bg-gray-800 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-400 transition ease-in-out duration-200 hover:-translate-y-1 mt-4 ${showReadMore ? 'hidden' : ''}`}
 				data-e2e="read-more-btn"
 				onClick={handleReadMoreToggle}
 			>
@@ -59,7 +132,7 @@ const About = ({ about }) => {
 			<button
 				type="button"
 				id="collapse-read-more-btn"
-				className={`flex space-x-1 font-medium text-indigo-600 hover:text-indigo-500 ${showReadMore ? '' : 'hidden'}`}
+				className={`inline-flex items-center rounded-sm text-xs md:text-sm font-semibold whitespace-nowrap p-3 focus:outline-none focus:ring-2 bg-gray-700 text-white hover:bg-gray-800 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-gray-400 transition ease-in-out duration-200 hover:-translate-y-1 mt-4 ${showReadMore ? '' : 'hidden'}`}
 				data-e2e="collapse-btn"
 				onClick={handleReadMoreToggle}
 			>

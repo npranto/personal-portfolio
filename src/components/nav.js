@@ -1,7 +1,7 @@
 import React from 'react';
 import Socials from './socials';
 import ProfilePicture from './profile-picture';
-import navLinks from '../content/nav-links.json';
+import nav from '../content/nav.json';
 import profile from '../content/profile.json';
 
 const MenuTabs = ({ links }) => (
@@ -59,8 +59,8 @@ const MenuSidebar = ({ profile, links }) => (
 export default function Nav({ className = '' }) {
 	return (
 		<nav className={`${className}`} data-e2e="nav">
-			<MenuTabs links={navLinks} />
-			<MenuSidebar profile={profile} links={navLinks} />
+			<MenuTabs links={nav?.links || []} />
+			<MenuSidebar profile={profile} links={nav?.links || []} />
 		</nav>
 	);
 }
