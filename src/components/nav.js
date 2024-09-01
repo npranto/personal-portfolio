@@ -24,11 +24,14 @@ const MenuTabs = ({ links }) => (
 		className="md:hidden bottom-0 w-full fixed bg-white flex overflow-x-auto space-x-2 px-4 pb-6 pt-4"
 	>
 		{links.map((link) => (
-			<a key={link.href} href={link.href} className="nav-link-tab">
+			<a
+				key={link.href}
+				href={link.href}
+				className="nav-link-tab py-2 px-4 rounded-full transition-colors bg-gray-100 hover:bg-gray-800 hover:text-white"
+			>
 				{link.text}
 			</a>
 		))}
-		<Socials />
 	</div>
 );
 
