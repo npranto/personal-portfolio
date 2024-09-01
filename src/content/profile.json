@@ -1,0 +1,23 @@
+{
+	"id": "Default - Profile",
+	"description": "Portfolio website - Nazmuz Pranto, a front-end engineer",
+	"title": "Portfolio - Nazmuz Pranto v4.0.0",
+	"picture": {
+		"id": "Default - Profile Owner",
+		"sm": "/assets/images/profile-v3-112.png",
+		"lg": "/assets/images/profile-v3-200.png"
+	},
+	"author": "Nazmuz Pranto",
+	"currentRole": "Software Engineer",
+	"location": "Boston, MA",
+	"highlightedRoles": [
+		"Frontend Engineer",
+		"Mentor",
+		"Creative Thinker",
+		"Problem Solver",
+		"Rookie Blogger"
+	],
+	"resumeHref": "/assets/resume.pdf",
+	"contactHref": "#contact",
+	"nickname": "Shakib"
+}

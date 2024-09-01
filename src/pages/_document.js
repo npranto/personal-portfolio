@@ -5,9 +5,7 @@ export default function Document() {
 		<Html lang="en">
 			<Head>
 				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="theme-color" content="#000000" />
-				<meta name="description" content="Your profile description here" />
 				<link
 					rel="apple-touch-icon"
 					sizes="57x57"
@@ -84,7 +82,6 @@ export default function Document() {
 					content="/assets/favicons/ms-icon-144x144.png"
 				/>
 				<meta name="theme-color" content="#ffffff" />
-				{/* <link rel="stylesheet" href="/styles/index.css" /> */}
 
 				{/* TODO: how do we isolate this onto its own file? */}
 				{/* Global site tag (gtag.js) - Google Analytics */}
@@ -103,10 +100,7 @@ export default function Document() {
 					}}
 				/> */}
 			</Head>
-			<body
-				className="max-w-screen-lg m-auto mt-0 mb-0"
-				class="max-w-screen-lg m-auto mt-0 mb-0"
-			>
+			<body className="max-w-screen-lg m-auto mt-0 mb-0">
 				<Main />
 				<NextScript />
 			</body>

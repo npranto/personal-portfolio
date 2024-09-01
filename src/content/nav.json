@@ -1,0 +1,35 @@
+{
+	"id": "Default - Nav",
+	"links": [
+		{
+			"id": "about",
+			"text": "About",
+			"href": "#about"
+		},
+		{
+			"id": "work",
+			"text": "Work",
+			"href": "#work"
+		},
+		{
+			"id": "projects",
+			"text": "Projects",
+			"href": "#projects"
+		},
+		{
+			"id": "blog",
+			"text": "Blog",
+			"href": "#blog"
+		},
+		{
+			"id": "education",
+			"text": "Education",
+			"href": "#education"
+		},
+		{
+			"id": "contact",
+			"text": "Contact",
+			"href": "#contact"
+		}
+	]
+}
