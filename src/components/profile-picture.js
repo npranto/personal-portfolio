@@ -20,7 +20,7 @@ const ProfilePicture = ({ src, width, height, className = '' }) => {
 
 	return (
 		<div
-			className={`profile-picture bg-gray-200 rounded dark:bg-gray-700 ${className}`}
+			className={`profile-picture bg-gray-200 rounded ${className}`}
 			style={{ height: `${height}px`, width: `${width}px` }}
 		>
 			<picture className="">

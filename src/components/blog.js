@@ -1,17 +1,18 @@
 import React from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
+import posts from '../content/blog.json';
 
-const Blog = ({ posts }) => {
+const Blog = () => {
 	return (
 		<Card id="blog" className="bg-green-100 blog card" data-e2e="blog">
 			<CardHeading>Blog</CardHeading>
 
-			<ul className="blog-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row max-h-screen overflow-auto">
+			<ul className="blog-list grid lg:grid-cols-2 gap-4 lg:grid-flow-row lg:items-stretch">
 				{posts.map((item) => (
 					<li
-						key={item.href} // Assuming `href` is unique. If not, use a unique identifier.
-						className="blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+						key={item.href}
+						className={`blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md`}
 					>
 						<a
 							href={item.href}

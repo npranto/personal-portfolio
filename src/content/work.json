@@ -1,19 +1,20 @@
 {
-	"id": "Default - Work",
+	"id": "content:work",
 	"header": "Work",
 	"items": [
 		{
 			"id": "bestbuy",
 			"image": {
 				"id": "bestbuy",
-				"sm": "/assets/images/bestbuy-logo-48.jpeg",
-				"lg": "/assets/images/bestbuy-logo-64.jpeg"
+				"sm": "/assets/images/bestbuy-logo-200x200.jpeg",
+				"lg": "/assets/images/bestbuy-logo-200x200.jpeg"
 			},
 			"position": "Software Engineer",
 			"company": "Best Buy",
 			"location": "Remote",
 			"duration": "March 2022 - Present",
 			"employmentType": "Contract",
+			"isCurrent": true,
 			"description": [
 				"Improved website performance for faster load and better customer experience",
 				"Built product detail page for Best Buy front of site",
@@ -25,8 +26,8 @@
 			"id": "newfold",
 			"image": {
 				"id": "Newfold Logo",
-				"sm": "/assets/images/newfold-logo-48.jpeg",
-				"lg": "/assets/images/newfold-logo-64.jpeg"
+				"sm": "/assets/images/newfold-logo-200x200.jpeg",
+				"lg": "/assets/images/newfold-logo-200x200.jpeg"
 			},
 			"position": "Software Engineer",
 			"company": "Newfold Digitial",
@@ -55,8 +56,8 @@
 			"id": "lexia",
 			"image": {
 				"id": "Lexia Logo",
-				"sm": "/assets/images/lexia-logo-48.jpeg",
-				"lg": "/assets/images/lexia-logo-64.jpeg"
+				"sm": "/assets/images/lexia-logo-200x200.jpeg",
+				"lg": "/assets/images/lexia-logo-200x200.jpeg"
 			},
 			"position": "Software Engineer",
 			"company": "Lexia Learning",

@@ -4,8 +4,8 @@
 	"title": "Portfolio - Nazmuz Pranto v5",
 	"picture": {
 		"id": "Default - Profile Owner",
-		"sm": "/assets/images/profile-v4-500x500.webp",
-		"lg": "/assets/images/profile-v4-500x500.webp"
+		"sm": "/assets/images/profile-v4-500x500.jpg",
+		"lg": "/assets/images/profile-v4-500x500.jpg"
 	},
 	"author": "Nazmuz Pranto",
 	"currentRole": "Software Engineer",

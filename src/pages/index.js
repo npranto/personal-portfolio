@@ -26,13 +26,13 @@ export default function Home() {
 				<title>{profile.title}</title>
 			</Head>
 			<div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
-				<Jumbotron className="card" profile={profile} />
-				<About about={about} />
-				<Work work={work} />
-				<Projects projects={projects} />
-				<Blog posts={posts} />
-				<Videos videos={videos} />
-				<Education education={education} />
+				<Jumbotron />
+				<About />
+				<Work />
+				<Projects />
+				<Blog />
+				<Videos />
+				<Education />
 				<Contact />
 			</div>
 		</>

@@ -1,8 +1,9 @@
 import React from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
+import education from '../content/education.json';
 
-const Education = ({ education }) => {
+const Education = () => {
 	return (
 		<Card
 			id="education"
@@ -11,13 +12,13 @@ const Education = ({ education }) => {
 		>
 			<CardHeading>{education.header}</CardHeading>
 
-			<ul className="education-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row">
+			<ul className="education-list grid lg:grid-cols-2 gap-4 lg:grid-flow-row lg:items-stretch">
 				{education.items.map((item, index) => (
 					<li
 						key={index}
-						className="education-item bg-gray-100 drop-shadow-lg transition ease-in-out duration-500 my-3 rounded-md"
+						className="blog-item bg-gray-100 drop-shadow-lg transition ease-in-out duration-500 rounded-md"
 					>
-						<div className="cursor-pointer p-4">
+						<div className="p-4">
 							<div className="flex space-x-2">
 								<div className="flex flex-col flex-grow top-level-details">
 									<h4 className="text-base font-semibold">

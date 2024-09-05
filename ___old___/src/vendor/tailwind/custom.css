@@ -2,7 +2,7 @@
 	@apply text-base text-gray-500;
 }
 .card {
-	@apply rounded-lg py-10 px-4;
+	@apply rounded-lg py-4 px-4;
 }
 .card-heading {
 	@apply flex text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight my-2;

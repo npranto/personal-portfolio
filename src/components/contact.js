@@ -78,7 +78,7 @@ const Contact = () => {
 							Name
 						</label>
 						<input
-							className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+							className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white transition-colors ease-in-out duration-500"
 							id="grid-name"
 							type="text"
 							name="name"
@@ -98,7 +98,7 @@ const Contact = () => {
 							Email
 						</label>
 						<input
-							className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+							className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white transition-colors ease-in-out duration-500"
 							id="grid-email"
 							type="email"
 							name="email"
@@ -118,7 +118,7 @@ const Contact = () => {
 							Message
 						</label>
 						<textarea
-							className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-48"
+							className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-48 transition-colors ease-in-out duration-500"
 							name="message"
 							id="grid-message"
 							placeholder="How can I help?"

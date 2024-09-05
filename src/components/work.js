@@ -1,27 +1,46 @@
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
+import work from '../content/work.json';
 
-const Work = ({ work }) => {
+const Work = () => {
+	const [activeWorkItemId, setActiveWorkItemId] = useState(work.items[0].id);
+	const [hasUserInteracted, setHasUserInteracted] = useState(false);
+
+	useEffect(() => {
+		if (hasUserInteracted) {
+			const activeItem = document.getElementById(`${activeWorkItemId}-item`);
+			if (activeItem) {
+				activeItem.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center',
+				});
+			}
+		}
+	}, [activeWorkItemId, hasUserInteracted]);
+
+	const handleItemClick = (itemId) => {
+		setActiveWorkItemId(itemId);
+		if (!hasUserInteracted) setHasUserInteracted(true);
+	};
+
 	return (
 		<Card id="work" className="bg-amber-100 work card" data-e2e="work">
 			<CardHeading>{work.header}</CardHeading>
 
-			<ul className="work-list">
+			<ul className="work-list grid lg:grid-cols-1 gap-4 lg:grid-flow-row lg:items-stretch">
 				{work.items.map((item) => (
 					<li
 						key={item.id}
-						className="work-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+						className={`project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md ${activeWorkItemId === item.id ? 'bg-white drop-shadow-2xl' : ''}`}
 						data-e2e={`${item.id}-item`}
+						id={`${item.id}-item`}
 					>
-						<input
-							className="hidden"
-							type="checkbox"
-							id={`${item.id}-input`}
-							name={`${item.id}-input`}
-							value={`${item.id}-dropdown-content`}
-						/>
-						<label htmlFor={`${item.id}-input`}>
+						<button
+							onClick={() => handleItemClick(item.id)}
+							className="text-left w-full h-full"
+						>
 							<div className="cursor-pointer p-4">
 								<div className="flex space-x-2">
 									<div className="logo flex-shrink-0">
@@ -42,9 +61,19 @@ const Work = ({ work }) => {
 											{item.duration} | {item.employmentType}
 										</p>
 									</div>
+									{item.isCurrent && (
+										<span className="self-start px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-green-800">
+											Current
+										</span>
+									)}
 								</div>
+
 								<div
-									className="description-and-tech hidden"
+									className={`description-and-tech overflow-hidden transition-all duration-500 ease-in-out ${
+										activeWorkItemId === item.id
+											? 'max-h-96 opacity-100'
+											: 'max-h-0 opacity-0'
+									}`}
 									id={`${item.id}-dropdown-content`}
 									data-e2e={`${item.id}-dropdown-content`}
 								>
@@ -65,7 +94,7 @@ const Work = ({ work }) => {
 									</div>
 								</div>
 							</div>
-						</label>
+						</button>
 					</li>
 				))}
 			</ul>

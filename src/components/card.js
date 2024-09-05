@@ -6,11 +6,7 @@ export default function Card({ children, id = '', className = '', ...props }) {
 	}
 
 	return (
-		<section
-			id={id}
-			className={`rounded-lg py-10 px-4 ${className}`}
-			{...props}
-		>
+		<section id={id} className={`rounded-lg py-4 px-4 ${className}`} {...props}>
 			{children}
 		</section>
 	);

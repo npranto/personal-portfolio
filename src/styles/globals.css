@@ -8,16 +8,16 @@
 
 /* global */
 :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
+	/* --foreground-rgb: 0, 0, 0; */
+	/* --background-start-rgb: 214, 219, 220; */
+	/* --background-end-rgb: 255, 255, 255; */
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--foreground-rgb: 255, 255, 255;
-		--background-start-rgb: 0, 0, 0;
-		--background-end-rgb: 0, 0, 0;
+		/* --foreground-rgb: 255, 255, 255; */
+		/* --background-start-rgb: 0, 0, 0; */
+		/* --background-end-rgb: 0, 0, 0; */
 	}
 }
 
@@ -36,7 +36,8 @@ body {
 	color: rgb(var(--foreground-rgb));
 }
 
-/* about-card */
-.about-card .paragraph-content a {
-	@apply border-b-2 border-gray-500 hover:text-gray-700 hover:border-gray-700;
+@layer utilities {
+	.paragraph-links {
+		@apply border-b-2 border-gray-500 hover:text-gray-700 hover:border-gray-700;
+	}
 }

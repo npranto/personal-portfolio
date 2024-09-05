@@ -3,8 +3,9 @@ import Socials from './socials';
 import Card from './card';
 import ProfilePicture from './profile-picture';
 import TextSlider from './text-slider';
+import profile from '../content/profile.json';
 
-const Jumbotron = ({ profile }) => {
+const Jumbotron = () => {
 	return (
 		<Card
 			id="jumbotron"

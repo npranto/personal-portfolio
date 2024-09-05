@@ -1,8 +1,31 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
+import projects from '../content/projects.json';
 
-const Projects = ({ projects }) => {
+const Projects = () => {
+	const [activeProjectItemId, setActiveProjectItemId] = useState(
+		projects.items[0].id
+	);
+	const [hasUserInteracted, setHasUserInteracted] = useState(false);
+
+	useEffect(() => {
+		if (hasUserInteracted) {
+			const activeItem = document.getElementById(`${activeProjectItemId}-item`);
+			if (activeItem) {
+				activeItem.scrollIntoView({
+					behavior: 'smooth',
+					block: 'center',
+				});
+			}
+		}
+	}, [activeProjectItemId, hasUserInteracted]);
+
+	const handleItemClick = (itemId) => {
+		setActiveProjectItemId(itemId);
+		if (!hasUserInteracted) setHasUserInteracted(true);
+	};
 	return (
 		<Card
 			id="projects"
@@ -11,38 +34,29 @@ const Projects = ({ projects }) => {
 		>
 			<CardHeading>{projects.header}</CardHeading>
 
-			<ul className="projects-list lg:grid h-auto lg:grid-cols-2 lg:gap-x-4 lg:grid-flow-row lg:items-stretch">
+			<ul className="projects-list grid lg:grid-cols-1 gap-4 lg:grid-flow-row lg:items-stretch">
 				{projects.items.map((item) => (
 					<li
 						key={item.id}
-						className="project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 my-3 rounded-md"
+						className={`project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md ${activeProjectItemId === item.id ? 'bg-white drop-shadow-2xl' : ''}`}
+						id={`${item.id}-item`}
 					>
-						<input
-							className="hidden"
-							type="checkbox"
-							id={`${item.id}-input`}
-							name={`${item.id}-input`}
-							value={`${item.id}-dropdown-content`}
-						/>
-						<label htmlFor={`${item.id}-input`}>
+						<button
+							onClick={() => handleItemClick(item.id)}
+							className="text-left w-full h-full"
+						>
 							<div className="cursor-pointer p-4">
 								<div className="flex space-x-2">
 									<div className="logo flex-shrink-0">
-										<picture>
-											<source
-												srcSet={`${item.image.sm}?as=webp`}
-												type="image/webp"
-											/>
-											<img
-												width="48px"
-												height="auto"
-												className="object-cover rounded-md"
-												src={item.image.sm}
-												alt={item.name}
-											/>
-										</picture>
+										<Image
+											className="object-cover rounded-md"
+											src={item.image.sm}
+											alt={item.id}
+											width={64}
+											height={64}
+										/>
 									</div>
-									<div className="flex flex-col flex-grow top-level-details">
+									<div className="flex justify-center flex-col flex-grow top-level-details">
 										<h4 className="text-base font-semibold">{item.name}</h4>
 										<p className="text-sm text-gray-500">{item.duration}</p>
 									</div>
@@ -105,10 +119,16 @@ const Projects = ({ projects }) => {
 									</div>
 								</div>
 								<div
-									className="description-and-tech mt-2 space-y-2 text-sm text-gray-500 hidden"
+									className={`description-and-tech overflow-hidden mt-2 space-y-2 text-sm text-gray-500 transition-all duration-500 ease-in-out ${
+										activeProjectItemId === item.id
+											? 'max-h-96 opacity-100'
+											: 'max-h-0 opacity-0'
+									}`}
 									id={`${item.id}-dropdown-content`}
 								>
-									<div dangerouslySetInnerHTML={{ __html: item.description }} />
+									{item.details.map((detail, idx) => (
+										<p key={idx} dangerouslySetInnerHTML={{ __html: detail }} />
+									))}
 
 									<div className="technologies flex flex-wrap my-2 gap-2">
 										{item.technologies.map((tech, index) => (
@@ -122,7 +142,7 @@ const Projects = ({ projects }) => {
 									</div>
 								</div>
 							</div>
-						</label>
+						</button>
 					</li>
 				))}
 			</ul>
