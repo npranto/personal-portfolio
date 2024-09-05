@@ -1,18 +1,39 @@
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
-const inter = Inter({ subsets: ['latin'] });
+import Jumbotron from '@/components/jumbotron';
+import About from '@/components/about';
+import Work from '@/components/work';
+import Projects from '@/components/projects';
+import Blog from '@/components/blog';
+import Videos from '@/components/videos';
+import Education from '@/components/education';
+import Contact from '@/components/contact';
+
+import profile from '../content/profile.json';
+import about from '../content/about.json';
+import work from '../content/work.json';
+import projects from '../content/projects.json';
+import posts from '../content/blog.json';
+import videos from '../content/videos.json';
+import education from '../content/education.json';
 
 export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Portfolio - Nazmuz Pranto</title>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="description" content={profile.description} />
+				<title>{profile.title}</title>
 			</Head>
-			<div
-				className={`flex min-h-screen flex-col px-4 py-4 ${inter.className}`}
-			>
-				<h1>npranto.dev</h1>
+			<div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
+				<Jumbotron />
+				<About />
+				<Work />
+				<Projects />
+				<Blog />
+				<Videos />
+				<Education />
+				<Contact />
 			</div>
 		</>
 	);

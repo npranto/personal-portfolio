@@ -1,0 +1,74 @@
+{
+	"id": "content:work",
+	"header": "Work",
+	"items": [
+		{
+			"id": "bestbuy",
+			"image": {
+				"id": "bestbuy",
+				"sm": "/assets/images/bestbuy-logo-200x200.jpeg",
+				"lg": "/assets/images/bestbuy-logo-200x200.jpeg"
+			},
+			"position": "Software Engineer",
+			"company": "Best Buy",
+			"location": "Remote",
+			"duration": "March 2022 - Present",
+			"employmentType": "Contract",
+			"isCurrent": true,
+			"description": [
+				"Improved website performance for faster load and better customer experience",
+				"Built product detail page for Best Buy front of site",
+				"Maintain and enhance 40+ UI components built with React and its ecosystem "
+			],
+			"technologies": ["React", "Webpack", "CSS"]
+		},
+		{
+			"id": "newfold",
+			"image": {
+				"id": "Newfold Logo",
+				"sm": "/assets/images/newfold-logo-200x200.jpeg",
+				"lg": "/assets/images/newfold-logo-200x200.jpeg"
+			},
+			"position": "Software Engineer",
+			"company": "Newfold Digitial",
+			"location": "Burlington, MA",
+			"duration": "Jul 2018 - Jul 2021",
+			"employmentType": "Full-time",
+			"description": [
+				"Built and maintained robust, reusable e-commerce UI components using React and Redux to ease feature development and integration for multiple internal teams",
+				"Added over 50+ bug-fixes and features along with unit tests to enhance and improve active single page application (SPA) for customer registration and checkout",
+				"Integrated Contentful CMS to dynamically prefetch product metadata to enable marketing teams to make custom changes quickly without code releases",
+				"Frequently collaborated with internal front and backend services teams to integrate new products and payment gateways",
+				"Worked on a fast-paced agile environment with multiple releases per sprint basis"
+			],
+			"technologies": [
+				"React",
+				"Redux",
+				"Sass",
+				"Webpack",
+				"Contentful",
+				"Node.js",
+				"Git",
+				"JIRA"
+			]
+		},
+		{
+			"id": "lexia",
+			"image": {
+				"id": "Lexia Logo",
+				"sm": "/assets/images/lexia-logo-200x200.jpeg",
+				"lg": "/assets/images/lexia-logo-200x200.jpeg"
+			},
+			"position": "Software Engineer",
+			"company": "Lexia Learning",
+			"location": "Concord, MA",
+			"duration": "Sep - Dec 2016 & Jun - Aug 2017",
+			"employmentType": "Contract",
+			"description": [
+				"Built 20+ JSON schemas to validate and structure large, nested JSON objects, or lesson tasks for production-level reading software program",
+				"Written various JavaScript functions or snippets to automate JSON file modifications to simplify and speed up application content updates"
+			],
+			"technologies": ["JavaScript", "JSON Schema", "Git"]
+		}
+	]
+}
