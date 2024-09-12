@@ -8,16 +8,11 @@ import Blog from '@/components/blog';
 import Videos from '@/components/videos';
 import Education from '@/components/education';
 import Contact from '@/components/contact';
-
 import profile from '../content/profile.json';
-import about from '../content/about.json';
-import work from '../content/work.json';
-import projects from '../content/projects.json';
-import posts from '../content/blog.json';
-import videos from '../content/videos.json';
-import education from '../content/education.json';
+import { getNavContent } from '@/content';
 
-export default function Home() {
+export default function Home(props) {
+	console.log({ props });
 	return (
 		<>
 			<Head>
@@ -37,4 +32,25 @@ export default function Home() {
 			</div>
 		</>
 	);
+}
+
+export async function getStaticProps() {
+	try {
+		// Await the promise from getNavContent
+		const nav = await getNavContent();
+
+		// Return the resolved data as props
+		return {
+			props: {
+				nav,
+			},
+		};
+	} catch (error) {
+		console.error('Error in getStaticProps:', error);
+		return {
+			props: {
+				nav: null, // Handle fallback for nav data if error occurs
+			},
+		};
+	}
 }
