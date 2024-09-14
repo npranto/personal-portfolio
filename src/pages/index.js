@@ -9,7 +9,7 @@ import Videos from '@/components/videos';
 import Education from '@/components/education';
 import Contact from '@/components/contact';
 import profile from '../content/profile.json';
-import { getNavContent } from '@/content';
+// import { getNavContent } from '@/content';
 
 export default function Home(props) {
 	console.log({ props });
@@ -34,23 +34,23 @@ export default function Home(props) {
 	);
 }
 
-export async function getStaticProps() {
-	try {
-		// Await the promise from getNavContent
-		const nav = await getNavContent();
+// export async function getStaticProps() {
+// 	try {
+// 		// Await the promise from getNavContent
+// 		// const nav = await getNavContent();
 
-		// Return the resolved data as props
-		return {
-			props: {
-				nav,
-			},
-		};
-	} catch (error) {
-		console.error('Error in getStaticProps:', error);
-		return {
-			props: {
-				nav: null, // Handle fallback for nav data if error occurs
-			},
-		};
-	}
-}
+// 		// Return the resolved data as props
+// 		return {
+// 			props: {
+// 				// nav,
+// 			},
+// 		};
+// 	} catch (error) {
+// 		console.error('Error in getStaticProps:', error);
+// 		return {
+// 			props: {
+// 				// nav: null, // Handle fallback for nav data if error occurs
+// 			},
+// 		};
+// 	}
+// }

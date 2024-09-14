@@ -21,7 +21,7 @@ const Jumbotron = () => {
 
 			<ProfilePicture
 				className="mb-2 md:hidden"
-				src={profile.picture.sm}
+				src={profile?.picture?.sm}
 				width={160}
 				height={160}
 			/>
