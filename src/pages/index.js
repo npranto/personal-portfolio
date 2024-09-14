@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import Jumbotron from '@/components/jumbotron';
 import About from '@/components/about';
 import Work from '@/components/work';
@@ -9,10 +8,8 @@ import Videos from '@/components/videos';
 import Education from '@/components/education';
 import Contact from '@/components/contact';
 import profile from '../content/profile.json';
-// import { getNavContent } from '@/content';
 
 export default function Home(props) {
-	console.log({ props });
 	return (
 		<>
 			<Head>

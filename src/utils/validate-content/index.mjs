@@ -7,8 +7,7 @@ import { validateProjectsContent } from './validateProjectsContent.mjs';
 import { validateSocialsContent } from './validateSocialsContent.mjs';
 import { validateVideosContent } from './validateVideosContent.mjs';
 import { validateWorkContent } from './validateWorkContent.mjs';
-
-const gap = () => console.log('\n');
+import { gap } from '../gap.mjs';
 
 export const validateAllContent = async () => {
 	console.log(chalk.bgGreen.black('[START]: ALL Content Validation'));

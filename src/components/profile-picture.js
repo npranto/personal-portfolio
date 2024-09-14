@@ -18,8 +18,6 @@ const ProfilePicture = ({ src, width, height, className = '' }) => {
 		);
 	}
 
-	console.log({ src, width, height });
-
 	return (
 		<div
 			className={`profile-picture bg-gray-200 rounded ${className}`}
