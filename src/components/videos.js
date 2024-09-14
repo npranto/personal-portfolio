@@ -10,7 +10,7 @@ const Videos = () => {
 		<Card id="videos" className="bg-orange-100 videos card" data-e2e="videos">
 			<CardHeading>Videos</CardHeading>
 			<ul className="videos-list grid lg:grid-cols-2 gap-4 lg:grid-flow-row lg:items-stretch">
-				{videos.videos.map((video, index) => (
+				{videos.posts.map((video, index) => (
 					<li
 						key={index}
 						className={`blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md`}

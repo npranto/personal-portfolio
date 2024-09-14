@@ -1,5 +1,6 @@
 {
 	"id": "content:blog",
+	"header": "Blog",
 	"posts": [
 		{
 			"href": "https://dev.to/npranto/bfedev-176-undefined-to-null-2fb8",

@@ -1,10 +1,9 @@
 {
 	"id": "content:profile",
-	"description": "Portfolio website - Nazmuz Pranto, a front-end engineer",
-	"title": "Portfolio - Nazmuz Pranto v5",
+	"description": "Portfolio website - Nazmuz (Shakib) Pranto, a front-end engineer",
+	"title": "Portfolio - Nazmuz Pranto (v.5)",
 	"picture": {
-		"id": "Default - Profile Owner",
-		"sm": "/assets/images/profile-v4-500x500.jpg",
+		"sm": "/assets/images/profile-v4-160x160.jpg",
 		"lg": "/assets/images/profile-v4-500x500.jpg"
 	},
 	"author": "Nazmuz Pranto",
