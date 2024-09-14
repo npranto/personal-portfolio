@@ -1,7 +1,7 @@
 import React from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
-import posts from '../content/blog.json';
+import blog from '../content/blog.json';
 
 const Blog = () => {
 	return (
@@ -9,7 +9,7 @@ const Blog = () => {
 			<CardHeading>Blog</CardHeading>
 
 			<ul className="blog-list grid lg:grid-cols-2 gap-4 lg:grid-flow-row lg:items-stretch">
-				{posts.map((item) => (
+				{blog?.posts.map((item) => (
 					<li
 						key={item.href}
 						className={`blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md`}
