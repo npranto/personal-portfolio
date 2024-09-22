@@ -24,7 +24,7 @@ export const crawlVideoPosts = async ({ videosUrl = '' } = {}) => {
 			return [...videos].map((video) => {
 				const title = video.querySelector('#video-title')?.innerText || '';
 				const link = video.querySelector('#video-title-link')?.href || '';
-				const uploadedOn =
+				const uploadedTime =
 					[
 						...video.querySelectorAll(
 							'.inline-metadata-item.ytd-video-meta-block'
@@ -33,7 +33,7 @@ export const crawlVideoPosts = async ({ videosUrl = '' } = {}) => {
 				return {
 					title,
 					link,
-					uploadedOn,
+					uploadedTime,
 				};
 			});
 		});

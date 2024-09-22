@@ -1,5 +1,5 @@
 import React from 'react';
-import socials from '../content/socials.json';
+import data from '../data.json';
 
 const GitHubLogo = () => {
 	return (
@@ -152,6 +152,7 @@ export default function Socials({
 	hideYoutube = false,
 	hideDevTo = false,
 }) {
+	const { socials } = data?.content || {};
 	return (
 		<ul className={`socials flex flex-row space-x-2 ${className}`}>
 			{!hideGithub && (

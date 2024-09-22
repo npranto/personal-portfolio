@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Card from './card';
 import CardHeading from './card-heading';
-import about from '../content/about.json';
+import data from '../data.json';
 
 const About = () => {
+	const { about } = data?.content || {};
 	const readMoreContentRef = useRef(null);
 	const hasInteractedWithReadMoreBtn = useRef(false);
 	const [showReadMore, setShowReadMore] = useState(false);
@@ -45,21 +46,19 @@ const About = () => {
 				<div className="text-base">
 					{about.mainContent.map((mainContentItem, idx) => (
 						<div key={idx}>
-							{mainContentItem.sectionHeader && (
-								<h3 className="font-semibold mt-3">
-									{mainContentItem.sectionHeader}
-								</h3>
+							{mainContentItem?.header && (
+								<h3 className="font-semibold mt-3">{mainContentItem.header}</h3>
 							)}
-							{mainContentItem.sectionContent.map((sectionContentItem) => (
+							{(mainContentItem?.paragraphs || []).map((paragraph) => (
 								<p
 									key={
-										sectionContentItem.length <= 10
-											? sectionContentItem
-											: sectionContentItem.substr(0, 5) +
-												sectionContentItem.substr(sectionContentItem.length - 5)
+										paragraph?.body?.length <= 10
+											? paragraph?.body
+											: paragraph?.body?.substr(0, 5) +
+												paragraph?.body?.substr(paragraph.length - 5)
 									}
 									className="paragraph-content text-base text-gray-500 my-2"
-									dangerouslySetInnerHTML={{ __html: sectionContentItem }}
+									dangerouslySetInnerHTML={{ __html: paragraph?.body }}
 								></p>
 							))}
 						</div>
@@ -78,24 +77,20 @@ const About = () => {
 						{about.secondaryContent.map((secondaryContentItem) => (
 							<>
 								<h3 className="font-semibold mt-3">
-									{secondaryContentItem.sectionHeader}
+									{secondaryContentItem.header}
 								</h3>
-								{secondaryContentItem.sectionContent.map(
-									(sectionContentItem) => (
-										<p
-											key={
-												sectionContentItem.length <= 10
-													? sectionContentItem
-													: sectionContentItem.substr(0, 5) +
-														sectionContentItem.substr(
-															sectionContentItem.length - 5
-														)
-											}
-											className="paragraph-content text-base text-gray-500 my-2"
-											dangerouslySetInnerHTML={{ __html: sectionContentItem }}
-										></p>
-									)
-								)}
+								{secondaryContentItem.paragraphs.map((paragraph) => (
+									<p
+										key={
+											paragraph?.body?.length <= 10
+												? paragraph?.body
+												: paragraph?.body?.substr(0, 5) +
+													paragraph?.body?.substr(paragraph?.body?.length - 5)
+										}
+										className="paragraph-content text-base text-gray-500 my-2"
+										dangerouslySetInnerHTML={{ __html: paragraph?.body }}
+									></p>
+								))}
 							</>
 						))}
 					</div>

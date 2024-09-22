@@ -1,9 +1,10 @@
 import React from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
-import education from '../content/education.json';
+import data from '../data.json';
 
 const Education = () => {
+	const { education } = data?.content || {};
 	return (
 		<Card
 			id="education"
@@ -13,7 +14,7 @@ const Education = () => {
 			<CardHeading>{education.header}</CardHeading>
 
 			<ul className="education-list grid lg:grid-cols-2 gap-4 lg:grid-flow-row lg:items-stretch">
-				{education.items.map((item, index) => (
+				{(education?.items || []).map((item, index) => (
 					<li
 						key={index}
 						className="blog-item bg-gray-100 drop-shadow-lg transition ease-in-out duration-500 rounded-md"

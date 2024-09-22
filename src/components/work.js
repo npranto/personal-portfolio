@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
-import work from '../content/work.json';
+import data from '../data.json';
 
 const Work = () => {
+	const { work } = data?.content || {};
 	const [activeWorkItemId, setActiveWorkItemId] = useState(work.items[0].id);
 	const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
