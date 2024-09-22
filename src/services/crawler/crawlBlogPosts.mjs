@@ -1,11 +1,13 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import puppeteer from 'puppeteer';
 
-export const crawlBlogPosts = async () => {
+export const crawlBlogPosts = async ({ blogUrl = '' } = {}) => {
+	if (!blogUrl || typeof blogUrl !== 'string' || blogUrl.trim().length === 0)
+		return { posts: [] };
+
 	try {
 		const browser = await puppeteer.launch();
 		const page = await browser.newPage();
-		await page.goto('https://dev.to/npranto', {
+		await page.goto(blogUrl, {
 			waitUntil: 'networkidle2',
 		});
 
@@ -45,9 +47,9 @@ export const crawlBlogPosts = async () => {
 			);
 		});
 		await browser.close();
-		return posts;
+		return { posts: posts || [] };
 	} catch (error) {
 		console.error('Error crawling blog posts', error.message);
-		return [];
+		return { posts: [] };
 	}
 };
