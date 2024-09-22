@@ -3,9 +3,10 @@ import Socials from './socials';
 import Card from './card';
 import ProfilePicture from './profile-picture';
 import TextSlider from './text-slider';
-import profile from '../content/profile.json';
+import data from '../data.json';
 
 const Jumbotron = () => {
+	const { profile } = data?.content || {};
 	return (
 		<Card
 			id="jumbotron"
@@ -21,7 +22,7 @@ const Jumbotron = () => {
 
 			<ProfilePicture
 				className="mb-2 md:hidden"
-				src={profile.picture.sm}
+				src={profile?.picture?.sm}
 				width={160}
 				height={160}
 			/>

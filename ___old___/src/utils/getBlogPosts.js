@@ -2,6 +2,11 @@
 const puppeteer = require('puppeteer');
 
 const fetchBlogPosts = async () => {
+	try {
+
+
+
+
 	const browser = await puppeteer.launch();
 	const page = await browser.newPage();
 	await page.goto('https://dev.to/npranto', {
@@ -43,8 +48,13 @@ const fetchBlogPosts = async () => {
 				)
 		);
 	});
-	await browser.close();
-	return posts;
+		await browser.close();
+		return posts;
+	} catch (error) {
+	console.log('Error fetching blog posts', error);
+	return [];
+
+	}
 };
 
 const getBlogPosts = async () => fetchBlogPosts();

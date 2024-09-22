@@ -8,19 +8,27 @@
 		"start": "next start",
 		"lint": "next lint",
 		"prepare": "husky",
-		"format": "npx prettier --write ."
+		"format": "npx prettier --write .",
+		"content": "node --no-warnings ./src/utils/content/index.mjs"
 	},
 	"dependencies": {
+		"chalk": "^5.3.0",
+		"dotenv": "^16.4.5",
 		"next": "14.2.6",
 		"react": "^18",
-		"react-dom": "^18"
+		"react-dom": "^18",
+		"zod": "^3.23.8",
+		"zod-validation-error": "^3.3.1"
 	},
 	"devDependencies": {
+		"contentful": "^11.0.2",
 		"eslint": "^8",
 		"eslint-config-next": "14.2.6",
+		"fs": "^0.0.1-security",
 		"husky": "^9.1.5",
 		"postcss": "^8",
 		"prettier": "^3.3.3",
+		"puppeteer": "^23.3.0",
 		"tailwindcss": "^3.4.1"
 	}
 }

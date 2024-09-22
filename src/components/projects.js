@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
-import projects from '../content/projects.json';
+import data from '../data.json';
 
 const Projects = () => {
+	const { projects } = data?.content || {};
 	const [activeProjectItemId, setActiveProjectItemId] = useState(
 		projects.items[0].id
 	);
@@ -35,7 +36,7 @@ const Projects = () => {
 			<CardHeading>{projects.header}</CardHeading>
 
 			<ul className="projects-list grid lg:grid-cols-1 gap-4 lg:grid-flow-row lg:items-stretch">
-				{projects.items.map((item) => (
+				{(projects?.items || []).map((item) => (
 					<li
 						key={item.id}
 						className={`project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md ${activeProjectItemId === item.id ? 'bg-white drop-shadow-2xl' : ''}`}
@@ -126,9 +127,9 @@ const Projects = () => {
 									}`}
 									id={`${item.id}-dropdown-content`}
 								>
-									{item.details.map((detail, idx) => (
-										<p key={idx} dangerouslySetInnerHTML={{ __html: detail }} />
-									))}
+									{item?.description && (
+										<p dangerouslySetInnerHTML={{ __html: item.description }} />
+									)}
 
 									<div className="technologies flex flex-wrap my-2 gap-2">
 										{item.technologies.map((tech, index) => (

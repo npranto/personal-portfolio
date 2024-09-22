@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import Jumbotron from '@/components/jumbotron';
 import About from '@/components/about';
 import Work from '@/components/work';
@@ -8,16 +7,10 @@ import Blog from '@/components/blog';
 import Videos from '@/components/videos';
 import Education from '@/components/education';
 import Contact from '@/components/contact';
+import data from '../data.json';
 
-import profile from '../content/profile.json';
-import about from '../content/about.json';
-import work from '../content/work.json';
-import projects from '../content/projects.json';
-import posts from '../content/blog.json';
-import videos from '../content/videos.json';
-import education from '../content/education.json';
-
-export default function Home() {
+export default function Home(props) {
+	const { profile } = data?.content || {};
 	return (
 		<>
 			<Head>
