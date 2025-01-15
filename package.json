@@ -1,7 +1,6 @@
 {
 	"name": "personal-portfolio",
 	"version": "5.0.0",
-	"private": true,
 	"scripts": {
 		"dev": "npm run fetch-content && next dev",
 		"build": "npm run fetch-content && next build",
