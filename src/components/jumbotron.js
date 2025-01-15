@@ -3,10 +3,10 @@ import Socials from './socials';
 import Card from './card';
 import ProfilePicture from './profile-picture';
 import TextSlider from './text-slider';
-import data from '../data.json';
+import PROFILE from '../content/profile.json';
 
 const Jumbotron = () => {
-	const { profile } = data?.content || {};
+	const profile = PROFILE?.profile || {};
 	return (
 		<Card
 			id="jumbotron"

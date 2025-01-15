@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-export const crawlVideoPosts = async ({ videosUrl = '' } = {}) => {
+export const crawlVideoPosts = async (videosUrl = '') => {
 	if (
 		!videosUrl ||
 		typeof videosUrl !== 'string' ||

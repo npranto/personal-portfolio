@@ -3,21 +3,25 @@
 	"version": "5.0.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
+		"dev": "npm run fetch-content && next dev",
+		"build": "npm run fetch-content && next build",
+		"start": "npm run fetch-content && next start",
 		"lint": "next lint",
 		"prepare": "husky",
 		"format": "npx prettier --write .",
-		"content": "node --no-warnings ./src/utils/content/index.mjs"
+		"fetch-content": "npm run fetch-blog-posts && npm run fetch-video-posts",
+		"fetch-blog-posts": "node --no-warnings ./src/scripts/fetch-blog-posts.mjs",
+		"fetch-video-posts": "node --no-warnings ./src/scripts/fetch-video-posts.mjs"
 	},
 	"dependencies": {
+		"@next/third-parties": "^15.1.4",
 		"@sendgrid/mail": "^8.1.3",
 		"chalk": "^5.3.0",
 		"dotenv": "^16.4.5",
-		"next": "14.2.6",
+		"next": "^15.1.4",
 		"react": "^18",
 		"react-dom": "^18",
+		"sharp": "^0.33.5",
 		"zod": "^3.23.8",
 		"zod-validation-error": "^3.3.1"
 	},
@@ -29,7 +33,7 @@
 		"husky": "^9.1.5",
 		"postcss": "^8",
 		"prettier": "^3.3.3",
-		"puppeteer": "^23.3.0",
+		"puppeteer": "^23.11.1",
 		"tailwindcss": "^3.4.1"
 	}
 }

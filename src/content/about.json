@@ -1,33 +1,45 @@
 {
-	"id": "content:about",
-	"header": "About",
-	"mainContent": [
-		{
-			"sectionContent": [
-				"I am Nazmuz (Shakib) Pranto, a front-end engineer with hands-on  experience building single and multi-page web applications. I'm  passionate about crafting clean, responsive, reusable user interfaces with modern technologies including <a href=\"https://reactjs.org/\"    target=\"_blank\" class=\"paragraph-links\">React</a>, <a href=\"https://redux.js.org/\" target=\"_blank\" class=\"paragraph-links\">Redux</a>, and <a href=\"https://nextjs.org/\" target=\"_blank\"  class=\"paragraph-links\">Next.js</a>. I also love creating products that serve instant value to customers.",
-
-				"Over the past few years, I had the honor of helping build a highly  customizable eCommerce platform as an engineer at Newfold Digital.  This, in return, accelerated development time and feature delivery for multiple client-side teams within the organization. On the side, I also built and published mini utility libraries and APIs using <a href=\"https://nodejs.org/en/\" target=\"_blank\"  class=\"paragraph-links\"> Node.js</a> for external use.",
-
-				"Currently, I am learning techniques to better architect client-side  applications to deliver more reliability and performance. So, if you  are looking for a front-end focused developer who can improve developer experience, create dynamic user interfaces, and collaborate effectively, feel free to <a href=\"#contact\" class=\"paragraph-links\"> reach out!</a>"
-			]
-		}
-	],
-	"secondaryContent": [
-		{
-			"sectionHeader": "My Journey",
-			"sectionContent": [
-				"I started my journey in web development during my first year of college as a Computer Science student. I was learning HTML and CSS for the very first time, not through a college course though, but on an online learning platform called - <a href=\"https://www.codecademy.com/\"    target=\"_blank\" class=\"paragraph-links\">Codeacademy</a>. I found that to be way more fun and practical than the college courses I was taking back then. Thus, I continued with it and pushed to learn even more on the side. Eventually, I fell in love with it so much that I took the risk of taking time off from college and fully dedicated my time to a software engineering immersive program called <a href=\"https://devmountain.com/\" target=\"_blank\"  class=\"paragraph-links\">DevMountain</a>.",
-
-				"I always believed that I was a go-getter who loves taking risks to improve and get better progressively. That's why I pursued an alternative track to higher education. While I understand the importance of traditional computer science education with a heavy theoretical learning approach, I don't think it's enough for diving into real-world problems in the most effective way. We need more hands-on, practical, project-based learning, where learning to code is acquired from a series of trials and mistakes. As a DevMountain scholar, I have learned to do exactly that and have taken that lesson to heart till today.",
-
-				"Since my exposure to DevMountain, I have taken on a junior role at <a href=\"https://www.lexialearning.com/\" target=\"_blank\"  class=\"paragraph-links\">Lexia Learning</a> to a full-time Software Engineer gig at <a href=\"https://newfold.com/\"    target=\"_blank\"  class=\"paragraph-links\">Newfold Digital</a>, working on enterprise-level applications used by millions of customers and internal teams."
-			]
-		},
-		{
-			"sectionHeader": "Future Ambitions",
-			"sectionContent": [
-				"Of course, I still have a long way to go and I am working on getting better one day at a time. For now, I plan to actively contribute the skills I have acquired till now on my next role and learn modern, industry-proven techniques and best practices from both experienced and newbie developers to be a more well-rounded senior engineer and a mentor."
-			]
-		}
-	]
+	"about": {
+		"id": "content:about:v1",
+		"header": "About",
+		"mainContent": [
+			{
+				"id": "content:content-section:about:main-content:1",
+				"paragraphs": [
+					{
+						"body": "Hey, I’m Nazmuz (Shakib) Pranto, a frontend engineer with over 5 years of hands-on experience building dynamic, high-performance web applications and reusable design systems. I’m passionate about creating clean, responsive, and accessible user interfaces using modern technologies like TypeScript, React, Next.js, and Node.js. I love contributing to meaningful products that deliver immediate value to customers while continuously learning and improving."
+					},
+					{
+						"body": "Throughout my career, I’ve had the privilege of working on impactful projects across different companies. At Best Buy, I enhanced critical e-commerce pages visited by millions daily, ensuring seamless customer experiences through performance optimization and tooling improvements. Before that, at Newfold Digital, I contributed to a highly customizable e-commerce platform that streamlined workflows and feature delivery across multiple internal teams. Along the way, I’ve also built utility libraries and tools to simplify development processes for internal and external use."
+					}
+				]
+			}
+		],
+		"secondaryContent": [
+			{
+				"id": "content:content-section:about:secondary-content:1",
+				"header": "My Journey",
+				"paragraphs": [
+					{
+						"body": "My web development journey began in my first year of college while studying Computer Science. Learning HTML and CSS through <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.codecademy.com/\">Codeacademy</a> felt more engaging and practical than my coursework, which inspired me to dive deeper. That curiosity led me to take a bold step—taking time off from college to enroll in an immersive software engineering program at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://devmountain.com/\">DevMountain</a>, where I gained hands-on experience solving real-world challenges."
+					},
+					{
+						"body": "I always believed that I was a go-getter who loves taking risks to improve and get better progressively. That's why I pursued an alternative track to higher education. While I understand the importance of traditional computer science education with a heavy theoretical learning approach, I don't think it's enough for diving into real-world problems in the most effective way. We need more practical, project-based learning, where learning to code is acquired from a series of trials and mistakes. As an student at DevMountain, I have learned to do exactly that and have taken that lesson to heart till today."
+					},
+					{
+						"body": "I’ve always embraced a growth mindset and a willingness to take calculated risks. My alternative path to education taught me the value of learning through trial, error, and collaboration. Since then, I’ve been fortunate to work in diverse roles, starting with <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.lexialearning.com/\">Lexia Learning</a>, where I focused on scripting and automation, to <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://newfold.com/\">Newfold Digital</a>, where I grew into a full-time software engineering role. Now, at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bestbuy.com/\">Best Buy</a>, I’m working on large-scale applications that impact millions of customers daily."
+					}
+				]
+			},
+			{
+				"id": "content:content-section:about:secondary-content:2",
+				"header": "Future Ambitions",
+				"paragraphs": [
+					{
+						"body": "I’m far from the finish line and remain dedicated to improving a little every day. In my next steps, I aim to contribute my expertise to impactful projects while learning modern techniques and best practices from my mentors and developers of all levels. My goal is to evolve into a well-rounded senior engineer / architect and eventually mentor others in their journeys."
+					}
+				]
+			}
+		]
+	}
 }

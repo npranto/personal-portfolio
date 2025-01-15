@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-export const crawlBlogPosts = async ({ blogUrl = '' } = {}) => {
+export const crawlBlogPosts = async (blogUrl = '') => {
 	if (!blogUrl || typeof blogUrl !== 'string' || blogUrl.trim().length === 0)
 		return { posts: [] };
 
@@ -17,13 +17,12 @@ export const crawlBlogPosts = async ({ blogUrl = '' } = {}) => {
 				title = '',
 				uploadedTime = '',
 			}) => ({
-				link: `https://dev.to${link.trim()}`,
+				link: `${link.trim()}`,
 				title: title.trim(),
 				uploadedTime: (() => {
-					const splitDate = uploadedTime?.split(',');
-					const monthAndDate = splitDate[splitDate.length - 3]?.trim();
-					const year = splitDate[splitDate.length - 2]?.trim();
-					return `${monthAndDate}, ${year}`?.trim();
+					const regex = /\b([A-Za-z]+ \d{1,2}, \d{4})\b/;
+					const match = uploadedTime.match(regex);
+					return match ? `${match[0]}` : '';
 				})(),
 			});
 

@@ -1,11 +1,12 @@
-import { promises as fs } from 'fs';
+import fs from 'fs';
+import path from 'path';
 
-export const writeToFile = async (filePath, stringifiedContent) => {
+export const writeToFile = async (filePath, content) => {
 	try {
-		await fs.writeFile(filePath, stringifiedContent, 'utf8');
+		const dir = path.dirname(filePath);
+		await fs.promises.mkdir(dir, { recursive: true });
+		await fs.promises.writeFile(filePath, content, 'utf8');
 	} catch (error) {
-		console.error(
-			`Error writing to file [${absoluteFilePath}]: ${error.message}`
-		);
+		console.error(error);
 	}
 };

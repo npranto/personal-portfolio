@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Card from './card';
 import CardHeading from './card-heading';
-import data from '../data.json';
+import ABOUT from '../content/about.json';
 
 const About = () => {
-	const { about } = data?.content || {};
+	const about = ABOUT?.about || {};
+
 	const readMoreContentRef = useRef(null);
 	const hasInteractedWithReadMoreBtn = useRef(false);
 	const [showReadMore, setShowReadMore] = useState(false);

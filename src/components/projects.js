@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
-import data from '../data.json';
+import PROJECTS from '../content/projects.json';
 
 const Projects = () => {
-	const { projects } = data?.content || {};
+	const projects = PROJECTS?.projects || {};
+
 	const [activeProjectItemId, setActiveProjectItemId] = useState(
 		projects.items[0].id
 	);
@@ -87,9 +88,9 @@ const Projects = () => {
 												</span>
 											</a>
 										)}
-										{item.demo && (
+										{item.demoUrl && (
 											<a
-												href={item.demo}
+												href={item.demoUrl}
 												target="_blank"
 												rel="noopener noreferrer"
 											>

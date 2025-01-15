@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../data.json';
+import SOCIALS from '../content/socials.json';
 
 const GitHubLogo = () => {
 	return (
@@ -143,6 +143,30 @@ const DevToLogo = () => {
 	);
 };
 
+export const SubstackLogo = () => {
+	return (
+		<span className="substack-icon">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				strokeWidth="2"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				className="icon icon-tabler icons-tabler-outline icon-tabler-stack-2"
+			>
+				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+				<path d="M12 4l-8 4l8 4l8 -4l-8 -4" />
+				<path d="M4 12l8 4l8 -4" />
+				<path d="M4 16l8 4l8 -4" />
+			</svg>
+		</span>
+	);
+};
+
 export default function Socials({
 	className = '',
 	hideGithub = false,
@@ -151,48 +175,84 @@ export default function Socials({
 	hideMedium = false,
 	hideYoutube = false,
 	hideDevTo = false,
+	hideSubstack = false,
 }) {
-	const { socials } = data?.content || {};
+	const socials = SOCIALS?.socials || {};
 	return (
 		<ul className={`socials flex flex-row space-x-2 ${className}`}>
-			{!hideGithub && (
+			{!hideGithub && !socials.github?.hideByDefault && (
 				<li className="transition ease-in-out hover:-translate-y-1">
-					<a href={socials.github} target="_blank" rel="noopener noreferrer">
+					<a
+						href={socials.github?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<GitHubLogo />
 					</a>
 				</li>
 			)}
-			{!hideLinkedin && (
+			{!hideLinkedin && !socials.linkedin?.hideByDefault && (
 				<li className="transition ease-in-out hover:-translate-y-1">
-					<a href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+					<a
+						href={socials.linkedin?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<LinkedinLogo />
 					</a>
 				</li>
 			)}
-			{!hideTwitter && (
+			{!hideTwitter && !socials.twitter?.hideByDefault && (
 				<li className="transition ease-in-out hover:-translate-y-1">
-					<a href={socials.twitter} target="_blank" rel="noopener noreferrer">
+					<a
+						href={socials.twitter?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<TwitterLogo />
 					</a>
 				</li>
 			)}
-			{!hideDevTo && (
+			{!hideSubstack && !socials.substack?.hideByDefault && (
 				<li className="transition ease-in-out hover:-translate-y-1">
-					<a href={socials.devto} target="_blank" rel="noopener noreferrer">
+					<a
+						href={socials.substack?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<SubstackLogo />
+					</a>
+				</li>
+			)}
+			{!hideDevTo && !socials.devto?.hideByDefault && (
+				<li className="transition ease-in-out hover:-translate-y-1">
+					<a
+						href={socials.devto?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<DevToLogo />
 					</a>
 				</li>
 			)}
-			{!hideMedium && (
+			{!hideMedium && !socials.medium?.hideByDefault && (
 				<li className="transition ease-in-out hover:-translate-y-1">
-					<a href={socials.medium} target="_blank" rel="noopener noreferrer">
+					<a
+						href={socials.medium?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<MediumLogo />
 					</a>
 				</li>
 			)}
-			{!hideYoutube && (
+			{!hideYoutube && !socials.youtube?.hideByDefault && (
 				<li className="transition ease-in-out hover:-translate-y-1">
-					<a href={socials.youtube} target="_blank" rel="noopener noreferrer">
+					<a
+						href={socials.youtube?.href}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<YoutubeLogo />
 					</a>
 				</li>

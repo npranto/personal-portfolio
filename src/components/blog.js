@@ -1,16 +1,16 @@
 import React from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
-import data from '../data.json';
+import BLOG_POSTS from '../content/blog-posts.json';
 
 const Blog = () => {
-	const { blog } = data?.content || {};
+	const posts = BLOG_POSTS?.posts || [];
 	return (
 		<Card id="blog" className="bg-green-100 blog card" data-e2e="blog">
-			<CardHeading>{blog.header}</CardHeading>
+			<CardHeading>Blog</CardHeading>
 
 			<ul className="blog-list grid lg:grid-cols-2 gap-4 lg:grid-flow-row lg:items-stretch">
-				{(blog?.posts || []).map((item) => (
+				{(posts || []).map((item) => (
 					<li
 						key={item?.link}
 						className={`blog-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md`}

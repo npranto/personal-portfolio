@@ -1,7 +1,8 @@
 import React from 'react';
 import Socials from './socials';
 import ProfilePicture from './profile-picture';
-import data from '../data.json';
+import NAV from '../content/nav.json';
+import PROFILE from '../content/profile.json';
 
 const MenuTabs = ({ links }) => (
 	<div
@@ -37,7 +38,7 @@ const MenuSidebar = ({ profile, links }) => (
 		<p className="title text-base text-gray-500">{profile.currentRole}</p>
 		<p className="location text-base text-gray-500">{profile.location}</p>
 
-		<ul id="menu-links" className="menu-links grid grid-cols-1 my-10">
+		<ul id="menu-links" className="menu-links grid grid-cols-1 my-6">
 			{links.map((link) => (
 				<li key={link.href}>
 					<a
@@ -56,7 +57,8 @@ const MenuSidebar = ({ profile, links }) => (
 );
 
 export default function Nav({ className = '' }) {
-	const { nav, profile } = data?.content || {};
+	const nav = NAV?.nav || {};
+	const profile = PROFILE?.profile || {};
 	return (
 		<nav className={`${className}`} data-e2e="nav">
 			<MenuTabs links={nav?.links || []} />

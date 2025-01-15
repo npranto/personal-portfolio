@@ -1,74 +1,95 @@
 {
-	"id": "content:work",
-	"header": "Work",
-	"items": [
-		{
-			"id": "bestbuy",
-			"image": {
-				"id": "bestbuy",
-				"sm": "/assets/images/bestbuy-logo-200x200.jpeg",
-				"lg": "/assets/images/bestbuy-logo-200x200.jpeg"
+	"work": {
+		"id": "content:work:v1",
+		"header": "Work",
+		"items": [
+			{
+				"id": "content:work-item:best-buy",
+				"image": {
+					"id": "content:picture:work-item:bestbuy",
+					"sm": "/assets/images/bestbuy-logo-200x200.jpeg",
+					"md": "/assets/images/bestbuy-logo-200x200.jpeg",
+					"lg": "/assets/images/bestbuy-logo-200x200.jpeg"
+				},
+				"position": "Frontend Engineer III",
+				"company": "Best Buy",
+				"location": "Remote",
+				"duration": "March 2022 - Present",
+				"employmentType": "Full-time",
+				"description": [
+					"Developed, enhanced, and monitored 25+ server/client rendered React components with high customer engagement inside the Product Details Page (PDP) to ensure uptime and functionality to over 4 million visitors daily, mitigating revenue loss",
+					"Collaborated with UX, business analysts, and product managers to revamp and redesign critical components' aesthetics and rendering performance, resulting in a 3% increase in customer visits and a 1% boost in conversion rates within PDP",
+					"Led performance optimizations for the Product Details Page by implementing code splitting, lazy rendering, and image format enhancements, reducing bundle size by 15% or more, leading to faster load times.",
+					"Improved production deployment efficiency by transitioning from a multi-step manual process to a fully automated CI/CD system with GitHub Actions, resulting in a 3X reduction in deployment time."
+				],
+				"technologies": [
+					"JavaScript",
+					"TypeScript",
+					"CSS Modules",
+					"Tailwind CSS",
+					"React.js",
+					"Next.js",
+					"GraphQL",
+					"Webpack",
+					"Web Performance",
+					"Test Automation",
+					"Jest",
+					"Cypress"
+				],
+				"isCurrent": true
 			},
-			"position": "Software Engineer",
-			"company": "Best Buy",
-			"location": "Remote",
-			"duration": "March 2022 - Present",
-			"employmentType": "Contract",
-			"isCurrent": true,
-			"description": [
-				"Improved website performance for faster load and better customer experience",
-				"Built product detail page for Best Buy front of site",
-				"Maintain and enhance 40+ UI components built with React and its ecosystem "
-			],
-			"technologies": ["React", "Webpack", "CSS"]
-		},
-		{
-			"id": "newfold",
-			"image": {
-				"id": "Newfold Logo",
-				"sm": "/assets/images/newfold-logo-200x200.jpeg",
-				"lg": "/assets/images/newfold-logo-200x200.jpeg"
+			{
+				"id": "content:work-item:newfold",
+				"image": {
+					"id": "content:picture:work-item:newfold",
+					"sm": "/assets/images/newfold-logo-200x200.jpeg",
+					"md": "/assets/images/newfold-logo-200x200.jpeg",
+					"lg": "/assets/images/newfold-logo-200x200.jpeg"
+				},
+				"position": "Software Engineer",
+				"company": "Newfold Digitial",
+				"location": "Burlington, MA",
+				"duration": "Jul 2018 - Jul 2021",
+				"employmentType": "Full-time",
+				"description": [
+					"Built and maintained robust, reusable e-commerce UI components using React and Redux to ease feature development and integration for multiple internal teams",
+					"Added over 50+ bug-fixes and features along with unit tests to enhance and improve active single page application (SPA) for customer registration and checkout",
+					"Integrated Contentful CMS to dynamically prefetch product metadata to enable marketing teams to make custom changes quickly without code releases",
+					"Frequently collaborated with internal front and backend services teams to integrate new products and payment gateways",
+					"Worked on a fast-paced agile environment with multiple releases per sprint basis"
+				],
+				"technologies": [
+					"React",
+					"Redux",
+					"Sass",
+					"Webpack",
+					"Contentful",
+					"Node.js",
+					"Git",
+					"JIRA"
+				],
+				"isCurrent": false
 			},
-			"position": "Software Engineer",
-			"company": "Newfold Digitial",
-			"location": "Burlington, MA",
-			"duration": "Jul 2018 - Jul 2021",
-			"employmentType": "Full-time",
-			"description": [
-				"Built and maintained robust, reusable e-commerce UI components using React and Redux to ease feature development and integration for multiple internal teams",
-				"Added over 50+ bug-fixes and features along with unit tests to enhance and improve active single page application (SPA) for customer registration and checkout",
-				"Integrated Contentful CMS to dynamically prefetch product metadata to enable marketing teams to make custom changes quickly without code releases",
-				"Frequently collaborated with internal front and backend services teams to integrate new products and payment gateways",
-				"Worked on a fast-paced agile environment with multiple releases per sprint basis"
-			],
-			"technologies": [
-				"React",
-				"Redux",
-				"Sass",
-				"Webpack",
-				"Contentful",
-				"Node.js",
-				"Git",
-				"JIRA"
-			]
-		},
-		{
-			"id": "lexia",
-			"image": {
-				"id": "Lexia Logo",
-				"sm": "/assets/images/lexia-logo-200x200.jpeg",
-				"lg": "/assets/images/lexia-logo-200x200.jpeg"
-			},
-			"position": "Software Engineer",
-			"company": "Lexia Learning",
-			"location": "Concord, MA",
-			"duration": "Sep - Dec 2016 & Jun - Aug 2017",
-			"employmentType": "Contract",
-			"description": [
-				"Built 20+ JSON schemas to validate and structure large, nested JSON objects, or lesson tasks for production-level reading software program",
-				"Written various JavaScript functions or snippets to automate JSON file modifications to simplify and speed up application content updates"
-			],
-			"technologies": ["JavaScript", "JSON Schema", "Git"]
-		}
-	]
+			{
+				"id": "content:work-item:lexia",
+				"image": {
+					"id": "content:picture:work-item:lexia",
+					"sm": "/assets/images/lexia-logo-200x200.jpeg",
+					"md": "/assets/images/lexia-logo-200x200.jpeg",
+					"lg": "/assets/images/lexia-logo-200x200.jpeg"
+				},
+				"position": "Software Engineer",
+				"company": "Lexia Learning",
+				"location": "Concord, MA",
+				"duration": "Sep - Dec 2016 & Jun - Aug 2017",
+				"employmentType": "Contract",
+				"description": [
+					"Built 20+ JSON schemas to validate and structure large, nested JSON objects, or lesson tasks for production-level reading software program",
+					"Written various JavaScript functions or snippets to automate JSON file modifications to simplify and speed up application content updates"
+				],
+				"technologies": ["JavaScript", "JSON Schema", "Git"],
+				"isCurrent": false
+			}
+		]
+	}
 }

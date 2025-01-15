@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
-import data from '../data.json';
+import WORK from '../content/work.json';
 
 const Work = () => {
-	const { work } = data?.content || {};
+	const work = WORK?.work || {};
+
 	const [activeWorkItemId, setActiveWorkItemId] = useState(work.items[0].id);
 	const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
@@ -72,7 +73,7 @@ const Work = () => {
 								<div
 									className={`description-and-tech overflow-hidden transition-all duration-500 ease-in-out ${
 										activeWorkItemId === item.id
-											? 'max-h-96 opacity-100'
+											? 'h-auto opacity-100'
 											: 'max-h-0 opacity-0'
 									}`}
 									id={`${item.id}-dropdown-content`}
@@ -87,7 +88,7 @@ const Work = () => {
 										{item.technologies.map((tech, index) => (
 											<span
 												key={index}
-												className="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+												className="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-800"
 											>
 												{tech}
 											</span>

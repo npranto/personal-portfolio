@@ -7,10 +7,21 @@ import Blog from '@/components/blog';
 import Videos from '@/components/videos';
 import Education from '@/components/education';
 import Contact from '@/components/contact';
-import data from '../data.json';
+import PROFILE from '../content/profile.json';
+import CONFIG from '../content/config.json';
 
-export default function Home(props) {
-	const { profile } = data?.content || {};
+export default function HomePage(props) {
+	const profile = PROFILE?.profile || {};
+	const {
+		showJumbotron,
+		showAbout,
+		showWork,
+		showProjects,
+		showBlog,
+		showVideos,
+		showEducation,
+		showContact,
+	} = CONFIG || {};
 	return (
 		<>
 			<Head>
@@ -19,14 +30,14 @@ export default function Home(props) {
 				<title>{profile.title}</title>
 			</Head>
 			<div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
-				<Jumbotron />
-				<About />
-				<Work />
-				<Projects />
-				<Blog />
-				<Videos />
-				<Education />
-				<Contact />
+				{showJumbotron && <Jumbotron />}
+				{showAbout && <About />}
+				{showWork && <Work />}
+				{showProjects && <Projects />}
+				{showBlog && <Blog />}
+				{showVideos && <Videos />}
+				{showEducation && <Education />}
+				{showContact && <Contact />}
 			</div>
 		</>
 	);

@@ -1,10 +1,10 @@
 import React from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
-import data from '../data.json';
+import EDUCATION from '../content/education.json';
 
 const Education = () => {
-	const { education } = data?.content || {};
+	const education = EDUCATION?.education || {};
 	return (
 		<Card
 			id="education"
@@ -23,13 +23,13 @@ const Education = () => {
 							<div className="flex space-x-2">
 								<div className="flex flex-col flex-grow top-level-details">
 									<h4 className="text-base font-semibold">
-										{item.institution}
+										{item?.institution}
 									</h4>
 									<p className="text-sm text-gray-500">
-										{item.duration && <span>{item.duration}</span>}
-										{item.location && <span> | {item.location}</span>}
+										{item?.duration && <span>{item.duration}</span>}
+										{item?.location && <span> | {item.location}</span>}
 									</p>
-									{item.description && (
+									{item?.description && (
 										<p
 											className="text-sm text-gray-500"
 											dangerouslySetInnerHTML={{ __html: item.description }}

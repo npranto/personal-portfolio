@@ -82,25 +82,8 @@ export default function Document() {
 					content="/assets/favicons/ms-icon-144x144.png"
 				/>
 				<meta name="theme-color" content="#ffffff" />
-
-				{/* TODO: how do we isolate this onto its own file? */}
-				{/* Global site tag (gtag.js) - Google Analytics */}
-				{/* <script
-					async
-					src="https://www.googletagmanager.com/gtag/js?id=G-1WW5F0M4MQ"
-				></script>
-				<script
-					dangerouslySetInnerHTML={{
-						__html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-1WW5F0M4MQ');
-          `,
-					}}
-				/> */}
 			</Head>
-			<body className="max-w-screen-lg m-auto my-2 md:my-10">
+			<body>
 				<Main />
 				<NextScript />
 			</body>

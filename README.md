@@ -19,7 +19,7 @@
 A static personal portfolio website to showcase projects, work experiences and blog posts. See it [live](https://npranto.dev/).
 
 <div>
-  <img src="./docs/cover.png" alt="Portfolio Shot" style="width: 100%; max-width: 640px">
+  <img src="./docs/cover-v5.png" alt="Portfolio Shot" style="width: 100%; max-width: 640px">
 </div>
 
 ## Built With
