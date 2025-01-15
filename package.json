@@ -2,15 +2,14 @@
 	"name": "personal-portfolio",
 	"version": "5.0.0",
 	"scripts": {
-		"dev": "npm run fetch-content && next dev",
-		"build": "npm run fetch-content && next build",
-		"start": "npm run fetch-content && next start",
+		"dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
+		"build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
+		"start": "next start",
 		"lint": "next lint",
 		"prepare": "husky",
 		"format": "npx prettier --write .",
-		"fetch-content": "npm run fetch-blog-posts && npm run fetch-video-posts",
-		"fetch-blog-posts": "node --no-warnings ./src/scripts/fetch-blog-posts.mjs",
-		"fetch-video-posts": "node --no-warnings ./src/scripts/fetch-video-posts.mjs"
+		"fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
+		"fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs"
 	},
 	"dependencies": {
 		"@next/third-parties": "^15.1.4",
