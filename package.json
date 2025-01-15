@@ -2,13 +2,12 @@
 	"name": "personal-portfolio",
 	"version": "5.0.0",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
+		"dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
+		"build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
 		"start": "next start",
 		"lint": "next lint",
 		"prepare": "husky",
 		"format": "npx prettier --write .",
-		"postinstall": "npm run fetch-blog-posts && npm run fetch-video-posts",
 		"fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
 		"fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs"
 	},
