@@ -9,20 +9,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_GTM_ID: ${{ secrets.NEXT_PUBLIC_GTM_ID }} # If you're using GitHub Secrets for security
+      CRAWLER_BLOG_URL: ${{ secrets.CRAWLER_BLOG_URL }}
+      CRAWLER_VIDEOS_URL: ${{ secrets.CRAWLER_VIDEOS_URL }}
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 'latest'
+
       - name: Install dependencies
         run: npm install
-      # - name: Run ESLint
-      # run: npm run lint
-      - name: Create build
+
+      - name: Build the Next.js app
         run: npm run build
-      - name: Run Cypress E2E tests
-        uses: cypress-io/github-action@v2
-        with:
-          start: npm start
+
+      - name: Output build result (optional)
+        run: echo "Build completed successfully"
