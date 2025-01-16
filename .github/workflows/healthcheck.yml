@@ -1,0 +1,40 @@
+name: 'Healthcheck: Lint, Test, and Build'
+
+on:
+  pull_request:
+    branches:
+      - main
+      - v5
+
+jobs:
+  healthcheck:
+    name: Healthcheck
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js using .nvmrc
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run lint
+      - name: Run lint
+        run: npm run lint
+
+      # Step 5: Run tests
+      - name: Run tests
+        run: npm test
+
+      # Step 6: Build the project
+      - name: Build the project
+        run: npm run build
