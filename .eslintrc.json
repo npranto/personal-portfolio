@@ -1,7 +1,6 @@
 {
 	"root": true,
-	"plugins": ["tailwindcss", "unused-imports"],
-	"parser": "@typescript-eslint/parser",
+	"plugins": ["prettier", "unused-imports", "tailwindcss"],
 	"parserOptions": {
 		"ecmaVersion": 2021,
 		"sourceType": "module",
@@ -10,12 +9,14 @@
 		}
 	},
 	"extends": [
+		"eslint:recommended",
+		"next",
 		"next/core-web-vitals",
-		"next/typescript",
-		"prettier",
-		"plugin:tailwindcss/recommended"
+		"plugin:tailwindcss/recommended",
+		"prettier"
 	],
 	"rules": {
+		"prettier/prettier": "error",
 		"semi": "error",
 		"tailwindcss/no-custom-classname": "off",
 		"unused-imports/no-unused-imports": "warn",
@@ -32,8 +33,8 @@
 	"ignorePatterns": [
 		"node_modules/",
 		".next/",
+		"coverage/",
 		"assets/",
-		"public/",
-		"coverage/"
+		"public/"
 	]
 }
