@@ -1,0 +1,39 @@
+{
+	"root": true,
+	"plugins": ["tailwindcss", "unused-imports"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2021,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": [
+		"next/core-web-vitals",
+		"next/typescript",
+		"prettier",
+		"plugin:tailwindcss/recommended"
+	],
+	"rules": {
+		"semi": "error",
+		"tailwindcss/no-custom-classname": "off",
+		"unused-imports/no-unused-imports": "warn",
+		"unused-imports/no-unused-vars": "warn"
+	},
+	"settings": {
+		"tailwindcss": {
+			"config": "./tailwind.config.mjs"
+		},
+		"next": {
+			"rootDir": ["./src"]
+		}
+	},
+	"ignorePatterns": [
+		"node_modules/",
+		".next/",
+		"assets/",
+		"public/",
+		"coverage/"
+	]
+}
