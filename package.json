@@ -8,7 +8,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
+		"lint": "next lint --no-cache",
 		"test": "echo \"No tests ✅\"",
 		"format": "npx prettier --write src",
 		"healthcheck": "npm run format && npm run lint && npm run test && npm run build",
