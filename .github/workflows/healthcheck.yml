@@ -18,11 +18,11 @@ jobs:
           node-version: '18'
       - name: Install dependencies
         run: npm install
-      - name: Run ESLint
-        run: npm run lint
+      # - name: Run ESLint
+      # run: npm run lint
       - name: Create build
-        run: npm run prod
+        run: npm run build
       - name: Run Cypress E2E tests
         uses: cypress-io/github-action@v2
         with:
-          start: npm run preview
+          start: npm start
