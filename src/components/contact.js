@@ -16,17 +16,19 @@ const Contact = () => {
         <a
           target="_blank"
           rel="noopener noreferrer"
+          className="underline font-bold"
           href={socials.linkedin?.href}
         >
-          <u>LinkedIn</u>
+          LinkedIn
         </a>{' '}
-        or email me at{' '}
+        | Email me at{' '}
         <a
           target="_blank"
           rel="noopener noreferrer"
+          className="underline font-bold"
           href={`mailto:${profile.email}`}
         >
-          <u>npranto@gmail.com</u>
+          npranto@gmail.com
         </a>
         .
         <br />
