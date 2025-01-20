@@ -9,7 +9,7 @@
     "build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"No tests ✅\"",
+    "test": "echo \"✅\"",
     "format": "npx prettier --write src",
     "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
     "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
