@@ -11,34 +11,34 @@ import PROFILE from '../content/profile.json';
 import CONFIG from '../content/config.json';
 
 export default function HomePage(props) {
-	const profile = PROFILE?.profile || {};
-	const {
-		showJumbotron,
-		showAbout,
-		showWork,
-		showProjects,
-		showBlog,
-		showVideos,
-		showEducation,
-		showContact,
-	} = CONFIG || {};
-	return (
-		<>
-			<Head>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="description" content={profile.description} />
-				<title>{profile.title}</title>
-			</Head>
-			<div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
-				{showJumbotron && <Jumbotron />}
-				{showAbout && <About />}
-				{showWork && <Work />}
-				{showProjects && <Projects />}
-				{showBlog && <Blog />}
-				{showVideos && <Videos />}
-				{showEducation && <Education />}
-				{showContact && <Contact />}
-			</div>
-		</>
-	);
+  const profile = PROFILE?.profile || {};
+  const {
+    showJumbotron,
+    showAbout,
+    showWork,
+    showProjects,
+    showBlog,
+    showVideos,
+    showEducation,
+    showContact,
+  } = CONFIG || {};
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={profile.description} />
+        <title>{profile.title}</title>
+      </Head>
+      <div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
+        {showJumbotron && <Jumbotron />}
+        {showAbout && <About />}
+        {showWork && <Work />}
+        {showProjects && <Projects />}
+        {showBlog && <Blog />}
+        {showVideos && <Videos />}
+        {showEducation && <Education />}
+        {showContact && <Contact />}
+      </div>
+    </>
+  );
 }

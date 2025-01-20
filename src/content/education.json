@@ -1,15 +1,15 @@
 {
-	"education": {
-		"id": "content:education:v1",
-		"header": "Education",
-		"items": [
-			{
-				"id": "content:education-item:devmountain",
-				"institution": "DevMountain",
-				"duration": "2016",
-				"location": "Dallas, TX",
-				"description": "Web Development Immersive Program"
-			}
-		]
-	}
+  "education": {
+    "id": "content:education:v1",
+    "header": "Education",
+    "items": [
+      {
+        "id": "content:education-item:devmountain",
+        "institution": "DevMountain",
+        "duration": "2016",
+        "location": "Dallas, TX",
+        "description": "Web Development Immersive Program"
+      }
+    ]
+  }
 }

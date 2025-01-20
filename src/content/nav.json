@@ -1,42 +1,42 @@
 {
-	"nav": {
-		"id": "content:nav:v1",
-		"links": [
-			{
-				"id": "content:nav-item:about",
-				"text": "About",
-				"href": "#about"
-			},
-			{
-				"id": "content:nav-item:work",
-				"text": "Work",
-				"href": "#work"
-			},
-			{
-				"id": "content:nav-item:projects",
-				"text": "Projects",
-				"href": "#projects"
-			},
-			{
-				"id": "content:nav-item:blog",
-				"text": "Blog",
-				"href": "#blog"
-			},
-			{
-				"id": "content:nav-item:videos",
-				"text": "Videos",
-				"href": "#videos"
-			},
-			{
-				"id": "content:nav-item:education",
-				"text": "Education",
-				"href": "#education"
-			},
-			{
-				"id": "content:nav-item:contact",
-				"text": "Contact",
-				"href": "#contact"
-			}
-		]
-	}
+  "nav": {
+    "id": "content:nav:v1",
+    "links": [
+      {
+        "id": "content:nav-item:about",
+        "text": "About",
+        "href": "#about"
+      },
+      {
+        "id": "content:nav-item:work",
+        "text": "Work",
+        "href": "#work"
+      },
+      {
+        "id": "content:nav-item:projects",
+        "text": "Projects",
+        "href": "#projects"
+      },
+      {
+        "id": "content:nav-item:blog",
+        "text": "Blog",
+        "href": "#blog"
+      },
+      {
+        "id": "content:nav-item:videos",
+        "text": "Videos",
+        "href": "#videos"
+      },
+      {
+        "id": "content:nav-item:education",
+        "text": "Education",
+        "href": "#education"
+      },
+      {
+        "id": "content:nav-item:contact",
+        "text": "Contact",
+        "href": "#contact"
+      }
+    ]
+  }
 }
