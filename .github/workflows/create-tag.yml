@@ -4,7 +4,7 @@ name: Create Tag
   push:
     branches:
       - main
-      - create-tag-gh-action
+
 jobs:
   create-tag:
     name: Bump Version + Create Tag
