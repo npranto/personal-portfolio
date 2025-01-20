@@ -1,0 +1,550 @@
+{
+  "config": {
+    "theme": "Simple",
+    "showAbout": true,
+    "showWork": true,
+    "showProjects": true,
+    "showBlog": true,
+    "showVideos": true,
+    "showEducation": true,
+    "showContact": true
+  },
+  "content": {
+    "about": {
+      "id": "content:about:v1",
+      "header": "About",
+      "mainContent": [
+        {
+          "id": "content:content-section:about:main-content:1",
+          "paragraphs": [
+            {
+              "body": "I am Nazmuz (Shakib) Pranto, a front-end engineer with hands-on experience building single and multi-page web applications. I'm passionate about crafting clean, responsive, reusable user interfaces with modern technologies including <a href=\\\"https://reactjs.org/\\\"    target=\\\"_blank\\\" class=\\\"paragraph-links\\\">React</a>, <a href=\\\"https://redux.js.org/\\\" target=\\\"_blank\\\" class=\\\"paragraph-links\\\">Redux</a>, and <a href=\\\"https://nextjs.org/\\\" target=\\\"_blank\\\"  class=\\\"paragraph-links\\\">Next.js</a>. I also love creating products that serve instant value to customers."
+            },
+            {
+              "body": "Over the past few years, I had the honor of helping build a highly customizable eCommerce platform as an engineer at Newfold Digital.  This, in return, accelerated development time and feature delivery for multiple client-side teams within the organization. On the side, I also built and published mini utility libraries and APIs using <a href=\\\"https://nodejs.org/en/\\\" target=\\\"_blank\\\"  class=\\\"paragraph-links\\\"> Node.js</a> for external use."
+            }
+          ]
+        }
+      ],
+      "secondaryContent": [
+        {
+          "id": "content:content-section:about:secondary-content:1",
+          "header": "My Journey",
+          "paragraphs": [
+            {
+              "body": "I started my journey in web development during my first year of college as a Computer Science student. I was learning HTML and CSS for the very first time, not through a college course though, but on an online learning platform called - <a href=\\\"https://www.codecademy.com/\\\"    target=\\\"_blank\\\" class=\\\"paragraph-links\\\">Codeacademy</a>. I found that to be way more fun and practical than the college courses I was taking back then. Thus, I continued with it and pushed to learn even more on the side. Eventually, I fell in love with it so much that I took the risk of taking time off from college and fully dedicated my time to a software engineering immersive program called <a href=\\\"https://devmountain.com/\\\" target=\\\"_blank\\\"  class=\\\"paragraph-links\\\">DevMountain</a>."
+            },
+            {
+              "body": "I always believed that I was a go-getter who loves taking risks to improve and get better progressively. That's why I pursued an alternative track to higher education. While I understand the importance of traditional computer science education with a heavy theoretical learning approach, I don't think it's enough for diving into real-world problems in the most effective way. We need more hands-on, practical, project-based learning, where learning to code is acquired from a series of trials and mistakes. As a DevMountain scholar, I have learned to do exactly that and have taken that lesson to heart till today."
+            },
+            {
+              "body": "Since my exposure to DevMountain, I have taken on a junior role at <a href=\\\"https://www.lexialearning.com/\\\" target=\\\"_blank\\\"  class=\\\"paragraph-links\\\">Lexia Learning</a> to a full-time Software Engineer gig at <a href=\\\"https://newfold.com/\\\"    target=\\\"_blank\\\"  class=\\\"paragraph-links\\\">Newfold Digital</a>, working on enterprise-level applications used by millions of customers and internal teams."
+            }
+          ]
+        },
+        {
+          "id": "content:content-section:about:secondary-content:2",
+          "header": "Future Ambitions",
+          "paragraphs": [
+            {
+              "body": "Of course, I still have a long way to go and I am working on getting better one day at a time. For now, I plan to actively contribute the skills I have acquired till now on my next role and learn modern, industry-proven techniques and best practices from both experienced and newbie developers to be a more well-rounded senior engineer and a mentor."
+            }
+          ]
+        }
+      ]
+    },
+    "work": {
+      "id": "content:work:v1",
+      "header": "Work",
+      "items": [
+        {
+          "id": "content:work-item:best-buy",
+          "image": {
+            "id": "content:picture:work-item:bestbuy",
+            "sm": "/assets/images/bestbuy-logo-200x200.jpeg",
+            "md": "/assets/images/bestbuy-logo-200x200.jpeg",
+            "lg": "/assets/images/bestbuy-logo-200x200.jpeg"
+          },
+          "position": "Frontend Engineer III",
+          "company": "Best Buy",
+          "location": "Remote",
+          "duration": "March 2022 - Present",
+          "employmentType": "Contract",
+          "description": [
+            "Improved website performance for faster load and better customer experience",
+            "Built product detail page for Best Buy front of site",
+            "Maintain and enhance 40+ UI components built with React and its ecosystem "
+          ],
+          "technologies": ["React", "Webpack", "CSS"],
+          "isCurrent": true
+        },
+        {
+          "id": "content:work-item:newfold",
+          "image": {
+            "id": "content:picture:work-item:newfold",
+            "sm": "/assets/images/newfold-logo-200x200.jpeg",
+            "md": "/assets/images/newfold-logo-200x200.jpeg",
+            "lg": "/assets/images/newfold-logo-200x200.jpeg"
+          },
+          "position": "Software Engineer",
+          "company": "Newfold Digitial",
+          "location": "Burlington, MA",
+          "duration": "Jul 2018 - Jul 2021",
+          "employmentType": "Full-time",
+          "description": [
+            "Built and maintained robust, reusable e-commerce UI components using React and Redux to ease feature development and integration for multiple internal teams",
+            "Added over 50+ bug-fixes and features along with unit tests to enhance and improve active single page application (SPA) for customer registration and checkout",
+            "Integrated Contentful CMS to dynamically prefetch product metadata to enable marketing teams to make custom changes quickly without code releases",
+            "Frequently collaborated with internal front and backend services teams to integrate new products and payment gateways",
+            "Worked on a fast-paced agile environment with multiple releases per sprint basis"
+          ],
+          "technologies": [
+            "React",
+            "Redux",
+            "Sass",
+            "Webpack",
+            "Contentful",
+            "Node.js",
+            "Git",
+            "JIRA"
+          ],
+          "isCurrent": false
+        },
+        {
+          "id": "content:work-item:lexia",
+          "image": {
+            "id": "content:picture:work-item:lexia",
+            "sm": "/assets/images/lexia-logo-200x200.jpeg",
+            "md": "/assets/images/lexia-logo-200x200.jpeg",
+            "lg": "/assets/images/lexia-logo-200x200.jpeg"
+          },
+          "position": "Software Engineer",
+          "company": "Lexia Learning",
+          "location": "Concord, MA",
+          "duration": "Sep - Dec 2016 & Jun - Aug 2017",
+          "employmentType": "Contract",
+          "description": [
+            "Built 20+ JSON schemas to validate and structure large, nested JSON objects, or lesson tasks for production-level reading software program",
+            "Written various JavaScript functions or snippets to automate JSON file modifications to simplify and speed up application content updates"
+          ],
+          "technologies": ["JavaScript", "JSON Schema", "Git"],
+          "isCurrent": false
+        }
+      ]
+    },
+    "projects": {
+      "id": "content:projects:v1",
+      "header": "Projects",
+      "items": [
+        {
+          "id": "content:project-item:portfolio-v5",
+          "name": "Portfolio v.5",
+          "duration": "Sep 2024",
+          "image": {
+            "id": "content:picture:project-item:portfolio-v5",
+            "sm": "/assets/images/portfolio-5.0.0-100x100.jpeg",
+            "md": "/assets/images/portfolio-5.0.0-100x100.jpeg",
+            "lg": "/assets/images/portfolio-5.0.0-100x100.jpeg"
+          },
+          "githubUrl": "https://github.com/npranto/personal-portfolio",
+          "demoUrl": "https://npranto.dev/",
+          "description": "A statically rendered personal portfolio website to showcase my projects, work experiences, and blogs. It’s powered by Next.js (using the pages router) and Contentful CMS, allowing me to update content easily through the web application dashboard. About five years ago, I created the first version of my portfolio as a single-page application using create-react-app. Looking back, I realize I overcomplicated things by client-rendering a static site that rarely changed. In hindsight, server-side rendering or static rendering in this case has been a more practical choice, given how infrequently the content is updated. With version 5, I decided to simplify and redesign the UI and architecture to make future updates easier and more manageable. Over the past few years, I’ve experimented with different versions of the site, but this current version feels like the perfect balance. Now, I can make content updates seamlessly through the CMS, while auto-deploying changes via Netlify without needing manual code updates. I’ve also integrated end-to-end testing with Cypress to ensure the UI stays solid and bug-free as I continue to update and grow the content.",
+          "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TailwindCSS",
+            "Parcel",
+            "Cypress",
+            "Netlify",
+            "ESLint",
+            "Prettier",
+            "GitHub Actions"
+          ]
+        },
+        {
+          "id": "content:project-item:logtrade",
+          "name": "LogTrade",
+          "duration": "Oct 2021 - Present",
+          "image": {
+            "id": "content:picture:project-item:logtrade",
+            "sm": "/assets/images/logtrade-200x200.jpeg",
+            "md": "/assets/images/logtrade-200x200.jpeg",
+            "lg": "/assets/images/logtrade-200x200.jpeg"
+          },
+          "githubUrl": "https://github.com/npranto/logtrade",
+          "demoUrl": "https://logtrade.netlify.app/home/",
+          "description": "LogTrade is a personal journal designed to keep track of your trades online. A friend approached me, asking for an app to log daily stock trades. The concept seemed straightforward, similar to other note or record-tracking software, so I was eager to jump right in. To save time, especially with managing APIs and databases, I opted to use Firebase for backend storage of stock trades. Firebase authentication made user login simple, allowing me to focus more on building a responsive, user-friendly UI with React. As of October 17, 2021, LogTrade <a class=\"paragraph-links\" href=\"https://github.com/npranto/logtrade/releases/tag/v1.0.0\">v1.0.0</a> is <a class=\"paragraph-links\" href=\"https://logtrade.netlify.app/home/\">live</a> in production. I'll be adding more features and fixing potential bugs soon, and I'm planning to release v2.0.0 in early to mid-2025.",
+          "technologies": [
+            "React",
+            "TailwindCSS",
+            "Webpack",
+            "Firebase",
+            "Netlify"
+          ]
+        },
+        {
+          "id": "content:project-item:regexer",
+          "name": "Regexer",
+          "duration": "Jul 2018 - Present",
+          "image": {
+            "id": "content:picture:project-item:regexer",
+            "sm": "/assets/images/regexer-200x200.jpeg",
+            "md": "/assets/images/regexer-200x200.jpeg",
+            "lg": "/assets/images/regexer-200x200.jpeg"
+          },
+          "githubUrl": "https://github.com/npranto/regexer",
+          "demoUrl": "https://www.npmjs.com/package/nsp-regexer",
+          "description": "Regexer is a utility library of functions that use regular expressions to validate various types of inputs. Developers often use regexes to validate inputs like emails, zip codes, or credit card numbers. I wanted to create a small utility library to handle a wide range of input validations with regexes, so I wouldn't need to constantly search for reliable patterns online. While it's not an exhaustive collection of regexes yet, I plan to add more functionality over time. Regexer is a Node package that can be installed and used on both the server and client side.",
+          "technologies": ["Node.js", "ESLint", "Mocha", "Semantic Release"]
+        },
+        {
+          "id": "content:project-item:actions-cli",
+          "name": "@npranto/actions-cli",
+          "duration": "June 2022",
+          "image": {
+            "id": "content:picture:project-item:actions-cli",
+            "sm": "/assets/images/actions-cli-100x100.jpeg",
+            "md": "/assets/images/actions-cli-100x100.jpeg",
+            "lg": "/assets/images/actions-cli-100x100.jpeg"
+          },
+          "githubUrl": "https://github.com/npranto/actions-cli",
+          "demoUrl": "https://www.npmjs.com/package/@npranto/actions-cli",
+          "description": "A command-line CLI tool to keep track of your action items for each day.",
+          "technologies": ["Node.js", "CLI Tool", "Commander", "Conf"]
+        }
+      ]
+    },
+    "education": {
+      "id": "content:education:v1",
+      "header": "Education",
+      "items": [
+        {
+          "id": "content:education-item:devmountain",
+          "institution": "DevMountain",
+          "duration": "2016",
+          "location": "Dallas, TX",
+          "description": "Web Development Immersive Program"
+        }
+      ]
+    },
+    "profile": {
+      "id": "content:profile:v1",
+      "description": "Portfolio website - Nazmuz (Shakib) Pranto, a front-end engineer",
+      "title": "Portfolio - Nazmuz Pranto (v.5)",
+      "picture": {
+        "id": "content:picture:profile:v1",
+        "sm": "/assets/images/profile-v4-160x160.jpg",
+        "md": "/assets/images/profile-v4-500x500.jpg",
+        "lg": "/assets/images/profile-v4-500x500.jpg"
+      },
+      "author": "Nazmuz Pranto",
+      "currentRole": "Software Engineer",
+      "location": "Boston, MA",
+      "highlightedRoles": [
+        "Frontend Engineer",
+        "Mentor",
+        "Creative Thinker",
+        "Problem Solver",
+        "Technical Blogger"
+      ],
+      "resumeHref": "/assets/resume.pdf",
+      "contactHref": "#contact",
+      "nickname": "Shakib"
+    },
+    "nav": {
+      "id": "content:nav:v1",
+      "links": [
+        {
+          "id": "content:nav-item:about",
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "id": "content:nav-item:work",
+          "text": "Work",
+          "href": "#work"
+        },
+        {
+          "id": "content:nav-item:projects",
+          "text": "Projects",
+          "href": "#projects"
+        },
+        {
+          "id": "content:nav-item:blog",
+          "text": "Blog",
+          "href": "#blog"
+        },
+        {
+          "id": "content:nav-item:education",
+          "text": "Education",
+          "href": "#education"
+        },
+        {
+          "id": "content:nav-item:contact",
+          "text": "Contact",
+          "href": "#contact"
+        }
+      ]
+    },
+    "socials": {
+      "id": "content.socials:v1",
+      "github": "https://github.com/npranto",
+      "linkedin": "https://www.linkedin.com/in/npranto",
+      "twitter": "https://twitter.com/nazmuzpranto",
+      "devto": "https://dev.to/npranto",
+      "medium": "https://medium.com/@npranto",
+      "youtube": "https://www.youtube.com/@npranto1547",
+      "substack": "https://substack.com/@npranto"
+    },
+    "blog": {
+      "id": "content:blog:v1",
+      "header": "Blog",
+      "useCrawler": true,
+      "posts": [
+        {
+          "link": "https://dev.to/npranto/bfedev-176-undefined-to-null-2fb8",
+          "title": "BFE.dev | 176. undefined to null",
+          "uploadedTime": "Tuesday, May 21"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-32-band-aid-3685",
+          "title": "CSSBattle | #32 Band-aid",
+          "uploadedTime": "Monday, May 20"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-31-equals-70h",
+          "title": "CSSBattle | #31 Equals",
+          "uploadedTime": "Sunday, October 16"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-30-horizon-22gn",
+          "title": "CSSBattle | #30 Horizon",
+          "uploadedTime": "Sunday, July 31"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-29-suffocate-ihk",
+          "title": "CSSBattle | #29 Suffocate",
+          "uploadedTime": "Thursday, July 28"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-28-cups-balls-57h5",
+          "title": "CSSBattle | #28 Cups & Balls",
+          "uploadedTime": "Sunday, July 17"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-27-lock-up-1b70",
+          "title": "CSSBattle | #27 Lock Up",
+          "uploadedTime": "Sunday, July 17"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-26-smiley-3iko",
+          "title": "CSSBattle | #26 Smiley",
+          "uploadedTime": "Friday, July 15"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-25-blossom-ap3",
+          "title": "CSSBattle | #25 Blossom",
+          "uploadedTime": "Tuesday, July 12"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-24-switches-2pl1",
+          "title": "CSSBattle | #24 Switches",
+          "uploadedTime": "Tuesday, July 12"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-23-boxception-407o",
+          "title": "CSSBattle | #23 Boxception",
+          "uploadedTime": "Tuesday, July 5"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-22-cloud-1536",
+          "title": "CSSBattle | #22 Cloud",
+          "uploadedTime": "Monday, July 4"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-21-sitepoint-logo-2160",
+          "title": "CSSBattle | #21 SitePoint Logo",
+          "uploadedTime": "Saturday, July 2"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-20-ticket-4ae7",
+          "title": "CSSBattle | #20 Ticket",
+          "uploadedTime": "Friday, July 1"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-19-cube-3kb2",
+          "title": "CSSBattle | #19 Cube",
+          "uploadedTime": "Friday, July 1"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-18-matrix-2ga4",
+          "title": "CSSBattle | #18 Matrix",
+          "uploadedTime": "Thursday, June 30"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-17-fidget-spinner-4hl6",
+          "title": "CSSBattle | #17 Fidget Spinner",
+          "uploadedTime": "Sunday, April 24"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-16-eye-of-the-tiger-2df8",
+          "title": "CSSBattle | #16 Eye of the Tiger",
+          "uploadedTime": "Thursday, March 17"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-15-overlap-4i5e",
+          "title": "CSSBattle | #15 Overlap",
+          "uploadedTime": "Monday, March 14"
+        },
+        {
+          "link": "https://dev.to/npranto/automate-adding-cvs-coupons-p06",
+          "title": "Automate Adding CVS Coupons",
+          "uploadedTime": "Saturday, March 12"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-14-web-maker-logo-47l9",
+          "title": "CSSBattle | #14 Web Maker Logo",
+          "uploadedTime": "Wednesday, March 9"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-13-totally-triangle-36pe",
+          "title": "CSSBattle | #13 Totally Triangle",
+          "uploadedTime": "Tuesday, March 8"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-12-wiggly-moustache-1noa",
+          "title": "CSSBattle | #12 Wiggly Moustache",
+          "uploadedTime": "Monday, March 7"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-11-eye-of-sauron-4gch",
+          "title": "CSSBattle | #11 Eye of Sauron",
+          "uploadedTime": "Thursday, March 3"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-10-cloaked-spirits-2bcc",
+          "title": "CSSBattle | #10 Cloaked Spirits",
+          "uploadedTime": "Tuesday, March 1"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-9-tesseract-15p9",
+          "title": "CSSBattle | #9 Tesseract",
+          "uploadedTime": "Tuesday, March 1"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-8-forking-crazy-52ea",
+          "title": "CSSBattle | #8 Forking Crazy",
+          "uploadedTime": "Tuesday, March 1"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-7-leafy-trail-4g86",
+          "title": "CSSBattle | #7 Leafy Trail",
+          "uploadedTime": "Monday, February 28"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-6-missing-slice-8ip",
+          "title": "CSSBattle | #6 Missing Slice",
+          "uploadedTime": "Sunday, February 27"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-5-acid-rain-3e55",
+          "title": "CSSBattle | #5 Acid Rain",
+          "uploadedTime": "Sunday, February 27"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-4-ups-n-downs-267e",
+          "title": "CSSBattle | #4 Ups n Downs",
+          "uploadedTime": "Sunday, February 27"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-3-push-button-2gg9",
+          "title": "CSSBattle | #3 Push Button",
+          "uploadedTime": "Sunday, February 27"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-2-carrom-4l37",
+          "title": "CSSBattle | #2 Carrom",
+          "uploadedTime": "Friday, February 25"
+        },
+        {
+          "link": "https://dev.to/npranto/cssbattle-1-simply-square-3j7",
+          "title": "CSSBattle | #1 Simply Square",
+          "uploadedTime": "Thursday, February 24"
+        },
+        {
+          "link": "https://dev.to/npranto/how-i-setup-eslint-prettier-and-editorconfig-for-static-sites-33ep",
+          "title": "How I Setup ESLint, Prettier, and EditorConfig for Static Sites",
+          "uploadedTime": "Tuesday, January 25"
+        },
+        {
+          "link": "https://dev.to/npranto/macos-web-development-setup-guide-345p",
+          "title": "macOS Web Development Setup Guide",
+          "uploadedTime": "Wednesday, December 8"
+        },
+        {
+          "link": "https://dev.to/npranto/quick-bite-ssh-key-4llh",
+          "title": "Quick Bite: SSH Key",
+          "uploadedTime": "Saturday, December 4"
+        }
+      ]
+    },
+    "videos": {
+      "id": "content:videos:v1",
+      "header": "Videos",
+      "useCrawler": true,
+      "posts": [
+        {
+          "title": "CSSBattle | #32 Band-aid",
+          "link": "https://www.youtube.com/watch?v=f91-sHBiHJY",
+          "uploadedTime": "4 months ago"
+        },
+        {
+          "title": "CSSBattle | #160 Donut",
+          "link": "https://www.youtube.com/watch?v=fkiIECZgWkw",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "CSSBattle | Daily Target - 05/09/2023",
+          "link": "https://www.youtube.com/watch?v=xEAMpxrSgnk",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "CSSBattle | #6 Missing Slice",
+          "link": "https://www.youtube.com/watch?v=QCKMyDAbYTU",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "CSSBattle | #5 Acid Rain",
+          "link": "https://www.youtube.com/watch?v=Ujinhuzq_iE",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "CSSBattle | #4 Ups n Downs",
+          "link": "https://www.youtube.com/watch?v=oK83sW_GEfk",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "CSSBattle | #3 Push Button",
+          "link": "https://www.youtube.com/watch?v=0Q8P1d_aT6A",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "Code Newbie: How to Upload Local Projects to GitHub",
+          "link": "https://www.youtube.com/watch?v=A3jyY5TVVXA",
+          "uploadedTime": "1 year ago"
+        },
+        {
+          "title": "CSSBattle | #2 Carrom",
+          "link": "https://www.youtube.com/watch?v=dBoDZX8VeqQ",
+          "uploadedTime": "2 years ago"
+        },
+        {
+          "title": "CSSBattle | #1 Simply Square",
+          "link": "https://www.youtube.com/watch?v=BTrccTD-d4M",
+          "uploadedTime": "2 years ago"
+        }
+      ]
+    }
+  }
+}

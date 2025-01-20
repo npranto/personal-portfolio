@@ -1,0 +1,86 @@
+{
+  "projects": {
+    "id": "content:projects:v1",
+    "header": "Projects",
+    "items": [
+      {
+        "id": "content:project-item:logtrade",
+        "name": "LogTrade",
+        "duration": "Oct 2021 - Present",
+        "image": {
+          "id": "content:picture:project-item:logtrade",
+          "sm": "/assets/images/logtrade-200x200.jpeg",
+          "md": "/assets/images/logtrade-200x200.jpeg",
+          "lg": "/assets/images/logtrade-200x200.jpeg"
+        },
+        "githubUrl": "https://github.com/npranto/logtrade",
+        "demoUrl": "https://logtrade.netlify.app/home/",
+        "description": "LogTrade is a personal journal for tracking daily stock trades online. Originally built using React and Firebase, it offered simple email/password authentication and responsive UI. Version 1.0.0 launched in October 2021 and is live. Currently, I’m migrating the app to Next.js with the App Router for better scalability and performance. I’m also switching to Clerk.dev for simpler client-side authentication, enabling built-in UIs and support for social logins. Alongside these changes, I’m implementing UI enhancements for a more modern look and adding new features like Google’s Speech-to-Text API and LLM integrations to let users manage trades more intuitively—quickly adding or removing trades without editing forms. These updates are part of the upcoming v2.0.0, planned for release in early to mid-2025, aimed at delivering a sleeker, smarter user experience.",
+        "technologies": [
+          "React",
+          "TailwindCSS",
+          "Webpack",
+          "Firebase",
+          "Netlify",
+          "Clerk.dev",
+          "Next.js"
+        ]
+      },
+      {
+        "id": "content:project-item:portfolio-v5",
+        "name": "Portfolio v.5",
+        "duration": "Jan 2024",
+        "image": {
+          "id": "content:picture:project-item:portfolio-v5",
+          "sm": "/assets/images/portfolio-5.0.0-100x100.jpeg",
+          "md": "/assets/images/portfolio-5.0.0-100x100.jpeg",
+          "lg": "/assets/images/portfolio-5.0.0-100x100.jpeg"
+        },
+        "githubUrl": "https://github.com/npranto/personal-portfolio",
+        "demoUrl": "https://npranto.dev/",
+        "description": "A statically rendered personal portfolio website showcasing my projects, work experiences, and blogs. Powered by Next.js (using the Pages Router) and fully hosted in a GitHub repository, this version gives me full control over both content and code. I switched to using static pages with content managed through a single configuration file, making updates simple while retaining auto-deployments via Netlify for seamless content changes without requiring code edits. Previously, I used Contentful CMS for dynamic content updates, but consolidating everything into a single repo ensures a more unified workflow. Looking back at the first version I built five years ago with create-react-app, I overcomplicated things by client-rendering a rarely updated static site. Moving to static rendering and redesigning the architecture has made the site far more efficient and easier to manage. This streamlined setup balances simplicity and functionality, allowing me to focus on content and growth while ensuring the site stays reliable and performant.",
+        "technologies": [
+          "HTML/CSS",
+          "JavaScript",
+          "TailwindCSS",
+          "Parcel",
+          "Cypress",
+          "Netlify",
+          "ESLint",
+          "Prettier",
+          "GitHub Actions"
+        ]
+      },
+      {
+        "id": "content:project-item:regexer",
+        "name": "Regexer",
+        "duration": "Jul 2018 - Present",
+        "image": {
+          "id": "content:picture:project-item:regexer",
+          "sm": "/assets/images/regexer-200x200.jpeg",
+          "md": "/assets/images/regexer-200x200.jpeg",
+          "lg": "/assets/images/regexer-200x200.jpeg"
+        },
+        "githubUrl": "https://github.com/npranto/regexer",
+        "demoUrl": "https://www.npmjs.com/package/nsp-regexer",
+        "description": "Regexer is a utility library of functions that use regular expressions to validate various types of inputs. Developers often use regexes to validate inputs like emails, zip codes, or credit card numbers. I wanted to create a small utility library to handle a wide range of input validations with regexes, so I wouldn't need to constantly search for reliable patterns online. While it's not an exhaustive collection of regexes yet, I plan to add more functionality over time. Regexer is a Node package that can be installed and used on both the server and client side.",
+        "technologies": ["Node.js", "ESLint", "Mocha", "Semantic Release"]
+      },
+      {
+        "id": "content:project-item:actions-cli",
+        "name": "@npranto/actions-cli",
+        "duration": "June 2022",
+        "image": {
+          "id": "content:picture:project-item:actions-cli",
+          "sm": "/assets/images/actions-cli-100x100.jpeg",
+          "md": "/assets/images/actions-cli-100x100.jpeg",
+          "lg": "/assets/images/actions-cli-100x100.jpeg"
+        },
+        "githubUrl": "https://github.com/npranto/actions-cli",
+        "demoUrl": "https://github.com/npranto/actions-cli",
+        "description": "A command-line CLI tool to keep track of your action items for each day.",
+        "technologies": ["Node.js", "CLI Tool", "Commander", "Conf"]
+      }
+    ]
+  }
+}
