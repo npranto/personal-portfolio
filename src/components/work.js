@@ -35,7 +35,7 @@ const Work = () => {
         {work.items.map((item) => (
           <li
             key={item.id}
-            className={`project-item bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md ${activeWorkItemId === item.id ? 'bg-white drop-shadow-2xl' : ''}`}
+            className={`project-item -mx-4 sm:-mx-0 bg-gray-100 hover:bg-white drop-shadow-lg hover:drop-shadow-2xl transition ease-in-out duration-500 rounded-md ${activeWorkItemId === item.id ? 'bg-white drop-shadow-2xl' : ''}`}
             data-e2e={`${item.id}-item`}
             id={`${item.id}-item`}
           >

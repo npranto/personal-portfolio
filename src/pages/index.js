@@ -29,7 +29,7 @@ export default function HomePage(props) {
         <meta name="description" content={profile.description} />
         <title>{profile.title}</title>
       </Head>
-      <div className={`flex min-h-screen flex-col px-4 py-4 space-y-10`}>
+      <div className={`flex min-h-screen flex-col sm:px-4 py-4 space-y-10`}>
         {showJumbotron && <Jumbotron />}
         {showAbout && <About />}
         {showWork && <Work />}

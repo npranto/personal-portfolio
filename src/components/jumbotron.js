@@ -21,15 +21,18 @@ const Jumbotron = () => {
       </h1>
 
       <ProfilePicture
-        className="mb-2 md:hidden"
+        className="mb-4 md:hidden"
         src={profile?.picture?.sm}
         width={160}
         height={160}
       />
 
-      <TextSlider className="sm:mb-10" items={profile.highlightedRoles} />
+      <TextSlider
+        className="hidden sm:block sm:mb-10"
+        items={profile.highlightedRoles}
+      />
 
-      <div className="action-call flex flex-row space-x-2">
+      <div className="action-call flex flex-row space-x-2 mb-4">
         <a
           href={profile.resumeHref}
           target="_blank"
@@ -47,7 +50,7 @@ const Jumbotron = () => {
         </a>
       </div>
 
-      <div className="md:hidden mt-5">
+      <div className="md:hidden">
         <Socials />
       </div>
     </Card>
