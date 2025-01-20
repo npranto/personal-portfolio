@@ -9,7 +9,7 @@
     "build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"✅\"",
+    "test": "echo \"No tests ✅\"",
     "format": "npx prettier --write src",
     "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
     "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
@@ -22,7 +22,8 @@
     "react-dom": "^19.0.0",
     "@next/third-parties": "^15.1.4",
     "dotenv": "^16.4.5",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "puppeteer": "^24.1.0"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "^5.0.1",
@@ -35,7 +36,6 @@
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
-    "fs": "^0.0.1-security",
-    "puppeteer": "^24.1.0"
+    "fs": "^0.0.1-security"
   }
 }
