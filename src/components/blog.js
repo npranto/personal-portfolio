@@ -5,6 +5,9 @@ import BLOG_POSTS from '../content/blog-posts.json';
 
 const Blog = () => {
   const posts = BLOG_POSTS?.posts || [];
+
+  if (!posts.length) return null;
+
   return (
     <Card id="blog" className="bg-green-100 blog card" data-e2e="blog">
       <CardHeading>Blog</CardHeading>

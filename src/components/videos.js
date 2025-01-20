@@ -6,6 +6,8 @@ import VIDEO_POSTS from '../content/video-posts.json';
 const Videos = () => {
   const posts = VIDEO_POSTS?.posts || [];
 
+  if (!posts.length) return null;
+
   return (
     <Card id="videos" className="bg-orange-100 videos card" data-e2e="videos">
       <CardHeading>Videos</CardHeading>
