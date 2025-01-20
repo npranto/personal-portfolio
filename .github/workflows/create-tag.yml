@@ -9,8 +9,10 @@ on:
 jobs:
   create-tag:
     name: 'Bump Version + Create Tag'
-    runs-on: ubuntu-latest
-    steps:
+
+		runs-on: ubuntu-latest
+
+		steps:
       - name: 'Checkout source code'
         uses: 'actions/checkout@v2'
         with:
