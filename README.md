@@ -1,4 +1,4 @@
-MAJOR - TEST
+MINOR - TEST
 
 <div align="center">
   <a href="https://npranto.dev/">
