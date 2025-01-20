@@ -20,6 +20,10 @@ jobs:
         uses: phips28/gh-action-bump-version@master
         with:
           tag-prefix: v
+          commit-message: 'CI: bumps version to {{version}} [skip ci]'
+          minor-wording: '[MINOR]'
+          major-wording: '[MAJOR]'
+          patch-wording: '[PATCH]'
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - name: cat package.json
