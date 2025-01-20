@@ -5,7 +5,7 @@
   <h2 align="center">npranto.dev</h2>
 
 [![Live](https://img.shields.io/badge/Demo-Live.svg)](https://npranto.dev/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4d16a376-43ef-47af-8b95-ee54bcffd93c/deploy-status?branch=v5)](https://app.netlify.com/sites/npranto/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d16a376-43ef-47af-8b95-ee54bcffd93c/deploy-status)](https://app.netlify.com/sites/npranto/deploys)
 [![Live](https://img.shields.io/badge/LinkedIn-blue.svg)](https://www.linkedin.com/in/npranto/)
 
 </div>
