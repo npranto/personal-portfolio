@@ -1,36 +1,41 @@
 {
-	"name": "personal-portfolio",
-	"version": "5.0.0",
-	"description": "A static personal portfolio website to showcase projects, work experiences and blog posts. See it [live](https://npranto.dev/).",
-	"scripts": {
-		"lint": "npx eslint ./",
-		"format": "npx prettier --write .",
-		"healthcheck": ""
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/npranto/personal-portfolio.git"
-	},
-	"keywords": [],
-	"author": "Nazmuz Pranto <npranto@gmail.com>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/npranto/personal-portfolio/issues"
-	},
-	"homepage": "https://github.com/npranto/personal-portfolio#readme",
-	"devDependencies": {
-		"commitizen": "^4.3.0",
-		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^8.41.0",
-		"eslint-config-airbnb-base": "^15.0.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-import": "^2.27.5",
-		"husky": "^8.0.3",
-		"prettier": "2.8.8"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	}
+  "name": "portfolio",
+  "version": "5.0.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
+    "build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "echo \"No tests ✅\"",
+    "format": "npx prettier --write src",
+    "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
+    "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
+    "healthcheck": "npm run format && npm run lint && npm run test && npm run build",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "next": "15.1.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@next/third-parties": "^15.1.4",
+    "dotenv": "^16.4.5",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "eslint-plugin-prettier": "^5.0.1",
+    "husky": "^9.1.7",
+    "typescript": "^5.7.3",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.3.0",
+    "fs": "^0.0.1-security",
+    "puppeteer": "^13.4.1"
+  }
 }
