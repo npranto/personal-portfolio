@@ -1,5 +1,3 @@
-MINOR - TEST
-
 <div align="center">
   <a href="https://npranto.dev/">
     <img src="./docs/nsp-logo-v2.png" alt="Cover" width="80" height="80">
