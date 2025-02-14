@@ -1,58 +1,32 @@
-import puppeteer from 'puppeteer';
-
 export const crawlBlogPosts = async (blogUrl = '') => {
   if (!blogUrl || typeof blogUrl !== 'string' || blogUrl.trim().length === 0)
     return { posts: [] };
 
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(blogUrl, {
-      waitUntil: 'networkidle2',
-    });
-
-    const posts = await page.evaluate(() => {
-      const formatPostInfo = ({
-        link = '',
-        title = '',
-        uploadedTime = '',
+    const response = await fetch(blogUrl);
+    if (!response.ok)
+      throw new Error(`Failed to fetch blog posts: ${response.statusText}`);
+    const articles = await response.json();
+    const posts = articles.map(
+      ({
+        url,
+        title,
+        readable_publish_date,
+        cover_image,
+        description,
+        tag_list,
       }) => ({
-        link: `${link.trim()}`,
+        link: url,
         title: title.trim(),
-        uploadedTime: (() => {
-          const regex = /\b([A-Za-z]+ \d{1,2}, \d{4})\b/;
-          const match = uploadedTime.match(regex);
-          return match ? `${match[0]}` : '';
-        })(),
-      });
-
-      // extract out all the blog post stories
-      const stories = [
-        ...document.querySelectorAll('#substories .crayons-story'),
-      ];
-
-      return (
-        stories
-          // extract out all the meta data - post title, link and date published
-          .map((story) => {
-            const link = story?.querySelector('a')?.getAttribute('href') || '';
-            const title = story?.querySelector('a')?.innerText || '';
-            const uploadedTime =
-              story
-                ?.querySelector('.crayons-story__meta a > time')
-                ?.getAttribute('title') || '';
-            return { link, title, uploadedTime };
-          })
-          // formats metadata
-          .map(({ link, title, uploadedTime }) =>
-            formatPostInfo({ link, title, uploadedTime })
-          )
-      );
-    });
-    await browser.close();
+        uploadedTime: readable_publish_date,
+        coverImage: cover_image || '',
+        description: description.trim(),
+        tags: tag_list || [],
+      })
+    );
     return { posts: posts || [] };
   } catch (error) {
-    console.error('Error crawling blog posts', error.message);
+    console.error('Error fetching blog posts:', error.message);
     return { posts: [] };
   }
 };

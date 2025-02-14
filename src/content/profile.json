@@ -2,7 +2,7 @@
   "profile": {
     "id": "content:profile:v1",
     "description": "Portfolio site - Nazmuz (Shakib) Pranto, a frontend software engineer (v.5)",
-    "titles": "Portfolio - Nazmuz (Shakib) Pranto",
+    "title": "Portfolio - Nazmuz (Shakib) Pranto",
     "picture": {
       "id": "content:picture:profile:v1",
       "sm": "/assets/images/profile-v4-160x160.jpg",

@@ -17,25 +17,28 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@next/third-parties": "^15.1.4",
+    "dotenv": "^16.4.5",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@next/third-parties": "^15.1.4",
-    "dotenv": "^16.4.5",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^5.0.1",
-    "husky": "^9.1.7",
-    "typescript": "^5.7.3",
     "autoprefixer": "^10.0.1",
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "fs": "^0.0.1-security",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "prettier": "^3.2.5",
+    "puppeteer": "^13.4.1",
     "tailwindcss": "^3.3.0",
-    "fs": "^0.0.1-security",
-    "puppeteer": "^13.4.1"
+    "typescript": "^5.7.3",
+    "ytdl-core": "^4.11.5"
   }
 }

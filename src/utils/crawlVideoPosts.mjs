@@ -1,6 +1,18 @@
-import puppeteer from 'puppeteer';
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+};
+
+const generateVideoLink = (videoId) => {
+  return videoId ? `https://www.youtube.com/watch?v=${videoId}` : '';
+};
 
 export const crawlVideoPosts = async (videosUrl = '') => {
+  console.log('videosUrl', videosUrl);
   if (
     !videosUrl ||
     typeof videosUrl !== 'string' ||
@@ -9,38 +21,24 @@ export const crawlVideoPosts = async (videosUrl = '') => {
     return { posts: [] };
 
   try {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(videosUrl, {
-      waitUntil: 'networkidle2',
-    });
-
-    const posts = await page.evaluate(() => {
-      const videos =
-        document.querySelectorAll(
-          'ytd-two-column-browse-results-renderer #contents ytd-rich-item-renderer'
-        ) || [];
-
-      return [...videos].map((video) => {
-        const title = video.querySelector('#video-title')?.innerText || '';
-        const link = video.querySelector('#video-title-link')?.href || '';
-        const uploadedTime =
-          [
-            ...video.querySelectorAll(
-              '.inline-metadata-item.ytd-video-meta-block'
-            ),
-          ]?.pop()?.innerText || '';
-        return {
-          title,
-          link,
-          uploadedTime,
-        };
-      });
-    });
-    await browser.close();
-    return { posts: posts || [] };
+    const response = await fetch(videosUrl);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch video posts: ${response.status}`);
+    }
+    const data = await response.json();
+    const videos = (data?.items || []).map((item) => ({
+      videoId: item?.id?.videoId || '',
+      title: item?.snippet?.title || '',
+      description: item?.snippet?.description || '',
+      publishedAt: item?.snippet?.publishedAt
+        ? formatDate(item.snippet.publishedAt)
+        : '',
+      thumbnail: item?.snippet?.thumbnails?.default?.url || '',
+      link: item?.id?.videoId ? generateVideoLink(item?.id?.videoId) : '',
+    }));
+    return { posts: videos || [] };
   } catch (error) {
-    console.error('Error crawling video posts', error.message);
+    console.error('Error fetching video posts', error.message);
     return { posts: [] };
   }
 };

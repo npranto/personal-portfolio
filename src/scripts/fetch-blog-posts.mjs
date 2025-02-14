@@ -1,4 +1,4 @@
-import { CRAWLER_BLOG_URL } from '../config/index.mjs';
+import { BLOG_API_URL } from '../config/index.mjs';
 import { crawlBlogPosts } from '../utils/crawlBlogPosts.mjs';
 import { writeToFile } from '../utils/writeToFile.mjs';
 
@@ -8,8 +8,8 @@ const fetchBlogPosts = async () => {
   console.log('=============================');
 
   try {
-    console.log('Crawler Blog URL: ', CRAWLER_BLOG_URL);
-    const { posts } = await crawlBlogPosts(CRAWLER_BLOG_URL);
+    console.log('Blog API URL: ', BLOG_API_URL);
+    const { posts } = await crawlBlogPosts(BLOG_API_URL);
     console.log('All blog posts: ');
     console.log(JSON.stringify({ posts }, null, 2));
     const filePath = './src/content/blog-posts.json';

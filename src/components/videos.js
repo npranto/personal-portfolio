@@ -30,9 +30,7 @@ const Videos = () => {
                     <h4 className="text-lg font-semibold line-clamp-2 leading-6">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-gray-400">
-                      {item?.uploadedTime}
-                    </p>
+                    <p className="text-xs text-gray-400">{item?.publishedAt}</p>
                   </div>
                 </div>
               </div>
