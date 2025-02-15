@@ -1,3 +1,244 @@
 {
-  "posts": []
+  "posts": [
+    {
+      "link": "https://dev.to/npranto/automate-adding-publix-coupons-3me1",
+      "title": "Automate Adding Publix Coupons",
+      "uploadedTime": "Feb 1",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcdrokoj08u2hlu9wc56x.png",
+      "description": "Background (feel free to skip)   Ok, let me cut to the chase... I am a software engineer by...",
+      "tags": ["publix", "coupons", "automate"]
+    },
+    {
+      "link": "https://dev.to/npranto/bfedev-176-undefined-to-null-2fb8",
+      "title": "BFE.dev | 176. undefined to null",
+      "uploadedTime": "May 22 '24",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foh9epuzycx4jzaodb30m.png",
+      "description": "Welcome to BFE.dev Challenges!  In this short article, I review my solution for BFE - #176 undefined...",
+      "tags": ["bfedev", "javascript", "coding", "challenge"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-32-band-aid-3685",
+      "title": "CSSBattle | #32 Band-aid",
+      "uploadedTime": "May 20 '24",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fra5ahkh8fu8brwprdsao.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I review my solution for CSSBattle - #32...",
+      "tags": ["css", "challenge", "bandaid", "cssbattle"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-31-equals-70h",
+      "title": "CSSBattle | #31 Equals",
+      "uploadedTime": "Oct 16 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fs9zlp8qlbs5pchtrovvr.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #31...",
+      "tags": ["css", "challenge", "cssbattle", "equals"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-30-horizon-22gn",
+      "title": "CSSBattle | #30 Horizon",
+      "uploadedTime": "Jul 31 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2i8u8bdhlaclofcvuv1w.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #30...",
+      "tags": ["css", "challenge", "cssbattle", "horizon"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-29-suffocate-ihk",
+      "title": "CSSBattle | #29 Suffocate",
+      "uploadedTime": "Jul 29 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fedbn8g117ldd96dheiwh.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #29...",
+      "tags": ["css", "challenge", "cssbattle", "suffocate"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-28-cups-balls-57h5",
+      "title": "CSSBattle | #28 Cups & Balls",
+      "uploadedTime": "Jul 17 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbsltrhnuftlkn2u7mrk6.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #28...",
+      "tags": ["css", "challenge", "cssbattle", "cupsandballs"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-27-lock-up-1b70",
+      "title": "CSSBattle | #27 Lock Up",
+      "uploadedTime": "Jul 17 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ffl6it1ua2vrrqrmuz33v.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #27...",
+      "tags": ["css", "challenge", "cssbattle", "lockup"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-26-smiley-3iko",
+      "title": "CSSBattle | #26 Smiley",
+      "uploadedTime": "Jul 16 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7ssaglgg9mxghczs6tbc.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #26...",
+      "tags": ["css", "challenge", "cssbattle", "smiley"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-25-blossom-ap3",
+      "title": "CSSBattle | #25 Blossom",
+      "uploadedTime": "Jul 12 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcizx7aea2dobi3eb213o.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #25...",
+      "tags": ["css", "challenge", "cssbattle", "blossom"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-24-switches-2pl1",
+      "title": "CSSBattle | #24 Switches",
+      "uploadedTime": "Jul 12 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fkrwe7otr6yz3u8v54luz.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #24...",
+      "tags": ["css", "challenge", "cssbattle", "switches"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-23-boxception-407o",
+      "title": "CSSBattle | #23 Boxception",
+      "uploadedTime": "Jul 6 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flcvyqtipvmxjjy782iqj.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #23...",
+      "tags": ["css", "challenge", "cssbattle", "boxception"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-22-cloud-1536",
+      "title": "CSSBattle | #22 Cloud",
+      "uploadedTime": "Jul 4 '22",
+      "coverImage": "",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #22...",
+      "tags": ["css", "challenge", "cssbattle", "cloud"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-21-sitepoint-logo-2160",
+      "title": "CSSBattle | #21 SitePoint Logo",
+      "uploadedTime": "Jul 2 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F7ekqtuw7e54rkbqfiykx.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #21...",
+      "tags": ["css", "challenge", "cssbattle", "sitepointlogo"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-20-ticket-4ae7",
+      "title": "CSSBattle | #20 Ticket",
+      "uploadedTime": "Jul 1 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fpgmyvuq9ueeiaiwe2p55.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #20...",
+      "tags": ["css", "challenge", "cssbattle", "ticket"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-19-cube-3kb2",
+      "title": "CSSBattle | #19 Cube",
+      "uploadedTime": "Jul 1 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fmimp98g60lmu4881l80s.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #19...",
+      "tags": ["css", "challenge", "cssbattle", "cube"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-18-matrix-2ga4",
+      "title": "CSSBattle | #18 Matrix",
+      "uploadedTime": "Jul 1 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6coo8oazyxddyts8mpss.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #18...",
+      "tags": ["css", "cssbattle", "challenge", "matrix"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-17-fidget-spinner-4hl6",
+      "title": "CSSBattle | #17 Fidget Spinner",
+      "uploadedTime": "Apr 24 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fcstutprazkqde4vc1sxx.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #17...",
+      "tags": ["css", "cssbattle", "challenge", "fidgetspinner"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-16-eye-of-the-tiger-2df8",
+      "title": "CSSBattle | #16 Eye of the Tiger",
+      "uploadedTime": "Mar 18 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Foq5g2ptjdti7rdjmejnj.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #16...",
+      "tags": ["css", "cssbattle", "challenge", "eyeofthetiger"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-15-overlap-4i5e",
+      "title": "CSSBattle | #15 Overlap",
+      "uploadedTime": "Mar 15 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F6bc0szohzf4rdvj9p0lr.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #15...",
+      "tags": ["css", "cssbattle", "challenge", "overlap"]
+    },
+    {
+      "link": "https://dev.to/npranto/automate-adding-cvs-coupons-p06",
+      "title": "Automate Adding CVS Coupons",
+      "uploadedTime": "Mar 12 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3zuooq5i5nckfeh2ot68.png",
+      "description": "Background (feel free to skip)   Ok, I understand this post is kind of weird OR may not...",
+      "tags": ["cvs", "coupons", "automate"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-14-web-maker-logo-47l9",
+      "title": "CSSBattle | #14 Web Maker Logo",
+      "uploadedTime": "Mar 10 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fl9vxe37iy1482g3n8geo.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #14...",
+      "tags": ["css", "cssbattle", "challenge", "webmakerlogo"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-13-totally-triangle-36pe",
+      "title": "CSSBattle | #13 Totally Triangle",
+      "uploadedTime": "Mar 9 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F40mlolx3yazaz0535koc.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #13...",
+      "tags": ["css", "cssbattle", "challenge", "totallytriangle"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-12-wiggly-moustache-1noa",
+      "title": "CSSBattle | #12 Wiggly Moustache",
+      "uploadedTime": "Mar 7 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbe7ymtdd7ka2r3udqajf.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #12...",
+      "tags": ["css", "cssbattle", "challenge", "wigglymoustache"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-11-eye-of-sauron-4gch",
+      "title": "CSSBattle | #11 Eye of Sauron",
+      "uploadedTime": "Mar 3 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flcaqk29s0lrsueosgu2r.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #11...",
+      "tags": ["css", "challenge", "cssbattle", "eyeofsauron"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-10-cloaked-spirits-2bcc",
+      "title": "CSSBattle | #10 Cloaked Spirits",
+      "uploadedTime": "Mar 1 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvzrae63bdwduywnpgkkh.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #10...",
+      "tags": ["css", "cssbattle", "challenge", "cloakedspirits"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-9-tesseract-15p9",
+      "title": "CSSBattle | #9 Tesseract",
+      "uploadedTime": "Mar 1 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flh6uvie2v32qulpdstp7.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #9...",
+      "tags": ["css", "cssbattle", "challenge", "tesseract"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-8-forking-crazy-52ea",
+      "title": "CSSBattle | #8 Forking Crazy",
+      "uploadedTime": "Mar 1 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F20s0ny3lc0nvax5uyy66.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #8...",
+      "tags": ["css", "cssbattle", "challenge", "forkingcrazy"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-7-leafy-trail-4g86",
+      "title": "CSSBattle | #7 Leafy Trail",
+      "uploadedTime": "Feb 28 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjqw6udzt0dk8akh4b026.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #7...",
+      "tags": ["css", "cssbattle", "challenge", "leafytrail"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-6-missing-slice-8ip",
+      "title": "CSSBattle | #6 Missing Slice",
+      "uploadedTime": "Feb 28 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy4x2d0l0j7ss1kk6f6ra.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #6...",
+      "tags": ["css", "cssbattle", "challenge", "missingslice"]
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import Card from './card';
 import ProfilePicture from './profile-picture';
 import TextSlider from './text-slider';
 import PROFILE from '../content/profile.json';
+import Picture from './profile-picture';
 
 const Jumbotron = () => {
   const profile = PROFILE?.profile || {};
@@ -20,11 +21,22 @@ const Jumbotron = () => {
         </span>
       </h1>
 
-      <ProfilePicture
+      <Picture
         className="mb-4 md:hidden"
-        src={profile?.picture?.sm}
-        width={160}
-        height={160}
+        srcSet={`
+        	${profile?.picture?.sm}.webp 480w,
+        	${profile?.picture?.md}.webp 768w,
+        	${profile?.picture?.lg}.webp 1200w
+        `}
+        sizes="(max-width: 480px) 480px,
+					(max-width: 768px) 768px,
+					1200px"
+        alt="Profile Picture"
+        src={`${profile?.picture?.sm}.jpg`}
+        width={'160'}
+        height={'160'}
+        loading="eager"
+        fetchPriority="high"
       />
 
       <TextSlider

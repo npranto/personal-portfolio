@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import CardHeading from './card-heading';
 import Card from './card';
 import WORK from '../content/work.json';
+import Picture from './profile-picture';
 
 const Work = () => {
   const work = WORK?.work || {};
@@ -46,12 +46,19 @@ const Work = () => {
               <div className="cursor-pointer p-4">
                 <div className="flex space-x-2">
                   <div className="logo flex-shrink-0">
-                    <Image
-                      className="object-cover rounded-md"
-                      src={item.image.lg}
+                    <Picture
+                      className="object-cover rounded"
+                      srcSet={`
+												${item.image.lg}.webp 480w,
+												${item.image.lg}.webp 768w,
+												${item.image.lg}.webp 1200w
+											`}
+                      sizes="(max-width: 480px) 480px,
+											(max-width: 768px) 768px, 1200px"
                       alt={item.company}
-                      width={64}
-                      height={64}
+                      src={`${item.image.lg}.jpeg`}
+                      width={'64'}
+                      height={'64'}
                     />
                   </div>
                   <div className="flex flex-col flex-grow top-level-details">

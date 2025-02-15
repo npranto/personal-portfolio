@@ -5,37 +5,37 @@
     "node": ">=18"
   },
   "scripts": {
-    "dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
-    "build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
+    "dev": "npm run fetch-blog-posts && npm run format:images &&  npm run fetch-video-posts && next dev",
+    "build": "npm run fetch-blog-posts && npm run format:images && npm run fetch-video-posts && next build",
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"No tests ✅\"",
     "format": "npx prettier --write src",
+    "format:images": "node ./src/scripts/format-images.mjs",
     "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
     "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
     "healthcheck": "npm run format && npm run lint && npm run test && npm run build",
     "prepare": "husky"
   },
   "dependencies": {
+    "@next/third-parties": "^15.1.4",
+    "dotenv": "^16.4.5",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "@next/third-parties": "^15.1.4",
-    "dotenv": "^16.4.5",
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "eslint-plugin-prettier": "^5.0.1",
-    "husky": "^9.1.7",
-    "typescript": "^5.7.3",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "fs": "^0.0.1-security",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.3.0",
-    "fs": "^0.0.1-security",
-    "puppeteer": "^13.4.1"
+    "typescript": "^5.7.3"
   }
 }

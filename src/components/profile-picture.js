@@ -1,37 +1,56 @@
 import React from 'react';
-import Image from 'next/image';
 
-const ProfilePicture = ({ src, width, height, className = '' }) => {
+const Picture = ({
+  src,
+  alt,
+  srcSet,
+  sizes,
+  width,
+  height,
+  className = '',
+  loading = 'lazy',
+  highPriority = false,
+  ...restProps
+}) => {
   if (!src || typeof src !== 'string' || src?.trim()?.length === 0) {
-    throw new Error('Please provide a valid `src` prop to <ProfilePicture />');
-  }
-
-  if (typeof width !== 'number' || width <= 0) {
     throw new Error(
-      'Please provide a valid `width` prop to <ProfilePicture />'
+      'Please provide a valid `src` prop to <Picture /> component'
     );
   }
 
-  if (typeof height !== 'number' || height <= 0) {
+  if (!alt || typeof alt !== 'string' || alt?.trim()?.length === 0) {
     throw new Error(
-      'Please provide a valid `height` prop to <ProfilePicture />'
+      'Please provide a valid `alt` prop to <Picture /> component'
     );
   }
 
   return (
     <div
-      className={`profile-picture bg-gray-200 rounded ${className}`}
+      className={`picture-component bg-gray-200 ${className}`}
       style={{ height: `${height}px`, width: `${width}px` }}
     >
-      <Image
-        src={`${src}?width=${width.toString()}&height=${height.toString()}`}
-        alt="Profile Picture"
-        width={width}
-        height={height}
-        className="rounded"
-      />
+      <picture>
+        {/* WebP format for modern browsers */}
+        <source srcSet={srcSet} type="image/webp" />
+
+        {/* JPEG fallback for older browsers */}
+        <source srcSet={srcSet} type="image/jpeg" />
+
+        {/* fallback default image) */}
+        <img
+          className={`${className || ''}`}
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          loading={loading}
+          fetchPriority={highPriority}
+          {...restProps}
+        />
+      </picture>
     </div>
   );
 };
 
-export default ProfilePicture;
+export default Picture;

@@ -1,4 +1,4 @@
-import { CRAWLER_VIDEOS_URL } from '../config/index.mjs';
+import { VIDEOS_API_URL } from '../config/index.mjs';
 import { crawlVideoPosts } from '../utils/crawlVideoPosts.mjs';
 import { writeToFile } from '../utils/writeToFile.mjs';
 
@@ -8,8 +8,8 @@ const fetchVideoPosts = async () => {
   console.log('=============================');
 
   try {
-    console.log('Crawler Video URL: ', CRAWLER_VIDEOS_URL);
-    const { posts } = await crawlVideoPosts(CRAWLER_VIDEOS_URL);
+    console.log('Videos API URL: ');
+    const { posts } = await crawlVideoPosts(VIDEOS_API_URL);
     console.log('All video posts: ');
     console.log(JSON.stringify({ posts }, null, 2));
     const filePath = './src/content/video-posts.json';

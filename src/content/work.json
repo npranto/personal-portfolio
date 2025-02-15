@@ -7,9 +7,9 @@
         "id": "content:work-item:best-buy",
         "image": {
           "id": "content:picture:work-item:bestbuy",
-          "sm": "/assets/images/bestbuy-logo-200x200.jpeg",
-          "md": "/assets/images/bestbuy-logo-200x200.jpeg",
-          "lg": "/assets/images/bestbuy-logo-200x200.jpeg"
+          "sm": "/assets/images/bestbuy-logo-200x200",
+          "md": "/assets/images/bestbuy-logo-200x200",
+          "lg": "/assets/images/bestbuy-logo-200x200"
         },
         "position": "Frontend Engineer III",
         "company": "Best Buy",
@@ -42,9 +42,9 @@
         "id": "content:work-item:newfold",
         "image": {
           "id": "content:picture:work-item:newfold",
-          "sm": "/assets/images/newfold-logo-200x200.jpeg",
-          "md": "/assets/images/newfold-logo-200x200.jpeg",
-          "lg": "/assets/images/newfold-logo-200x200.jpeg"
+          "sm": "/assets/images/newfold-logo-200x200",
+          "md": "/assets/images/newfold-logo-200x200",
+          "lg": "/assets/images/newfold-logo-200x200"
         },
         "position": "Software Engineer",
         "company": "Newfold Digitial",
@@ -74,9 +74,9 @@
         "id": "content:work-item:lexia",
         "image": {
           "id": "content:picture:work-item:lexia",
-          "sm": "/assets/images/lexia-logo-200x200.jpeg",
-          "md": "/assets/images/lexia-logo-200x200.jpeg",
-          "lg": "/assets/images/lexia-logo-200x200.jpeg"
+          "sm": "/assets/images/lexia-logo-200x200",
+          "md": "/assets/images/lexia-logo-200x200",
+          "lg": "/assets/images/lexia-logo-200x200"
         },
         "position": "Software Engineer",
         "company": "Lexia Learning",
