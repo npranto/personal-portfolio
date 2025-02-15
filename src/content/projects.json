@@ -9,9 +9,9 @@
         "duration": "Oct 2021 - Present",
         "image": {
           "id": "content:picture:project-item:logtrade",
-          "sm": "/assets/images/logtrade-200x200.jpeg",
-          "md": "/assets/images/logtrade-200x200.jpeg",
-          "lg": "/assets/images/logtrade-200x200.jpeg"
+          "sm": "/assets/images/logtrade-200x200",
+          "md": "/assets/images/logtrade-200x200",
+          "lg": "/assets/images/logtrade-200x200"
         },
         "githubUrl": "https://github.com/npranto/logtrade",
         "demoUrl": "https://logtrade.netlify.app/home/",
@@ -32,9 +32,9 @@
         "duration": "Jan 2024",
         "image": {
           "id": "content:picture:project-item:portfolio-v5",
-          "sm": "/assets/images/portfolio-5.0.0-100x100.jpeg",
-          "md": "/assets/images/portfolio-5.0.0-100x100.jpeg",
-          "lg": "/assets/images/portfolio-5.0.0-100x100.jpeg"
+          "sm": "/assets/images/portfolio-5.0.0-100x100",
+          "md": "/assets/images/portfolio-5.0.0-100x100",
+          "lg": "/assets/images/portfolio-5.0.0-100x100"
         },
         "githubUrl": "https://github.com/npranto/personal-portfolio",
         "demoUrl": "https://npranto.dev/",
@@ -57,9 +57,9 @@
         "duration": "Jul 2018 - Present",
         "image": {
           "id": "content:picture:project-item:regexer",
-          "sm": "/assets/images/regexer-200x200.jpeg",
-          "md": "/assets/images/regexer-200x200.jpeg",
-          "lg": "/assets/images/regexer-200x200.jpeg"
+          "sm": "/assets/images/regexer-200x200",
+          "md": "/assets/images/regexer-200x200",
+          "lg": "/assets/images/regexer-200x200"
         },
         "githubUrl": "https://github.com/npranto/regexer",
         "demoUrl": "https://www.npmjs.com/package/nsp-regexer",
@@ -72,9 +72,9 @@
         "duration": "June 2022",
         "image": {
           "id": "content:picture:project-item:actions-cli",
-          "sm": "/assets/images/actions-cli-100x100.jpeg",
-          "md": "/assets/images/actions-cli-100x100.jpeg",
-          "lg": "/assets/images/actions-cli-100x100.jpeg"
+          "sm": "/assets/images/actions-cli-100x100",
+          "md": "/assets/images/actions-cli-100x100",
+          "lg": "/assets/images/actions-cli-100x100"
         },
         "githubUrl": "https://github.com/npranto/actions-cli",
         "demoUrl": "https://github.com/npranto/actions-cli",

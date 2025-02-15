@@ -1,8 +1,8 @@
 import React from 'react';
 import Socials from './socials';
-import ProfilePicture from './profile-picture';
 import NAV from '../content/nav.json';
 import PROFILE from '../content/profile.json';
+import Picture from './profile-picture';
 
 const MenuTabs = ({ links }) => (
   <div
@@ -26,11 +26,24 @@ const MenuSidebar = ({ profile, links }) => (
     id="nav-menu"
     className="navigation-menu hidden md:block h-screen px-4 py-4 box-border"
   >
-    <ProfilePicture
-      className="mb-2"
-      src={profile.picture.lg}
-      width={200}
-      height={200}
+    <Picture
+      className="mb-2 rounded"
+      srcSet={`
+				${profile?.picture?.lg}.webp 480w,
+				${profile?.picture?.lg}.webp 768w,
+				${profile?.picture?.lg}.webp 1200w
+      `}
+      sizes="
+					(max-width: 480px) 480px,
+					(max-width: 768px) 768px,
+					1200px
+				"
+      alt="Profile Picture"
+      src={`${profile?.picture?.lg}.jpg`}
+      width={'200'}
+      height={'200'}
+      loading="eager"
+      fetchPriority="high"
     />
     <h1 className="name inline-block text-2xl sm:text-3xl font-semibold text-gray-900 tracking-tight my-2">
       {profile.author}
