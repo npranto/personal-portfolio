@@ -239,6 +239,70 @@
       "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fy4x2d0l0j7ss1kk6f6ra.png",
       "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #6...",
       "tags": ["css", "cssbattle", "challenge", "missingslice"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-5-acid-rain-3e55",
+      "title": "CSSBattle | #5 Acid Rain",
+      "uploadedTime": "Feb 28 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fwb0vsx7gcj7o8sl0txd2.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #5...",
+      "tags": ["css", "cssbattle", "challenge", "acidrain"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-4-ups-n-downs-267e",
+      "title": "CSSBattle | #4 Ups n Downs",
+      "uploadedTime": "Feb 27 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F3ldz2kkpk1ho1o65om4z.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #4...",
+      "tags": ["css", "cssbattle", "challenge", "upsndowns"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-3-push-button-2gg9",
+      "title": "CSSBattle | #3 Push Button",
+      "uploadedTime": "Feb 27 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fqwb4dx7d4sn95sbo3pj5.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #3...",
+      "tags": ["css", "cssbattle", "challenge", "pushbutton"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-2-carrom-4l37",
+      "title": "CSSBattle | #2 Carrom",
+      "uploadedTime": "Feb 25 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F4qrk9nhsic0knencs643.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #2...",
+      "tags": ["css", "cssbattle", "challenge", "carrom"]
+    },
+    {
+      "link": "https://dev.to/npranto/cssbattle-1-simply-square-3j7",
+      "title": "CSSBattle | #1 Simply Square",
+      "uploadedTime": "Feb 24 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F0fe9u5so0jbr0uuiplc5.png",
+      "description": "Welcome to CSSBattle Challenges!  In this short article, I go through my solution for CSSBattle - #1...",
+      "tags": ["css", "cssbattle", "challenge", "simplysquare"]
+    },
+    {
+      "link": "https://dev.to/npranto/how-i-setup-eslint-prettier-and-editorconfig-for-static-sites-33ep",
+      "title": "How I Setup ESLint, Prettier, and EditorConfig for Static Sites",
+      "uploadedTime": "Jan 25 '22",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fa9dbrgcx8jl8shb1eow7.png",
+      "description": "Whenever I build simple static sites, I always find the need to set up ESLint, Prettier, and...",
+      "tags": ["eslint", "prettier", "setup", "guide"]
+    },
+    {
+      "link": "https://dev.to/npranto/macos-web-development-setup-guide-345p",
+      "title": "macOS Web Development Setup Guide",
+      "uploadedTime": "Dec 8 '21",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F1xsf81458f4dx7zrebgv.jpg",
+      "description": "Table of Contents    What Does This Guide Cover? Why Should You Consider It? Steps:   Step...",
+      "tags": ["development", "setup", "guide", "macos"]
+    },
+    {
+      "link": "https://dev.to/npranto/quick-bite-ssh-key-4llh",
+      "title": "Quick Bite: SSH Key",
+      "uploadedTime": "Dec 4 '21",
+      "coverImage": "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftlbqftl7p6vr6i091sq4.jpg",
+      "description": "SSH stands for - \"Secure Shell\"  It is a protocol that enables secure communication between 2...",
+      "tags": ["sshkey", "github", "gitlab", "bitbucket"]
     }
   ]
 }

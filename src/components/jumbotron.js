@@ -1,10 +1,10 @@
 import React from 'react';
 import Socials from './socials';
 import Card from './card';
-import ProfilePicture from './profile-picture';
+import ProfilePicture from './picture';
 import TextSlider from './text-slider';
 import PROFILE from '../content/profile.json';
-import Picture from './profile-picture';
+import Picture from './picture';
 
 const Jumbotron = () => {
   const profile = PROFILE?.profile || {};
