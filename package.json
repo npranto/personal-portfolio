@@ -5,8 +5,8 @@
     "node": ">=18"
   },
   "scripts": {
-    "dev": "npm run fetch-blog-posts && npm run format:images &&  npm run fetch-video-posts && next dev",
-    "build": "npm run fetch-blog-posts && npm run format:images && npm run fetch-video-posts && next build",
+    "dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
+    "build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
     "start": "next start",
     "lint": "next lint",
     "test": "echo \"No tests ✅\"",

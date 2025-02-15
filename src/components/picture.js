@@ -9,7 +9,7 @@ const Picture = ({
   height,
   className = '',
   loading = 'lazy',
-  highPriority = false,
+  highPriority = 'auto',
   ...restProps
 }) => {
   if (!src || typeof src !== 'string' || src?.trim()?.length === 0) {

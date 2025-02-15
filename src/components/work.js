@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
 import WORK from '../content/work.json';
-import Picture from './profile-picture';
+import Picture from './picture';
 
 const Work = () => {
   const work = WORK?.work || {};
 
-  const [activeWorkItemId, setActiveWorkItemId] = useState(work.items[0].id);
+  const [activeWorkItemId, setActiveWorkItemId] = useState();
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
   useEffect(() => {
@@ -61,12 +61,12 @@ const Work = () => {
                       height={'64'}
                     />
                   </div>
-                  <div className="flex flex-col flex-grow top-level-details">
+                  <div className="flex flex-col flex-grow top-level-details leading-normal">
                     <h4 className="text-base font-semibold">{item.position}</h4>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs sm:text-sm text-gray-500">
                       {item.company}, {item.location}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-xs sm:text-sm  text-gray-500">
                       {item.duration} | {item.employmentType}
                     </p>
                   </div>
@@ -78,7 +78,7 @@ const Work = () => {
                 </div>
 
                 <div
-                  className={`description-and-tech overflow-hidden transition-all duration-500 ease-in-out ${
+                  className={`description-and-tech overflow-hidden transition-all duration-150 ease-in-out ${
                     activeWorkItemId === item.id
                       ? 'h-auto opacity-100'
                       : 'max-h-0 opacity-0'
@@ -86,7 +86,7 @@ const Work = () => {
                   id={`${item.id}-dropdown-content`}
                   data-e2e={`${item.id}-dropdown-content`}
                 >
-                  <ul className="descriptions mt-2 text-sm space-y-1 list-disc text-gray-500 mx-6">
+                  <ul className="descriptions mt-2 text-xs sm:text-sm space-y-1 list-disc text-gray-500 mx-6 leading-normal">
                     {item.description.map((desc, index) => (
                       <li key={index}>{desc}</li>
                     ))}

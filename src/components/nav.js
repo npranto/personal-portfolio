@@ -2,7 +2,7 @@ import React from 'react';
 import Socials from './socials';
 import NAV from '../content/nav.json';
 import PROFILE from '../content/profile.json';
-import Picture from './profile-picture';
+import Picture from './picture';
 
 const MenuTabs = ({ links }) => (
   <div

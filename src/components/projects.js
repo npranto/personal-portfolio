@@ -2,14 +2,12 @@ import { useState, useEffect } from 'react';
 import CardHeading from './card-heading';
 import Card from './card';
 import PROJECTS from '../content/projects.json';
-import Picture from './profile-picture';
+import Picture from './picture';
 
 const Projects = () => {
   const projects = PROJECTS?.projects || {};
 
-  const [activeProjectItemId, setActiveProjectItemId] = useState(
-    projects.items[0].id
-  );
+  const [activeProjectItemId, setActiveProjectItemId] = useState();
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
 
   useEffect(() => {
@@ -67,7 +65,9 @@ const Projects = () => {
                   </div>
                   <div className="flex justify-center flex-col flex-grow top-level-details">
                     <h4 className="text-base font-semibold">{item.name}</h4>
-                    <p className="text-sm text-gray-500">{item.duration}</p>
+                    <p className="text-xs sm:text-sm text-gray-500">
+                      {item.duration}
+                    </p>
                   </div>
                   <div className="resources flex space-x-2">
                     {item.github && (
@@ -128,7 +128,7 @@ const Projects = () => {
                   </div>
                 </div>
                 <div
-                  className={`description-and-tech overflow-hidden mt-2 space-y-2 text-sm text-gray-500 transition-all duration-500 ease-in-out ${
+                  className={`description-and-tech overflow-hidden mt-2 space-y-2 text-xs text-gray-500 transition-all duration-150 ease-in-out ${
                     activeProjectItemId === item.id
                       ? 'max-h-96 opacity-100'
                       : 'max-h-0 opacity-0'
@@ -136,14 +136,17 @@ const Projects = () => {
                   id={`${item.id}-dropdown-content`}
                 >
                   {item?.description && (
-                    <p dangerouslySetInnerHTML={{ __html: item.description }} />
+                    <p
+                      className="text-xs sm:text-sm leading-normal"
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
                   )}
 
                   <div className="technologies flex flex-wrap my-2 gap-2">
                     {item.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-500"
+                        className="px-1 rounded-sm inline text-xs font-medium text-gray-50 bg-gray-800"
                       >
                         {tech}
                       </span>
