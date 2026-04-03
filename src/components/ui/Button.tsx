@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react';
 
 type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline';
@@ -89,7 +90,6 @@ export function Button(props: ButtonProps) {
 
   if (props.as === 'a') {
     /* Strip Button-specific props before spreading onto <a> */
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const {
       as,
       variant: _v,
@@ -107,7 +107,6 @@ export function Button(props: ButtonProps) {
   }
 
   /* Default: render as <button> */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const {
     as,
     variant: _v,

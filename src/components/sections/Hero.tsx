@@ -42,13 +42,13 @@ export function Hero({ profile, socials }: HeroProps) {
         }}
       />
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10">
           {/* ── Text column ─────────────────────────────────────────────── */}
           <div className="flex-1 text-center md:text-left">
             {/* Greeting */}
             <p className="text-sm font-semibold tracking-widest uppercase text-[var(--color-accent)] mb-4">
-              Hello, world!
+              Hello,
             </p>
 
             {/* Name */}
@@ -58,8 +58,15 @@ export function Hero({ profile, socials }: HeroProps) {
             </h1>
 
             {/* Role + location sub-heading */}
-            <p className="text-lg text-[var(--color-muted)] mb-5">
-              {profile.currentRole} &mdash; {profile.location}
+            <p className="text-lg text-[var(--color-muted)] mb-5 gap-2 flex items-center">
+              {profile.currentRole}
+              <span
+                className="text-accent font-bold text-base leading-none select-none tracking-wider"
+                aria-hidden="true"
+              >
+                /
+              </span>
+              {profile.location}
             </p>
 
             {/* Animated role rotator */}
@@ -90,7 +97,10 @@ export function Hero({ profile, socials }: HeroProps) {
             </div>
 
             {/* Social links */}
-            <SocialIcons socials={socials} />
+            <SocialIcons
+              socials={socials}
+              className="justify-center md:justify-start"
+            />
           </div>
 
           {/* ── Profile photo column ────────────────────────────────────── */}
@@ -110,22 +120,23 @@ export function Hero({ profile, socials }: HeroProps) {
               {/* Photo container */}
               <div className="relative w-52 h-52 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-[var(--color-bg)]">
                 <Image
-                  src={`${profile.picture.md}.webp`}
+                  src={`${profile.picture.md}.jpg`}
                   alt={`${profile.author} — profile photo`}
                   width={500}
                   height={500}
                   className="object-cover w-full h-full"
                   priority
-                  sizes="(max-width: 768px) 208px, 288px"
+                  quality={90}
+                  sizes="(max-width: 500px) 200px, 250px"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — hidden on mobile */}
         <div
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce"
           aria-hidden="true"
         >
           <span className="text-xs text-[var(--color-faint)]">scroll</span>
