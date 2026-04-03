@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "5.0.3",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "scripts": {
     "dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
@@ -18,24 +18,23 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@next/third-parties": "^15.1.4",
-    "dotenv": "^16.4.5",
-    "next": "15.1.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sharp": "^0.33.5"
+    "@next/third-parties": "^15.5.14",
+    "dotenv": "^16",
+    "next": "^15.5.14",
+    "react": "^19",
+    "react-dom": "^19",
+    "sharp": "^0.33"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "fs": "^0.0.1-security",
-    "husky": "^9.1.7",
+    "autoprefixer": "^10",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15",
+    "eslint-config-prettier": "^9",
+    "eslint-plugin-prettier": "^5",
+    "husky": "^9",
     "postcss": "^8",
-    "prettier": "^3.2.5",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5.7.3"
+    "prettier": "^3",
+    "tailwindcss": "^3",
+    "typescript": "^5"
   }
 }
