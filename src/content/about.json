@@ -5,27 +5,11 @@
     "content": [
       {
         "type": "paragraph",
-        "body": "Hey, I’m Nazmuz (Shakib) Pranto, a frontend engineer with over 5 years of hands-on experience building dynamic, high-performance web applications and reusable design systems. I’m passionate about creating clean, responsive, and accessible user interfaces using modern technologies like TypeScript, React, Next.js, and Node.js. I love contributing to meaningful products that deliver immediate value to customers while continuously learning and improving."
+        "body": "Hey, I'm Shakib. I'm a Senior Frontend Engineer with 7+ years of experience building web applications and design systems that people actually enjoy using. I work primarily with TypeScript, React, Next.js, and Node.js, and I care a lot about performance, accessibility, and making the developer experience better for everyone on the team."
       },
       {
         "type": "paragraph",
-        "body": "Throughout my career, I’ve had the privilege of working on impactful projects across different companies. At Best Buy, I enhanced critical e-commerce pages visited by millions daily, ensuring seamless customer experiences through performance optimization and tooling improvements. Before that, at Newfold Digital, I contributed to a highly customizable e-commerce platform that streamlined workflows and feature delivery across multiple internal teams. Along the way, I’ve also built utility libraries and tools to simplify development processes for internal and external use."
-      },
-      {
-        "type": "header",
-        "body": "My Journey"
-      },
-      {
-        "type": "paragraph",
-        "body": "My web development journey began in my first year of college while studying Computer Science. Learning HTML and CSS through <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.codecademy.com/\">Codeacademy</a> felt more engaging and practical than my coursework, which inspired me to dive deeper. That curiosity led me to take a bold step—taking time off from college to enroll in an immersive software engineering program at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://devmountain.com/\">DevMountain</a>, where I gained hands-on experience solving real-world challenges."
-      },
-      {
-        "type": "paragraph",
-        "body": "I always believed that I was a go-getter who loves taking risks to improve and get better progressively. That's why I pursued an alternative track to higher education. While I understand the importance of traditional computer science education with a heavy theoretical learning approach, I don't think it's enough for diving into real-world problems in the most effective way. We need more practical, project-based learning, where learning to code is acquired from a series of trials and mistakes. As an student at DevMountain, I have learned to do exactly that and have taken that lesson to heart till today."
-      },
-      {
-        "type": "paragraph",
-        "body": "I’ve always embraced a growth mindset and a willingness to take calculated risks. My alternative path to education taught me the value of learning through trial, error, and collaboration. Since then, I’ve been fortunate to work in diverse roles, starting with <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.lexialearning.com/\">Lexia Learning</a>, where I focused on scripting and automation, to <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://newfold.com/\">Newfold Digital</a>, where I grew into a full-time software engineering role. Now, at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bestbuy.com/\">Best Buy</a>, I’m working on large-scale applications that impact millions of customers daily."
+        "body": "Most recently at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://hydrow.com/\">Hydrow</a>, I was one of three engineers responsible for the entire e-commerce platform. I led a full homepage redesign, wired up Shopify custom pixel tracking for better funnel visibility, and built out a typography system that finally made things consistent across the site. Before that, at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bestbuy.com/\">Best Buy</a>, I worked on the Product Details Page, which serves over 4 million users a day. I got to focus on performance improvements, A/B testing, and cutting deployment time by 6x with a GitHub Actions pipeline. And earlier at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://newfold.com/\">Newfold Digital</a>, I built a library of reusable components and helped integrate Contentful CMS so the marketing team could ship updates without needing an engineer every time."
       }
     ],
     "mainContent": [
@@ -33,10 +17,10 @@
         "id": "content:content-section:about:main-content:1",
         "paragraphs": [
           {
-            "body": "Hey, I’m Nazmuz (Shakib) Pranto, a frontend engineer with over 5 years of hands-on experience building dynamic, high-performance web applications and reusable design systems. I’m passionate about creating clean, responsive, and accessible user interfaces using modern technologies like TypeScript, React, Next.js, and Node.js. I love contributing to meaningful products that deliver immediate value to customers while continuously learning and improving."
+            "body": "Hey, I'm Shakib. I'm a Senior Frontend Engineer with 7+ years of experience building web applications and design systems that people actually enjoy using. I work primarily with TypeScript, React, Next.js, and Node.js, and I care a lot about performance, accessibility, and making the developer experience better for everyone on the team."
           },
           {
-            "body": "Throughout my career, I’ve had the privilege of working on impactful projects across different companies. At Best Buy, I enhanced critical e-commerce pages visited by millions daily, ensuring seamless customer experiences through performance optimization and tooling improvements. Before that, at Newfold Digital, I contributed to a highly customizable e-commerce platform that streamlined workflows and feature delivery across multiple internal teams. Along the way, I’ve also built utility libraries and tools to simplify development processes for internal and external use."
+            "body": "Most recently at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://hydrow.com/\">Hydrow</a>, I was one of three engineers responsible for the entire e-commerce platform. I led a full homepage redesign, wired up Shopify custom pixel tracking for better funnel visibility, and built out a typography system that finally made things consistent across the site. Before that, at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bestbuy.com/\">Best Buy</a>, I worked on the Product Details Page, which serves over 4 million users a day. I got to focus on performance improvements, A/B testing, and cutting deployment time by 6x with a GitHub Actions pipeline. And earlier at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://newfold.com/\">Newfold Digital</a>, I built a library of reusable components and helped integrate Contentful CMS so the marketing team could ship updates without needing an engineer every time."
           }
         ]
       }
@@ -47,22 +31,16 @@
         "header": "My Journey",
         "paragraphs": [
           {
-            "body": "My web development journey began in my first year of college while studying Computer Science. Learning HTML and CSS through <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.codecademy.com/\">Codeacademy</a> felt more engaging and practical than my coursework, which inspired me to dive deeper. That curiosity led me to take a bold step—taking time off from college to enroll in an immersive software engineering program at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://devmountain.com/\">DevMountain</a>, where I gained hands-on experience solving real-world challenges."
-          },
-          {
-            "body": "I always believed that I was a go-getter who loves taking risks to improve and get better progressively. That's why I pursued an alternative track to higher education. While I understand the importance of traditional computer science education with a heavy theoretical learning approach, I don't think it's enough for diving into real-world problems in the most effective way. We need more practical, project-based learning, where learning to code is acquired from a series of trials and mistakes. As an student at DevMountain, I have learned to do exactly that and have taken that lesson to heart till today."
-          },
-          {
-            "body": "I’ve always embraced a growth mindset and a willingness to take calculated risks. My alternative path to education taught me the value of learning through trial, error, and collaboration. Since then, I’ve been fortunate to work in diverse roles, starting with <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.lexialearning.com/\">Lexia Learning</a>, where I focused on scripting and automation, to <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://newfold.com/\">Newfold Digital</a>, where I grew into a full-time software engineering role. Now, at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bestbuy.com/\">Best Buy</a>, I’m working on large-scale applications that impact millions of customers daily."
+            "body": "I started out studying Computer Science in college, but after discovering web development through Codecademy, I took a year off to attend <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://devmountain.com/\">DevMountain</a>, a software engineering bootcamp. It was a bet on myself that paid off. Hands-on, project-based learning suited me way more than lectures ever did, and it's still how I approach picking up new things today."
           }
         ]
       },
       {
         "id": "content:content-section:about:secondary-content:2",
-        "header": "Future Ambitions",
+        "header": "Outside of Work",
         "paragraphs": [
           {
-            "body": "I’m far from the finish line and remain dedicated to improving a little every day. In my next steps, I aim to contribute my expertise to impactful projects while learning modern techniques and best practices from my mentors and developers of all levels. My goal is to evolve into a well-rounded senior engineer / architect and eventually mentor others in their journeys."
+            "body": "I like building things for myself when I have spare time. <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://logtrade.netlify.app/\">LogTrade</a> is a personal trade journal I built with React and Firebase, and <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.npmjs.com/package/nsp-regexer\">Regexer</a> is a small NPM utility library I've been maintaining since 2018. Lately I've been spending a lot of time experimenting with AI tooling and MCP workflows."
           }
         ]
       }

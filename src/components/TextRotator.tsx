@@ -48,8 +48,9 @@ export function TextRotator({
       <span
         className="text-accent font-bold text-base leading-none select-none tracking-wider"
         aria-hidden="true"
+        // eslint-disable-next-line react/jsx-no-comment-textnodes
       >
-        &quot;//&quot;
+        //
       </span>
       <span
         className="text-lg md:text-xl font-semibold text-accent-light inline-block"

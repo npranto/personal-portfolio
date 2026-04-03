@@ -31,7 +31,7 @@ export function SectionHeading({
           aria-hidden="true"
         />
         <span className="text-xs font-semibold tracking-widest uppercase text-[var(--color-accent)]">
-          {title}
+          - - -
         </span>
         <span
           className="block h-px w-8 bg-[var(--color-accent)]"
