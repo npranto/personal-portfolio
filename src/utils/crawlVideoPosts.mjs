@@ -11,7 +11,11 @@ const generateVideoLink = (videoId) =>
   videoId ? `https://www.youtube.com/watch?v=${videoId}` : '';
 
 export const crawlVideoPosts = async (videosUrl = '') => {
-  if (!videosUrl || typeof videosUrl !== 'string' || videosUrl.trim().length === 0)
+  if (
+    !videosUrl ||
+    typeof videosUrl !== 'string' ||
+    videosUrl.trim().length === 0
+  )
     return { posts: [] };
 
   try {

@@ -8,7 +8,14 @@ export const crawlBlogPosts = async (blogUrl = '') => {
       throw new Error(`Failed to fetch blog posts: ${response.statusText}`);
     const articles = await response.json();
     const posts = articles.map(
-      ({ url, title, readable_publish_date, cover_image, description, tag_list }) => ({
+      ({
+        url,
+        title,
+        readable_publish_date,
+        cover_image,
+        description,
+        tag_list,
+      }) => ({
         link: url,
         title: title.trim(),
         uploadedTime: readable_publish_date,
