@@ -4,58 +4,58 @@ overview: Rebuild the personal portfolio as a modern, eye-catching Next.js 16 Ap
 todos:
   - id: design-tokens
     content: Set up globals.css with two-tier design token system, Poppins @font-face, and base styles
-    status: pending
+    status: completed
   - id: layout-metadata
     content: 'Update layout.tsx: metadata (title, description, favicons from /assets/favicons/), skip-nav link, remove Geist font'
-    status: pending
+    status: completed
   - id: types-lib
     content: Create src/lib/types.ts with TypeScript interfaces for all content JSON shapes
-    status: pending
+    status: completed
   - id: ui-components
     content: 'Create src/components/ui/: Badge.tsx, Button.tsx, SectionHeading.tsx'
-    status: pending
+    status: completed
   - id: text-rotator
     content: Create TextRotator.tsx client component for animated role cycling
-    status: pending
+    status: completed
   - id: navbar
     content: 'Create Navbar.tsx: sticky, blur on scroll, anchor links from nav.json, mobile hamburger'
-    status: pending
+    status: completed
   - id: hero-section
     content: 'Create Hero.tsx: profile photo (next/image with webp/avif), name, TextRotator, CTA buttons, social icons'
-    status: pending
+    status: completed
   - id: about-section
     content: Create About.tsx client component with expandable read-more using about.json content array
-    status: pending
+    status: completed
   - id: work-section
     content: 'Create Work.tsx: timeline layout with company logos, bullets, tech badges from work.json'
-    status: pending
+    status: completed
   - id: projects-section
     content: 'Create Projects.tsx: 2-col grid with images, descriptions, tech tags, GitHub/demo links'
-    status: pending
+    status: completed
   - id: blog-section
     content: 'Create Blog.tsx: 3-col grid with cover images, titles, dates, tags from blog-posts.json'
-    status: pending
+    status: completed
   - id: videos-section
     content: 'Create Videos.tsx: 2-col grid with YouTube thumbnails, titles, dates from video-posts.json'
-    status: pending
+    status: completed
   - id: education-section
     content: 'Create Education.tsx: single card from education.json'
-    status: pending
+    status: completed
   - id: contact-section
     content: 'Create Contact.tsx: email link + all social platform links from socials.json'
-    status: pending
+    status: completed
   - id: footer
     content: Create Footer.tsx with social icons and copyright
-    status: pending
+    status: completed
   - id: page-assembly
     content: Wire page.tsx to import all sections, conditionally render per config.json flags
-    status: pending
+    status: completed
   - id: scripts-utils
     content: Copy fetch scripts and utils from _/src/scripts/ and _/src/utils/ into src/, add package.json npm scripts
-    status: pending
+    status: completed
   - id: next-config
     content: 'Update next.config.ts: add remotePatterns for dev.to and ytimg.com cover/thumbnail images'
-    status: pending
+    status: completed
 isProject: false
 ---
 

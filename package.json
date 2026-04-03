@@ -9,7 +9,10 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "prepare": "husky",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
+    "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
+    "fetch-content": "npm run fetch-blog-posts && npm run fetch-video-posts"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
