@@ -1,0 +1,33 @@
+{
+  "socials": {
+    "id": "content.socials:v1",
+    "github": {
+      "hideByDefault": false,
+      "href": "https://github.com/npranto"
+    },
+    "linkedin": {
+      "hideByDefault": false,
+      "href": "https://www.linkedin.com/in/npranto"
+    },
+    "twitter": {
+      "hideByDefault": false,
+      "href": "https://twitter.com/nazmuzpranto"
+    },
+    "devto": {
+      "hideByDefault": false,
+      "href": "https://dev.to/npranto"
+    },
+    "medium": {
+      "hideByDefault": false,
+      "href": "https://medium.com/@npranto"
+    },
+    "youtube": {
+      "hideByDefault": false,
+      "href": "https://www.youtube.com/@npranto1547"
+    },
+    "substack": {
+      "hideByDefault": false,
+      "href": "https://substack.com/@npranto"
+    }
+  }
+}

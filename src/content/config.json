@@ -1,0 +1,11 @@
+{
+  "theme": "Default",
+  "showJumbotron": true,
+  "showAbout": true,
+  "showWork": true,
+  "showProjects": true,
+  "showBlog": true,
+  "showVideos": true,
+  "showEducation": true,
+  "showContact": true
+}
