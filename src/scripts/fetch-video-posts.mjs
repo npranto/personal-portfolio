@@ -8,20 +8,20 @@ const fetchVideoPosts = async () => {
   console.log('=============================');
 
   try {
-    console.log('Videos API URL: ');
     const { posts } = await crawlVideoPosts(VIDEOS_API_URL);
-    console.log('All video posts: ');
+    console.log('All video posts:');
     console.log(JSON.stringify({ posts }, null, 2));
     const filePath = './src/content/video-posts.json';
     console.log(`Saving all video posts to: [${filePath}]`);
     await writeToFile(filePath, JSON.stringify({ posts }, null, 2));
-    console.log('All video posts saved successfully 🎉');
+    console.log('All video posts saved successfully');
   } catch (error) {
     console.error(
       'Oops! Something went wrong while fetching or saving video posts',
       error
     );
   }
+
   console.log('===========================');
   console.log('END >>> Fetching video posts');
   console.log('===========================');

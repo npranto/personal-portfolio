@@ -1,7 +1,4 @@
 <div align="center">
-  <a href="https://npranto.dev/">
-    <img src="./docs/nsp-logo-v2.png" alt="Cover" width="80" height="80">
-  </a>
   <h2 align="center">npranto.dev</h2>
 
 [![Live](https://img.shields.io/badge/Demo-Live.svg)](https://npranto.dev/)
@@ -12,74 +9,117 @@
 
 ## About
 
-A static personal portfolio website to showcase projects, work experiences and blog posts. See it [live](https://npranto.dev/).
+A personal portfolio website showcasing projects, work experience, education, blog posts, and videos. All content is data-driven via JSON files, with external sources (DEV.to, YouTube) fetched via Node scripts and cached locally.
 
-<div>
-  <img src="./docs/cover.png" alt="Portfolio Shot" style="width: 100%; max-width: 640px; border-radius: 10px;"/>
-</div>
+See it live at [npranto.dev](https://npranto.dev/).
 
-## Built With
+## Tech Stack
 
-- HTML/CSS
-- JavaScript
-- [React.js](https://react.dev/)
-- [Next.js](https://nextjs.org/) (Pages Router)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+| Layer      | Choice                                                                                                 |
+| ---------- | ------------------------------------------------------------------------------------------------------ |
+| Framework  | [Next.js 16](https://nextjs.org/) — App Router                                                         |
+| UI         | [React 19](https://react.dev/) + TypeScript 5                                                          |
+| Styling    | [Tailwind CSS v4](https://tailwindcss.com/)                                                            |
+| Linting    | [ESLint 9](https://eslint.org/) + [Prettier](https://prettier.io/)                                     |
+| Git hooks  | [Husky](https://typicode.github.io/husky/) + [lint-staged](https://github.com/lint-staged/lint-staged) |
+| Deployment | [Netlify](https://netlify.com/)                                                                        |
 
 ## Prerequisites
 
-To get started on development, let's install a few prerequisites
+- [Node.js](https://nodejs.org/en) v22 or above
+- npm (comes with Node)
 
-- [Node](https://nodejs.org/en) (v.22.x.x or above)
-- NPM
-  ```sh
-  npm install npm@latest -g
-  ```
+## Getting Started
 
-## Installation
+```sh
+# 1. Clone and enter the repo
+git clone https://github.com/npranto/personal-portfolio.git
+cd personal-portfolio
 
-1. Clone the repo
-   ```sh
-   git clone https://github.com/npranto/personal-portfolio.git
-   ```
-2. Checkout branch `v5`
-   ```sh
-   git checkout main
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Start up local development server
-   ```sh
-   npm run dev
-   ```
-   _Note: You will need to setup a `.env` file with a few environmental variables to fetch contents as blog and video posts via web scraping. Refer to `.env.example` file for all the environment examples in the root_
+# 2. Install dependencies
+npm install
 
-## Contribution
+# 3. Set up environment variables
+cp .env.example .env   # then fill in values (see Environment Variables below)
 
-Follow the list of procedures below to start contributing or make updates to portfolio
+# 4. Start the dev server
+npm run dev
+```
 
-1. Create a new issue on the [issue](https://github.com/npranto/personal-portfolio/issues) board
-2. Create a new branch from `main` branch, i.e., `git checkout -b pp-105`. _Note: `105` refers to the issue id and `pp` is just a prefix, stands for personal-portfolio_
-3. Make code or content changes as necessary. Code changes usually go inside `src` directory. All content changes go inside `src/content` directory as all content is stored in JSON files divided by sections.
-4. Before committing all changes:
-   1. Ensure formatting and linting passes via the following 2 commands:
-      - `npm run format`
-      - `npm run lint`
-   2. You may also want to run `npm run dev` and ensure all code or content changes reflect correctly in local development.
-   3. To see production preview, create a new production build - `npm run build`, run preview local server - `npm start` and open http://localhost:3000/.
-   4. Verify all changes are reflected correctly on the preview environment as well.
-5. Commit and push changes to remote origin on the new branch.
-6. Create a pull request from the new branch => `main` branch
-7. After creating a new pull request to merge to the main branch, you will notice a preview / demo URL will pop up after Netlify preview deployment gets kicked off
-8. Once the preview URL is available, open it up and ensure all of your changes are reflecting correctly
-9. Once changes are verified, merge in the changes and shortly after you should see your changes up on the production site - [npranto.dev](https://npranto.dev/).
-10. Check to ensure that a new patch, minor or major version is bumped on the `package.json` file and note that a new tag will be created based on the semver version as well.
-11. Note(s): In case you run into issues where the preview URL is not available or log into [Netlify](https://app.netlify.com/sites/npranto/deploys) to see if build finished or failed. You may need to debug and fix the build issue in this case, but in most cases, this is very unlikely to occur.
-12. Refer back to the original issue, link the pull request, add assignee, and mark issue as closed
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Environment Variables
+
+The following variables are required in `.env` (see `.env.example` for the full template):
+
+| Variable         | Description                                  |
+| ---------------- | -------------------------------------------- |
+| `BLOG_API_URL`   | DEV.to API URL to fetch published blog posts |
+| `VIDEOS_API_URL` | YouTube Data API URL to fetch videos         |
+
+### Refreshing Content
+
+Blog posts and videos are pre-fetched and stored as JSON. To pull the latest:
+
+```sh
+npm run fetch-content       # fetches both blog posts and videos
+
+npm run fetch-blog-posts    # blog posts only
+npm run fetch-video-posts   # videos only
+```
+
+These scripts hit the configured APIs and write to `src/content/blog-posts.json` and `src/content/video-posts.json`.
+
+## Folder Structure
+
+```
+src/
+├── app/                  # Next.js App Router root
+│   ├── layout.tsx        # Root layout (fonts, metadata, Navbar, Footer)
+│   ├── page.tsx          # Home page — composes all section components
+│   └── globals.css       # Global styles and Tailwind base
+│
+├── components/
+│   ├── layout/           # Structural shell components (Navbar, Footer)
+│   ├── sections/         # One component per page section (Hero, About, Work, Projects, Blog, Videos, Education, Contact)
+│   └── ui/               # Reusable primitives (Badge, Button, SectionHeading, SocialIcons)
+│
+├── content/              # JSON data files — single source of truth for all displayed content
+│   ├── profile.json      # Name, title, summary
+│   ├── work.json         # Work experience entries
+│   ├── projects.json     # Highlighted projects
+│   ├── education.json    # Education history
+│   ├── blog-posts.json   # Cached posts from DEV.to (auto-generated)
+│   ├── video-posts.json  # Cached videos from YouTube (auto-generated)
+│   └── ...               # Other section data (about, nav, socials, config)
+│
+├── config/               # Runtime config — reads env variables for external API URLs
+├── lib/                  # Shared TypeScript types
+├── scripts/              # Node scripts that fetch and write content JSON files
+└── utils/                # Helpers used by scripts (crawl + file write)
+```
+
+**Why this structure?** Sections are intentionally split into components under `sections/` so each part of the page is independently editable without touching the layout or other sections. All content lives in `content/` as plain JSON so updates can be made without touching any component code. The `scripts/` + `utils/` separation keeps fetch logic testable and decoupled from the Next.js app itself.
+
+## Available Scripts
+
+| Script                  | Description                                          |
+| ----------------------- | ---------------------------------------------------- |
+| `npm run dev`           | Start local dev server at `localhost:3000`           |
+| `npm run build`         | Create a production build                            |
+| `npm start`             | Serve the production build locally                   |
+| `npm run lint`          | Run ESLint across the project                        |
+| `npm run format`        | Run Prettier across the project                      |
+| `npm run fetch-content` | Fetch and cache all external content (blog + videos) |
+
+## Contributing
+
+1. Open an [issue](https://github.com/npranto/personal-portfolio/issues) describing the change
+2. Branch off `main`: `git checkout -b pp-<issue-id>`
+3. Make changes — content updates go in `src/content/`, code changes in `src/`
+4. Verify locally: `npm run lint && npm run dev`
+5. Open a pull request to `main` — a Netlify preview URL will be generated automatically
+6. Once the preview looks good, merge; production updates within minutes
 
 ## License
 

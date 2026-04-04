@@ -1,1 +1,10 @@
-node_modules
+# Legacy copy (not part of this app)
+_/
+
+node_modules/
+.next/
+out/
+build/
+dist/
+
+package-lock.json

@@ -4,6 +4,39 @@
     "header": "Work",
     "items": [
       {
+        "id": "content:work-item:hydrow",
+        "image": {
+          "id": "content:picture:work-item:hydrow",
+          "sm": "/assets/images/hydrow-logo-200x200",
+          "md": "/assets/images/hydrow-logo-200x200",
+          "lg": "/assets/images/hydrow-logo-200x200"
+        },
+        "position": "eCommerce Engineer",
+        "company": "Hydrow",
+        "location": "Boston, MA",
+        "duration": "Mar 2025 - Mar 2026",
+        "employmentType": "Full-time",
+        "description": [
+          "Owned end-to-end e-commerce platform (marketing, blogs, PDP, PLP, and checkout) as part of a small team of 3 engineers.",
+          "Increased site engagement and conversion by leading a full homepage redesign and legacy page rebuild, optimizing for performance, accessibility, and scalability across CMS-driven layouts.",
+          "Integrated Shopify custom pixel tracking, enabling full-funnel visibility across checkout flows and improving attribution accuracy and upsell targeting.",
+          "Improved visual consistency and maintainability by implementing a scalable typography system across legacy and new pages without disrupting existing layouts."
+        ],
+        "technologies": [
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Shopify",
+          "Contentful CMS",
+          "Web Performance",
+          "Accessibility",
+          "RudderStack",
+          "Vercel",
+          "Playwright"
+        ],
+        "isCurrent": false
+      },
+      {
         "id": "content:work-item:best-buy",
         "image": {
           "id": "content:picture:work-item:bestbuy",
@@ -14,13 +47,13 @@
         "position": "Frontend Engineer III",
         "company": "Best Buy",
         "location": "Remote",
-        "duration": "Mar 2022 - Present",
+        "duration": "Mar 2022 - Nov 2024",
         "employmentType": "Full-time",
         "description": [
-          "Developed, enhanced, and monitored 25+ server/client rendered React components with high customer engagement inside the Product Details Page (PDP) to ensure uptime and functionality to over 4 million visitors daily, mitigating revenue loss",
-          "Collaborated with UX, business analysts, and product managers to revamp and redesign critical components' aesthetics and rendering performance, resulting in a 3% increase in customer visits and a 1% boost in conversion rates within PDP",
-          "Led performance optimizations for the Product Details Page by implementing code splitting, lazy rendering, and image format enhancements, reducing bundle size by 15% or more, leading to faster load times.",
-          "Improved production deployment efficiency by transitioning from a multi-step manual process to a fully automated CI/CD system with GitHub Actions, resulting in a 3X reduction in deployment time."
+          "Maintained and optimized 25+ mission-critical React components within the Product Details Page (PDP), serving 4M+ daily users, directly impacting revenue-critical user flows.",
+          "Drove a 3% increase in customer engagement by collaborating with product, UX, and backend teams to redesign key product components using A/B testing and data-driven experimentation.",
+          "Reduced core-components bundle sizes by 15% or more and improved load performance by implementing code splitting, lazy loading, and modern image optimization strategies.",
+          "Led CI/CD transformation, reducing deployment time by 6X by building a self-service GitHub Actions pipeline."
         ],
         "technologies": [
           "JavaScript",
@@ -36,7 +69,7 @@
           "Jest",
           "Cypress"
         ],
-        "isCurrent": true
+        "isCurrent": false
       },
       {
         "id": "content:work-item:newfold",
@@ -46,23 +79,25 @@
           "md": "/assets/images/newfold-logo-200x200",
           "lg": "/assets/images/newfold-logo-200x200"
         },
-        "position": "Software Engineer",
-        "company": "Newfold Digitial",
+        "position": "Full-Stack Software Engineer",
+        "company": "Newfold Digital",
         "location": "Burlington, MA",
         "duration": "Jul 2018 - Jul 2021",
         "employmentType": "Full-time",
         "description": [
-          "Built and maintained robust, reusable e-commerce UI components using React and Redux to ease feature development and integration for multiple internal teams",
-          "Added over 50+ bug-fixes and features along with unit tests to enhance and improve active single page application (SPA) for customer registration and checkout",
-          "Integrated Contentful CMS to dynamically prefetch product metadata to enable marketing teams to make custom changes quickly without code releases",
-          "Frequently collaborated with internal front and backend services teams to integrate new products and payment gateways",
-          "Worked on a fast-paced agile environment with multiple releases per sprint basis"
+          "Built and maintained 15+ reusable e-commerce UI components using Next.js, React, and Redux, streamlining feature development and enabling easier collaboration across teams.",
+          "Improved the core single-page app by adding 50+ features & bug-fixes, along with comprehensive unit tests using Jest and Enzyme, to ensure usability of customer registration and checkout flow.",
+          "Integrated Contentful CMS for dynamic product fetching, enabling marketing team updates without code releases.",
+          "Partnered with backend teams to integrate new APIs and payment gateways to support scalable eCommerce operations."
         ],
         "technologies": [
+          "Next.js",
           "React",
           "Redux",
           "Sass",
           "Webpack",
+          "Jest",
+          "Enzyme",
           "Contentful",
           "Node.js",
           "Git",

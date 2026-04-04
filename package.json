@@ -1,40 +1,46 @@
 {
-  "name": "portfolio",
-  "version": "5.0.4",
-  "engines": {
-    "node": ">=22"
-  },
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "npm run fetch-blog-posts && npm run fetch-video-posts && next dev",
-    "build": "npm run fetch-blog-posts && npm run fetch-video-posts && next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "echo \"No tests ✅\"",
-    "format": "npx prettier --write src",
-    "format:images": "node ./src/scripts/format-images.mjs",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "prepare": "husky",
+    "lint-staged": "lint-staged",
     "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
     "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
-    "healthcheck": "npm run format && npm run lint && npm run test && npm run build",
-    "prepare": "husky"
+    "fetch-content": "npm run fetch-blog-posts && npm run fetch-video-posts"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "npm run format"
+    ],
+    "*.{json,css,md}": [
+      "npm run format"
+    ]
   },
   "dependencies": {
-    "@next/third-parties": "^15.5.14",
-    "dotenv": "^16",
-    "next": "^15.5.14",
-    "react": "^19",
-    "react-dom": "^19",
-    "sharp": "^0.33"
+    "@next/third-parties": "^16.2.2",
+    "next": "16.2.2",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^15",
-    "eslint-config-prettier": "^9",
-    "eslint-plugin-prettier": "^5",
-    "husky": "^9",
-    "postcss": "^8",
-    "prettier": "^3",
-    "tailwindcss": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }

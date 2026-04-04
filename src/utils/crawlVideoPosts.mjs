@@ -7,12 +7,10 @@ const formatDate = (dateString) => {
   });
 };
 
-const generateVideoLink = (videoId) => {
-  return videoId ? `https://www.youtube.com/watch?v=${videoId}` : '';
-};
+const generateVideoLink = (videoId) =>
+  videoId ? `https://www.youtube.com/watch?v=${videoId}` : '';
 
 export const crawlVideoPosts = async (videosUrl = '') => {
-  console.log('videosUrl', videosUrl);
   if (
     !videosUrl ||
     typeof videosUrl !== 'string' ||

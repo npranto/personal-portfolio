@@ -5,9 +5,9 @@
     "title": "Portfolio - Nazmuz (Shakib) Pranto",
     "picture": {
       "id": "content:picture:profile:v1",
-      "sm": "/assets/images/profile-v4-160x160",
-      "md": "/assets/images/profile-v4-500x500",
-      "lg": "/assets/images/profile-v4-500x500"
+      "sm": "/assets/images/profile-latest",
+      "md": "/assets/images/profile-latest",
+      "lg": "/assets/images/profile-latest"
     },
     "author": "Nazmuz Pranto",
     "currentRole": "Software Engineer",
