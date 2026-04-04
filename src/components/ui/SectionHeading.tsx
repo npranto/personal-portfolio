@@ -22,23 +22,6 @@ export function SectionHeading({
 
   return (
     <div className={`mb-10 ${isCenter ? 'text-center' : ''} ${className}`}>
-      {/* Decorative overline */}
-      <div
-        className={`flex items-center gap-3 mb-3 ${isCenter ? 'justify-center' : ''}`}
-      >
-        <span
-          className="block h-px w-8 bg-[var(--color-accent)]"
-          aria-hidden="true"
-        />
-        <span className="text-xs font-semibold tracking-widest uppercase text-[var(--color-accent)]">
-          - - -
-        </span>
-        <span
-          className="block h-px w-8 bg-[var(--color-accent)]"
-          aria-hidden="true"
-        />
-      </div>
-
       {/* Main heading */}
       <h2
         className={`text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-tight ${isCenter ? '' : ''}`}
