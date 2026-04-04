@@ -1,5 +1,12 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
+
+/**
+ * Runs synchronously before React hydration to prevent a flash of the wrong
+ * theme. Reads localStorage first; falls back to the OS prefers-color-scheme.
+ */
+const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
 export const metadata: Metadata = {
   title: 'Nazmuz (Shakib) Pranto — Frontend Engineer',
@@ -53,13 +60,17 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      {/* Anti-flash: sets data-theme before React hydrates */}
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col">
         {/* Accessibility: skip past the navbar for keyboard users */}
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import type { NavLink } from '@/lib/types';
+import { useTheme } from '@/components/ThemeProvider';
 
 interface NavbarProps {
   links: NavLink[];
@@ -19,6 +20,7 @@ export function Navbar({ links, initials }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState('');
+  const { theme, toggleTheme } = useTheme();
 
   /* Track scroll position to toggle the blurred background */
   useEffect(() => {
@@ -103,24 +105,29 @@ export function Navbar({ links, initials }: NavbarProps) {
           })}
         </ul>
 
-        {/* Mobile hamburger */}
-        <button
-          type="button"
-          className="md:hidden flex flex-col items-center justify-center w-9 h-9 gap-1.5 rounded-lg hover:bg-[var(--color-elevated)] transition-colors"
-          onClick={() => setMenuOpen((o) => !o)}
-          aria-expanded={menuOpen}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-        >
-          <span
-            className={`block w-5 h-0.5 bg-[var(--color-text)] rounded-full transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-[var(--color-text)] rounded-full transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-[var(--color-text)] rounded-full transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
-          />
-        </button>
+        {/* Right-side controls: theme toggle + mobile hamburger */}
+        <div className="flex items-center gap-1">
+          <ThemeToggleButton theme={theme} onToggle={toggleTheme} />
+
+          {/* Mobile hamburger */}
+          <button
+            type="button"
+            className="md:hidden flex flex-col items-center justify-center w-9 h-9 gap-1.5 rounded-lg hover:bg-[var(--color-elevated)] transition-colors"
+            onClick={() => setMenuOpen((o) => !o)}
+            aria-expanded={menuOpen}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          >
+            <span
+              className={`block w-5 h-0.5 bg-[var(--color-text)] rounded-full transition-all duration-200 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-[var(--color-text)] rounded-full transition-all duration-200 ${menuOpen ? 'opacity-0' : ''}`}
+            />
+            <span
+              className={`block w-5 h-0.5 bg-[var(--color-text)] rounded-full transition-all duration-200 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+            />
+          </button>
+        </div>
       </nav>
 
       {/* Mobile dropdown menu */}
@@ -154,5 +161,66 @@ export function Navbar({ links, initials }: NavbarProps) {
         </div>
       )}
     </header>
+  );
+}
+
+/* ── Theme toggle button ───────────────────────────────────────────────────── */
+
+function ThemeToggleButton({
+  theme,
+  onToggle,
+}: {
+  theme: 'dark' | 'light';
+  onToggle: () => void;
+}) {
+  const isDark = theme === 'dark';
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="flex items-center justify-center w-9 h-9 rounded-lg hover:bg-[var(--color-elevated)] transition-colors text-[var(--color-muted)] hover:text-[var(--color-text)]"
+    >
+      {isDark ? <SunIcon /> : <MoonIcon />}
+    </button>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
   );
 }

@@ -151,6 +151,32 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   LAYER 1b — Light mode primitive overrides
+   Applied when <html data-theme="light"> is set.
+───────────────────────────────────────────────────────────────────────────── */
+[data-theme='light'] {
+  /* backgrounds — inverted: 950 = lightest (white), 700 = darkest tint */
+  --prim-bg-950: #ffffff;
+  --prim-bg-900: #f8fafc;
+  --prim-bg-800: #f1f5f9;
+  --prim-bg-700: #e2e8f0;
+
+  /* borders */
+  --prim-border-strong: #cbd5e1;
+  --prim-border-subtle: #e2e8f0;
+
+  /* text — inverted: 50 = darkest (near-black), 500 = lightest legible */
+  --prim-text-50: #0f172a;
+  --prim-text-200: #1e293b;
+  --prim-text-400: #475569;
+  --prim-text-500: #94a3b8;
+
+  /* soften glow for light backgrounds */
+  --prim-accent-glow: rgba(99, 102, 241, 0.08);
+  --prim-highlight-bg: rgba(16, 185, 129, 0.08);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    LAYER 2 — Semantic tokens
    These reference primitives only — never hard-code hex values here.
    Change the color scheme by updating Layer 1 above, not these.
