@@ -127,7 +127,7 @@ export function Hero({ profile, socials }: HeroProps) {
                   className="object-cover w-full h-full"
                   priority
                   quality={90}
-                  sizes="(max-width: 500px) 200px, 250px"
+                  sizes="(max-width: 767px) 208px, 288px"
                 />
               </div>
             </div>

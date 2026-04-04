@@ -49,6 +49,7 @@ export function Work({ header, items }: WorkProps) {
                     height={28}
                     className="rounded-md object-contain"
                     loading="lazy"
+                    sizes="28px"
                   />
                 </div>
 

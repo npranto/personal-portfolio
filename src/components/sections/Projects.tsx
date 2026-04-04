@@ -57,6 +57,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           height={200}
           className="w-20 h-20 object-contain rounded-lg transition-transform duration-300 group-hover:scale-110"
           loading="lazy"
+          sizes="80px"
         />
         {/* Duration badge */}
         <span className="absolute top-3 right-3 text-xs text-[var(--color-faint)] bg-[var(--color-bg)] px-2 py-1 rounded-md border border-[var(--color-border)]">
