@@ -34,7 +34,7 @@ export function Contact({ email, socials }: ContactProps) {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <SectionHeading
           title="Contact"
-          subtitle="Got a project, opportunity, or just want to chat? Reach out — I'd love to connect."
+          subtitle="Got a project, opportunity, or just want to chat? Reach out... I'd love to connect!"
           align="center"
         />
 
@@ -58,7 +58,7 @@ export function Contact({ email, socials }: ContactProps) {
             aria-hidden="true"
           />
           <span className="text-xs text-[var(--color-faint)] font-medium tracking-widest uppercase">
-            Or find me on
+            Find Me On
           </span>
           <span
             className="flex-1 h-px bg-[var(--color-border)]"

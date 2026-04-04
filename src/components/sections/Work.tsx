@@ -27,6 +27,7 @@ export function Work({ header, items }: WorkProps) {
           {items.map((job, idx) => (
             <li
               key={job.id}
+              aria-current={job.isCurrent ? 'true' : undefined}
               className={`relative flex gap-6 md:gap-10 ${idx < items.length - 1 ? 'pb-12' : ''}`}
             >
               {/* Vertical line + dot */}
@@ -91,7 +92,7 @@ export function Work({ header, items }: WorkProps) {
                 <ul className="space-y-2 mb-5" aria-label="Accomplishments">
                   {job.description.map((bullet, i) => (
                     <li
-                      key={i}
+                      key={`${job.id}-desc-${i}`}
                       className="flex items-start gap-2.5 text-sm text-[var(--color-muted)]"
                     >
                       <span

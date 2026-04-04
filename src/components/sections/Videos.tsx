@@ -6,54 +6,45 @@ interface VideosProps {
   posts: VideoPost[];
 }
 
-function PlayIcon() {
+function PlayGlyph({ className }: { className?: string }) {
   return (
     <svg
-      width="36"
-      height="36"
+      width="14"
+      height="14"
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden="true"
-      className="text-white drop-shadow-lg"
+      className={className}
     >
-      <circle
-        cx="12"
-        cy="12"
-        r="12"
-        className="text-black/50"
-        fill="currentColor"
-      />
-      <path d="M10 8.5l6 3.5-6 3.5V8.5z" fill="white" />
+      <path d="M8 5v14l11-7L8 5z" />
     </svg>
   );
 }
 
-interface VideoCardProps {
+interface VideoRowProps {
   video: VideoPost;
 }
 
-function VideoCard({ video }: VideoCardProps) {
+function VideoRow({ video }: VideoRowProps) {
   return (
     <article
-      className="card overflow-hidden flex flex-col group hover:border-[var(--color-accent-dark)] transition-all duration-300 hover:shadow-xl hover:shadow-[var(--color-accent-glow,rgba(99,102,241,0.08))]"
+      className="flex gap-3 sm:gap-3.5 py-3.5 border-b border-[var(--color-border-subtle)] min-w-0 first:pt-0 last:border-b-0"
       aria-label={video.title}
     >
-      {/* Thumbnail with play overlay */}
       <a
         href={video.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative block h-44 overflow-hidden bg-[var(--color-elevated)] flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+        className="relative w-[5.25rem] aspect-video shrink-0 rounded-md overflow-hidden bg-[var(--color-elevated)] ring-1 ring-[var(--color-border-subtle)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)]"
         aria-label={`Watch "${video.title}" on YouTube`}
-        tabIndex={0}
       >
         {video.thumbnail ? (
           <Image
             src={video.thumbnail}
-            alt={`Thumbnail for "${video.title}"`}
+            alt=""
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, 50vw"
+            className="object-cover"
+            sizes="(max-width: 768px) 84px, 96px"
             loading="lazy"
           />
         ) : (
@@ -63,37 +54,35 @@ function VideoCard({ video }: VideoCardProps) {
             aria-hidden="true"
           />
         )}
-        {/* Dark overlay + play button */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <PlayIcon />
-        </div>
-        {/* YouTube brand pill */}
-        <span className="absolute top-2 left-2 bg-[#FF0000] text-white text-[0.6rem] font-bold px-1.5 py-0.5 rounded-sm">
-          YouTube
+        {/* Static play affordance — no hover zoom or full-bleed overlay */}
+        <span className="absolute bottom-1 right-1 flex items-center justify-center w-6 h-6 rounded-full bg-black/70 text-white shadow-sm">
+          <PlayGlyph className="ml-0.5" />
+        </span>
+        <span className="absolute top-1 left-1 bg-[#FF0000]/95 text-white text-[0.55rem] font-bold px-1 py-px rounded leading-none">
+          YT
         </span>
       </a>
 
-      {/* Content */}
-      <div className="flex flex-col flex-1 p-4">
+      <div className="min-w-0 flex-1 flex flex-col gap-1">
         <time
-          className="text-xs text-[var(--color-faint)] mb-2"
+          className="text-[0.65rem] uppercase tracking-wide text-[var(--color-faint)]"
           dateTime={video.publishedAt}
         >
           {video.publishedAt}
         </time>
 
-        <h3 className="text-sm font-bold text-[var(--color-text)] leading-snug mb-2 group-hover:text-[var(--color-accent-light)] transition-colors line-clamp-2">
+        <h3 className="text-sm font-semibold text-[var(--color-text)] leading-snug">
           <a
             href={video.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)] rounded-sm"
           >
             {video.title}
           </a>
         </h3>
 
-        <p className="text-xs text-[var(--color-muted)] leading-relaxed line-clamp-3">
+        <p className="text-xs text-[var(--color-muted)] leading-relaxed line-clamp-2">
           {video.description}
         </p>
       </div>
@@ -102,8 +91,7 @@ function VideoCard({ video }: VideoCardProps) {
 }
 
 /**
- * Videos section — 2-column card grid with YouTube thumbnails.
- * Populated at build time from video-posts.json.
+ * Videos — same tight multi-column pattern as Blog; small thumbs, no hover scale.
  */
 export function Videos({ posts }: VideosProps) {
   if (!posts || posts.length === 0) return null;
@@ -120,9 +108,9 @@ export function Videos({ posts }: VideosProps) {
           subtitle="CSSBattle solutions and developer content on YouTube."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-0">
           {posts.map((video) => (
-            <VideoCard key={video.videoId} video={video} />
+            <VideoRow key={video.videoId} video={video} />
           ))}
         </div>
       </div>
