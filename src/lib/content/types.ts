@@ -71,9 +71,9 @@ export interface RichProject {
   caseStudy?: ProjectCaseStudy;
 }
 
-/* ── Work / Experience ──────────────────────────────────────────────────── */
+/* ── Experience ─────────────────────────────────────────────────────────── */
 
-export interface RichWorkItem {
+export interface RichExperienceItem {
   id: string;
   image: ImageAsset;
   position: string;
@@ -144,7 +144,7 @@ export interface RichEducationItem {
 
 export interface ContentCollections {
   projects: RichProject[];
-  work: RichWorkItem[];
+  experience: RichExperienceItem[];
   skills: SkillGroup[];
   blogPosts: RichBlogPost[];
   videoPosts: RichVideoPost[];

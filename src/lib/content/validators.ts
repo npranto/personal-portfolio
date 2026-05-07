@@ -2,7 +2,7 @@ import { isValidUrl } from '@/lib/utils/url';
 import { isValidSlug } from '@/lib/utils/slug';
 import type {
   RichProject,
-  RichWorkItem,
+  RichExperienceItem,
   RichBlogPost,
   SkillGroup,
 } from './types';
@@ -94,14 +94,16 @@ export function validateProjects(projects: RichProject[]): ValidationError[] {
   return errors;
 }
 
-/* ── Work validators ─────────────────────────────────────────────────────── */
+/* ── Experience validators ──────────────────────────────────────────────── */
 
-export function validateWorkItems(items: RichWorkItem[]): ValidationError[] {
+export function validateExperienceItems(
+  items: RichExperienceItem[]
+): ValidationError[] {
   const errors: ValidationError[] = [];
-  const file = 'src/content/work.json';
+  const file = 'src/content/experience.json';
 
   items.forEach((item, i) => {
-    const base = `work.items[${i}]`;
+    const base = `experience.items[${i}]`;
     if (!item.position?.trim())
       errors.push(err(file, `${base}.position`, 'missing required position'));
     if (!item.company?.trim())

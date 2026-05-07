@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import type { RichWorkItem } from '@/lib/content/types';
+import type { RichExperienceItem } from '@/lib/content/types';
 import { Badge } from '@/components/ui/Badge';
 import { ProjectTechStack } from '@/components/projects/ProjectTechStack';
 
 interface ExperienceCardProps {
-  job: RichWorkItem;
+  job: RichExperienceItem;
   isLast?: boolean;
 }
 

@@ -1,21 +1,25 @@
 import Image from 'next/image';
-import type { WorkItem } from '@/lib/types';
+import type { ExperienceItem } from '@/lib/types';
 import { Badge } from '@/components/ui/Badge';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
-interface WorkProps {
+interface ExperienceProps {
   header: string;
-  items: WorkItem[];
+  items: ExperienceItem[];
 }
 
 /**
- * Work experience section rendered as a vertical timeline.
+ * Experience section rendered as a vertical timeline.
  * Each entry shows: company logo, position, company name, duration/location,
  * a bullet list of accomplishments, and tech badges.
  */
-export function Work({ header, items }: WorkProps) {
+export function Experience({ header, items }: ExperienceProps) {
   return (
-    <section id="work" className="section-padding" aria-label="Work experience">
+    <section
+      id="experience"
+      className="section-padding"
+      aria-label="Work experience"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title={header}

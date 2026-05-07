@@ -56,8 +56,8 @@ export function ProjectsClient({
 
   return (
     <div>
-      {/* Controls */}
-      <div className="flex flex-col gap-4 mb-8">
+      {/* Controls — min-height reduces layout shift when category tabs wrap */}
+      <div className="flex flex-col gap-4 mb-8 min-h-[11.5rem] sm:min-h-[8rem]">
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="flex-1">
             <ProjectSearch value={query} onChange={setQuery} />

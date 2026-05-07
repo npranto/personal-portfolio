@@ -76,14 +76,14 @@ Required fields: `id`, `slug`, `name`, `category`, `technologies`
 5. Run `npm run validate-content` to verify
 6. Run `npm run build` to confirm everything compiles
 
-### Experience (`work.json`)
+### Experience (`experience.json`)
 
 ```json
 {
-  "work": {
+  "experience": {
     "items": [
       {
-        "id": "content:work-item:company",
+        "id": "content:experience-item:company",
         "position": "Senior Engineer",
         "company": "Company Name",
         "location": "City, State | Remote",

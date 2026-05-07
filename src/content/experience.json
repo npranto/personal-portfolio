@@ -1,12 +1,12 @@
 {
-  "work": {
-    "id": "content:work:v1",
-    "header": "Work",
+  "experience": {
+    "id": "content:experience:v1",
+    "header": "Experience",
     "items": [
       {
-        "id": "content:work-item:hydrow",
+        "id": "content:experience-item:hydrow",
         "image": {
-          "id": "content:picture:work-item:hydrow",
+          "id": "content:picture:experience-item:hydrow",
           "sm": "/assets/images/hydrow-logo-200x200",
           "md": "/assets/images/hydrow-logo-200x200",
           "lg": "/assets/images/hydrow-logo-200x200"
@@ -37,9 +37,9 @@
         "isCurrent": false
       },
       {
-        "id": "content:work-item:best-buy",
+        "id": "content:experience-item:best-buy",
         "image": {
-          "id": "content:picture:work-item:bestbuy",
+          "id": "content:picture:experience-item:bestbuy",
           "sm": "/assets/images/bestbuy-logo-200x200",
           "md": "/assets/images/bestbuy-logo-200x200",
           "lg": "/assets/images/bestbuy-logo-200x200"
@@ -72,9 +72,9 @@
         "isCurrent": false
       },
       {
-        "id": "content:work-item:newfold",
+        "id": "content:experience-item:newfold",
         "image": {
-          "id": "content:picture:work-item:newfold",
+          "id": "content:picture:experience-item:newfold",
           "sm": "/assets/images/newfold-logo-200x200",
           "md": "/assets/images/newfold-logo-200x200",
           "lg": "/assets/images/newfold-logo-200x200"
@@ -106,9 +106,9 @@
         "isCurrent": false
       },
       {
-        "id": "content:work-item:lexia",
+        "id": "content:experience-item:lexia",
         "image": {
-          "id": "content:picture:work-item:lexia",
+          "id": "content:picture:experience-item:lexia",
           "sm": "/assets/images/lexia-logo-200x200",
           "md": "/assets/images/lexia-logo-200x200",
           "lg": "/assets/images/lexia-logo-200x200"

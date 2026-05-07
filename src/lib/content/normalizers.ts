@@ -4,7 +4,7 @@ import type {
   RichProject,
   RichBlogPost,
   RichVideoPost,
-  RichWorkItem,
+  RichExperienceItem,
   RichEducationItem,
 } from './types';
 
@@ -37,7 +37,7 @@ interface RawProject {
   };
 }
 
-interface RawWorkItem {
+interface RawExperienceItem {
   id: string;
   position: string;
   company: string;
@@ -133,7 +133,9 @@ export function normalizeProject(raw: RawProject): RichProject {
   };
 }
 
-export function normalizeWorkItem(raw: RawWorkItem): RichWorkItem {
+export function normalizeExperienceItem(
+  raw: RawExperienceItem
+): RichExperienceItem {
   return {
     id: raw.id,
     image: {

@@ -5,14 +5,14 @@
 
 import {
   normalizeProject,
-  normalizeWorkItem,
+  normalizeExperienceItem,
   normalizeBlogPost,
   normalizeVideoPost,
   normalizeEducationItem,
 } from './normalizers';
 import type {
   RichProject,
-  RichWorkItem,
+  RichExperienceItem,
   RichBlogPost,
   RichVideoPost,
   RichEducationItem,
@@ -24,8 +24,8 @@ const projectsRaw = require('@/content/projects.json') as {
   projects: { items: Parameters<typeof normalizeProject>[0][] };
 };
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const workRaw = require('@/content/work.json') as {
-  work: { items: Parameters<typeof normalizeWorkItem>[0][] };
+const experienceRaw = require('@/content/experience.json') as {
+  experience: { items: Parameters<typeof normalizeExperienceItem>[0][] };
 };
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const blogRaw = require('@/content/blog-posts.json') as {
@@ -48,8 +48,8 @@ export function loadProjects(): RichProject[] {
   return (projectsRaw.projects.items ?? []).map(normalizeProject);
 }
 
-export function loadWorkItems(): RichWorkItem[] {
-  return (workRaw.work.items ?? []).map(normalizeWorkItem);
+export function loadExperienceItems(): RichExperienceItem[] {
+  return (experienceRaw.experience.items ?? []).map(normalizeExperienceItem);
 }
 
 export function loadBlogPosts(): RichBlogPost[] {

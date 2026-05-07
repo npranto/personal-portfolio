@@ -8,10 +8,9 @@ export interface SiteConfig {
   theme: string;
   showJumbotron: boolean;
   showAbout: boolean;
-  showWork: boolean;
+  showExperience: boolean;
   showProjects: boolean;
-  showBlog: boolean;
-  showVideos: boolean;
+  showContent: boolean;
   showEducation: boolean;
   showContact: boolean;
 }
@@ -78,16 +77,16 @@ export interface AboutContent {
   about: About;
 }
 
-/* ---- work.json ---------------------------------------------------------- */
-export interface WorkImage {
+/* ---- experience.json ---------------------------------------------------- */
+export interface ExperienceImage {
   id: string;
   sm: string;
   md: string;
   lg: string;
 }
-export interface WorkItem {
+export interface ExperienceItem {
   id: string;
-  image: WorkImage;
+  image: ExperienceImage;
   position: string;
   company: string;
   location: string;
@@ -97,11 +96,11 @@ export interface WorkItem {
   technologies: string[];
   isCurrent: boolean;
 }
-export interface WorkContent {
-  work: {
+export interface ExperienceContent {
+  experience: {
     id: string;
     header: string;
-    items: WorkItem[];
+    items: ExperienceItem[];
   };
 }
 

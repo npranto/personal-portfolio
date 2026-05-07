@@ -43,7 +43,7 @@ export function Hero({ profile, socials }: HeroProps) {
         }}
       />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10">
           {/* ── Text column ─────────────────────────────────────────────── */}
           <div className="flex-1 text-center md:text-left">
@@ -78,7 +78,7 @@ export function Hero({ profile, socials }: HeroProps) {
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
               <Link
-                href="/projects"
+                href="/#projects"
                 className="inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white shadow-lg shadow-[var(--color-accent-glow,rgba(99,102,241,0.3))] hover:shadow-[var(--color-accent-glow,rgba(99,102,241,0.5))] px-7 py-3.5 text-base"
               >
                 View Projects

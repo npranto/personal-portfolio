@@ -1,9 +1,9 @@
-import type { RichWorkItem } from '@/lib/content/types';
+import type { RichExperienceItem } from '@/lib/content/types';
 import { ExperienceCard } from './ExperienceCard';
 import { EmptyState } from '@/components/ui/EmptyState';
 
 interface ExperienceTimelineProps {
-  items: RichWorkItem[];
+  items: RichExperienceItem[];
 }
 
 export function ExperienceTimeline({ items }: ExperienceTimelineProps) {

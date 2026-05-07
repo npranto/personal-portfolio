@@ -9,7 +9,7 @@
 
 ## About
 
-A production-quality engineering portfolio platform showcasing projects, work experience, skills, education, blog posts, and videos. Built with Next.js 16 App Router, TypeScript, and Tailwind CSS v4. All content is data-driven via JSON files with runtime validation.
+A personal portfolio showcasing projects, work experience, skills, education, blog posts, and videos. Built with Next.js 16 (App Router), TypeScript, and Tailwind CSS (v4). All content is data-driven via JSON files with runtime validation.
 
 See it live at [npranto.dev](https://npranto.dev/).
 
@@ -103,7 +103,7 @@ All content lives in `src/content/*.json`. The key files are:
 | File               | Contents                                                 |
 | ------------------ | -------------------------------------------------------- |
 | `profile.json`     | Name, role, location, resume link                        |
-| `work.json`        | Work experience with description bullets and tech        |
+| `experience.json`  | Work experience with description bullets and tech        |
 | `projects.json`    | Projects with slug, category, case study, links, metrics |
 | `skills.json`      | Skill groups organized by category                       |
 | `education.json`   | Education history                                        |

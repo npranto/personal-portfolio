@@ -20,7 +20,7 @@ export function Navbar({ links, initials }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState('');
-  const { theme, toggleTheme } = useTheme();
+  const { theme, hydrated, toggleTheme } = useTheme();
 
   /* Track scroll position to toggle the blurred background */
   useEffect(() => {
@@ -107,7 +107,11 @@ export function Navbar({ links, initials }: NavbarProps) {
 
         {/* Right-side controls: theme toggle + mobile hamburger */}
         <div className="flex items-center gap-1">
-          <ThemeToggleButton theme={theme} onToggle={toggleTheme} />
+          <ThemeToggleButton
+            theme={theme}
+            hydrated={hydrated}
+            onToggle={toggleTheme}
+          />
 
           {/* Mobile hamburger */}
           <button
@@ -168,12 +172,14 @@ export function Navbar({ links, initials }: NavbarProps) {
 
 function ThemeToggleButton({
   theme,
+  hydrated,
   onToggle,
 }: {
   theme: 'dark' | 'light';
+  hydrated: boolean;
   onToggle: () => void;
 }) {
-  const isDark = theme === 'dark';
+  const isDark = hydrated ? theme === 'dark' : true;
   return (
     <button
       type="button"

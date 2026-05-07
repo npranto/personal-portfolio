@@ -13,14 +13,14 @@ src/
       Navbar.tsx    — sticky nav, IntersectionObserver active state
       Footer.tsx    — copyright only
     sections/
-      Hero.tsx, About.tsx, Work.tsx, Projects.tsx,
+      Hero.tsx, About.tsx, Experience.tsx, Projects.tsx,
       Blog.tsx, Videos.tsx, Education.tsx, Contact.tsx
     ui/
       Badge.tsx, Button.tsx, SectionHeading.tsx, SocialIcons.tsx
     TextRotator.tsx, ThemeProvider.tsx
   content/
     config.json, nav.json, profile.json, about.json,
-    work.json, projects.json, education.json,
+    experience.json, projects.json, education.json,
     socials.json, blog-posts.json, video-posts.json
   lib/
     types.ts        — TypeScript interfaces for all content shapes
@@ -44,7 +44,7 @@ src/
 
 - `profile.json` — name, role, location, resume link
 - `about.json` — bio paragraphs
-- `work.json` — 4 companies with description bullets and tech arrays
+- `experience.json` — 4 companies with description bullets and tech arrays
 - `projects.json` — 4 projects (name, description, links, tech)
 - `education.json` — 1 institution
 - `socials.json` — 7 social platforms
