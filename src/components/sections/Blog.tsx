@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { BlogPost } from '@/lib/types';
 import { Badge } from '@/components/ui/Badge';
+import { EmptyState } from '@/components/ui/EmptyState';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 interface BlogProps {
@@ -122,8 +123,6 @@ function BlogRow({ post }: BlogRowProps) {
  * Blog — tight multi-column index: compact rows with small thumbs, dividers only.
  */
 export function Blog({ posts }: BlogProps) {
-  if (!posts || posts.length === 0) return null;
-
   return (
     <section id="blog" className="section-padding" aria-label="Blog posts">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -132,11 +131,18 @@ export function Blog({ posts }: BlogProps) {
           subtitle="Articles and write-ups I've published"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-0">
-          {posts.map((post) => (
-            <BlogRow key={post.link} post={post} />
-          ))}
-        </div>
+        {!posts || posts.length === 0 ? (
+          <EmptyState
+            title="No blog posts available"
+            description="Posts are fetched from DEV.to. Run content fetch scripts to refresh."
+          />
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-0">
+            {posts.map((post) => (
+              <BlogRow key={post.link} post={post} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

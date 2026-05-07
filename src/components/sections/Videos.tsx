@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { VideoPost } from '@/lib/types';
+import { EmptyState } from '@/components/ui/EmptyState';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 interface VideosProps {
@@ -94,8 +95,6 @@ function VideoRow({ video }: VideoRowProps) {
  * Videos — same tight multi-column pattern as Blog; small thumbs, no hover scale.
  */
 export function Videos({ posts }: VideosProps) {
-  if (!posts || posts.length === 0) return null;
-
   return (
     <section
       id="videos"
@@ -108,11 +107,18 @@ export function Videos({ posts }: VideosProps) {
           subtitle="CSSBattle solutions and developer content on YouTube."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-0">
-          {posts.map((video) => (
-            <VideoRow key={video.videoId} video={video} />
-          ))}
-        </div>
+        {!posts || posts.length === 0 ? (
+          <EmptyState
+            title="No videos available"
+            description="Videos are fetched from YouTube and cached in content JSON."
+          />
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-0">
+            {posts.map((video) => (
+              <VideoRow key={video.videoId} video={video} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

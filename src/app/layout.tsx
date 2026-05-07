@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { SkipLink } from '@/components/ui/SkipLink';
+import {
+  personStructuredData,
+  websiteStructuredData,
+} from '@/lib/seo/structured-data';
 
 /**
  * Runs synchronously before React hydration to prevent a flash of the wrong
@@ -9,9 +14,27 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
 export const metadata: Metadata = {
-  title: 'Nazmuz (Shakib) Pranto — Frontend Engineer',
+  metadataBase: new URL('https://npranto.dev'),
+  title: {
+    default: 'Nazmuz (Shakib) Pranto — Senior Frontend Engineer',
+    template: '%s | npranto.dev',
+  },
   description:
-    'Portfolio of Nazmuz (Shakib) Pranto, a frontend software engineer based in Boston, MA. Specializing in React, Next.js, TypeScript, and high-performance web applications.',
+    'Senior frontend engineer portfolio focused on scalable product experiences, eCommerce systems, accessibility, and web performance.',
+  openGraph: {
+    title: 'Nazmuz (Shakib) Pranto — Senior Frontend Engineer',
+    description:
+      'Case studies, work history, and writing focused on frontend architecture, product engineering, and performance.',
+    url: 'https://npranto.dev',
+    siteName: 'npranto.dev',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nazmuz (Shakib) Pranto — Senior Frontend Engineer',
+    description:
+      'Case studies and frontend engineering work across product, eCommerce, and platform teams.',
+  },
   icons: {
     icon: [
       {
@@ -64,12 +87,21 @@ export default function RootLayout({
       {/* Anti-flash: sets data-theme before React hydrates */}
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData),
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
-        {/* Accessibility: skip past the navbar for keyboard users */}
-        <a href="#main-content" className="skip-to-content">
-          Skip to main content
-        </a>
+        <SkipLink />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

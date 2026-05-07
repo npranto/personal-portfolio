@@ -1,33 +1,5 @@
-import type {
-  SiteConfig,
-  NavContent,
-  ProfileContent,
-  AboutContent,
-  WorkContent,
-  ProjectsContent,
-  EducationContent,
-  SocialsContent,
-  BlogPostsContent,
-  VideoPostsContent,
-} from '@/lib/types';
-
-/* ── Static content imports ─────────────────────────────────────────────── */
-import configData from '@/content/config.json';
-import navData from '@/content/nav.json';
-import profileData from '@/content/profile.json';
-import aboutData from '@/content/about.json';
-import workData from '@/content/work.json';
-import projectsData from '@/content/projects.json';
-import educationData from '@/content/education.json';
-import socialsData from '@/content/socials.json';
-import blogData from '@/content/blog-posts.json';
-import videoData from '@/content/video-posts.json';
-
-/* ── Layout components ──────────────────────────────────────────────────── */
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-
-/* ── Section components ─────────────────────────────────────────────────── */
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { Work } from '@/components/sections/Work';
@@ -36,18 +8,22 @@ import { Blog } from '@/components/sections/Blog';
 import { Videos } from '@/components/sections/Videos';
 import { Education } from '@/components/sections/Education';
 import { Contact } from '@/components/sections/Contact';
+import { loadPortfolioContent } from '@/lib/content/loaders';
+import { Card } from '@/components/ui/Card';
+import { Section } from '@/components/ui/Section';
 
-/* ── Type-cast JSON imports ─────────────────────────────────────────────── */
-const config = configData as SiteConfig;
-const { nav } = navData as NavContent;
-const { profile } = profileData as ProfileContent;
-const { about } = aboutData as AboutContent;
-const { work } = workData as WorkContent;
-const { projects } = projectsData as ProjectsContent;
-const { education } = educationData as EducationContent;
-const { socials } = socialsData as SocialsContent;
-const { posts: blogPosts } = blogData as BlogPostsContent;
-const { posts: videoPosts } = videoData as VideoPostsContent;
+const {
+  config,
+  nav,
+  profile,
+  about,
+  work,
+  projects,
+  education,
+  socials,
+  blogPosts,
+  videoPosts,
+} = loadPortfolioContent();
 
 /**
  * Main portfolio page.
@@ -61,6 +37,23 @@ export default function Home() {
 
       <main id="main-content" className="flex-1">
         {config.showJumbotron && <Hero profile={profile} socials={socials} />}
+        <Section id="value" label="Value proposition">
+          <h2 className="text-2xl font-bold">
+            What I Bring as a Senior Engineer
+          </h2>
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            {[
+              'Scalable frontend systems',
+              'eCommerce and product ownership',
+              'Performance and accessibility',
+              'AI-assisted developer workflows',
+            ].map((item) => (
+              <Card key={item} className="p-4">
+                <p className="font-semibold">{item}</p>
+              </Card>
+            ))}
+          </div>
+        </Section>
 
         {config.showAbout && <About about={about} />}
 
@@ -70,9 +63,9 @@ export default function Home() {
           <Projects header={projects.header} items={projects.items} />
         )}
 
-        {config.showBlog && <Blog posts={blogPosts} />}
+        {config.showBlog && <Blog posts={blogPosts.slice(0, 9)} />}
 
-        {config.showVideos && <Videos posts={videoPosts} />}
+        {config.showVideos && <Videos posts={videoPosts.slice(0, 6)} />}
 
         {config.showEducation && (
           <Education header={education.header} items={education.items} />

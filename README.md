@@ -9,9 +9,7 @@
 
 ## About
 
-A personal portfolio website showcasing projects, work experience, education, blog posts, and videos. All content is data-driven via JSON files, with external sources (DEV.to, YouTube) fetched via Node scripts and cached locally.
-
-See it live at [npranto.dev](https://npranto.dev/).
+Senior frontend portfolio platform built with Next.js App Router, TypeScript, and Tailwind CSS. The site is content-driven, SEO-ready, accessibility-focused, and designed for long-term maintainability.
 
 ## Tech Stack
 
@@ -70,6 +68,29 @@ npm run fetch-video-posts   # videos only
 
 These scripts hit the configured APIs and write to `src/content/blog-posts.json` and `src/content/video-posts.json`.
 
+## Architecture Overview
+
+- App routes and metadata: `src/app`
+- Design system primitives: `src/components/ui`
+- Page sections: `src/components/sections`
+- Content JSON source-of-truth: `src/content`
+- Content typing/loading/validation: `src/lib/content`
+- External content fetch scripts: `src/scripts`
+
+Detailed docs: `docs/architecture.md`
+
+## Content Model and Validation
+
+- Typed content contracts are defined in `src/lib/content/types.ts`
+- Runtime-safe content loading is implemented in `src/lib/content/loaders.ts`
+- Content schema validation logic is in `src/lib/content/validators.ts`
+
+Run validation:
+
+```sh
+npm run validate-content
+```
+
 ## Folder Structure
 
 ```
@@ -103,23 +124,40 @@ src/
 
 ## Available Scripts
 
-| Script                  | Description                                          |
-| ----------------------- | ---------------------------------------------------- |
-| `npm run dev`           | Start local dev server at `localhost:3000`           |
-| `npm run build`         | Create a production build                            |
-| `npm start`             | Serve the production build locally                   |
-| `npm run lint`          | Run ESLint across the project                        |
-| `npm run format`        | Run Prettier across the project                      |
-| `npm run fetch-content` | Fetch and cache all external content (blog + videos) |
+| Script                     | Description                                          |
+| -------------------------- | ---------------------------------------------------- |
+| `npm run dev`              | Start local dev server                               |
+| `npm run build`            | Create production build                              |
+| `npm start`                | Serve production build                               |
+| `npm run lint`             | Run ESLint                                           |
+| `npm run typecheck`        | Run TypeScript in noEmit mode                        |
+| `npm run validate-content` | Validate required content structures before build    |
+| `npm run check`            | Run validate-content + lint + typecheck + build      |
+| `npm run format`           | Run Prettier                                         |
+| `npm run fetch-content`    | Fetch and cache all external content (blog + videos) |
 
-## Contributing
+## Development Workflow
 
-1. Open an [issue](https://github.com/npranto/personal-portfolio/issues) describing the change
-2. Branch off `main`: `git checkout -b pp-<issue-id>`
-3. Make changes — content updates go in `src/content/`, code changes in `src/`
-4. Verify locally: `npm run lint && npm run dev`
-5. Open a pull request to `main` — a Netlify preview URL will be generated automatically
-6. Once the preview looks good, merge; production updates within minutes
+1. Create a feature branch from `main`.
+2. Make changes in small logical commits.
+3. Run `npm run check` before opening a PR.
+4. Confirm accessibility and responsive behavior manually.
+5. Open a PR with screenshots and test notes.
+
+## Deployment Notes
+
+- Optimized for static-friendly deployment on Netlify.
+- Ensure `npm run check` passes before deploying.
+- Keep environment variables updated for content fetch scripts.
+
+## Additional Docs
+
+- `docs/architecture.md`
+- `docs/content-model.md`
+- `docs/qa-checklist.md`
+- `docs/accessibility-checklist.md`
+- `docs/performance-seo-notes.md`
+- `docs/ai-agent-workflow.md`
 
 ## License
 

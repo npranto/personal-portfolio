@@ -18,6 +18,7 @@ export function Footer({ author, socials }: FooterProps) {
       aria-label="Site footer"
     >
       <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <SocialIcons socials={socials} size="sm" />
         {/* Copyright */}
         <p className="text-xs text-[var(--color-faint)] order-2 sm:order-1">
           &copy; {year} {author}. All rights reserved.

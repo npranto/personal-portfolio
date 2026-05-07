@@ -59,7 +59,7 @@ export function Hero({ profile, socials }: HeroProps) {
 
             {/* Role + location sub-heading */}
             <p className="text-lg text-[var(--color-muted)] mb-5 gap-2 flex items-center">
-              {profile.currentRole}
+              Senior Frontend / Product Engineer
               <span
                 className="text-accent font-bold text-base leading-none select-none tracking-wider"
                 aria-hidden="true"
@@ -67,6 +67,11 @@ export function Hero({ profile, socials }: HeroProps) {
                 /
               </span>
               {profile.location}
+            </p>
+            <p className="text-sm text-[var(--color-muted)] mb-6 max-w-2xl">
+              I build scalable, high-performance web experiences for product and
+              eCommerce platforms with a strong focus on accessibility and
+              developer productivity.
             </p>
 
             {/* Animated role rotator */}

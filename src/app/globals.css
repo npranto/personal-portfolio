@@ -247,6 +247,11 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -365,6 +370,19 @@ body {
 
 .text-rotator-track {
   animation: slide-up 12s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Fade-in on scroll (applied via JS intersection observer) */
