@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Profile, Socials } from '@/lib/types';
 import { Button } from '@/components/ui/Button';
 import { SocialIcons } from '@/components/ui/SocialIcons';
@@ -76,20 +77,26 @@ export function Hero({ profile, socials }: HeroProps) {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white shadow-lg shadow-[var(--color-accent-glow,rgba(99,102,241,0.3))] hover:shadow-[var(--color-accent-glow,rgba(99,102,241,0.5))] px-7 py-3.5 text-base"
+              >
+                View Projects
+              </Link>
               <Button
                 as="a"
                 href={profile.resumeHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="primary"
+                variant="outline"
                 size="lg"
               >
-                View Resume
+                Resume
               </Button>
               <Button
                 as="a"
                 href={profile.contactHref}
-                variant="outline"
+                variant="ghost"
                 size="lg"
               >
                 Let&apos;s Talk

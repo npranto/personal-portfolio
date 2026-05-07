@@ -12,7 +12,10 @@
     "lint-staged": "lint-staged",
     "fetch-blog-posts": "node ./src/scripts/fetch-blog-posts.mjs",
     "fetch-video-posts": "node ./src/scripts/fetch-video-posts.mjs",
-    "fetch-content": "npm run fetch-blog-posts && npm run fetch-video-posts"
+    "fetch-content": "npm run fetch-blog-posts && npm run fetch-video-posts",
+    "validate-content": "node ./src/scripts/validate-content.mjs",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run validate-content && npm run lint && npm run typecheck && npm run build"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

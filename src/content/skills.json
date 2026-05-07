@@ -1,0 +1,101 @@
+{
+  "skillGroups": [
+    {
+      "id": "skills:frontend-platform",
+      "label": "Frontend Platform",
+      "skills": [
+        { "name": "React", "level": "core" },
+        { "name": "Next.js", "level": "core" },
+        { "name": "TypeScript", "level": "core" },
+        { "name": "JavaScript (ES2022+)", "level": "core" },
+        { "name": "HTML5 / Semantic Markup", "level": "core" },
+        { "name": "CSS3 / CSS Modules", "level": "core" },
+        { "name": "Tailwind CSS", "level": "core" }
+      ]
+    },
+    {
+      "id": "skills:design-systems",
+      "label": "Design Systems & UI",
+      "skills": [
+        { "name": "Component Libraries", "level": "core" },
+        { "name": "Design Tokens", "level": "proficient" },
+        { "name": "Storybook", "level": "proficient" },
+        { "name": "Figma", "level": "familiar" },
+        { "name": "Responsive Design", "level": "core" },
+        { "name": "Sass / SCSS", "level": "proficient" }
+      ]
+    },
+    {
+      "id": "skills:performance",
+      "label": "Performance & Web Vitals",
+      "skills": [
+        { "name": "Core Web Vitals", "level": "core" },
+        { "name": "Code Splitting", "level": "core" },
+        { "name": "Lazy Loading", "level": "core" },
+        { "name": "Image Optimization", "level": "core" },
+        {
+          "name": "Bundle Analysis (Webpack/Turbopack)",
+          "level": "proficient"
+        },
+        { "name": "Lighthouse Auditing", "level": "proficient" }
+      ]
+    },
+    {
+      "id": "skills:accessibility",
+      "label": "Accessibility",
+      "skills": [
+        { "name": "WCAG 2.1", "level": "proficient" },
+        { "name": "ARIA Attributes", "level": "proficient" },
+        { "name": "Keyboard Navigation", "level": "core" },
+        { "name": "Screen Reader Testing", "level": "proficient" },
+        { "name": "Semantic HTML", "level": "core" },
+        { "name": "Color Contrast Auditing", "level": "proficient" }
+      ]
+    },
+    {
+      "id": "skills:ecommerce",
+      "label": "eCommerce & CMS",
+      "skills": [
+        { "name": "Shopify", "level": "proficient" },
+        { "name": "Contentful CMS", "level": "core" },
+        { "name": "A/B Testing", "level": "proficient" },
+        { "name": "Analytics (RudderStack, GA4)", "level": "proficient" },
+        { "name": "Conversion Rate Optimization", "level": "proficient" }
+      ]
+    },
+    {
+      "id": "skills:testing",
+      "label": "Testing & Quality",
+      "skills": [
+        { "name": "Jest", "level": "core" },
+        { "name": "Cypress", "level": "proficient" },
+        { "name": "Playwright", "level": "proficient" },
+        { "name": "React Testing Library", "level": "proficient" },
+        { "name": "Enzyme", "level": "familiar" },
+        { "name": "ESLint / Prettier", "level": "core" }
+      ]
+    },
+    {
+      "id": "skills:devops",
+      "label": "DevOps & Tooling",
+      "skills": [
+        { "name": "GitHub Actions", "level": "core" },
+        { "name": "CI/CD Pipelines", "level": "core" },
+        { "name": "Netlify / Vercel", "level": "proficient" },
+        { "name": "Webpack", "level": "proficient" },
+        { "name": "Git / GitHub", "level": "core" },
+        { "name": "Node.js", "level": "proficient" }
+      ]
+    },
+    {
+      "id": "skills:ai",
+      "label": "AI-Assisted Development",
+      "skills": [
+        { "name": "Cursor AI / Agent Workflows", "level": "core" },
+        { "name": "MCP Tooling", "level": "proficient" },
+        { "name": "Prompt Engineering", "level": "proficient" },
+        { "name": "LLM API Integration", "level": "familiar" }
+      ]
+    }
+  ]
+}

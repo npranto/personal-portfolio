@@ -5,7 +5,9 @@
     "items": [
       {
         "id": "content:project-item:logtrade",
+        "slug": "logtrade",
         "name": "LogTrade",
+        "summary": "A personal journal for tracking daily stock trades online, with plans to add AI/LLM integrations for smarter trade management.",
         "duration": "Oct 2021 - Present",
         "image": {
           "id": "content:picture:project-item:logtrade",
@@ -15,7 +17,10 @@
         },
         "githubUrl": "https://github.com/npranto/logtrade",
         "demoUrl": "https://logtrade.netlify.app/home/",
-        "description": "LogTrade is a personal journal for tracking daily stock trades online. Originally built using React and Firebase, it offered simple email/password authentication and responsive UI. Version 1.0.0 launched in October 2021 and is live. Currently, I’m migrating the app to Next.js with the App Router for better scalability and performance. I’m also switching to Clerk.dev for simpler client-side authentication, enabling built-in UIs and support for social logins. Alongside these changes, I’m implementing UI enhancements for a more modern look and adding new features like Google’s Speech-to-Text API and LLM integrations to let users manage trades more intuitively—quickly adding or removing trades without editing forms. These updates are part of the upcoming v2.0.0, planned for release in early to mid-2025, aimed at delivering a sleeker, smarter user experience.",
+        "description": "LogTrade is a personal journal for tracking daily stock trades online. Originally built using React and Firebase, it offered simple email/password authentication and responsive UI. Version 1.0.0 launched in October 2021 and is live. Currently, I'm migrating the app to Next.js with the App Router for better scalability and performance. I'm also switching to Clerk.dev for simpler client-side authentication, enabling built-in UIs and support for social logins. Alongside these changes, I'm implementing UI enhancements for a more modern look and adding new features like Google's Speech-to-Text API and LLM integrations to let users manage trades more intuitively—quickly adding or removing trades without editing forms. These updates are part of the upcoming v2.0.0, planned for release in early to mid-2025, aimed at delivering a sleeker, smarter user experience.",
+        "role": "Sole Developer",
+        "category": "web-app",
+        "featured": true,
         "technologies": [
           "React",
           "TailwindCSS",
@@ -24,11 +29,44 @@
           "Netlify",
           "Clerk.dev",
           "Next.js"
-        ]
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/npranto/logtrade",
+            "type": "github"
+          },
+          {
+            "label": "Live Demo",
+            "url": "https://logtrade.netlify.app/home/",
+            "type": "demo"
+          }
+        ],
+        "metrics": [
+          {
+            "label": "Version",
+            "value": "v1.0.0 live"
+          },
+          {
+            "label": "Auth",
+            "value": "Email + Social (upcoming)"
+          }
+        ],
+        "caseStudy": {
+          "problem": "Tracking stock trades across spreadsheets was error-prone and lacked a clean interface for quickly logging and reviewing daily activity.",
+          "constraints": "Solo project built in spare time; needed fast time-to-launch with minimal operational overhead.",
+          "solution": "Built a React + Firebase app with email/password auth and a simple journaling UI. v2 adds Next.js App Router, Clerk.dev auth, and LLM integrations for voice-driven trade entry.",
+          "architectureNotes": "v1: React SPA + Firebase Realtime Database + Netlify. v2 (in progress): Next.js App Router + Clerk.dev + Supabase.",
+          "technicalDecisions": "Chose Firebase for v1 due to its generous free tier and minimal backend setup. Switching to Clerk.dev in v2 for a better auth UX with social logins out of the box.",
+          "impact": "Live and actively used for personal trade journaling. v2 will add voice/LLM trade entry to reduce friction significantly.",
+          "lessonsLearned": "Starting with the simplest viable stack (React + Firebase) enabled fast shipping. The migration to a more structured stack in v2 is informed by real usage patterns."
+        }
       },
       {
         "id": "content:project-item:portfolio-v5",
+        "slug": "portfolio-v5",
         "name": "Portfolio v.5",
+        "summary": "A statically rendered personal portfolio website showcasing projects, work experience, and blog posts, powered by Next.js.",
         "duration": "Jan 2024",
         "image": {
           "id": "content:picture:project-item:portfolio-v5",
@@ -38,22 +76,57 @@
         },
         "githubUrl": "https://github.com/npranto/personal-portfolio",
         "demoUrl": "https://npranto.dev/",
-        "description": "A statically rendered personal portfolio website showcasing my projects, work experiences, and blogs. Powered by Next.js (using the Pages Router) and fully hosted in a GitHub repository, this version gives me full control over both content and code. I switched to using static pages with content managed through a single configuration file, making updates simple while retaining auto-deployments via Netlify for seamless content changes without requiring code edits. Previously, I used Contentful CMS for dynamic content updates, but consolidating everything into a single repo ensures a more unified workflow. Looking back at the first version I built five years ago with create-react-app, I overcomplicated things by client-rendering a rarely updated static site. Moving to static rendering and redesigning the architecture has made the site far more efficient and easier to manage. This streamlined setup balances simplicity and functionality, allowing me to focus on content and growth while ensuring the site stays reliable and performant.",
+        "description": "A statically rendered personal portfolio website showcasing my projects, work experiences, and blogs. Powered by Next.js (using the App Router) and fully hosted in a GitHub repository, this version gives me full control over both content and code. I switched to using static pages with content managed through a single configuration file, making updates simple while retaining auto-deployments via Netlify for seamless content changes without requiring code edits. Previously, I used Contentful CMS for dynamic content updates, but consolidating everything into a single repo ensures a more unified workflow. Looking back at the first version I built five years ago with create-react-app, I overcomplicated things by client-rendering a rarely updated static site. Moving to static rendering and redesigning the architecture has made the site far more efficient and easier to manage.",
+        "role": "Sole Developer",
+        "category": "web-app",
+        "featured": true,
         "technologies": [
-          "HTML/CSS",
-          "JavaScript",
+          "TypeScript",
+          "Next.js",
+          "React",
           "TailwindCSS",
-          "Parcel",
-          "Cypress",
           "Netlify",
           "ESLint",
           "Prettier",
           "GitHub Actions"
-        ]
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/npranto/personal-portfolio",
+            "type": "github"
+          },
+          {
+            "label": "Live Site",
+            "url": "https://npranto.dev/",
+            "type": "demo"
+          }
+        ],
+        "metrics": [
+          {
+            "label": "Rendering",
+            "value": "100% static"
+          },
+          {
+            "label": "Deployment",
+            "value": "Auto via Netlify"
+          }
+        ],
+        "caseStudy": {
+          "problem": "Previous portfolio versions used client-rendered SPAs for a site that rarely changes, leading to unnecessary complexity and slower load times.",
+          "constraints": "Content must be easy to update without a CMS dependency; design should be maintainable long-term by a single developer.",
+          "solution": "Rebuilt using Next.js App Router with all content in JSON files. Static generation produces fast HTML with no client-side data fetching needed.",
+          "architectureNotes": "Single Next.js app with JSON content files, Tailwind CSS for styling, and Netlify for hosting and CI/CD.",
+          "technicalDecisions": "Dropped Contentful CMS in favor of co-located JSON files to reduce dependencies and keep the content and code in a single repository.",
+          "impact": "Achieved a much simpler architecture that is easy to update, highly performant, and straightforward to maintain.",
+          "lessonsLearned": "Static rendering is the right default for personal portfolio sites. Moving content into the repo eliminated a dependency that was adding friction without real benefit."
+        }
       },
       {
         "id": "content:project-item:regexer",
+        "slug": "regexer",
         "name": "Regexer",
+        "summary": "A utility npm library of functions using regular expressions to validate common input types like emails, ZIP codes, and credit card numbers.",
         "duration": "Jul 2018 - Present",
         "image": {
           "id": "content:picture:project-item:regexer",
@@ -64,12 +137,45 @@
         "githubUrl": "https://github.com/npranto/regexer",
         "demoUrl": "https://www.npmjs.com/package/nsp-regexer",
         "description": "Regexer is a utility library of functions that use regular expressions to validate various types of inputs. Developers often use regexes to validate inputs like emails, zip codes, or credit card numbers. I wanted to create a small utility library to handle a wide range of input validations with regexes, so I wouldn't need to constantly search for reliable patterns online. While it's not an exhaustive collection of regexes yet, I plan to add more functionality over time. Regexer is a Node package that can be installed and used on both the server and client side.",
-        "technologies": ["Node.js", "ESLint", "Mocha", "Semantic Release"]
+        "role": "Author & Maintainer",
+        "category": "library",
+        "featured": false,
+        "technologies": [
+          "Node.js",
+          "JavaScript",
+          "ESLint",
+          "Mocha",
+          "Semantic Release"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/npranto/regexer",
+            "type": "github"
+          },
+          {
+            "label": "npm",
+            "url": "https://www.npmjs.com/package/nsp-regexer",
+            "type": "npm"
+          }
+        ],
+        "metrics": [
+          {
+            "label": "Published",
+            "value": "npm package"
+          },
+          {
+            "label": "Runtime",
+            "value": "Server + client"
+          }
+        ]
       },
       {
         "id": "content:project-item:actions-cli",
+        "slug": "actions-cli",
         "name": "@npranto/actions-cli",
-        "duration": "June 2022",
+        "summary": "A command-line tool for keeping track of daily action items and tasks, built with Node.js and Commander.",
+        "duration": "Jun 2022",
         "image": {
           "id": "content:picture:project-item:actions-cli",
           "sm": "/assets/images/actions-cli-100x100",
@@ -78,8 +184,19 @@
         },
         "githubUrl": "https://github.com/npranto/actions-cli",
         "demoUrl": "https://github.com/npranto/actions-cli",
-        "description": "A command-line CLI tool to keep track of your action items for each day.",
-        "technologies": ["Node.js", "CLI Tool", "Commander", "Conf"]
+        "description": "A command-line CLI tool to keep track of your action items for each day. Built using Node.js, Commander for argument parsing, and Conf for persistent local storage. Useful for developers who prefer staying in the terminal for task management.",
+        "role": "Author",
+        "category": "tool",
+        "featured": false,
+        "technologies": ["Node.js", "CLI", "Commander", "Conf", "JavaScript"],
+        "links": [
+          {
+            "label": "GitHub",
+            "url": "https://github.com/npranto/actions-cli",
+            "type": "github"
+          }
+        ],
+        "metrics": []
       }
     ]
   }
