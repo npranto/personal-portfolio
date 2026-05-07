@@ -97,7 +97,7 @@ function ContentCard({ item }: { item: ContentItem }) {
 
   return (
     <article
-      className="card group flex gap-4 p-4 transition-colors duration-200 hover:border-[var(--color-accent-dark)] md:gap-5 md:p-5"
+      className="group flex gap-4 border-0 pb-4 border-b border-[var(--color-border-subtle)] bg-transparent transition-colors duration-200 hover:border-b-[var(--color-accent-dark)] md:gap-5"
       aria-label={item.title}
     >
       <a
@@ -113,7 +113,7 @@ function ContentCard({ item }: { item: ContentItem }) {
             alt=""
             width={THUMB_SIZE}
             height={THUMB_SIZE}
-            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+            className="h-full w-full object-cover transition-transform duration-300"
             sizes="72px"
             loading="lazy"
           />
@@ -155,20 +155,11 @@ function ContentCard({ item }: { item: ContentItem }) {
       <div className="flex min-w-0 flex-1 flex-col gap-1.5">
         <div className="flex items-start justify-between gap-2">
           <time
-            className="text-[10px] font-semibold uppercase leading-tight tracking-widest text-[var(--color-faint)] md:text-[11px]"
+            className="text-[10px] font-base uppercase leading-tight tracking-widest text-[var(--color-faint)] md:text-[11px]"
             dateTime={item.date}
           >
             {item.date}
           </time>
-          <span
-            className={
-              isVideo
-                ? 'inline-flex shrink-0 items-center rounded-full border border-rose-200/90 bg-rose-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-rose-800 dark:border-rose-900/70 dark:bg-rose-950/70 dark:text-rose-200'
-                : 'inline-flex shrink-0 items-center rounded-full border border-sky-200/90 bg-sky-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-sky-800 dark:border-sky-800/70 dark:bg-sky-950/70 dark:text-sky-200'
-            }
-          >
-            {isVideo ? 'Video' : 'Article'}
-          </span>
         </div>
 
         <h3 className="text-base font-semibold leading-tight text-[var(--color-text)] md:text-base">
@@ -191,7 +182,7 @@ function ContentCard({ item }: { item: ContentItem }) {
             {item.tags.slice(0, 4).map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center rounded-full border border-[#bee3f8] bg-[#ebf8ff] px-2 py-0.5 text-[11px] font-medium text-[#2b6cb0] dark:border-blue-900/60 dark:bg-blue-950/50 dark:text-blue-300"
+                className="inline-flex items-center rounded-full border border-[var(--color-border)] bg-[var(--color-elevated)] px-2 py-0.5 text-xs font-medium text-[var(--color-text)]"
               >
                 #{tag}
               </span>
@@ -199,16 +190,16 @@ function ContentCard({ item }: { item: ContentItem }) {
           </div>
         )}
 
-        {/* <a
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-0.5 inline-flex w-fit items-center gap-1 text-xs font-semibold text-[#3182ce] hover:text-[var(--color-accent-light)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-surface)] md:text-[13px] dark:text-[var(--color-accent-light)]"
-          aria-label={actionLabel}
+        <span
+          className={
+            (isVideo
+              ? 'inline-flex items-center rounded-full border border-rose-200/90 bg-rose-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-rose-800 dark:border-rose-900/70 dark:bg-rose-950/70 dark:text-rose-200'
+              : 'inline-flex items-center rounded-full border border-sky-200/90 bg-sky-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-sky-800 dark:border-sky-800/70 dark:bg-sky-950/70 dark:text-sky-200') +
+            ' w-max'
+          }
         >
-          {item.source}
-          <ExternalLinkIcon className="shrink-0 opacity-90" />
-        </a> */}
+          {isVideo ? 'Video' : 'Article'}
+        </span>
       </div>
     </article>
   );
