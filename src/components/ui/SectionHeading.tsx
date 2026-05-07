@@ -31,7 +31,7 @@ export function SectionHeading({
 
       {/* Optional subtitle */}
       {subtitle && (
-        <p className="mt-3 text-base text-[var(--color-muted)] max-w-2xl leading-relaxed">
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-[var(--color-faint)]">
           {subtitle}
         </p>
       )}
