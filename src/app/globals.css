@@ -750,3 +750,21 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Respect reduced-motion preferences for accessibility and comfort */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .text-rotator-track {
+    animation: none;
+  }
+
+  .fade-in-up,
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

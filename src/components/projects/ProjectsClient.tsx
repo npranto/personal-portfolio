@@ -32,6 +32,14 @@ export function ProjectsClient({
   const [category, setCategory] = useState<CategoryFilter>('all');
   const [featuredOnly, setFeaturedOnly] = useState(false);
 
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<ProjectCategory, number>();
+    for (const project of projects) {
+      counts.set(project.category, (counts.get(project.category) ?? 0) + 1);
+    }
+    return counts;
+  }, [projects]);
+
   const tabs = useMemo(() => {
     const allTab = {
       value: 'all' as CategoryFilter,
@@ -41,10 +49,10 @@ export function ProjectsClient({
     const catTabs = availableCategories.map((cat) => ({
       value: cat as CategoryFilter,
       label: CATEGORY_LABELS[cat],
-      count: projects.filter((p) => p.category === cat).length,
+      count: categoryCounts.get(cat) ?? 0,
     }));
     return [allTab, ...catTabs];
-  }, [projects, availableCategories]);
+  }, [projects.length, availableCategories, categoryCounts]);
 
   const filtered = useMemo(() => {
     let result = sortProjects(projects);

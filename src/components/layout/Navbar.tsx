@@ -29,6 +29,18 @@ export function Navbar({ links, initials }: NavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  /* Allow keyboard users to close the mobile menu quickly */
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [menuOpen]);
+
   /* Highlight the active section via IntersectionObserver */
   useEffect(() => {
     const sectionIds = links.map((l) => l.href.replace('#', ''));
@@ -119,6 +131,7 @@ export function Navbar({ links, initials }: NavbarProps) {
             className="md:hidden flex flex-col items-center justify-center w-9 h-9 gap-1.5 rounded-lg hover:bg-[var(--color-elevated)] transition-colors"
             onClick={() => setMenuOpen((o) => !o)}
             aria-expanded={menuOpen}
+            aria-controls="mobile-navigation-menu"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
             <span
@@ -136,7 +149,10 @@ export function Navbar({ links, initials }: NavbarProps) {
 
       {/* Mobile dropdown menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[var(--color-surface)]/95 backdrop-blur-md border-b border-[var(--color-border)] shadow-xl">
+        <div
+          id="mobile-navigation-menu"
+          className="md:hidden bg-[var(--color-surface)]/95 backdrop-blur-md border-b border-[var(--color-border)] shadow-xl"
+        >
           <ul
             className="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1"
             role="list"

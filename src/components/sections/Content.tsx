@@ -176,8 +176,8 @@ function ContentCard({ item }: { item: ContentItem }) {
         <span
           className={
             (isVideo
-              ? 'inline-flex items-center rounded-full border border-rose-200/90 bg-rose-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-rose-800 dark:border-rose-900/70 dark:bg-rose-950/70 dark:text-rose-200'
-              : 'inline-flex items-center rounded-full border border-sky-200/90 bg-sky-100 px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-sky-800 dark:border-sky-800/70 dark:bg-sky-950/70 dark:text-sky-200') +
+              ? 'inline-flex items-center rounded-full border border-[var(--color-highlight)] bg-[var(--color-highlight-bg)] px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-[var(--color-highlight)]'
+              : 'inline-flex items-center rounded-full border border-[var(--color-accent)] bg-[var(--color-accent-glow)] px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-[var(--color-accent)]') +
             ' w-max'
           }
         >
