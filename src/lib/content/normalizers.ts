@@ -4,6 +4,7 @@ import type {
   RichProject,
   RichBlogPost,
   RichVideoPost,
+  RichRecentActivity,
   RichExperienceItem,
   RichEducationItem,
 } from './types';
@@ -177,6 +178,32 @@ export function normalizeVideoPost(raw: RawVideoPost): RichVideoPost {
     publishedAt: raw.publishedAt,
     thumbnail: raw.thumbnail ?? '',
     link: raw.link,
+  };
+}
+
+export function normalizeRecentActivityFromBlog(
+  raw: RawBlogPost
+): RichRecentActivity {
+  return {
+    id: raw.link,
+    type: 'article',
+    title: raw.title,
+    href: raw.link,
+    publishedAt: raw.uploadedTime,
+    description: raw.description?.trim() || undefined,
+  };
+}
+
+export function normalizeRecentActivityFromVideo(
+  raw: RawVideoPost
+): RichRecentActivity {
+  return {
+    id: raw.videoId,
+    type: 'video',
+    title: raw.title,
+    href: raw.link,
+    publishedAt: raw.publishedAt,
+    description: raw.description?.trim() || undefined,
   };
 }
 

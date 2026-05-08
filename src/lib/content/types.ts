@@ -129,6 +129,19 @@ export interface RichVideoPost {
   link: string;
 }
 
+/* ── Recent Activities ─────────────────────────────────────────────────── */
+
+export type RecentActivityType = 'article' | 'video';
+
+export interface RichRecentActivity {
+  id: string;
+  type: RecentActivityType;
+  title: string;
+  href: string;
+  publishedAt?: string;
+  description?: string;
+}
+
 /* ── Education ──────────────────────────────────────────────────────────── */
 
 export interface RichEducationItem {
@@ -148,5 +161,6 @@ export interface ContentCollections {
   skills: SkillGroup[];
   blogPosts: RichBlogPost[];
   videoPosts: RichVideoPost[];
+  recentActivities: RichRecentActivity[];
   education: RichEducationItem[];
 }

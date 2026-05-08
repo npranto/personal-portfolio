@@ -8,6 +8,8 @@ import {
   normalizeExperienceItem,
   normalizeBlogPost,
   normalizeVideoPost,
+  normalizeRecentActivityFromBlog,
+  normalizeRecentActivityFromVideo,
   normalizeEducationItem,
 } from './normalizers';
 import type {
@@ -15,6 +17,7 @@ import type {
   RichExperienceItem,
   RichBlogPost,
   RichVideoPost,
+  RichRecentActivity,
   RichEducationItem,
   SkillGroup,
 } from './types';
@@ -58,6 +61,36 @@ export function loadBlogPosts(): RichBlogPost[] {
 
 export function loadVideoPosts(): RichVideoPost[] {
   return (videoRaw.posts ?? []).map(normalizeVideoPost);
+}
+
+function getParsedTime(value?: string): number {
+  if (!value) return Number.NaN;
+  return new Date(value).getTime();
+}
+
+export function loadRecentActivities(limit = 5): RichRecentActivity[] {
+  const articleActivities = (blogRaw.posts ?? []).map(
+    normalizeRecentActivityFromBlog
+  );
+  const videoActivities = (videoRaw.posts ?? []).map(
+    normalizeRecentActivityFromVideo
+  );
+
+  const merged = [...articleActivities, ...videoActivities].filter(
+    (item) => item.title && item.href
+  );
+
+  const sorted = [...merged].sort((a, b) => {
+    const aTime = getParsedTime(a.publishedAt);
+    const bTime = getParsedTime(b.publishedAt);
+
+    if (Number.isNaN(aTime) && Number.isNaN(bTime)) return 0;
+    if (Number.isNaN(aTime)) return 1;
+    if (Number.isNaN(bTime)) return -1;
+    return bTime - aTime;
+  });
+
+  return sorted.slice(0, Math.max(0, limit));
 }
 
 export function loadEducation(): RichEducationItem[] {
