@@ -1,77 +1,65 @@
 # Implementation Audit
 
-## Current Repo Structure (before rebuild)
+## Current Repo Structure
 
 ```
 src/
   app/
-    layout.tsx      — root HTML layout, ThemeProvider, basic metadata
+    layout.tsx      — root HTML layout, ThemeProvider, structured data (JSON-LD)
     page.tsx        — single-page portfolio, all sections inline
+    not-found.tsx   — global 404
+    sitemap.ts      — dynamic sitemap (/ + external blog URLs)
+    robots.ts       — robots.txt
     globals.css     — design tokens, Tailwind v4, base styles
   components/
     layout/
       Navbar.tsx    — sticky nav, IntersectionObserver active state
-      Footer.tsx    — copyright only
+      Footer.tsx    — copyright + social icons
     sections/
       Hero.tsx, About.tsx, Experience.tsx, Projects.tsx,
-      Blog.tsx, Videos.tsx, Education.tsx, Contact.tsx
+      Content.tsx, Education.tsx, Contact.tsx
+    projects/
+      ProjectCard.tsx, ProjectGrid.tsx, ProjectsClient.tsx, ProjectSearch.tsx
     ui/
-      Badge.tsx, Button.tsx, SectionHeading.tsx, SocialIcons.tsx
+      Badge.tsx, Button.tsx, EmptyState.tsx, ExternalLink.tsx,
+      FilterTabs.tsx, Input.tsx, SectionHeading.tsx, SocialIcons.tsx
     TextRotator.tsx, ThemeProvider.tsx
   content/
     config.json, nav.json, profile.json, about.json,
     experience.json, projects.json, education.json,
-    socials.json, blog-posts.json, video-posts.json
+    skills.json, socials.json, blog-posts.json, video-posts.json
   lib/
-    types.ts        — TypeScript interfaces for all content shapes
-  config/
-    index.mjs
-  scripts/
-    fetch-blog-posts.mjs, fetch-video-posts.mjs
-  utils/
-    crawlBlogPosts.mjs, crawlVideoPosts.mjs, writeToFile.mjs
+    content/        — types, loaders, normalizers, search, filters, sort
+    seo/            — structured-data.ts only
+    ui/             — cn.ts
+    utils/          — slug.ts, url.ts, text.ts
+    types.ts        — legacy type interfaces (used by page.tsx)
 ```
 
-## Existing App Architecture
+## Current App Architecture
 
 - **Framework:** Next.js 16.2.2 (Turbopack, App Router)
 - **Styling:** Tailwind CSS v4 with CSS custom property design tokens
 - **Rendering:** 100% static generation (SSG)
 - **Content:** JSON files in `src/content/`, imported at build time
 - **Theme:** Dark/light mode via `data-theme` attribute + localStorage
+- **Routes:** Single-page only (`/`). No sub-pages yet.
 
-## Existing Content Sources
+## Content Sources
 
 - `profile.json` — name, role, location, resume link
 - `about.json` — bio paragraphs
-- `experience.json` — 4 companies with description bullets and tech arrays
-- `projects.json` — 4 projects (name, description, links, tech)
-- `education.json` — 1 institution
-- `socials.json` — 7 social platforms
+- `experience.json` — companies with description bullets and tech arrays
+- `projects.json` — projects with slug, category, featured, summary, role, links, metrics, caseStudy
+- `education.json` — educational institutions
+- `skills.json` — skill groups with proficiency levels
+- `socials.json` — social platform links
 - `nav.json` — anchor-based nav links
-- `blog-posts.json` — 35 posts from dev.to
-- `video-posts.json` — 10 YouTube videos
+- `blog-posts.json` — posts from dev.to
+- `video-posts.json` — YouTube videos
 - `config.json` — feature flags to show/hide sections
 
-## Existing Risks (pre-rebuild)
-
-- Single-page only — no dedicated pages for projects, experience, skills
-- Projects lacked slugs, categories, and case study content
-- No content validation CI/CD step
-- No SEO metadata for sub-pages (none existed)
-- No structured data (JSON-LD)
-- No sitemap or robots.txt
-- Limited design system (only Badge, Button, SectionHeading, SocialIcons)
-- No utility functions for dates, slugs, URLs, text
-- Footer had unused `socials` prop import
-
-## Initial Validation Results
-
-- `npm run lint` — Passed (2 warnings from Footer unused vars, now fixed)
-- `npm run build` — Passed (4 static routes: /, /\_not-found)
-- `npm run validate-content` — Script did not exist (created as part of rebuild)
-
-## Major Changes Made
+## What Has Been Implemented
 
 ### Phase 0 — Audit
 
@@ -79,72 +67,90 @@ src/
 
 ### Phase 1 — Content Platform
 
-- Created `src/lib/content/` with types, normalizers, validators, search, filters, sort, loaders, index
-- Created `src/content/skills.json` with 8 skill groups
+- Created `src/lib/content/` with types, normalizers, search, filters, sort, loaders
+- Created `src/content/skills.json` with skill groups
 - Enriched `src/content/projects.json` with slug, category, featured, summary, role, links, metrics, caseStudy
 
-### Phase 2 — Validation CLI
+### Phase 2 — Validation CLI (partial)
 
-- Created `src/scripts/validate-content.mjs`
-- Added `validate-content`, `typecheck`, `check` npm scripts
+- Added `validate-content`, `typecheck`, `check` npm scripts to `package.json`
+- **Not yet created:** `src/scripts/validate-content.mjs` — running `npm run validate-content` will fail
 
-### Phase 3 — Projects Experience
+### Phase 3 — Projects Section (home page only)
 
-- `src/app/(pages)/projects/page.tsx` — projects listing page
-- `src/app/(pages)/projects/[slug]/page.tsx` — project detail with case study, tech stack, related projects
-- `src/app/(pages)/projects/[slug]/not-found.tsx`
-- `src/components/projects/` — ProjectCard, ProjectGrid, ProjectFilters, ProjectSearch, ProjectMetrics, ProjectTechStack, ProjectCaseStudy, RelatedProjects, ProjectsClient
+- `src/components/projects/ProjectCard.tsx` — project card component
+- `src/components/projects/ProjectGrid.tsx` — responsive grid wrapper
+- `src/components/projects/ProjectsClient.tsx` — search + filter state
+- `src/components/projects/ProjectSearch.tsx` — search input
+- `src/components/sections/Projects.tsx` — home-page projects section using the above
 
-### Phase 4 — Experience
+### Phase 7 — Homepage Metadata
 
-- `src/app/(pages)/experience/page.tsx`
-- `src/components/experience/ExperienceTimeline.tsx`, `ExperienceCard.tsx`
+- Added structured data (Person, WebSite JSON-LD) to root layout via `src/lib/seo/structured-data.ts`
+- Improved root metadata (OpenGraph, Twitter cards) in `src/app/layout.tsx`
 
-### Phase 5 — Skills
-
-- `src/app/(pages)/skills/page.tsx`
-- `src/components/skills/SkillGroupCard.tsx`
-
-### Phase 6 — Blog
-
-- `src/app/(pages)/blog/page.tsx`
-- `src/components/blog/BlogCard.tsx`, `BlogGrid.tsx`
-
-### Phase 7 — Homepage
-
-- Added "View Projects" primary CTA to Hero
-- Added structured data (Person, WebSite JSON-LD) to root layout
-- Improved root metadata (OpenGraph, Twitter cards)
-
-### Phase 8 — Design System
+### Phase 8 — Design System (partial)
 
 - Added `src/lib/ui/cn.ts`
-- Added `src/components/ui/` — Card, Container, EmptyState, ExternalLink, FilterTabs, Input, Section, StatCard, TagList, LinkButton
+- Added `src/components/ui/` — Badge, Button, EmptyState, ExternalLink, FilterTabs, Input, SectionHeading, SocialIcons
 
-### Phase 9 — SEO
+### Phase 9 — SEO (partial)
 
-- `src/lib/seo/metadata.ts` — `buildMetadata()` helper
-- `src/lib/seo/structured-data.ts` — JSON-LD generators
-- `src/lib/seo/routes.ts` — route registry + `canonicalUrl()`
-- `src/app/sitemap.ts` — dynamic sitemap
+- `src/lib/seo/structured-data.ts` — JSON-LD generators (Person, WebSite)
+- `src/app/sitemap.ts` — sitemap with `/` and external blog URLs
 - `src/app/robots.ts` — robots.txt
+- **Not yet created:** `src/lib/seo/metadata.ts` (buildMetadata helper)
+- **Not yet created:** `src/lib/seo/routes.ts` (route registry)
 
-### Phase 10 — Accessibility
+### Phase 15 — Utilities (partial)
 
-- Skip link already present in layout
-- `aria-current`, `aria-label`, `aria-live` added throughout
-- Focus ring styles on all interactive components
-- Semantic HTML used in all new pages and components
+- `src/lib/utils/slug.ts`, `url.ts`, `text.ts`
+- **Not yet created:** `src/lib/utils/date.ts`, `array.ts`
 
 ### Phase 12–13 — Docs
 
-- `docs/` directory with architecture, content-model, development-workflow, qa-checklist, ai-agent-workflow, seo-guide, accessibility-checklist, performance-notes
+- `docs/` directory with all documentation files
 - `docs/reviews/` templates
 
-### Phase 15 — Utilities
+## What Has NOT Been Implemented (Pending)
 
-- `src/lib/utils/` — date, slug, url, text, array utilities
+The following phases are planned but the code does not yet exist:
 
-### Phase 16 — QA Page
+### Pending: Fetch Scripts
 
-- `src/app/(pages)/dev/qa/page.tsx` — dev-only dashboard
+- `src/scripts/fetch-blog-posts.mjs` — fetches from dev.to
+- `src/scripts/fetch-video-posts.mjs` — fetches from YouTube
+- `src/scripts/validate-content.mjs` — validates content JSON files
+
+### Pending: Sub-pages and Route Group
+
+- `src/app/(pages)/` route group
+- `/projects` — standalone projects listing page
+- `/projects/[slug]` — project detail with case study
+- `/experience` — standalone experience timeline page
+- `/skills` — standalone skills matrix page
+- `/blog` — standalone blog listing page
+- `/dev/qa` — dev-only QA dashboard
+
+### Pending: Sub-page Components
+
+- `src/components/layout/SubpageNavbar.tsx`
+- `src/components/experience/` — ExperienceTimeline, ExperienceCard
+- `src/components/skills/` — SkillGroupCard
+- `src/components/blog/` — BlogCard, BlogGrid
+- Additional project detail components: ProjectCaseStudy, ProjectTechStack, ProjectMetrics, RelatedProjects
+
+### Pending: SEO Helpers
+
+- `src/lib/seo/metadata.ts` — `buildMetadata()` helper
+- `src/lib/seo/routes.ts` — route registry + `canonicalUrl()`
+- Per-page `metadata` exports on all sub-pages
+- Breadcrumb JSON-LD on project detail pages
+- Dynamic `generateMetadata()` for project detail pages
+- Sitemap entries for sub-pages and project slugs
+
+### Pending: Accessibility Improvements
+
+- `@media (prefers-reduced-motion: reduce)` on text-rotator-track and fade-in-up animations
+- `aria-expanded` on mobile menu
+- Keyboard focus trap for mobile menu

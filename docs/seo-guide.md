@@ -1,16 +1,21 @@
 # SEO Guide
 
-## What Changed
+## What Is Implemented
 
-- Added `src/lib/seo/metadata.ts` — `buildMetadata()` helper for consistent page metadata
-- Added `src/lib/seo/structured-data.ts` — JSON-LD generators (Person, WebSite, BreadcrumbList)
-- Added `src/lib/seo/routes.ts` — route registry and `canonicalUrl()` helper
-- Added `src/app/sitemap.ts` — dynamic XML sitemap including project detail pages
-- Added `src/app/robots.ts` — disallows `/dev/` from crawlers
-- Updated `src/app/layout.tsx` — OpenGraph, Twitter cards, JSON-LD in `<head>`
-- All new pages export `metadata` using `buildMetadata()`
-- Dynamic project pages use `generateMetadata()` for per-project OG data
-- Breadcrumb JSON-LD on project detail pages
+- `src/lib/seo/structured-data.ts` — JSON-LD generators (`personJsonLd()`, `websiteJsonLd()`)
+- `src/app/sitemap.ts` — dynamic XML sitemap (includes `/` and external blog post URLs)
+- `src/app/robots.ts` — robots.txt
+- `src/app/layout.tsx` — global `metadata` export with OpenGraph, Twitter cards, favicons, manifest
+- Root layout injects Person and WebSite JSON-LD via `<Script>` tags
+
+## What Is NOT Yet Implemented
+
+- `src/lib/seo/metadata.ts` — `buildMetadata()` helper (planned but not created)
+- `src/lib/seo/routes.ts` — route registry + `canonicalUrl()` (planned but not created)
+- Sub-page metadata (no sub-pages exist yet)
+- Per-project `generateMetadata()` (no project detail pages yet)
+- Breadcrumb JSON-LD (no detail pages yet)
+- Sitemap entries for sub-pages or project slugs (none exist yet)
 
 ## Required Environment Variables
 
@@ -50,32 +55,39 @@ Then view page source (Cmd+U) and look for:
 
 ### 4. Check sitemap
 
-Visit `/sitemap.xml` to verify all routes appear.
+Visit `/sitemap.xml` to verify routes appear. Currently includes:
+
+- `/` (the home page)
+- External blog post URLs from `blog-posts.json`
 
 ### 5. Check robots.txt
 
-Visit `/robots.txt` to verify `/dev/` is disallowed.
+Visit `/robots.txt` to verify the content.
 
 ## Manual SEO Checklist
 
-- [ ] Every page has a unique `<title>` tag
-- [ ] Every page has a `<meta name="description">` under 160 characters
+- [ ] Home page has a unique `<title>` tag
+- [ ] Home page has a `<meta name="description">` under 160 characters
 - [ ] Home page has Person and WebSite JSON-LD
-- [ ] Project detail pages have BreadcrumbList JSON-LD
-- [ ] Sitemap includes all project detail routes
-- [ ] Canonical URL is set correctly for production
-- [ ] Open Graph image is 1200×630px or close to it
-- [ ] Twitter card type is `summary_large_image` for image-heavy pages
-- [ ] `/dev/` routes return `noindex, nofollow`
+- [ ] Sitemap is reachable at `/sitemap.xml`
+- [ ] Canonical URL uses `NEXT_PUBLIC_SITE_URL` in production
+- [ ] Open Graph image is present (`/assets/images/profile-v4-500x500.jpg`)
+- [ ] Twitter card type is `summary_large_image`
 
-## Sitemap Structure
+## Future SEO Work (when sub-pages are added)
 
-The sitemap is generated dynamically at `/sitemap.xml` and includes:
+When sub-pages (`/projects`, `/experience`, `/skills`, `/blog`) are created:
 
-- `/` (priority: 1.0)
-- `/projects` (priority: 0.9)
-- `/experience` (priority: 0.8)
-- `/skills` (priority: 0.7)
-- `/blog` (priority: 0.7)
-- `/projects/[slug]` for each project (priority: 0.7)
-- External blog post URLs (priority: 0.5)
+1. Create `src/lib/seo/metadata.ts` with a `buildMetadata()` helper
+2. Create `src/lib/seo/routes.ts` with a route registry and `canonicalUrl()`
+3. Export `metadata` from each sub-page using `buildMetadata()`
+4. Use `generateMetadata()` on dynamic project detail pages
+5. Add BreadcrumbList JSON-LD to project detail pages
+6. Update `src/app/sitemap.ts` to include all sub-page routes and project slugs
+
+## Current Sitemap Structure
+
+```
+/ (priority: 1.0)
+external blog post URLs (priority: 0.5)
+```

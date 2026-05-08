@@ -30,14 +30,12 @@
 
 ## Pages to Test
 
-| Page               | Key Elements to Check                                   |
-| ------------------ | ------------------------------------------------------- |
-| `/`                | Hero CTA buttons, nav, social icons, skip link          |
-| `/projects`        | Search input, filter tabs, project cards, count updates |
-| `/projects/[slug]` | Back link, headings, external links, related projects   |
-| `/experience`      | Timeline list structure, current badge                  |
-| `/skills`          | Skill level legend, skill group cards                   |
-| `/blog`            | Blog cards, external article links, empty state         |
+| Page | Key Elements to Check                                                           |
+| ---- | ------------------------------------------------------------------------------- |
+| `/`  | Hero buttons, nav anchor links, social icons, skip link, projects filter/search |
+
+The following pages do not yet exist. Add them to this table when they are built:
+`/projects`, `/projects/[slug]`, `/experience`, `/skills`, `/blog`
 
 ## Known Limitations
 

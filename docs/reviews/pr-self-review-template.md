@@ -37,9 +37,10 @@ Use this checklist before opening or merging a PR in this portfolio repo.
 
 ## SEO
 
-- [ ] New pages export `metadata` using `buildMetadata()`
-- [ ] Dynamic pages use `generateMetadata()`
-- [ ] Sitemap updated if new routes were added
+- [ ] New pages export a `metadata` object with a unique title and description
+- [ ] Dynamic pages use `generateMetadata()` if per-item OG data is needed
+- [ ] `src/app/sitemap.ts` updated if new routes were added
+- [ ] Note: `buildMetadata()` helper does not exist yet — add metadata manually until it is created
 
 ## Performance
 

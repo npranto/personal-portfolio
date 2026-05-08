@@ -8,59 +8,50 @@ src/
     layout.tsx                  — root HTML, ThemeProvider, JSON-LD
     page.tsx                    — home page (single-page portfolio)
     not-found.tsx               — global 404
-    sitemap.ts                  — dynamic sitemap
+    sitemap.ts                  — dynamic sitemap (/ + external blog URLs)
     robots.ts                   — robots.txt
-    (pages)/
-      layout.tsx                — sub-page layout (Navbar + Footer)
-      blog/page.tsx
-      experience/page.tsx
-      skills/page.tsx
-      projects/
-        page.tsx                — projects listing
-        [slug]/page.tsx         — project detail
-        [slug]/not-found.tsx
-      dev/qa/page.tsx           — dev-only QA dashboard
+    globals.css                 — design tokens, Tailwind v4, base styles
   components/
     layout/
       Navbar.tsx                — home page navbar (anchor links, IntersectionObserver)
-      SubpageNavbar.tsx         — sub-page navbar (Next.js Links, usePathname)
       Footer.tsx
     sections/                   — home page section components
+      Hero.tsx, About.tsx, Experience.tsx, Projects.tsx,
+      Content.tsx, Education.tsx, Contact.tsx
     projects/                   — project-specific components
-    experience/                 — experience timeline components
-    skills/                     — skill group components
-    blog/                       — blog card/grid components
+      ProjectCard.tsx, ProjectGrid.tsx, ProjectsClient.tsx, ProjectSearch.tsx
     ui/                         — design system primitives
+      Badge.tsx, Button.tsx, EmptyState.tsx, ExternalLink.tsx,
+      FilterTabs.tsx, Input.tsx, SectionHeading.tsx, SocialIcons.tsx
     TextRotator.tsx, ThemeProvider.tsx
   content/                      — all content as JSON
+    config.json, nav.json, profile.json, about.json,
+    experience.json, projects.json, education.json,
+    skills.json, socials.json, blog-posts.json, video-posts.json
   lib/
-    content/                    — content platform (types, loaders, validators, search)
-    seo/                        — SEO helpers (metadata, structured data, routes)
+    content/                    — content platform (types, loaders, normalizers, search, filters, sort)
+    seo/                        — SEO helpers (structured-data only)
     ui/                         — UI utilities (cn)
-    utils/                      — utility functions (date, slug, url, text, array)
-  scripts/                      — CLI scripts (validate-content, fetch-posts)
-  utils/                        — legacy crawl utilities
-  config/                       — site config
+    utils/                      — utility functions (slug, url, text)
+    types.ts                    — legacy type interfaces (still used by page.tsx)
 ```
 
 ## Routing Strategy
 
-The app uses Next.js App Router with two layout contexts:
+The app currently has a single layout context:
 
 1. **Root layout** (`src/app/layout.tsx`)
    - Applies to all routes
    - Provides: HTML structure, ThemeProvider, skip link, global JSON-LD
-   - Does NOT include Navbar/Footer (those live at the page or route group level)
+   - Does NOT include Navbar/Footer (those live at the page level)
 
 2. **Home page** (`src/app/page.tsx`)
-   - Single-page portfolio with all sections
+   - Single-page portfolio with all sections inline
    - Includes its own `<Navbar>` and `<Footer>`
    - Nav links are anchor-based (`#about`, `#work`, etc.)
+   - All content is rendered here: Hero, About, Experience, Projects, Content (blog + videos), Education, Contact
 
-3. **Pages route group** (`src/app/(pages)/`)
-   - Provides shared `<SubpageNavbar>` + `<Footer>` for sub-pages
-   - Sub-pages: `/projects`, `/experience`, `/skills`, `/blog`, `/dev/qa`
-   - Dynamic route: `/projects/[slug]`
+There is no sub-page route group. All portfolio content lives on the home page.
 
 ## Content Architecture
 
@@ -68,54 +59,56 @@ All content is stored in `src/content/*.json` and:
 
 1. Read directly as JSON imports (no file I/O at runtime)
 2. Normalized into richer types via `src/lib/content/normalizers.ts`
-3. Validated at build-time via `src/scripts/validate-content.mjs`
-4. Exposed through typed loader functions in `src/lib/content/loaders.ts`
+3. Exposed through typed loader functions in `src/lib/content/loaders.ts`
+
+The `src/scripts/validate-content.mjs` script is referenced in `package.json` but the `src/scripts/` directory does not yet exist. Running `npm run validate-content` will fail until the script is created.
 
 ## Component Architecture
 
 ### Server Components (default)
 
 All page components and most section/card components are server components.
-Content is loaded directly in the page files using the content loaders.
+Content is loaded directly in `page.tsx` using JSON imports.
 
 ### Client Components (interactive features only)
 
-- `Navbar.tsx` — scroll detection, IntersectionObserver, mobile menu
-- `SubpageNavbar.tsx` — usePathname for active state, mobile menu
-- `ThemeProvider.tsx` — localStorage theme persistence
-- `TextRotator.tsx` — CSS animation
-- `ProjectsClient.tsx` — search + filter state (query, category, featuredOnly)
-- `FilterTabs.tsx` — button interactions
-- `Input.tsx` — forwarded ref
+| Component            | Reason for Client                                         |
+| -------------------- | --------------------------------------------------------- |
+| `Navbar.tsx`         | Scroll detection, IntersectionObserver, mobile menu state |
+| `ThemeProvider.tsx`  | localStorage theme persistence                            |
+| `TextRotator.tsx`    | CSS animation trigger                                     |
+| `ProjectsClient.tsx` | Search query + category + featuredOnly state              |
+| `FilterTabs.tsx`     | Button click events                                       |
+| `Input.tsx`          | `forwardRef`                                              |
 
-### Composition Pattern
+Everything else — cards, grids, timelines — is server-rendered.
 
-Pages load data → pass to server components → pass to client components only at the interactive boundary.
-
-Example for Projects:
+### Composition Pattern for Projects Section
 
 ```
-projects/page.tsx (server) → loads projects
-  → ProjectsClient (client) — holds search/filter state
-    → ProjectGrid (server-compatible, receives filtered array)
-      → ProjectCard (server)
+page.tsx (server) → passes projects header
+  → Projects section (server) — loads projects via loadProjects()
+    → ProjectsClient (client) — holds search/filter state
+      → ProjectGrid (server-compatible, receives filtered array)
+        → ProjectCard (server)
 ```
 
 ## SEO Strategy
 
-- `src/lib/seo/metadata.ts` — `buildMetadata()` used in all page exports
 - Root layout exports global `metadata` with OG/Twitter cards
-- Per-page metadata via `export const metadata: Metadata = buildMetadata({...})`
-- Dynamic project pages use `generateMetadata()` for per-project OG data
-- `src/app/sitemap.ts` — includes all static + dynamic routes
-- `src/app/robots.ts` — blocks `/dev/` from crawlers
-- JSON-LD: Person + WebSite in root layout; BreadcrumbList in project detail pages
+- `src/app/sitemap.ts` — includes `/` and external blog post URLs
+- `src/app/robots.ts` — exists (currently minimal)
+- JSON-LD: Person + WebSite in root layout via `src/lib/seo/structured-data.ts`
 - `NEXT_PUBLIC_SITE_URL` env var sets canonical base URL
+
+**Not yet implemented:**
+
+- `src/lib/seo/metadata.ts` — `buildMetadata()` helper (referenced in docs, not created)
+- `src/lib/seo/routes.ts` — route registry (referenced in docs, not created)
+- Per-page metadata for sub-pages (no sub-pages exist yet)
 
 ## Validation Strategy
 
 - TypeScript — strict type checking for all content types
-- Runtime content validation — `src/scripts/validate-content.mjs`
-  - Validates all JSON files without Next.js runtime dependency
-  - Runs as part of `npm run check` in CI
 - `npm run check` = validate-content + lint + typecheck + build
+- **Note:** `validate-content`, `fetch-blog-posts`, and `fetch-video-posts` scripts are defined in `package.json` but the `src/scripts/` implementation files do not yet exist. Running these will fail until the files are created.

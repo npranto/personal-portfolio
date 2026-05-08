@@ -27,6 +27,8 @@ Hot reloading is handled by Next.js Turbopack.
 npm run validate-content
 ```
 
+> **Note:** This script is defined in `package.json` but `src/scripts/validate-content.mjs` does not yet exist. Running this command will fail until the script file is created.
+
 Validates all JSON files in `src/content/`. Exits with code 0 on success, 1 on failure.
 
 Run this before committing content changes.
@@ -63,16 +65,12 @@ npm run build
 
 Produces a production build in `.next/`. All pages are statically generated.
 
-Expected routes:
+Expected routes currently built:
 
-- `/` — Home
-- `/projects` — Projects listing
-- `/projects/[slug]` — Project detail (one per project in projects.json)
-- `/experience` — Experience timeline
-- `/skills` — Skills matrix
-- `/blog` — Blog listing
+- `/` — Home (single-page portfolio)
 - `/sitemap.xml` — Sitemap
 - `/robots.txt` — Robots
+- `/_not-found` — 404 page
 
 ## Full Check (CI)
 
@@ -82,7 +80,7 @@ npm run check
 
 Runs all of: `validate-content` → `lint` → `typecheck` → `build`
 
-Use this before pushing to remote.
+Use this before pushing to remote. **Note:** `validate-content` will fail until `src/scripts/validate-content.mjs` is created.
 
 ## Fetch External Content
 
@@ -91,6 +89,8 @@ npm run fetch-blog-posts    # Fetches latest posts from dev.to
 npm run fetch-video-posts   # Fetches latest videos from YouTube
 npm run fetch-content       # Runs both
 ```
+
+> **Note:** These scripts are defined in `package.json` but `src/scripts/fetch-blog-posts.mjs` and `src/scripts/fetch-video-posts.mjs` do not yet exist. They will fail until created.
 
 Requires network access and valid API credentials in `.env`.
 
@@ -107,10 +107,6 @@ Run `npm run validate-content` and read the file/path/issue in the output. Most 
 - Missing required field (name, slug, category)
 - Invalid URL format in `links` array
 - Duplicate slugs in `projects.json`
-
-### Routes are doubled (e.g., `/projects/projects`)
-
-This happens when pages are moved into a route group directory that already exists. Check `src/app/(pages)/` structure — each page file should be directly inside its route folder, not nested one level deeper.
 
 ### Theme flashes on load
 

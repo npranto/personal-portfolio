@@ -15,14 +15,13 @@ All page components and most content components are React Server Components. Cli
 | Component            | Reason for Client                                         |
 | -------------------- | --------------------------------------------------------- |
 | `Navbar.tsx`         | Scroll detection, IntersectionObserver, mobile menu state |
-| `SubpageNavbar.tsx`  | `usePathname` for active state, mobile menu               |
 | `ThemeProvider.tsx`  | localStorage read for theme persistence                   |
 | `TextRotator.tsx`    | CSS animation trigger                                     |
 | `ProjectsClient.tsx` | Search query + category + featuredOnly state              |
 | `FilterTabs.tsx`     | Button click events                                       |
 | `Input.tsx`          | `forwardRef`                                              |
 
-Everything else — cards, grids, timelines, case studies — is server-rendered.
+Everything else — cards, grids, timelines — is server-rendered.
 
 ### Image Optimization
 
@@ -77,4 +76,3 @@ Key metrics to watch:
 
 - The `TextRotator` uses a continuous CSS animation — this can't be paused without JS for `prefers-reduced-motion`
 - The filter/search client boundary in `ProjectsClient` sends a small JS bundle for search logic — acceptable for the interactivity gain
-- The `SubpageNavbar` is a client component because it needs `usePathname` — this adds a small amount of client JS
