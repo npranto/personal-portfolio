@@ -3,7 +3,6 @@ import type { Profile, Socials } from '@/lib/types';
 import { Button } from '@/components/ui/Button';
 import { SocialIcons } from '@/components/ui/SocialIcons';
 import { TextRotator } from '@/components/TextRotator';
-import Link from 'next/link';
 
 interface HeroProps {
   profile: Profile;
@@ -77,30 +76,19 @@ export function Hero({ profile, socials }: HeroProps) {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
-              <Link
-                href="/#projects"
-                className="inline-flex items-center justify-center gap-2 font-semibold rounded-lg transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--color-bg)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-dark)] text-white shadow-lg shadow-[var(--color-accent-glow,rgba(99,102,241,0.3))] hover:shadow-[var(--color-accent-glow,rgba(99,102,241,0.5))] px-7 py-3.5 text-base"
-              >
-                View Resume
-              </Link>
               <Button
                 as="a"
                 href={profile.resumeHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                variant="outline"
+                variant="primary"
                 size="lg"
               >
+                View Resume
+              </Button>
+              <Button as="a" href="#contact" variant="outline" size="lg">
                 Let&apos;s Talk
               </Button>
-              {/* <Button
-									as="a"
-									href={profile.contactHref}
-									variant="ghost"
-									size="lg"
-								>
-									Let&apos;s Talk
-								</Button> */}
             </div>
 
             {/* Social links */}
