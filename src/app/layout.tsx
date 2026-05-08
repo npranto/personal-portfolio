@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { personJsonLd, websiteJsonLd } from '@/lib/seo/structured-data';
+import type { BrandTheme, SiteConfig } from '@/lib/types';
+import configData from '@/content/config.json';
+
+const brandTheme: BrandTheme = (configData as SiteConfig).theme ?? 'default';
 
 /**
  * Runs synchronously before React hydration to prevent a flash of the wrong
@@ -9,9 +15,35 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
 
 export const metadata: Metadata = {
-  title: 'Nazmuz (Shakib) Pranto — Frontend Engineer',
+  title: 'Nazmuz (Shakib) Pranto — Senior Frontend Engineer',
   description:
-    'Portfolio of Nazmuz (Shakib) Pranto, a frontend software engineer based in Boston, MA. Specializing in React, Next.js, TypeScript, and high-performance web applications.',
+    'Portfolio of Nazmuz (Shakib) Pranto, a senior frontend engineer based in Boston, MA. 7+ years building React, Next.js, TypeScript, and high-performance eCommerce web applications.',
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  ),
+  openGraph: {
+    type: 'website',
+    title: 'Nazmuz (Shakib) Pranto — Senior Frontend Engineer',
+    description:
+      'Senior frontend engineer based in Boston, MA. Specializing in React, Next.js, TypeScript, eCommerce platforms, and high-performance web applications.',
+    siteName: 'Shakib Pranto',
+    images: [
+      {
+        url: '/assets/images/profile-v4-500x500.jpg',
+        width: 500,
+        height: 500,
+        alt: 'Nazmuz (Shakib) Pranto',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nazmuz (Shakib) Pranto — Senior Frontend Engineer',
+    description:
+      'Senior frontend engineer based in Boston, MA — React, Next.js, TypeScript, eCommerce.',
+    creator: '@nazmuzpranto',
+    images: ['/assets/images/profile-v4-500x500.jpg'],
+  },
   icons: {
     icon: [
       {
@@ -60,10 +92,30 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
-      {/* Anti-flash: sets data-theme before React hydrates */}
+    <html
+      lang="en"
+      className="h-full antialiased"
+      suppressHydrationWarning
+      data-brand-theme={brandTheme}
+    >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Anti-flash: sets data-theme before React hydrates */}
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
+        {/* Structured data */}
+        <Script
+          id="person-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+        />
+        <Script
+          id="website-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd()) }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         {/* Accessibility: skip past the navbar for keyboard users */}

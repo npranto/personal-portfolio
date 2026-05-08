@@ -8,9 +8,9 @@
         "href": "#about"
       },
       {
-        "id": "content:nav-item:work",
-        "text": "Work",
-        "href": "#work"
+        "id": "content:nav-item:experience",
+        "text": "Experience",
+        "href": "#experience"
       },
       {
         "id": "content:nav-item:projects",
@@ -18,14 +18,9 @@
         "href": "#projects"
       },
       {
-        "id": "content:nav-item:blog",
-        "text": "Blog",
-        "href": "#blog"
-      },
-      {
-        "id": "content:nav-item:videos",
-        "text": "Videos",
-        "href": "#videos"
+        "id": "content:nav-item:content",
+        "text": "Content",
+        "href": "#content"
       },
       {
         "id": "content:nav-item:education",

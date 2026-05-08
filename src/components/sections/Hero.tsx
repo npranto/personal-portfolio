@@ -42,7 +42,7 @@ export function Hero({ profile, socials }: HeroProps) {
         }}
       />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-10">
           {/* ── Text column ─────────────────────────────────────────────── */}
           <div className="flex-1 text-center md:text-left">
@@ -86,12 +86,7 @@ export function Hero({ profile, socials }: HeroProps) {
               >
                 View Resume
               </Button>
-              <Button
-                as="a"
-                href={profile.contactHref}
-                variant="outline"
-                size="lg"
-              >
+              <Button as="a" href="#contact" variant="outline" size="lg">
                 Let&apos;s Talk
               </Button>
             </div>

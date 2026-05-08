@@ -151,6 +151,43 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   Brand palette: aurora — dark mode baseline
+   Activated by data-brand-theme="aurora" on <html> (set via config.json).
+   All four combinations are resolved by specificity on a single element:
+     default dark  → :root                               (0,1,0)
+     aurora dark   → html[data-brand-theme='aurora']     (0,1,1)
+     default light → [data-theme='light']                (0,1,0) + source order
+     aurora light  → html[data-brand-theme='aurora'][data-theme='light'] (0,2,1)
+───────────────────────────────────────────────────────────────────────────── */
+html[data-brand-theme='aurora'] {
+  /* backgrounds — deep ocean */
+  --prim-bg-950: #06111f;
+  --prim-bg-900: #0b1d35;
+  --prim-bg-800: #122a49;
+  --prim-bg-700: #1a3860;
+
+  /* borders */
+  --prim-border-strong: #33557f;
+  --prim-border-subtle: #17385d;
+
+  /* text — icy cyan tint */
+  --prim-text-50: #ecfeff;
+  --prim-text-200: #c7f9ff;
+  --prim-text-400: #8cc7d9;
+  --prim-text-500: #6ea8bd;
+
+  /* accent — cyan / amber instead of indigo / green */
+  --prim-accent: #06b6d4;
+  --prim-accent-light: #22d3ee;
+  --prim-accent-dark: #0891b2;
+  --prim-accent-glow: rgba(6, 182, 212, 0.22);
+
+  /* highlight */
+  --prim-highlight: #f59e0b;
+  --prim-highlight-bg: rgba(245, 158, 11, 0.16);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    LAYER 1b — Light mode primitive overrides
    Applied when <html data-theme="light"> is set.
 ───────────────────────────────────────────────────────────────────────────── */
@@ -174,6 +211,340 @@
   /* soften glow for light backgrounds */
   --prim-accent-glow: rgba(99, 102, 241, 0.08);
   --prim-highlight-bg: rgba(16, 185, 129, 0.08);
+}
+
+/* Brand palette: aurora — light mode overrides (highest specificity, wins all) */
+html[data-brand-theme='aurora'][data-theme='light'] {
+  /* backgrounds — pale arctic */
+  --prim-bg-950: #f7feff;
+  --prim-bg-900: #effaff;
+  --prim-bg-800: #def3fb;
+  --prim-bg-700: #c7e7f6;
+
+  /* borders */
+  --prim-border-strong: #9ec8de;
+  --prim-border-subtle: #c7e7f6;
+
+  /* text — deep navy */
+  --prim-text-50: #0a2238;
+  --prim-text-200: #12324f;
+  --prim-text-400: #2d5675;
+  --prim-text-500: #5f86a3;
+
+  /* accent — cyan stays, just softer glow for bright backgrounds */
+  --prim-accent: #0284c7;
+  --prim-accent-light: #0ea5e9;
+  --prim-accent-dark: #0369a1;
+  --prim-accent-glow: rgba(6, 182, 212, 0.1);
+
+  /* highlight */
+  --prim-highlight: #d97706;
+  --prim-highlight-bg: rgba(245, 158, 11, 0.1);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brand palette: ember — volcanic warmth
+   Dark: near-black with deep red-brown undertones, orange accent, gold highlight.
+   Light: warm cream/parchment, burnt-orange accent, deep brown text.
+───────────────────────────────────────────────────────────────────────────── */
+html[data-brand-theme='ember'] {
+  /* backgrounds — scorched dark */
+  --prim-bg-950: #0d0703;
+  --prim-bg-900: #1a0e06;
+  --prim-bg-800: #2d1a0d;
+  --prim-bg-700: #3d2415;
+
+  /* borders */
+  --prim-border-strong: #7c2d12;
+  --prim-border-subtle: #431407;
+
+  /* text — warm whites with ember tint */
+  --prim-text-50: #fff7ed;
+  --prim-text-200: #fed7aa;
+  --prim-text-400: #fdba74;
+  --prim-text-500: #c2410c;
+
+  /* accent — flame orange */
+  --prim-accent: #f97316;
+  --prim-accent-light: #fb923c;
+  --prim-accent-dark: #ea580c;
+  --prim-accent-glow: rgba(249, 115, 22, 0.28);
+
+  /* highlight — molten gold */
+  --prim-highlight: #eab308;
+  --prim-highlight-bg: rgba(234, 179, 8, 0.18);
+}
+
+html[data-brand-theme='ember'][data-theme='light'] {
+  /* backgrounds — warm cream */
+  --prim-bg-950: #fff7f0;
+  --prim-bg-900: #fff0e0;
+  --prim-bg-800: #ffe8cc;
+  --prim-bg-700: #ffd9aa;
+
+  /* borders */
+  --prim-border-strong: #c2410c;
+  --prim-border-subtle: #fed7aa;
+
+  /* text — deep burnt brown */
+  --prim-text-50: #431407;
+  --prim-text-200: #7c2d12;
+  --prim-text-400: #9a3412;
+  --prim-text-500: #c2410c;
+
+  /* accent — richer orange on bright bg */
+  --prim-accent: #c2410c;
+  --prim-accent-light: #ea580c;
+  --prim-accent-dark: #9a3412;
+  --prim-accent-glow: rgba(194, 65, 12, 0.12);
+
+  /* highlight */
+  --prim-highlight: #a16207;
+  --prim-highlight-bg: rgba(161, 98, 7, 0.12);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brand palette: forest — deep woodland
+   Dark: near-black forest green depths, vivid emerald accent, lime highlight.
+   Light: pale mint/sage, deep forest text, emerald accent.
+───────────────────────────────────────────────────────────────────────────── */
+html[data-brand-theme='forest'] {
+  /* backgrounds — old-growth darkness */
+  --prim-bg-950: #030a04;
+  --prim-bg-900: #0d1f0f;
+  --prim-bg-800: #143319;
+  --prim-bg-700: #1c4824;
+
+  /* borders */
+  --prim-border-strong: #166534;
+  --prim-border-subtle: #14532d;
+
+  /* text — moonlit canopy greens */
+  --prim-text-50: #f0fdf4;
+  --prim-text-200: #bbf7d0;
+  --prim-text-400: #86efac;
+  --prim-text-500: #4ade80;
+
+  /* accent — vivid emerald */
+  --prim-accent: #22c55e;
+  --prim-accent-light: #4ade80;
+  --prim-accent-dark: #16a34a;
+  --prim-accent-glow: rgba(34, 197, 94, 0.28);
+
+  /* highlight — electric lime */
+  --prim-highlight: #a3e635;
+  --prim-highlight-bg: rgba(163, 230, 53, 0.18);
+}
+
+html[data-brand-theme='forest'][data-theme='light'] {
+  /* backgrounds — sunlit clearing */
+  --prim-bg-950: #f0fdf4;
+  --prim-bg-900: #dcfce7;
+  --prim-bg-800: #bbf7d0;
+  --prim-bg-700: #86efac;
+
+  /* borders */
+  --prim-border-strong: #16a34a;
+  --prim-border-subtle: #bbf7d0;
+
+  /* text — deep forest floor */
+  --prim-text-50: #052e16;
+  --prim-text-200: #14532d;
+  --prim-text-400: #166534;
+  --prim-text-500: #15803d;
+
+  /* accent — rich forest green on bright bg */
+  --prim-accent: #15803d;
+  --prim-accent-light: #16a34a;
+  --prim-accent-dark: #14532d;
+  --prim-accent-glow: rgba(21, 128, 61, 0.12);
+
+  /* highlight */
+  --prim-highlight: #65a30d;
+  --prim-highlight-bg: rgba(101, 163, 13, 0.12);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brand palette: rose — romantic elegance
+   Dark: near-black with deep rose undertones, vivid rose accent, hot-pink highlight.
+   Light: petal blush backgrounds, deep burgundy text, rose accent.
+───────────────────────────────────────────────────────────────────────────── */
+html[data-brand-theme='rose'] {
+  /* backgrounds — velvet dark */
+  --prim-bg-950: #0d0408;
+  --prim-bg-900: #1a0a11;
+  --prim-bg-800: #2d1220;
+  --prim-bg-700: #42162c;
+
+  /* borders */
+  --prim-border-strong: #9f1239;
+  --prim-border-subtle: #4c0519;
+
+  /* text — rose-dusted whites */
+  --prim-text-50: #fff1f2;
+  --prim-text-200: #fecdd3;
+  --prim-text-400: #fda4af;
+  --prim-text-500: #fb7185;
+
+  /* accent — vivid rose */
+  --prim-accent: #f43f5e;
+  --prim-accent-light: #fb7185;
+  --prim-accent-dark: #e11d48;
+  --prim-accent-glow: rgba(244, 63, 94, 0.28);
+
+  /* highlight — hot fuchsia */
+  --prim-highlight: #ec4899;
+  --prim-highlight-bg: rgba(236, 72, 153, 0.18);
+}
+
+html[data-brand-theme='rose'][data-theme='light'] {
+  /* backgrounds — petal blush */
+  --prim-bg-950: #fff1f2;
+  --prim-bg-900: #ffe4e8;
+  --prim-bg-800: #fecdd3;
+  --prim-bg-700: #fda4af;
+
+  /* borders */
+  --prim-border-strong: #e11d48;
+  --prim-border-subtle: #fecdd3;
+
+  /* text — deep burgundy */
+  --prim-text-50: #4c0519;
+  --prim-text-200: #881337;
+  --prim-text-400: #9f1239;
+  --prim-text-500: #be123c;
+
+  /* accent — deep rose on light bg */
+  --prim-accent: #be123c;
+  --prim-accent-light: #e11d48;
+  --prim-accent-dark: #9f1239;
+  --prim-accent-glow: rgba(190, 18, 60, 0.12);
+
+  /* highlight */
+  --prim-highlight: #be185d;
+  --prim-highlight-bg: rgba(190, 24, 93, 0.12);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brand palette: midnight — deep luxury purple
+   Dark: true near-black with violet undertones, vivid purple accent, teal highlight.
+   Light: pale lavender, deep plum text, vivid purple accent.
+───────────────────────────────────────────────────────────────────────────── */
+html[data-brand-theme='midnight'] {
+  /* backgrounds — void purple */
+  --prim-bg-950: #050309;
+  --prim-bg-900: #0e0920;
+  --prim-bg-800: #1b1035;
+  --prim-bg-700: #261848;
+
+  /* borders */
+  --prim-border-strong: #6b21a8;
+  --prim-border-subtle: #3b0764;
+
+  /* text — amethyst-washed whites */
+  --prim-text-50: #faf5ff;
+  --prim-text-200: #e9d5ff;
+  --prim-text-400: #c084fc;
+  --prim-text-500: #a855f7;
+
+  /* accent — electric purple */
+  --prim-accent: #a855f7;
+  --prim-accent-light: #c084fc;
+  --prim-accent-dark: #9333ea;
+  --prim-accent-glow: rgba(168, 85, 247, 0.28);
+
+  /* highlight — contrast teal */
+  --prim-highlight: #14b8a6;
+  --prim-highlight-bg: rgba(20, 184, 166, 0.18);
+}
+
+html[data-brand-theme='midnight'][data-theme='light'] {
+  /* backgrounds — pale lavender mist */
+  --prim-bg-950: #faf5ff;
+  --prim-bg-900: #f3e8ff;
+  --prim-bg-800: #e9d5ff;
+  --prim-bg-700: #d8b4fe;
+
+  /* borders */
+  --prim-border-strong: #7c3aed;
+  --prim-border-subtle: #e9d5ff;
+
+  /* text — deep plum */
+  --prim-text-50: #2e1065;
+  --prim-text-200: #3b0764;
+  --prim-text-400: #4c1d95;
+  --prim-text-500: #5b21b6;
+
+  /* accent — vivid purple on light bg */
+  --prim-accent: #7c3aed;
+  --prim-accent-light: #8b5cf6;
+  --prim-accent-dark: #6d28d9;
+  --prim-accent-glow: rgba(124, 58, 237, 0.12);
+
+  /* highlight */
+  --prim-highlight: #0d9488;
+  --prim-highlight-bg: rgba(13, 148, 136, 0.12);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Brand palette: solar — golden warmth
+   Dark: deep warm black with amber undertones, molten gold accent, orange highlight.
+   Light: honey/parchment warmth, deep amber-brown text, gold accent.
+───────────────────────────────────────────────────────────────────────────── */
+html[data-brand-theme='solar'] {
+  /* backgrounds — solar deep */
+  --prim-bg-950: #0a0700;
+  --prim-bg-900: #1a1200;
+  --prim-bg-800: #2d2000;
+  --prim-bg-700: #3d2d00;
+
+  /* borders */
+  --prim-border-strong: #92400e;
+  --prim-border-subtle: #451a03;
+
+  /* text — sun-gilded whites */
+  --prim-text-50: #fffbeb;
+  --prim-text-200: #fef3c7;
+  --prim-text-400: #fde68a;
+  --prim-text-500: #fbbf24;
+
+  /* accent — molten amber */
+  --prim-accent: #f59e0b;
+  --prim-accent-light: #fbbf24;
+  --prim-accent-dark: #d97706;
+  --prim-accent-glow: rgba(245, 158, 11, 0.32);
+
+  /* highlight — solar flare orange */
+  --prim-highlight: #f97316;
+  --prim-highlight-bg: rgba(249, 115, 22, 0.18);
+}
+
+html[data-brand-theme='solar'][data-theme='light'] {
+  /* backgrounds — honey parchment */
+  --prim-bg-950: #fffbeb;
+  --prim-bg-900: #fef3c7;
+  --prim-bg-800: #fde68a;
+  --prim-bg-700: #fcd34d;
+
+  /* borders */
+  --prim-border-strong: #b45309;
+  --prim-border-subtle: #fde68a;
+
+  /* text — deep amber brown */
+  --prim-text-50: #451a03;
+  --prim-text-200: #78350f;
+  --prim-text-400: #92400e;
+  --prim-text-500: #b45309;
+
+  /* accent — rich gold on bright bg */
+  --prim-accent: #b45309;
+  --prim-accent-light: #d97706;
+  --prim-accent-dark: #92400e;
+  --prim-accent-glow: rgba(180, 83, 9, 0.12);
+
+  /* highlight */
+  --prim-highlight: #c2410c;
+  --prim-highlight-bg: rgba(194, 65, 12, 0.12);
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -378,4 +749,22 @@ body {
 .fade-in-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Respect reduced-motion preferences for accessibility and comfort */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .text-rotator-track {
+    animation: none;
+  }
+
+  .fade-in-up,
+  .fade-in-up.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

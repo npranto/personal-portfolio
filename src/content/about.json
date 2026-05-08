@@ -1,20 +1,8 @@
 {
   "about": {
-    "id": "content:about:v1",
     "header": "About",
-    "content": [
-      {
-        "type": "paragraph",
-        "body": "Hey, I'm Shakib. I'm a Senior Frontend Engineer with 7+ years of experience building web applications and design systems that people actually enjoy using. I work primarily with TypeScript, React, Next.js, and Node.js, and I care a lot about performance, accessibility, and making the developer experience better for everyone on the team."
-      },
-      {
-        "type": "paragraph",
-        "body": "Most recently at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://hydrow.com/\">Hydrow</a>, I was one of three engineers responsible for the entire e-commerce platform. I led a full homepage redesign, wired up Shopify custom pixel tracking for better funnel visibility, and built out a typography system that finally made things consistent across the site. Before that, at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://www.bestbuy.com/\">Best Buy</a>, I worked on the Product Details Page, which serves over 4 million users a day. I got to focus on performance improvements, A/B testing, and cutting deployment time by 6x with a GitHub Actions pipeline. And earlier at <a style=\"text-decoration: underline\" target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://newfold.com/\">Newfold Digital</a>, I built a library of reusable components and helped integrate Contentful CMS so the marketing team could ship updates without needing an engineer every time."
-      }
-    ],
     "mainContent": [
       {
-        "id": "content:content-section:about:main-content:1",
         "paragraphs": [
           {
             "body": "Hey, I'm Shakib. I'm a Senior Frontend Engineer with 7+ years of experience building web applications and design systems that people actually enjoy using. I work primarily with TypeScript, React, Next.js, and Node.js, and I care a lot about performance, accessibility, and making the developer experience better for everyone on the team."

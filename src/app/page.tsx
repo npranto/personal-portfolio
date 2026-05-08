@@ -3,7 +3,7 @@ import type {
   NavContent,
   ProfileContent,
   AboutContent,
-  WorkContent,
+  ExperienceContent,
   ProjectsContent,
   EducationContent,
   SocialsContent,
@@ -16,7 +16,7 @@ import configData from '@/content/config.json';
 import navData from '@/content/nav.json';
 import profileData from '@/content/profile.json';
 import aboutData from '@/content/about.json';
-import workData from '@/content/work.json';
+import experienceData from '@/content/experience.json';
 import projectsData from '@/content/projects.json';
 import educationData from '@/content/education.json';
 import socialsData from '@/content/socials.json';
@@ -30,10 +30,9 @@ import { Footer } from '@/components/layout/Footer';
 /* ── Section components ─────────────────────────────────────────────────── */
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
-import { Work } from '@/components/sections/Work';
+import { Experience } from '@/components/sections/Experience';
 import { Projects } from '@/components/sections/Projects';
-import { Blog } from '@/components/sections/Blog';
-import { Videos } from '@/components/sections/Videos';
+import { Content } from '@/components/sections/Content';
 import { Education } from '@/components/sections/Education';
 import { Contact } from '@/components/sections/Contact';
 
@@ -42,7 +41,7 @@ const config = configData as SiteConfig;
 const { nav } = navData as NavContent;
 const { profile } = profileData as ProfileContent;
 const { about } = aboutData as AboutContent;
-const { work } = workData as WorkContent;
+const { experience } = experienceData as ExperienceContent;
 const { projects } = projectsData as ProjectsContent;
 const { education } = educationData as EducationContent;
 const { socials } = socialsData as SocialsContent;
@@ -64,15 +63,15 @@ export default function Home() {
 
         {config.showAbout && <About about={about} />}
 
-        {config.showWork && <Work header={work.header} items={work.items} />}
-
-        {config.showProjects && (
-          <Projects header={projects.header} items={projects.items} />
+        {config.showExperience && (
+          <Experience header={experience.header} items={experience.items} />
         )}
 
-        {config.showBlog && <Blog posts={blogPosts} />}
+        {config.showProjects && <Projects header={projects.header} />}
 
-        {config.showVideos && <Videos posts={videoPosts} />}
+        {config.showContent && (
+          <Content blogPosts={blogPosts} videoPosts={videoPosts} />
+        )}
 
         {config.showEducation && (
           <Education header={education.header} items={education.items} />

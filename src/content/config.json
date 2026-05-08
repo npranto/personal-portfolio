@@ -1,11 +1,19 @@
 {
-  "theme": "Default",
+  "theme": "aurora",
+  "allowedThemes": [
+    "default",
+    "aurora",
+    "ember",
+    "forest",
+    "rose",
+    "midnight",
+    "solar"
+  ],
   "showJumbotron": true,
   "showAbout": true,
-  "showWork": true,
+  "showExperience": true,
   "showProjects": true,
-  "showBlog": true,
-  "showVideos": true,
+  "showContent": true,
   "showEducation": true,
   "showContact": true
 }
