@@ -15,6 +15,7 @@ export type BrandTheme =
 
 export interface SiteConfig {
   theme: BrandTheme;
+  allowedThemes?: BrandTheme[];
   showJumbotron: boolean;
   showAbout: boolean;
   showExperience: boolean;
