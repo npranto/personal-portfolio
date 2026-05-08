@@ -1,5 +1,14 @@
 {
-  "theme": "Default",
+  "theme": "midnight",
+  "allowedThemes": [
+    "default",
+    "aurora",
+    "ember",
+    "forest",
+    "rose",
+    "midnight",
+    "solar"
+  ],
   "showJumbotron": true,
   "showAbout": true,
   "showExperience": true,

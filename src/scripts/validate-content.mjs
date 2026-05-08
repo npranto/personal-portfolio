@@ -95,6 +95,25 @@ function validateConfig(data, file) {
   const keyPath = 'root';
   if (!expectObject(data, file, keyPath)) return;
 
+  const allowedThemes = [
+    'default',
+    'aurora',
+    'ember',
+    'forest',
+    'rose',
+    'midnight',
+    'solar',
+  ];
+  if (expectNonEmptyString(data.theme, file, 'theme')) {
+    if (!allowedThemes.includes(data.theme)) {
+      addError(
+        file,
+        'theme',
+        `Expected one of: ${allowedThemes.join(', ')}`
+      );
+    }
+  }
+
   const keys = [
     'showJumbotron',
     'showAbout',

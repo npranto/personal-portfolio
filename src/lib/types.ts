@@ -4,8 +4,17 @@
 ───────────────────────────────────────────────────────────────────────────── */
 
 /* ---- config.json -------------------------------------------------------- */
+export type BrandTheme =
+  | 'default'
+  | 'aurora'
+  | 'ember'
+  | 'forest'
+  | 'rose'
+  | 'midnight'
+  | 'solar';
+
 export interface SiteConfig {
-  theme: string;
+  theme: BrandTheme;
   showJumbotron: boolean;
   showAbout: boolean;
   showExperience: boolean;

@@ -3,6 +3,10 @@ import Script from 'next/script';
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { personJsonLd, websiteJsonLd } from '@/lib/seo/structured-data';
+import type { BrandTheme, SiteConfig } from '@/lib/types';
+import configData from '@/content/config.json';
+
+const brandTheme: BrandTheme = (configData as SiteConfig).theme ?? 'default';
 
 /**
  * Runs synchronously before React hydration to prevent a flash of the wrong
@@ -88,7 +92,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="h-full antialiased"
+      suppressHydrationWarning
+      data-brand-theme={brandTheme}
+    >
       <head>
         {/* Anti-flash: sets data-theme before React hydrates */}
         <Script
