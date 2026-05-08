@@ -35,6 +35,8 @@ import { Projects } from '@/components/sections/Projects';
 import { Content } from '@/components/sections/Content';
 import { Education } from '@/components/sections/Education';
 import { Contact } from '@/components/sections/Contact';
+import { RecentActivities } from '@/components/sections/RecentActivities';
+import { loadRecentActivities } from '@/lib/content/loaders';
 
 /* ── Type-cast JSON imports ─────────────────────────────────────────────── */
 const config = configData as SiteConfig;
@@ -54,12 +56,16 @@ const { posts: videoPosts } = videoData as VideoPostsContent;
  * Section visibility is controlled by config.json feature flags.
  */
 export default function Home() {
+  const recentActivities = loadRecentActivities(3);
+
   return (
     <>
       <Navbar links={nav.links} initials="NP" />
 
       <main id="main-content" className="flex-1">
         {config.showJumbotron && <Hero profile={profile} socials={socials} />}
+
+        <RecentActivities items={recentActivities} />
 
         {config.showAbout && <About about={about} />}
 
