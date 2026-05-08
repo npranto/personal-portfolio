@@ -106,11 +106,7 @@ function validateConfig(data, file) {
   ];
   if (expectNonEmptyString(data.theme, file, 'theme')) {
     if (!allowedThemes.includes(data.theme)) {
-      addError(
-        file,
-        'theme',
-        `Expected one of: ${allowedThemes.join(', ')}`
-      );
+      addError(file, 'theme', `Expected one of: ${allowedThemes.join(', ')}`);
     }
   }
 
