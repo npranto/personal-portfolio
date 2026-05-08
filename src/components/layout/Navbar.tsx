@@ -76,6 +76,8 @@ export function Navbar({ links, initials }: NavbarProps) {
           {initials}
         </a>
 
+        <h1>Before Major Rebuild</h1>
+
         {/* Desktop nav links */}
         <ul className="hidden md:flex items-center gap-1" role="list">
           {links.map((link) => {
