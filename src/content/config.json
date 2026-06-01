@@ -10,6 +10,7 @@
     "solar"
   ],
   "showJumbotron": true,
+  "showRecentActivities": true,
   "showAbout": true,
   "showExperience": true,
   "showProjects": true,

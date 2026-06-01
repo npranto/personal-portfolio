@@ -17,6 +17,7 @@ export interface SiteConfig {
   theme: BrandTheme;
   allowedThemes?: BrandTheme[];
   showJumbotron: boolean;
+  showRecentActivities: boolean;
   showAbout: boolean;
   showExperience: boolean;
   showProjects: boolean;
