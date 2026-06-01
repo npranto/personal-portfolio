@@ -112,6 +112,7 @@ function validateConfig(data, file) {
 
   const keys = [
     'showJumbotron',
+    'showRecentActivities',
     'showAbout',
     'showExperience',
     'showProjects',

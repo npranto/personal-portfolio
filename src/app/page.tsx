@@ -56,7 +56,9 @@ const { posts: videoPosts } = videoData as VideoPostsContent;
  * Section visibility is controlled by config.json feature flags.
  */
 export default function Home() {
-  const recentActivities = loadRecentActivities(3);
+  const recentActivities = config.showRecentActivities
+    ? loadRecentActivities(3)
+    : [];
 
   return (
     <>
@@ -65,7 +67,9 @@ export default function Home() {
       <main id="main-content" className="flex-1">
         {config.showJumbotron && <Hero profile={profile} socials={socials} />}
 
-        <RecentActivities items={recentActivities} />
+        {config.showRecentActivities && (
+          <RecentActivities items={recentActivities} />
+        )}
 
         {config.showAbout && <About about={about} />}
 
